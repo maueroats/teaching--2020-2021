@@ -1,0 +1,4 @@
+<!-- usage:
+github-mo file="needed.html" name="Needed File"
+-->
+<a href="{{ .Params.github_base }}{{ .Params.github_glue }}/{{ .Page.File.Dir }}{{ .Page.File.BaseFileName}}.files/{{ if isset .Params "file" }}{{ index .Params "file" }}{{else}}BadFile{{end}}">{{ if isset .Params "name" }}{{index .Params "name"}}{{else}}{{ index .Params "file" }}{{end}}</a>

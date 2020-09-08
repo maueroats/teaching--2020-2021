@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>intermediate-cs on WY Computer Science</title>
+    <link>https://wy-cs.info/categories/intermediate-cs/</link>
+    <description>Recent content in intermediate-cs on WY Computer Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 Sep 2017 19:49:27 -0500</lastBuildDate>
+    
+	<atom:link href="https://wy-cs.info/categories/intermediate-cs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intermediate CS</title>
+      <link>https://wy-cs.info/</link>
+      <pubDate>Sat, 09 Sep 2017 19:49:27 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/</guid>
+      <description>Intermediate Computer Science uses the DrRacket environment and the Picturing Programs textbook. Use WeScheme if you cannot install programs, but read the notes on WeScheme because it is different in some ways.
+Eventually you will want to understand why we learn Racket instead of a more popular language like Python.
+Extra Info: Online Course The Racket MOOC is a good place to look if you want more detail.
+Recent Changes   Resources modified Sun 09-08  Intermediate-cs modified Sun 09-08  Why Racket?</description>
+    </item>
+    
+  </channel>
+</rss>

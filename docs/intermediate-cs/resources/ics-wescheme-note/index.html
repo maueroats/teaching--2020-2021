@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WY Computer Science</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<title>WeScheme :: WY Computer Science</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/wy-cs.info";
+</script>
+<meta name="description" content="Notes on how WeScheme is different from DrRacket.">
+
+
+
+    
+  </head>
+  <body data-url="/intermediate-cs/resources/ics-wescheme-note/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p>WY Computer Science</p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="/ftc"  rel="noopener">
+                  FTC Robotics
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/ecs-teach"  rel="noopener">
+                  Teacher Links
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/events"  rel="noopener">
+                  CS Events
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="http://wyoung.org"  rel="noopener">
+                  Whitney Young
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/resources/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/resources/generic-cs-syllabus/" class="dd-item">
+        <div>
+          <a href="/resources/generic-cs-syllabus/">
+            Syllabus: All Courses
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/apcs-syllabus-2019-2020/" class="dd-item">
+        <div>
+          <a href="/resources/apcs-syllabus-2019-2020/">
+            Syllabus: AP CS
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/intermediatecs-syllabus/" class="dd-item">
+        <div>
+          <a href="/resources/intermediatecs-syllabus/">
+            Syllabus: Intermediate
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/grading-scale/" class="dd-item">
+        <div>
+          <a href="/resources/grading-scale/">
+            Grade Weights
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/academic-integrity/" class="dd-item">
+        <div>
+          <a href="/resources/academic-integrity/">
+            Academic Integrity
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/letters-of-recommendation/" class="dd-item">
+        <div>
+          <a href="/resources/letters-of-recommendation/">
+            Letters of Recommendation
+          </a>
+        </div>
+    </li>
+    <li data-nav-id="/resources/remote-learning/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/resources/remote-learning/">Remote Learning 2020</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/resources/remote-learning/schedule/" class="dd-item">
+        <div>
+          <a href="/resources/remote-learning/schedule/">
+            WY Remote Schedule
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/resources/interview/" class="dd-item">
+        <div>
+          <a href="/resources/interview/">
+            Interviews
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/senioritis/" class="dd-item">
+        <div>
+          <a href="/resources/senioritis/">
+            Senioritis
+          </a>
+        </div>
+    </li>
+    <li data-nav-id="/resources/events/" class="dd-item
+        ">
+      <div>
+      <a href="/resources/events/">CS Events</a>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/">Intermediate-cs</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/intermediate-cs/resources/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/resources/">Resources</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/resources/why-racket/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/why-racket/">
+            Why Racket?
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/resources/e-courses/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/e-courses/">
+            Online Help
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/resources/ics-wescheme-note/" class="dd-item active">
+        <div>
+          <a href="/intermediate-cs/resources/ics-wescheme-note/">
+            WeScheme
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/resources/" >
+   Resources</option>
+    <option value="/intermediate-cs/" >
+   Intermediate-cs</option> 
+    <option value="/intermediate-cs/resources/" >
+  - 
+   Resources</option> 
+      <option value="/intermediate-cs/resources/why-racket/" >-- Why Racket?</option>
+      <option value="/intermediate-cs/resources/e-courses/" >-- Online Help</option>
+      <option value="/intermediate-cs/resources/ics-wescheme-note/"  selected>-- WeScheme</option>
+  
+  
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>WeScheme</h1>
+
+    
+    
+    
+    <p>WeScheme is a browser-based version of Racket. It works well for at
+least the first semester of Intermediate Computer Science.</p>
+<h2 id="special-notes-for-wescheme-users">Special notes for WeScheme users</h2>
+<p>You can use <a href="http://wescheme.org">WeScheme</a> if you cannot install [DrRacket](http://racket
+-lang.org). For example, if you have a Chromebook for your home computer.</p>
+<p>There are a few differences:</p>
+<ul>
+<li>
+<p>Omit the <code>(require picturing-programs)</code> line.</p>
+</li>
+<li>
+<p>(<strong>Chapter 3</strong>)
+Instead of copy and pasting in a picture, you need to copy the link for the image and use <code>bitmap/url</code> like this:</p>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;https://www.what-dog.net/Images/faces2/main004.jpg&#34;</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><ul>
+<li>(<strong>Chapter 6</strong>) Inside <code>big-bang</code> you need to use the phrase <code>to-draw</code> instead of <code>on-draw</code> that we use in DrRacket.
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">draw-handler</span> <span style="color:#111">model</span><span style="color:#111">)</span> 
+    <span style="color:#111">(</span><span style="color:#111">overlay</span> <span style="color:#111">model</span> <span style="color:#111">(</span><span style="color:#111">empty-scene</span> <span style="color:#ae81ff">300</span> <span style="color:#ae81ff">200</span><span style="color:#111">)))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">tick-handler</span> <span style="color:#111">model</span><span style="color:#111">)</span> 
+    <span style="color:#111">(</span><span style="color:#111">scale</span> <span style="color:#ae81ff">1.01</span> <span style="color:#111">model</span><span style="color:#111">))</span>
+
+<span style="color:#111">(</span><span style="color:#111">big-bang</span> <span style="color:#111">(</span><span style="color:#111">circle</span> <span style="color:#ae81ff">10</span> <span style="color:#d88200">&#34;solid&#34;</span> <span style="color:#d88200">&#34;green&#34;</span><span style="color:#111">)</span>
+          <span style="color:#111">(</span><span style="color:#111">on-tick</span> <span style="color:#111">tick-handler</span><span style="color:#111">)</span>
+<span style="display:block;width:100%;background-color:#e1e1e1">          <span style="color:#111">(</span><span style="color:#111">to-draw</span> <span style="color:#111">draw-handler</span><span style="color:#111">))</span></span></code></pre></div></li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/intermediate-cs/resources/e-courses/" title="Online Help"> <i class="fa fa-chevron-left"></i><label>Online Help</label></a>
+    <a class="nav nav-next" href="/intermediate-cs/resources/why-racket/" title="Why Racket?" style="margin-right: 0px;"><label>Why Racket?</label><i class="fa fa-chevron-right"></i></a></div>
+
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 09/09/2017
+    </div>
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

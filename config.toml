@@ -1,4 +1,4 @@
-baseURL = "https://wy-cs.website"
+baseURL = "https://wy-cs.info"
 languageCode = "en-us"
 title = "WY Computer Science"
 theme = "docdock"
@@ -12,7 +12,7 @@ pygmentsCodefencesGuessSyntax = true
 disableSearch = "true"
 #themeStyle = "original"
 themeStyle = "flex"
-github_base = "https://raw.githubusercontent.com/maueroats/teaching--2019-2020"
+github_base = "https://raw.githubusercontent.com/maueroats/teaching--2020-2021"
 github_glue = "/master/docs"
 
 [outputs]

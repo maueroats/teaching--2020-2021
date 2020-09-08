@@ -1,0 +1,12 @@
+<!-- need scratchblocks to loaded in ecs.html, but this works -->
+<script src="/js/scratchblocks-v3.4-min.js"></script>
+<script>
+window.onload = function () {
+  console.log('MO: Loading scratchblocks');
+  scratchblocks.renderMatching('pre.scratch');
+  scratchblocks.renderMatching('scratch.inline', {inline: true});
+}
+</script>
+<pre class="scratch">
+{{ .Inner }}
+</pre>

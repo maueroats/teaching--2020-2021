@@ -1,0 +1,3 @@
+{{- $src := .Get "src" }}
+{{- $width := .Get "width" | default 200 }}
+  <a href="{{ $src }}"><img src="{{ $src }}"  width={{ $width }} /></a>
