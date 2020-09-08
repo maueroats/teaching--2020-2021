@@ -1,0 +1,67 @@
+baseURL = "https://wy-cs.website"
+languageCode = "en-us"
+title = "WY Computer Science"
+theme = "docdock"
+publishDir = "docs"
+rssLimit = 10
+pygmentsStyle = "monokailight"
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+
+[params]
+disableSearch = "true"
+#themeStyle = "original"
+themeStyle = "flex"
+github_base = "https://raw.githubusercontent.com/maueroats/teaching--2019-2020"
+github_glue = "/master/docs"
+
+[outputs]
+# removed RSS from both of the following
+# no JSON for home means no search functionality
+home = [ "HTML" ] 
+section = [ "HTML" ]
+
+[[menu.shortcuts]]
+pre = "<h3>Clubs and Groups</h3>"
+name = "FTC Robotics"
+url = "/ftc"
+weight = 14
+
+[[menu.shortcuts]]
+name = "Teacher Links"
+url = "/ecs-teach"
+weight = 15
+
+[[menu.shortcuts]]
+pre = "<h3>Other</h3>"
+name = "CS Events"
+url = "/events"
+weight = 21
+
+#[[menu.shortcuts]]
+#name = "Racket MOOC <img src='/intermediate-cs/e-courses/edX.png' height='16px'/>"
+#url = "/intermediate-cs/e-courses"
+#weight = 23
+
+#[[menu.shortcuts]]
+#name = "Biography"
+#url = "/biography"
+#weight = 25
+
+[[menu.shortcuts]]
+pre = "<h3>External</h3>"
+#name = "<i class='fa fa-calendar' aria-hidden='true'></i>AP Exam Calendar 2020"
+#identifier = "apcal"
+#url = "https://apcentral.collegeboard.org/courses/exam-dates-and-fees"
+#weight = 50
+
+#[[menu.shortcuts]]
+name = "Whitney Young"
+identifier = "wy"
+url = "http://wyoung.org"
+weight = 100
+
+
+# Added for 0.62 in order to make images show.
+[markup.goldmark.renderer]
+unsafe = true

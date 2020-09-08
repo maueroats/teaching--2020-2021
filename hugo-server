@@ -1,0 +1,6 @@
+#! /bin/bash
+hugo server -D 
+# --disableFastRender
+
+# When you interrupt the hugo server, you want a shell not a closed window.
+exec fish
