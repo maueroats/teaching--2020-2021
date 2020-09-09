@@ -5,7 +5,7 @@ function die() {
 }
 
 if [ -z "$www" ]; then
-   www="$HOME/Documents/2019b/2019-2020--HOME/www"
+   www="$HOME/Documents/2020b/2020-2021--HOME/www"
 fi
 
 if [ -n "$www" ]; then
@@ -18,9 +18,7 @@ if [ ! -f ./hugo-server ]; then
 fi
 
 # cd $www
-i3-msg "workspace 5; append_layout $HOME/.config/i3/layout-www-edit.json"
-emacs --title "Site Editor" content/ &
+i3-msg "workspace 6; append_layout $HOME/.config/i3/layout-www-edit.json"
+qemacs -n --frame-parameters='((title . "Site Editor"))' content/ 
 i3-sensible-terminal --title "Hugo Site Generator" -e ./hugo-server &
 i3-sensible-terminal --title "Publisher" -e fish &
-
-

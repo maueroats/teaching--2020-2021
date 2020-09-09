@@ -68,6 +68,66 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
+    <li data-nav-id="/ap-cs/" class="dd-item
+        ">
+      <div>
+      <a href="/ap-cs/">AP CS</a>
+      </div>
+    </li>
+    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/">Intermediate CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/intermediate-cs/resources/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/resources/">Resources</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/resources/why-racket/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/why-racket/">
+            Why Racket?
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/resources/e-courses/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/e-courses/">
+            Online Help
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/resources/ics-wescheme-note/" class="dd-item active">
+        <div>
+          <a href="/intermediate-cs/resources/ics-wescheme-note/">
+            WeScheme
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ml/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ml/startup/" class="dd-item">
+        <div>
+          <a href="/ml/startup/">
+            ML Startup
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
     <li data-nav-id="/resources/" class="dd-item haschildren
         ">
       <div>
@@ -153,45 +213,6 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
-        ">
-      <div>
-      <a href="/intermediate-cs/">Intermediate-cs</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
-      </div>
-        <ul>
-    <li data-nav-id="/intermediate-cs/resources/" class="dd-item parent haschildren
-        ">
-      <div>
-      <a href="/intermediate-cs/resources/">Resources</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
-      </div>
-        <ul>
-      <li data-nav-id="/intermediate-cs/resources/why-racket/" class="dd-item">
-        <div>
-          <a href="/intermediate-cs/resources/why-racket/">
-            Why Racket?
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/intermediate-cs/resources/e-courses/" class="dd-item">
-        <div>
-          <a href="/intermediate-cs/resources/e-courses/">
-            Online Help
-          </a>
-        </div>
-    </li>
-      <li data-nav-id="/intermediate-cs/resources/ics-wescheme-note/" class="dd-item active">
-        <div>
-          <a href="/intermediate-cs/resources/ics-wescheme-note/">
-            WeScheme
-          </a>
-        </div>
-    </li>
-        </ul>
-    </li>
-        </ul>
-    </li>
 
 
 
@@ -207,10 +228,10 @@
       <center>Navigation : 
         <select onchange="javascript:location.href = this.value;">
           
-    <option value="/resources/" >
-   Resources</option>
+    <option value="/ap-cs/" >
+   AP CS</option>
     <option value="/intermediate-cs/" >
-   Intermediate-cs</option> 
+   Intermediate CS</option> 
     <option value="/intermediate-cs/resources/" >
   - 
    Resources</option> 
@@ -219,6 +240,10 @@
       <option value="/intermediate-cs/resources/ics-wescheme-note/"  selected>-- WeScheme</option>
   
   
+    <option value="/ml/" >
+   Machine Learning</option>
+    <option value="/resources/" >
+   Resources</option>
 
 
 
@@ -235,12 +260,16 @@
     <p>WeScheme is a browser-based version of Racket. It works well for at
 least the first semester of Intermediate Computer Science.</p>
 <h2 id="special-notes-for-wescheme-users">Special notes for WeScheme users</h2>
-<p>You can use <a href="http://wescheme.org">WeScheme</a> if you cannot install [DrRacket](http://racket
--lang.org). For example, if you have a Chromebook for your home computer.</p>
+<p>You can use <a href="http://wescheme.org">WeScheme</a> if you cannot install
+<a href="https://racket-lang.org">DrRacket</a>.
+For example, if you have a Chromebook for your home computer.</p>
 <p>There are a few differences:</p>
 <ul>
 <li>
 <p>Omit the <code>(require picturing-programs)</code> line.</p>
+</li>
+<li>
+<p>(<strong>Chapter 1</strong>) See the <a href="/intermediate-cs/resources/wescheme-ch1/">WeScheme starter code</a>.</p>
 </li>
 <li>
 <p>(<strong>Chapter 3</strong>)
@@ -266,7 +295,7 @@ Instead of copy and pasting in a picture, you need to copy the link for the imag
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/intermediate-cs/resources/e-courses/" title="Online Help"> <i class="fa fa-chevron-left"></i><label>Online Help</label></a>
-    <a class="nav nav-next" href="/intermediate-cs/resources/why-racket/" title="Why Racket?" style="margin-right: 0px;"><label>Why Racket?</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/ml/" title="Machine Learning" style="margin-right: 0px;"><label>Machine Learning</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
