@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Online Help :: WY Computer Science</title>
+<title>Ch03 :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="">
+<meta name="description" content="Data Visualization.">
 
 
 
     
   </head>
-  <body data-url="/intermediate-cs/resources/e-courses/">
+  <body data-url="/ml/r4ds/ch03/">
     
       <header>
   <div class="logo">
@@ -74,18 +74,16 @@
       <a href="/ap-cs/">AP CS</a>
       </div>
     </li>
-    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
+    <li data-nav-id="/intermediate-cs/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/">Intermediate CS</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/">Intermediate CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/intermediate-cs/resources/" class="dd-item parent haschildren
+    <li data-nav-id="/intermediate-cs/resources/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/resources/">Resources</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/intermediate-cs/resources/why-racket/" class="dd-item">
@@ -95,7 +93,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/intermediate-cs/resources/e-courses/" class="dd-item active">
+      <li data-nav-id="/intermediate-cs/resources/e-courses/" class="dd-item">
         <div>
           <a href="/intermediate-cs/resources/e-courses/">
             Online Help
@@ -113,10 +111,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/" class="dd-item haschildren
+    <li data-nav-id="/ml/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/">Machine Learning</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/startup/" class="dd-item">
@@ -126,10 +125,11 @@
           </a>
         </div>
     </li>
-    <li data-nav-id="/ml/r4ds/" class="dd-item haschildren
+    <li data-nav-id="/ml/r4ds/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/r4ds/">R for Data Science</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/r4ds/">R for Data Science</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/r4ds/ch01/" class="dd-item">
@@ -146,7 +146,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ml/r4ds/ch03/" class="dd-item">
+      <li data-nav-id="/ml/r4ds/ch03/" class="dd-item active">
         <div>
           <a href="/ml/r4ds/ch03/">
             Ch03
@@ -260,17 +260,18 @@
     <option value="/ap-cs/" >
    AP CS</option>
     <option value="/intermediate-cs/" >
-   Intermediate CS</option> 
-    <option value="/intermediate-cs/resources/" >
-  - 
-   Resources</option> 
-      <option value="/intermediate-cs/resources/why-racket/" >-- Why Racket?</option>
-      <option value="/intermediate-cs/resources/e-courses/"  selected>-- Online Help</option>
-      <option value="/intermediate-cs/resources/ics-wescheme-note/" >-- WeScheme</option>
-  
-  
+   Intermediate CS</option>
     <option value="/ml/" >
-   Machine Learning</option>
+   Machine Learning</option> 
+      <option value="/ml/startup/" >- ML Startup</option>
+    <option value="/ml/r4ds/" >
+  - 
+   R for Data Science</option> 
+      <option value="/ml/r4ds/ch01/" >-- Ch01</option>
+      <option value="/ml/r4ds/ch02/" >-- Ch02</option>
+      <option value="/ml/r4ds/ch03/"  selected>-- Ch03</option>
+  
+  
     <option value="/resources/" >
    Resources</option>
 
@@ -281,33 +282,60 @@
     </div>
     
 
-    <h1>Online Help</h1>
+    <h1>Ch03</h1>
 
     
     
     
-    <p>The best resource I am aware of is Gregor Kiczales&rsquo; course <a href="https://www.edx.org/course/how-code-simple-data-ubcx-htc1x">How to Code: Simple Data</a>. The course is available for free through edX.</p>
-<h2 id="kiczales-course-structure">Kiczales Course Structure</h2>
-<p>The two most important parts of the course (from my point of view) are:</p>
+    <p>The author of the epigraph at the start of the chapter is famous, you can read his <a href="http://www.ams.org/notices/200202/fea-tukey.pdf">mathematical obituary</a> if you are interested.</p>
+<p>The text suggests reading Wickham&rsquo;s article that introduces the &ldquo;Grammar of Graphics&rdquo; ideas of <code>ggplot2</code>. I think this is a good idea.</p>
+<p>FIXME: When do we read this? <a href=":/7c7483ef896f414bb67355b80ef79105">03b-R-Explore-GrammarOfGraphics</a></p>
+<h2 id="32">3.2</h2>
+<p>In-class activity: the relationship between engine size and fuel efficiency.</p>
+<p>According to <code>?mpg</code>:</p>
 <ul>
-<li>
-<p><strong>Module 1b: How to Design Functions.</strong> The design process.</p>
-</li>
-<li>
-<p><strong>Module 3a: How to Design Worlds.</strong> Big-bang.</p>
-</li>
+<li>How large is the data set?</li>
+<li>What variable describes the kind of drive train?</li>
+<li>What values are allowed for the drive train variable?</li>
+<li>Which variable describes the size of the engine? What units does it use?</li>
 </ul>
-<h2 id="other-resources">Other Resources</h2>
-<p>Signing up for a free online course is too much commitment? You could browse
-<a href="https://www.youtube.com/user/gregorkiczales/playlists">the YouTube playlists of Professor Kiczales</a>. The first video of Summer 110 Weeks 3-4 is an introduction to big-bang.</p>
+<p>More questions:</p>
+<ul>
+<li>What does <code>aes</code> stand for in <code>ggplot</code>?</li>
+<li>What is the purpose of the <code>mapping</code> argument to a geometry (geom) object?</li>
+</ul>
+<h2 id="33-aesthetics-with-exercises">3.3 Aesthetics with Exercises</h2>
+<ul>
+<li>What is an <strong>aesthetic</strong>?</li>
+<li>Aside from <code>x</code> and <code>y</code>, give three examples of aesthetic properties.</li>
+<li>Do the exercises 1-6 in Section 3.3.1. The point brought up in exercise 1 is kind of subtle - we should discuss it in class. Write down at least one sentence to say about it.</li>
+</ul>
+<h2 id="35-facets-with-exercises">3.5 Facets with Exercises</h2>
+<p>There are six exercises in this section. Do them all.</p>
+<p>Make predictions before you run code, write them down first, then if you were wrong explain something you learned or still wonder about.</p>
+<p>Q4: Also make the plot using color instead of faceting.</p>
+<h2 id="36-geometric-objects-geoms">3.6 Geometric objects (geoms)</h2>
+<ul>
+<li>Name three different kinds of geoms. (Two are easy to find in the text.)</li>
+<li>How do you get two different representations (geoms) to show in the same plot?</li>
+<li>How do you avoid repeating the assignments of variables to the <code>x</code> and <code>y</code> coordinates when you are showing multiple geometries in one graph?</li>
+<li>Bonus: What can you do if you are only interested in graphing a line through the four cylinder vehicles?</li>
+</ul>
+<p>There are six exercises in this section. Do them all.</p>
+<p>Q5: As usual, write your prediction and explanation before checking by running the code. If you learn something, add another sentence explaining your new understanding.</p>
+<p>Q6: Making these graphs is a fundamental learning experience!</p>
+<h2 id="37-statistics">3.7 Statistics</h2>
+<ul>
+<li>What is the relationship between a geometry and a statistic?</li>
+</ul>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/intermediate-cs/resources/why-racket/" title="Why Racket?"> <i class="fa fa-chevron-left"></i><label>Why Racket?</label></a>
-    <a class="nav nav-next" href="/intermediate-cs/resources/ics-wescheme-note/" title="WeScheme" style="margin-right: 0px;"><label>WeScheme</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ml/r4ds/ch02/" title="Ch02"> <i class="fa fa-chevron-left"></i><label>Ch02</label></a>
+    <a class="nav nav-next" href="/resources/" title="Resources" style="margin-right: 0px;"><label>Resources</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -323,7 +351,7 @@
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 29/10/2017
+        <i class='fa fa-calendar'></i> Last update on 10/09/2020
     </div>
     
 

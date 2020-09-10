@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Online Help :: WY Computer Science</title>
+<title>Ch01 :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="">
+<meta name="description" content="Introduction.">
 
 
 
     
   </head>
-  <body data-url="/intermediate-cs/resources/e-courses/">
+  <body data-url="/ml/r4ds/ch01/">
     
       <header>
   <div class="logo">
@@ -74,18 +74,16 @@
       <a href="/ap-cs/">AP CS</a>
       </div>
     </li>
-    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
+    <li data-nav-id="/intermediate-cs/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/">Intermediate CS</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/">Intermediate CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/intermediate-cs/resources/" class="dd-item parent haschildren
+    <li data-nav-id="/intermediate-cs/resources/" class="dd-item haschildren
         ">
       <div>
-      <a href="/intermediate-cs/resources/">Resources</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/intermediate-cs/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/intermediate-cs/resources/why-racket/" class="dd-item">
@@ -95,7 +93,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/intermediate-cs/resources/e-courses/" class="dd-item active">
+      <li data-nav-id="/intermediate-cs/resources/e-courses/" class="dd-item">
         <div>
           <a href="/intermediate-cs/resources/e-courses/">
             Online Help
@@ -113,10 +111,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/" class="dd-item haschildren
+    <li data-nav-id="/ml/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/">Machine Learning</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/startup/" class="dd-item">
@@ -126,13 +125,14 @@
           </a>
         </div>
     </li>
-    <li data-nav-id="/ml/r4ds/" class="dd-item haschildren
+    <li data-nav-id="/ml/r4ds/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/r4ds/">R for Data Science</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/r4ds/">R for Data Science</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ml/r4ds/ch01/" class="dd-item">
+      <li data-nav-id="/ml/r4ds/ch01/" class="dd-item active">
         <div>
           <a href="/ml/r4ds/ch01/">
             Ch01
@@ -260,17 +260,18 @@
     <option value="/ap-cs/" >
    AP CS</option>
     <option value="/intermediate-cs/" >
-   Intermediate CS</option> 
-    <option value="/intermediate-cs/resources/" >
-  - 
-   Resources</option> 
-      <option value="/intermediate-cs/resources/why-racket/" >-- Why Racket?</option>
-      <option value="/intermediate-cs/resources/e-courses/"  selected>-- Online Help</option>
-      <option value="/intermediate-cs/resources/ics-wescheme-note/" >-- WeScheme</option>
-  
-  
+   Intermediate CS</option>
     <option value="/ml/" >
-   Machine Learning</option>
+   Machine Learning</option> 
+      <option value="/ml/startup/" >- ML Startup</option>
+    <option value="/ml/r4ds/" >
+  - 
+   R for Data Science</option> 
+      <option value="/ml/r4ds/ch01/"  selected>-- Ch01</option>
+      <option value="/ml/r4ds/ch02/" >-- Ch02</option>
+      <option value="/ml/r4ds/ch03/" >-- Ch03</option>
+  
+  
     <option value="/resources/" >
    Resources</option>
 
@@ -281,33 +282,55 @@
     </div>
     
 
-    <h1>Online Help</h1>
+    <h1>Ch01</h1>
 
     
     
     
-    <p>The best resource I am aware of is Gregor Kiczales&rsquo; course <a href="https://www.edx.org/course/how-code-simple-data-ubcx-htc1x">How to Code: Simple Data</a>. The course is available for free through edX.</p>
-<h2 id="kiczales-course-structure">Kiczales Course Structure</h2>
-<p>The two most important parts of the course (from my point of view) are:</p>
+    <p><strong>Warning</strong>: Section 1.4 does not describe the method we will use for accessing R.</p>
 <ul>
-<li>
-<p><strong>Module 1b: How to Design Functions.</strong> The design process.</p>
-</li>
-<li>
-<p><strong>Module 3a: How to Design Worlds.</strong> Big-bang.</p>
-</li>
+<li>What are the steps used in a typical data science project?</li>
+<li>Define what the authors mean by &ldquo;tidy data&rdquo;.</li>
+<li>Transformations
+<ul>
+<li>There are three types of transformations listed. Give each type.</li>
+<li>Briefly describe a (possibly imaginary) dataset (<em>not</em> from the book).</li>
+<li>Using this data set, give an example of each type of transformation.</li>
 </ul>
-<h2 id="other-resources">Other Resources</h2>
-<p>Signing up for a free online course is too much commitment? You could browse
-<a href="https://www.youtube.com/user/gregorkiczales/playlists">the YouTube playlists of Professor Kiczales</a>. The first video of Summer 110 Weeks 3-4 is an introduction to big-bang.</p>
+</li>
+<li>The book mentions both visualization and modeling. Which is more appropriate for the beginning of an investigation, and why?</li>
+<li>How large does the book consider to be a &ldquo;small&rdquo; data set? How big would a &ldquo;larger&rdquo; data set be? Does the book give a clue at what point the authors start to consider a data set &ldquo;Big Data&rdquo;?</li>
+<li>Name at least two other computer languages commonly uesd in data science.</li>
+<li>What would the authors think about me teaching Python and Hadoop alongside of R in this class? Explain their reasoning.</li>
+<li>In a nutshell, what is the difference between  exploration and hypothesis confirmation?</li>
+</ul>
+<h2 id="getting-help">Getting Help</h2>
+<p>Section 1.6 has some brief information about how to figure out what is going on when something goes wrong. At the start, here is some advice:</p>
+<ul>
+<li>Make sure you can clearly state what the code you are typing is supposed to do. If you&rsquo;re not sure what the result should look like, get clear on that first.</li>
+<li>Make a small example instead of being frustrated with a large one. If you have problems reading the hundred line data file, will it work when you cut it down to two lines? The book says it beautifully:</li>
+</ul>
+<blockquote>
+<p>Do your best to remove everything that is not related to the problem. The shorter your code is, the easier it is to understand, and the easier it is to fix.</p>
+</blockquote>
+<ul>
+<li>Check every step. If one line has a bunch of commands on it, break them down into separate lines and look at the answer after each one.</li>
+<li>Post your question for the class.</li>
+</ul>
+<h2 id="application-question">Application Question</h2>
+<p>The Society of Actuaries has a 45 million record data set about group long term disability insurance. Each record is an instance of a disability claim. There are about 29 pieces of information associated with each claim. Do you think this qualifies as big data? Explain why or why not. (Data format is in Appendix A of the <a href="https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/2009-2017-gltd-study-report-appendix-1.pdf">SOA Data Request</a>.)</p>
+<h2 id="review-questions">Review Questions</h2>
+<ul>
+<li>When someone talks about &ldquo;wrangling&rdquo; data, what do they mean?</li>
+</ul>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/intermediate-cs/resources/why-racket/" title="Why Racket?"> <i class="fa fa-chevron-left"></i><label>Why Racket?</label></a>
-    <a class="nav nav-next" href="/intermediate-cs/resources/ics-wescheme-note/" title="WeScheme" style="margin-right: 0px;"><label>WeScheme</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ml/r4ds/" title="R for Data Science"> <i class="fa fa-chevron-left"></i><label>R for Data Science</label></a>
+    <a class="nav nav-next" href="/ml/r4ds/ch02/" title="Ch02" style="margin-right: 0px;"><label>Ch02</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -323,7 +346,7 @@
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 29/10/2017
+        <i class='fa fa-calendar'></i> Last update on 10/09/2020
     </div>
     
 
