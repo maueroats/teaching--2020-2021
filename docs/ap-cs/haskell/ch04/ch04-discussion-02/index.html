@@ -1,0 +1,81 @@
+	<head><meta charset="utf-8"></head>
+
+	<link rel="stylesheet" href="/revealjs/css/reveal.css">
+	<link rel="stylesheet" href="/revealjs/css/theme/white.css" id="theme">
+	<link rel="stylesheet" href="/revealjs/lib/css/zenburn.css">
+
+	<div class="reveal">
+	<div class="slides">
+	<section data-markdown
+	         data-separator="^---"
+		 data-separator-vertical="^___"
+		 data-separator-notes="^Note:">
+	
+# `sub_posn`
+
+* Two ordered pair inputs.
+* Ordered pair output.
+* Subtract corresponding coordinates.
+
+`sub_posn (5,7) (1,2) == (4,5)`
+
+---
+
+# Dot Product
+
+Multiply the corresponding parts and add.
+
+`dot_product (1,3) (4,7) == 1*4 &#43; 3*7`
+
+---
+
+# First of 
+
+`first_of [5,1,2,3] ==`
+
+`&#34;The first element of [5,1,2,3] is 5.&#34;`
+
+---
+
+# Pattern
+
+Write a function creating this pattern.
+
+ n     |  0  |  1  |  2  |  3  |  4  |  5  |  6  |
+ ------|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+ value | &#34;a&#34; | &#34;b&#34; | &#34;c&#34; | &#34;ab&#34; | &#34;bc&#34; | &#34;cab&#34; | &#34;abbc&#34; |
+
+---
+
+
+# What?
+
+`whaa (a,b,c) wow@[x:y:z:ws] = `
+
+    a : z : wow
+
+`whaa (5,2,1) [2,4..10] == ?`
+
+	</section>
+	</div>
+	</div>
+	<script src="/revealjs/lib/js/head.min.js"></script>
+	<script src="/revealjs/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+		      	embedded : true,
+
+		        
+		        
+		        
+		        dependencies: [
+		          { src: '\/revealjs\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: '\/revealjs\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/math\/math.js', async: true}
+		        ]
+		      });
+	</script>

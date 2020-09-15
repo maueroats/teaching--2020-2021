@@ -1,0 +1,109 @@
+	<head><meta charset="utf-8"></head>
+
+	<link rel="stylesheet" href="/revealjs/css/reveal.css">
+	<link rel="stylesheet" href="/revealjs/css/theme/white.css" id="theme">
+	<link rel="stylesheet" href="/revealjs/lib/css/zenburn.css">
+
+	<div class="reveal">
+	<div class="slides">
+	<section data-markdown
+	         data-separator="^---"
+		 data-separator-vertical="^___"
+		 data-separator-notes="^Note:">
+	
+# Cubes
+
+* List: all perfect cubes divisible by 16 and less than N.
+* Write signature.
+
+```haskell
+cubes 100 == [64]
+cubes 600 == [64, 512]
+```
+
+---
+
+# Partial Average
+
+* Average first N items of a list.
+* Write signature.
+
+```haskell
+partAvg 3 [10,15,50,10000] == 25
+```
+
+---
+
+# Say GPA
+
+* Make a string &#34;My GPA is 3.10&#34;.
+* Number is parameter.
+* Write signature.
+
+```haskell
+sayGPA 3.10 == &#34;My GPA is 3.10&#34;
+```
+
+---
+
+# Count Up I
+
+* Given start and end numbers, print a string.
+* Usage: `countUp 3 7`
+* Result:  &#34;I can count from 3 to 7: [3, 4, 5, 6, 7]&#34;
+
+```haskell
+countUp 3 7 == &#34;I can count from 3 to 7: [3, 4, 5, 6, 7]&#34;
+```
+
+---
+# Count Up II
+
+* Given strings containing start and end numbers, as if typed.
+* Same as Count Up I.
+
+```haskell
+countUpII &#34;3&#34; &#34;7&#34; == &#34;I can count from 3 to 7: [3, 4, 5, 6, 7]&#34;
+```
+
+--- 
+
+# Need `read`? 
+
+Use type signatures and helper functions.
+
+---
+
+# Sample Standard Deviation
+
+Input a list of numbers, say there are n of them.
+
+1. Find the average (called &#34;xbar&#34;).
+2. Find the sum of (x-xbar)^2 for each x in the list.
+3. Divide by n-1.
+4. Take the square root.
+
+
+	</section>
+	</div>
+	</div>
+	<script src="/revealjs/lib/js/head.min.js"></script>
+	<script src="/revealjs/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+		      	embedded : true,
+
+		        
+		        
+		        
+		        dependencies: [
+		          { src: '\/revealjs\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: '\/revealjs\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/math\/math.js', async: true}
+		        ]
+		      });
+	</script>

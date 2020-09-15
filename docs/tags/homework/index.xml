@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>homework on WY Computer Science</title>
+    <link>https://wy-cs.info/tags/homework/</link>
+    <description>Recent content in homework on WY Computer Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Sep 2019 15:59:25 -0500</lastBuildDate>
+    
+	<atom:link href="https://wy-cs.info/tags/homework/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Haskell HW 2</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch02/hw-a2/</link>
+      <pubDate>Fri, 13 Sep 2019 15:59:25 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch02/hw-a2/</guid>
+      <description>All of the points you should work with have Int coordinates. So far you only know Int, String, and lists of each of those.
+ Write a function onLine that takes in a slope m, a y-intercept b, and a point (x0,y0) and gives back True if the point is on the line y=m*x+b and false otherwise.
+  Write a function moreThan100 that takes in a list of numbers and puts out a list of numbers.</description>
+    </item>
+    
+    <item>
+      <title>Chapter 3 Problem Set</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch03/ch03-hw1/</link>
+      <pubDate>Thu, 14 Sep 2017 10:00:00 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch03/ch03-hw1/</guid>
+      <description>&lt;p&gt;The essentials of the Types and Typeclasses chapter are: writing type
+signatures for functions, reading string inputs with the &lt;code&gt;Read&lt;/code&gt; class,
+and dealing with Integral to Fractional conversions when they are needed.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Chapter 4 Problem Set</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch04/ch04-problemset/</link>
+      <pubDate>Wed, 20 Sep 2017 20:32:15 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch04/ch04-problemset/</guid>
+      <description>Key new concepts: patterns, guards, where, let, case.
+Please write function signatures for every solution.
+ Some of these problems are classical exercises with solutions online. Please do not search for them or read them before turning in your work. (See Academic Integrity.)
+Exercises   First Third. Return the sum of the first and third elements in the list. Example: firstThird [10,30,50,90] == 60.
+  Take a list of items that can be compared for equality (Eq a) and reduce repeats to a single element.</description>
+    </item>
+    
+  </channel>
+</rss>

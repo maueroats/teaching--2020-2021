@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>project on WY Computer Science</title>
+    <link>https://wy-cs.info/tags/project/</link>
+    <description>Recent content in project on WY Computer Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Oct 2018 09:37:17 -0500</lastBuildDate>
+    
+	<atom:link href="https://wy-cs.info/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Connect Four</title>
+      <link>https://wy-cs.info/ap-cs/haskell/connect-four/</link>
+      <pubDate>Tue, 09 Oct 2018 09:37:17 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/connect-four/</guid>
+      <description>Familiarize yourself with the game of Connect Four, possibly playing a few games.
+ Connect Four Overview 
+ Connect Four UI 
+ Connect Four Testcases 
+ Connect Four Spoilers 
+ Primer 2 
+ Connect Four Rubric 
+ </description>
+    </item>
+    
+  </channel>
+</rss>

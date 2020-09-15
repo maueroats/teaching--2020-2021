@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>haskell on WY Computer Science</title>
+    <link>https://wy-cs.info/tags/haskell/</link>
+    <description>Recent content in haskell on WY Computer Science</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Sep 2019 15:59:25 -0500</lastBuildDate>
+    
+	<atom:link href="https://wy-cs.info/tags/haskell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1. Intro</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch01/</link>
+      <pubDate>Sat, 09 Sep 2017 15:34:07 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch01/</guid>
+      <description>&lt;p&gt;A high-level overview of the Haskell language and why its features are good.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>3. Types and Typeclasses</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch03/</link>
+      <pubDate>Tue, 12 Sep 2017 13:18:35 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch03/</guid>
+      <description>&lt;p&gt;Types categorize the kinds of data that appear in a program. Typeclasses provide general abilities that different types can have.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>4. Syntax in Functions</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch04/</link>
+      <pubDate>Mon, 18 Sep 2017 13:22:05 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch04/</guid>
+      <description>&lt;p&gt;Patterns, guards, where, let, and case.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Haskell</title>
+      <link>https://wy-cs.info/ap-cs/haskell/</link>
+      <pubDate>Wed, 05 Sep 2018 11:26:51 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/</guid>
+      <description>You will need the the text Learn You a Haskell For Great Good.
+ Tip: Use repl.it for programming.
+ Haskell is a pure, lazy, statically typed language. In the first chapter you will learn what those terms mean. Later you will learn how to write programs.
+Chapters  1. Intro
+A high-level overview of the Haskell language and why its features are good.
+  2. Starting Out</description>
+    </item>
+    
+    <item>
+      <title>Chapter 4 Reading Guide</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch04/ch04-reading-guide/</link>
+      <pubDate>Sun, 17 Sep 2017 20:47:05 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch04/ch04-reading-guide/</guid>
+      <description>Sections 4.1&amp;ndash;4.3   A pattern starts out with &amp;ldquo;dog&amp;rdquo;,&amp;ldquo;cat&amp;rdquo;, &amp;ldquo;cat dog&amp;rdquo;, &amp;ldquo;cat dog cat&amp;rdquo;, &amp;ldquo;cat dog cat cat dog&amp;rdquo;, &amp;ldquo;cat dog cat cat dog cat dog cat&amp;rdquo; and so on - each new string is created by appending the previous two with a space in between them. Write a function that takes in the number of the word in the sequence and returns the word, starting with 1 is &amp;ldquo;dog&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Chapter 2 Reading Guide</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch02/ch02-reading-guide/</link>
+      <pubDate>Sat, 09 Sep 2017 15:57:47 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch02/ch02-reading-guide/</guid>
+      <description>Haskell Starting Out Questions A. Sections 2.1&amp;ndash;2.3   There is an annoyance with negative numbers that is mentioned.
+ What is the correct way to write five times negative three in Haskell? What is a wrong way to do the same thing?    Logical operations are basic building blocks of programs. How do you write:
+ and or not equals not equals    Haskell follows mostly the normal order of operations from mathematics.</description>
+    </item>
+    
+    <item>
+      <title>Haskell CW II.2</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch02/cw-a2/</link>
+      <pubDate>Sat, 09 Sep 2017 15:57:47 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch02/cw-a2/</guid>
+      <description>&lt;script&gt;
+MathJax = {
+ tex: {
+  inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]],
+  displayMath: [[&#39;$$&#39;,&#39;$$&#39;], [&#39;\\[&#39;,&#39;\\]&#39;]]
+  }};
+&lt;/script&gt;
+&lt;script src=&#34;https://polyfill.io/v3/polyfill.min.js?features=es6&#34;&gt;&lt;/script&gt;
+&lt;script id=&#34;MathJax-script&#34; async src=&#34;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js&#34;&gt;&lt;/script&gt;
+
+
+
+&lt;h2 id=&#34;warmup&#34;&gt;Warmup&lt;/h2&gt;
+&lt;p&gt;On the line $y = 3x-5$, find at least 20 ordered pairs $(x,y)$ with
+$0\le x \le 5$.&lt;/p&gt;
+&lt;h2 id=&#34;class-work-for-21--23&#34;&gt;Class work for 2.1&amp;ndash;2.3&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://projecteuler.net/problem=6&#34;&gt;Sum Square Difference&lt;/a&gt;
+The sum of the squares of the first ten natural numbers is,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; 1^2 + 2^2 + ... + 10^2 = 385
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The square of the sum of the first ten natural numbers is,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; (1 + 2 + ... + 10)^2 = 55^2 = 3025
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 - 385 = 2640.&lt;/p&gt;
+&lt;p&gt;Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>Haskell HW 2</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch02/hw-a2/</link>
+      <pubDate>Fri, 13 Sep 2019 15:59:25 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch02/hw-a2/</guid>
+      <description>All of the points you should work with have Int coordinates. So far you only know Int, String, and lists of each of those.
+ Write a function onLine that takes in a slope m, a y-intercept b, and a point (x0,y0) and gives back True if the point is on the line y=m*x+b and false otherwise.
+  Write a function moreThan100 that takes in a list of numbers and puts out a list of numbers.</description>
+    </item>
+    
+    <item>
+      <title>Chapter 3 Reading Guide</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch03/ch03-reading-guide-haskell/</link>
+      <pubDate>Wed, 13 Sep 2017 13:18:35 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch03/ch03-reading-guide-haskell/</guid>
+      <description>You should use valid Haskell types in all of your answers. Unless needed, I stick with Int for the type for integers.
+Basics  How do you find the type of an expression (when using the interpreter)?
+  What is the type of a string, written in correct Haskell type syntax?
+  What is the type of the expression (5 == 5)?
+  What is the type signature for a function that takes in an integer and puts out a string?</description>
+    </item>
+    
+    <item>
+      <title>Chapter 3 Problem Set</title>
+      <link>https://wy-cs.info/ap-cs/haskell/ch03/ch03-hw1/</link>
+      <pubDate>Thu, 14 Sep 2017 10:00:00 -0500</pubDate>
+      
+      <guid>https://wy-cs.info/ap-cs/haskell/ch03/ch03-hw1/</guid>
+      <description>&lt;p&gt;The essentials of the Types and Typeclasses chapter are: writing type
+signatures for functions, reading string inputs with the &lt;code&gt;Read&lt;/code&gt; class,
+and dealing with Integral to Fractional conversions when they are needed.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

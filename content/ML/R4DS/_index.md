@@ -9,7 +9,7 @@ description: "R for Data Science resources, questions, and exercises."
 ---
 
 * [R for Data Science](https://r4ds.had.co.nz/): Main text.
-* [Modern Dive: Statistical Infernce via Data
+* [Modern Dive: Statistical Inference via Data
   Science](https://moderndive.com/): Supplemental reading. 
    More details, more examples. Less technical.
 

@@ -1,0 +1,96 @@
+	<head><meta charset="utf-8"></head>
+
+	<link rel="stylesheet" href="/revealjs/css/reveal.css">
+	<link rel="stylesheet" href="/revealjs/css/theme/white.css" id="theme">
+	<link rel="stylesheet" href="/revealjs/lib/css/zenburn.css">
+
+	<div class="reveal">
+	<div class="slides">
+	<section data-markdown
+	         data-separator="^---"
+		 data-separator-vertical="^___"
+		 data-separator-notes="^Note:">
+	
+# Chapter 4 Discussion
+
+
+---
+
+## Absence Interpretation
+
+| Periods Absent | Probability of all day absence |
+|:--------------:|:------------------------------:|
+|      a &gt;= 6    |       1.0                      |
+|      a &gt;= 3    |       0.5                      |
+|      a &lt;  3    |       0.0                      |
+
+---
+
+## Speaker
+
+| Input | Pattern output |
+|:-----:|----------------|
+|   1   |  &#34;welcome&#34;     |
+|   2   |  &#34;students&#34;    |
+|   3   | &#34;_students_ welcome welcome _students_&#34; |
+|   4   | &#34;_students_ welcome welcome _students_ students students _students_ welcome welcome _students_&#34; |
+|   n   | (previous output) (output before that) (output before that) (previous output) |
+
+---
+
+## Trimult
+
+Given a list of numbers, produce a list of all products of three terms in a row.
+
+* `trimult [10,20,50] = [10000]`
+* `trimult [1,2,3,4,5,6] = [6,24,60,120]`
+
+---
+
+## Second and third
+
+|Input|Output|
+|-----|------|
+| [1,5,10] | &#34;The second and third items of [1,5,10] add to be 15&#34; |
+| [3,40,60,99] | &#34;The second and third items of [3,40,60,99] add to be 100&#34; |
+
+ Try two different ways!
+
+---
+
+## Eighty-first
+
+Find the eighty-first item in a list.
+
+|Input|Output|
+|-----|------|
+| [0,2..200] | 162 |
+|[110,120..]| 920 |
+
+---
+
+
+
+	</section>
+	</div>
+	</div>
+	<script src="/revealjs/lib/js/head.min.js"></script>
+	<script src="/revealjs/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+		      	embedded : true,
+
+		        
+		        
+		        
+		        dependencies: [
+		          { src: '\/revealjs\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: '\/revealjs\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/math\/math.js', async: true}
+		        ]
+		      });
+	</script>
