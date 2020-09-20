@@ -6,6 +6,9 @@ date: 2017-09-09T15:50:00-05:00
 
 # Computer Science Syllabus
 
+Please see the [grading document]({{% relref "Grading-Scale" %}}) for
+COVID-year grade weights.
+
 ## Overview
 
 The most important information (contact information, grading scale) comes first. 
@@ -16,14 +19,14 @@ Anything you need that you do not see here, check the following sources:
 
 ## Course-specific information
 
-* [AP Computer Science]({{< relref "APCS-Syllabus--2017-2018.md" >}})
+* [AP Computer Science]({{< relref "APCS-Syllabus--2019-2020.md" >}})
 * [Intermediate Computer Science]({{< relref "IntermediateCS-Syllabus--2017-2018.md" >}})
 
 ## Contact information
 
 I read email regularly. Email [amauer-oats@cps.edu](mailto:amauer-oats@cps.edu). 
 I am willing to call or text with you. 
-Make sure your student put your phone number on the [parent page of the student information form](http://tinyurl.com/2017b-wy-cs-survey) ... or email me.
+Make sure your student put your phone number on the parent page of the student information form ... or email me.
 
 ## Philosophy
 

@@ -116,7 +116,7 @@ The sum of the squares of the first ten natural numbers is,&lt;/p&gt;
       
       <guid>https://wy-cs.info/ap-cs/haskell/ch02/hw-a2/</guid>
       <description>All of the points you should work with have Int coordinates. So far you only know Int, String, and lists of each of those.
- Write a function onLine that takes in a slope m, a y-intercept b, and a point (x0,y0) and gives back True if the point is on the line y=m*x+b and false otherwise.
+  Write a function onLine that takes in a slope m, a y-intercept b, and a point (x0,y0) and gives back True if the point is on the line y=m*x+b and false otherwise.
   Write a function moreThan100 that takes in a list of numbers and puts out a list of numbers.</description>
     </item>
     
@@ -127,7 +127,7 @@ The sum of the squares of the first ten natural numbers is,&lt;/p&gt;
       
       <guid>https://wy-cs.info/ap-cs/haskell/ch03/ch03-reading-guide-haskell/</guid>
       <description>You should use valid Haskell types in all of your answers. Unless needed, I stick with Int for the type for integers.
-Basics  How do you find the type of an expression (when using the interpreter)?
+Basics   How do you find the type of an expression (when using the interpreter)?
   What is the type of a string, written in correct Haskell type syntax?
   What is the type of the expression (5 == 5)?
   What is the type signature for a function that takes in an integer and puts out a string?</description>

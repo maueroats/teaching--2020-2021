@@ -13,7 +13,7 @@ description: "Graph a function, is a point on a line, get the numbers more than 
 All of the points you should work with have `Int` coordinates. So far
 you only know `Int`, `String`, and lists of each of those.
 
-5. Write a function `onLine` that takes in a slope `m`, a y-intercept `b`, and a point `(x0,y0)` and gives back True if the point is on the line `y=m*x+b` and false otherwise.
+1. Write a function `onLine` that takes in a slope `m`, a y-intercept `b`, and a point `(x0,y0)` and gives back True if the point is on the line `y=m*x+b` and false otherwise.
 
 6. Write a function `moreThan100` that takes in a list of numbers and puts out a list of numbers. The output is the same as the input with all of the numbers less than or equal to 100 removed.
 

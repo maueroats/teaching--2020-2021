@@ -12,7 +12,7 @@ description: "We learn about types and typeclasses. Types are familiar. Typeclas
 You should use valid Haskell types in all of your answers. Unless needed, I stick with Int for the type for integers.
 
 ## Basics
-5. How do you find the type of an expression (when using the interpreter)?
+1. How do you find the type of an expression (when using the interpreter)?
 2. What is the type of a string, written in correct Haskell type syntax?
 6. What is the type of the expression (5 == 5)?
 7. What is the type signature for a function that takes in an integer and puts out a string?
@@ -32,7 +32,7 @@ You should use valid Haskell types in all of your answers. Unless needed, I stic
     3. init
     
 ## Class Constraints
-13. Where can you find a class constraint?
+12. Where can you find a class constraint?
 14. What special symbol separates a class constraint from a function's type?
 15. What is the best type to give the function:
     ```
@@ -42,17 +42,17 @@ You should use valid Haskell types in all of your answers. Unless needed, I stic
 16. What familiar typeclass indicates that something can be written in string form?
 
 ## The Read Typeclass
-17. What does being in the Read typeclass indicate?
+16. What does being in the Read typeclass indicate?
 18. How can you convert the string "10230" to an integer?
 
 ## Miscellaneous Typeclasses
-19. What is the main use of the Enum typeclass?
+18. What is the main use of the Enum typeclass?
 20. Aside from integers, give two other examples of things in the Enum typeclass.
 21. What typeclass tells you that something has a largest and smallest value?
 22. How would you find the smallest possible Int in Haskell?
 
 ## Math
-23. What is the difference between 5 and (5 :: Int)? 
+22. What is the difference between 5 and (5 :: Int)? 
 24. Can you do this math? 
     1. 3.2 * (5 :: Int) 
     2. 5.63 * 20
@@ -60,7 +60,7 @@ You should use valid Haskell types in all of your answers. Unless needed, I stic
     listBigSize aList = 3 * (length aList)
 
 ## Integral vs Floating
-26. The last function discussed in the chapter is the most important by far. 
+25. The last function discussed in the chapter is the most important by far. 
     1. Write its name and signature here.
     2. What is it used for?
 
