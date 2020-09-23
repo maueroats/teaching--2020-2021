@@ -10,6 +10,11 @@ description: "A short test of some Chapter 2 skills."
 
 {{< use-mathjax >}}
 
+This is a test, please do it on your own and do not help others. You
+are supposed to show your understanding of Haskell. Just getting an
+answer might not show a good understanding.
+
+
 1. Create the following list with less effort:
    `[31,35,39,43,47,...,431] `
    
