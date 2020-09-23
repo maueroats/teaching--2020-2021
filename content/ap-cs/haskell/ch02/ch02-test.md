@@ -26,9 +26,10 @@ answer might not show a good understanding.
       * 10201 = 101^2 is an odd perfect square, but it is not less
         than 1000
         
-3. Given $y=3x-12$, find 100 points on this line with $0 <= x <= 10$.
+3. Given $y=3x-12$, find 100 points on this line with $0 <= x <=
+   10$. No need to round to make them _exactly_ on the line.
 
-4. Write a function to select all of the numbers between 200 and 300
+4. Write a function to select all of the numbers between 200 and 300 (inclusive)
    out of a given list.
    
     `prob4 [100,250,290,310,210] == [250, 290, 210]`
