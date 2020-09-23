@@ -2,9 +2,10 @@
 title: "Chapter 2 Test"
 date: 2019-09-12T13:34:57-05:00
 weight: 200
-draft: true
+draft: false
 #type: slide
 #theme: white
+description: "A short test of some Chapter 2 skills."
 ---
 
 {{< use-mathjax >}}

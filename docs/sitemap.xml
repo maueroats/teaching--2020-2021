@@ -258,6 +258,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/ml/r4ds/ch07/</loc>
+    <lastmod>2020-09-22T12:32:23-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch07/</loc>
     <lastmod>2019-12-12T16:27:28-06:00</lastmod>
   </url>
@@ -340,6 +345,11 @@
   <url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch05/ch05-quiz/</loc>
     <lastmod>2019-11-07T13:23:13-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/ap-cs/haskell/ch02/ch02-test/</loc>
+    <lastmod>2019-09-12T13:34:57-05:00</lastmod>
   </url>
   
   <url>

@@ -20,22 +20,21 @@ options(repr.plot.width=10, repr.plot.height=6)
 theme_update(text = element_text(size=20))
 ```
 
-## Repr Update
+## Farver Update
 
+(Last tested: 2020-09-23.) 
 I have had weird errors (see below) when trying to use fill colors
 with a continuous variable. Solution: make
-sure you have an up-to-date "repr" package, then choose the menu option
-"Runtime -> Restart and run all". No restart is needed if a new
-package is not installed (read the output from the `install_github`
-command). 
-
+sure you have an up-to-date "farver" package.
 ```
-devtools::install_github('IRkernel/repr')
-## restart runtime if this installs a new package
+install.packages(c("farver"))
 ```
+If you get the error message, you will need to reload the kernel to
+get the up-to-date "farver" package.
+Choose the menu option "Runtime -> Restart and run all".
 
 If you can run the code below without errors, you do not need the
-`repr` fix.
+`farver` fix.
 ```
 library(tidyverse)
 x <- LETTERS[1:20]

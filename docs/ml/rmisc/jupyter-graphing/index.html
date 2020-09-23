@@ -150,6 +150,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/ch02-test/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/ch02-test/">
+            Chapter 2 Test
+          </a>
+        </div>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ap-cs/haskell/ch03/" class="dd-item haschildren
@@ -705,6 +712,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/ml/r4ds/ch07/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch07/">
+            Ch07
+          </a>
+        </div>
+    </li>
         </ul>
     </li>
         </ul>
@@ -832,17 +846,17 @@ an internal package.</p>
 <p>I use these options to make my Jupyter notebook plots look good.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">options(repr.plot.width=10, repr.plot.height=6)
 theme_update(text = element_text(size=20))
-</code></pre></div><h2 id="repr-update">Repr Update</h2>
-<p>I have had weird errors (see below) when trying to use fill colors
+</code></pre></div><h2 id="farver-update">Farver Update</h2>
+<p>(Last tested: 2020-09-23.)
+I have had weird errors (see below) when trying to use fill colors
 with a continuous variable. Solution: make
-sure you have an up-to-date &ldquo;repr&rdquo; package, then choose the menu option
-&ldquo;Runtime -&gt; Restart and run all&rdquo;. No restart is needed if a new
-package is not installed (read the output from the <code>install_github</code>
-command).</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">devtools::install_github(&#39;IRkernel/repr&#39;)
-## restart runtime if this installs a new package
-</code></pre></div><p>If you can run the code below without errors, you do not need the
-<code>repr</code> fix.</p>
+sure you have an up-to-date &ldquo;farver&rdquo; package.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">install.packages(c(&#34;farver&#34;))
+</code></pre></div><p>If you get the error message, you will need to reload the kernel to
+get the up-to-date &ldquo;farver&rdquo; package.
+Choose the menu option &ldquo;Runtime -&gt; Restart and run all&rdquo;.</p>
+<p>If you can run the code below without errors, you do not need the
+<code>farver</code> fix.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">library(tidyverse)
 x &lt;- LETTERS[1:20]
 y &lt;- paste0(&#34;var&#34;, seq(1,20))
