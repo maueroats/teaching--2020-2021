@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Academic Integrity :: WY Computer Science</title>
+<title>Ch05 Book :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="">
+<meta name="description" content="A digest of some information from Chapter 5.">
 
 
 
     
   </head>
-  <body data-url="/resources/academic-integrity/">
+  <body data-url="/ml/r4ds/ch05-book/">
     
       <header>
   <div class="logo">
@@ -641,10 +641,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/" class="dd-item haschildren
+    <li data-nav-id="/ml/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/">Machine Learning</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/startup/" class="dd-item">
@@ -676,10 +677,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/r4ds/" class="dd-item haschildren
+    <li data-nav-id="/ml/r4ds/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/r4ds/">R for Data Science</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/r4ds/">R for Data Science</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/r4ds/ch01/" class="dd-item">
@@ -703,7 +705,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ml/r4ds/ch05-book/" class="dd-item">
+      <li data-nav-id="/ml/r4ds/ch05-book/" class="dd-item active">
         <div>
           <a href="/ml/r4ds/ch05-book/">
             Ch05 Book
@@ -728,11 +730,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/resources/" class="dd-item parent haschildren
+    <li data-nav-id="/resources/" class="dd-item haschildren
         ">
       <div>
-      <a href="/resources/">Resources</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/resources/generic-cs-syllabus/" class="dd-item">
@@ -763,7 +764,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/resources/academic-integrity/" class="dd-item active">
+      <li data-nav-id="/resources/academic-integrity/" class="dd-item">
         <div>
           <a href="/resources/academic-integrity/">
             Academic Integrity
@@ -819,21 +820,24 @@
     <option value="/intermediate-cs/" >
    Intermediate CS</option>
     <option value="/ml/" >
-   Machine Learning</option>
-    <option value="/resources/" >
-   Resources</option> 
-      <option value="/resources/generic-cs-syllabus/" >- Syllabus: All Courses</option>
-      <option value="/resources/apcs-syllabus-2019-2020/" >- Syllabus: AP CS</option>
-      <option value="/resources/intermediatecs-syllabus/" >- Syllabus: Intermediate</option>
-      <option value="/resources/grading-scale/" >- Grade Weights</option>
-      <option value="/resources/academic-integrity/"  selected>- Academic Integrity</option>
-      <option value="/resources/letters-of-recommendation/" >- Letters of Recommendation</option>
-      <option value="/resources/interview/" >- Interviews</option>
-      <option value="/resources/senioritis/" >- Senioritis</option>
-    <option value="/resources/events/" >
+   Machine Learning</option> 
+      <option value="/ml/startup/" >- ML Startup</option>
+    <option value="/ml/rmisc/" >
   - 
-   CS Events</option>
+   R: Misc</option>
+    <option value="/ml/r4ds/" >
+  - 
+   R for Data Science</option> 
+      <option value="/ml/r4ds/ch01/" >-- Ch01</option>
+      <option value="/ml/r4ds/ch02/" >-- Ch02</option>
+      <option value="/ml/r4ds/ch03/" >-- Ch03</option>
+      <option value="/ml/r4ds/ch05-book/"  selected>-- Ch05 Book</option>
+      <option value="/ml/r4ds/ch05/" >-- Ch05 Problem Set</option>
+      <option value="/ml/r4ds/ch07/" >-- Ch07</option>
   
+  
+    <option value="/resources/" >
+   Resources</option>
 
 
 
@@ -842,52 +846,90 @@
     </div>
     
 
-    <h1>Academic Integrity</h1>
+    <h1>Ch05 Book</h1>
 
     
     
     
-    <p>Being honest and honorable regarding one’s academic integrity is
-essential in all of your classes.</p>
-<p>Students are expected to adhere to the following honor code regarding
-all of their work in this class.</p>
+    <h2 id="general">General</h2>
+<p>Many summary functions do not work if the data contains <code>NA</code>.
+The <code>na.rm</code> option causes them to be ignored, or <code>drop_na()</code> gets rid
+of them in the pipe. There are other methods we will learn later.</p>
+<h2 id="summarizing-functions-56">Summarizing Functions (5.6)</h2>
 <ul>
-<li>“I have neither given nor received improper aid on this test/project.”</li>
+<li>mean</li>
+<li>median</li>
+<li>sd = standard deviation (will learn later if you do not know)</li>
+<li>n(): how many values are in the group</li>
+<li>n_distinct: how many distinct values</li>
+<li>sum</li>
+<li>min, max</li>
+<li>quantile(data,0.25): produces a single number, a value that
+is greater than 25% of the data values at less than the remaining 75%.
+Read
+<code>?quantile</code> for a surprising amount of technical information.</li>
+<li>ntile(data,n): produces a column of numbers giving which of the n
+bins the input numbers fall into. Outputs number from 1 to n inclusive.</li>
+<li>mad = median absolute deviation</li>
+<li>IQR = interquartile range (Q3-Q1)</li>
 </ul>
-<p>“Improper aid” includes, but is not limited to:</p>
+<p>Detail Notes: a boolean TRUE counts as the number 1 and FALSE counts
+as 0. Summing booleans gives how many trues. Finding the mean of
+booleans gives the proportion that are true.</p>
+<p>Boolean <code>is.na</code> is used to find out how many NAs are in the data.</p>
+<h2 id="window-functions">Window functions</h2>
+<p>Source: <a href="https://cran.r-project.org/web/packages/dplyr/vignettes/window-functions.html">window-functions vignette</a>.</p>
+<p>These functions are normally used only on grouped data.</p>
+<h3 id="common-accumulating-functions">Common accumulating functions</h3>
 <ul>
-<li>copying another student’s work</li>
-<li>allowing another student to copy your work</li>
-<li>sharing the problems given on a test to a student who has not
-taken the test</li>
-<li>copying work from any online or electronic resource without citation</li>
-<li>chatting or texting with another student during a test in which
-computer use is allowed</li>
+<li>cumsum: the cumulative sum</li>
+<li>cummean: the cumulative mean</li>
+<li>cummin: least value so far</li>
+<li>cummax: greatest value so far</li>
+<li>cumall: boolean, true if every value so far is true (like and; once false it
+stays false)</li>
+<li>cumany: boolean, true if any value so far is true (like &ldquo;or&rdquo;; once true it
+stays true)</li>
 </ul>
-<p>On a project (not test), it is acceptable to give suggestions to a
-student who knows less than you do.</p>
+<h3 id="common-other-functions">Common other functions</h3>
 <ul>
-<li>The student who is giving help may read the code of the student
-seeking help.</li>
-<li>The student who is giving help may <em>not</em> type (or write) any code.</li>
+<li>min_rank: order within the window</li>
+<li>lag: the previous item in the vector</li>
+<li>lead: the next item in the vector</li>
 </ul>
-<p>Penalties when a student is caught cheating in this class may include:</p>
+<h3 id="uncommon-ranking-functions">Uncommon: Ranking Functions</h3>
+<p>There are a ton of ranking functions because:</p>
+<ol>
+<li>there are many ways ties can be broken</li>
+<li>everybody wants to rank everything</li>
+</ol>
 <ul>
-<li>A zero on the assessment</li>
-<li>Final grade being lowered a letter</li>
-<li>Expulsion from National Honor Society (NHS or NJHS)</li>
-<li>Denial of a future application to National Honor Society (NHS or NJHS)</li>
-<li>Negatively affecting scholarships and post-high school programs for
-which you have applied</li>
+<li>row_number</li>
+<li>min_rank</li>
+<li>dense_rank</li>
+<li>cume_dist: proportion of values &lt;= current value</li>
+<li>percent_rank: proportion of values &lt; current value</li>
 </ul>
-
+<p>Example from source that shows the difference between these functions.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">x &lt;- c(1, 1, 2, 2, 2)
+row_number(x)
+#&gt; [1] 1 2 3 4 5
+min_rank(x)
+#&gt; [1] 1 1 3 3 3
+dense_rank(x)
+#&gt; [1] 1 1 2 2 2
+cume_dist(x)
+#&gt; [1] 0.4 0.4 1.0 1.0 1.0
+percent_rank(x)
+#&gt; [1] 0.0 0.0 0.5 0.5 0.5
+</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/resources/grading-scale/" title="Grade Weights"> <i class="fa fa-chevron-left"></i><label>Grade Weights</label></a>
-    <a class="nav nav-next" href="/resources/letters-of-recommendation/" title="Letters of Recommendation" style="margin-right: 0px;"><label>Letters of Recommendation</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ml/r4ds/ch03/" title="Ch03"> <i class="fa fa-chevron-left"></i><label>Ch03</label></a>
+    <a class="nav nav-next" href="/ml/r4ds/ch05/" title="Ch05 Problem Set" style="margin-right: 0px;"><label>Ch05 Problem Set</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -903,7 +945,7 @@ which you have applied</li>
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 09/09/2017
+        <i class='fa fa-calendar'></i> Last update on 23/09/2020
     </div>
     
 

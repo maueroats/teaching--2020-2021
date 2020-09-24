@@ -203,8 +203,8 @@
   </url>
   
   <url>
-    <loc>https://wy-cs.info/ml/r4ds/ch05/</loc>
-    <lastmod>2020-09-21T11:26:45-05:00</lastmod>
+    <loc>https://wy-cs.info/ml/r4ds/ch05-book/</loc>
+    <lastmod>2020-09-23T21:16:28-05:00</lastmod>
   </url>
   
   <url>
@@ -215,6 +215,11 @@
   <url>
     <loc>https://wy-cs.info/ap-cs/haskell/connect-four/ui/</loc>
     <lastmod>2017-10-12T09:54:31-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/ml/r4ds/ch05/</loc>
+    <lastmod>2020-09-21T11:26:45-05:00</lastmod>
   </url>
   
   <url>
