@@ -7,6 +7,10 @@ draft: false
 #theme: white
 description: "A digest of some information from Chapter 5."
 ---
+
+Note: three assignments are recommended: 5.3-5.5, 5.6,
+5.7. Combining the last two was too much work.
+
 ## General
 
 Many summary functions do not work if the data contains `NA`. 
