@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Tags :: WY Computer Science</title>
+<title>Standard Header :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="">
+<meta name="description" content="Boilerplate for all of my notebooks.">
 
 
 
     
   </head>
-  <body data-url="/tags/">
+  <body data-url="/ml/rmisc/stdinc/">
     
       <header>
   <div class="logo">
@@ -641,10 +641,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/" class="dd-item haschildren
+    <li data-nav-id="/ml/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/">Machine Learning</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/startup/" class="dd-item">
@@ -654,10 +655,11 @@
           </a>
         </div>
     </li>
-    <li data-nav-id="/ml/rmisc/" class="dd-item haschildren
+    <li data-nav-id="/ml/rmisc/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/rmisc/">R: Misc</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/rmisc/">R: Misc</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/rmisc/jupyter-graphing/" class="dd-item">
@@ -667,7 +669,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ml/rmisc/stdinc/" class="dd-item">
+      <li data-nav-id="/ml/rmisc/stdinc/" class="dd-item active">
         <div>
           <a href="/ml/rmisc/stdinc/">
             Standard Header
@@ -832,7 +834,19 @@
     <option value="/intermediate-cs/" >
    Intermediate CS</option>
     <option value="/ml/" >
-   Machine Learning</option>
+   Machine Learning</option> 
+      <option value="/ml/startup/" >- ML Startup</option>
+    <option value="/ml/rmisc/" >
+  - 
+   R: Misc</option> 
+      <option value="/ml/rmisc/jupyter-graphing/" >-- Jupyter Graphing</option>
+      <option value="/ml/rmisc/stdinc/"  selected>-- Standard Header</option>
+      <option value="/ml/rmisc/na-vs-null/" >-- NA vs NULL</option>
+  
+    <option value="/ml/r4ds/" >
+  - 
+   R for Data Science</option>
+  
     <option value="/resources/" >
    Resources</option>
 
@@ -843,160 +857,35 @@
     </div>
     
 
-    <h1>Tags</h1>
+    <h1>Standard Header</h1>
 
     
     
     
+    <p>There are two: one for Colaboratory and one for local Jupyter
+notebooks.</p>
+<h2 id="colaboratory">Colaboratory</h2>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75af00">install.packages</span><span style="color:#111">(</span><span style="color:#75af00">c</span><span style="color:#111">(</span><span style="color:#d88200">&#34;farver&#34;</span><span style="color:#111">))</span>
+<span style="color:#75af00">library</span><span style="color:#111">(</span><span style="color:#111">tidyverse</span><span style="color:#111">)</span>
 
-
-
-<div class="extra-pagination inner">
-<nav class="pagination" role="navigation">
-        
-        <span class="page-number">Page 1 of 1</span>
-        
-</nav>
-
-</div>
-
-
-   <article class="post tags">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/tags/ap-cs/">ap-cs</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> <a class="read-more" href="/tags/ap-cs/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-        
-
-    </footer>
-</article>
-
-   <article class="post tags">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/tags/haskell/">haskell</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> <a class="read-more" href="/tags/haskell/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-        
-
-    </footer>
-</article>
-
-   <article class="post tags">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/tags/homework/">homework</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> <a class="read-more" href="/tags/homework/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-        
-
-    </footer>
-</article>
-
-   <article class="post tags">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/tags/hw/">hw</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> <a class="read-more" href="/tags/hw/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-        
-
-    </footer>
-</article>
-
-   <article class="post tags">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/tags/project/">project</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> <a class="read-more" href="/tags/project/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-        
-
-    </footer>
-</article>
-
-   <article class="post tags">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/tags/reading-guide/">reading-guide</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> <a class="read-more" href="/tags/reading-guide/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-        
-
-    </footer>
-</article>
-
-   <article class="post tags">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/tags/daily-notes/">daily-notes</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p> <a class="read-more" href="/tags/daily-notes/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-        
-
-    </footer>
-</article>
-
-
-<div style="margin-bottom:2rem"></div>
-
-<nav class="pagination" role="navigation">
-        
-        <span class="page-number">Page 1 of 1</span>
-        
-</nav>
-
-
-
+<span style="color:#75af00">options</span><span style="color:#111">(</span><span style="color:#111">repr.plot.width</span><span style="color:#f92672">=</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span> <span style="color:#111">repr.plot.height</span><span style="color:#f92672">=</span><span style="color:#ae81ff">6</span><span style="color:#111">)</span>
+<span style="color:#75af00">theme_update</span><span style="color:#111">(</span><span style="color:#111">text</span> <span style="color:#f92672">=</span> <span style="color:#75af00">element_text</span><span style="color:#111">(</span><span style="color:#111">size</span><span style="color:#f92672">=</span><span style="color:#ae81ff">20</span><span style="color:#111">))</span>
+</code></pre></div><h2 id="jupyter-notebook">Jupyter Notebook</h2>
+<h3 id="linux">Linux</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75af00">library</span><span style="color:#111">(</span><span style="color:#111">tidyverse</span><span style="color:#111">)</span>
+<span style="color:#75af00">options</span><span style="color:#111">(</span><span style="color:#111">repr.plot.width</span><span style="color:#f92672">=</span><span style="color:#ae81ff">10</span><span style="color:#111">,</span> <span style="color:#111">repr.plot.height</span><span style="color:#f92672">=</span><span style="color:#ae81ff">6</span><span style="color:#111">)</span>
+<span style="color:#75af00">switch</span><span style="color:#111">(</span><span style="color:#75af00">Sys.info</span><span style="color:#111">()</span><span style="color:#111">[[</span><span style="color:#d88200">&#39;sysname&#39;</span><span style="color:#111">]]</span><span style="color:#111">,</span>
+       <span style="color:#d88200">&#39;Linux&#39;</span> <span style="color:#f92672">=</span> <span style="color:#75af00">theme_update</span><span style="color:#111">(</span><span style="color:#111">text</span><span style="color:#f92672">=</span><span style="color:#75af00">element_text</span><span style="color:#111">(</span><span style="color:#111">size</span><span style="color:#f92672">=</span><span style="color:#ae81ff">16</span><span style="color:#111">,</span> <span style="color:#111">family</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;Arial&#34;</span><span style="color:#111">)))</span>
+</code></pre></div><h3 id="mac">Mac</h3>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">[update]
+</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-next" href="/ap-cs/" title="AP CS" style="margin-right: 0px;"><label>AP CS</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ml/rmisc/jupyter-graphing/" title="Jupyter Graphing"> <i class="fa fa-chevron-left"></i><label>Jupyter Graphing</label></a>
+    <a class="nav nav-next" href="/ml/rmisc/na-vs-null/" title="NA vs NULL" style="margin-right: 0px;"><label>NA vs NULL</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1012,7 +901,7 @@
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 13/09/2019
+        <i class='fa fa-calendar'></i> Last update on 30/09/2020
     </div>
     
 

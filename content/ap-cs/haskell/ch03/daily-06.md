@@ -6,7 +6,7 @@ draft: false
 #type: slide
 #theme: white
 ---
-Write type signatures for all functions.
+Write the type signature and function for each problem.
 
 1. Add a 3 to the front of a list of numbers.
 2. Add a 4 to the back of a list of numbers.
