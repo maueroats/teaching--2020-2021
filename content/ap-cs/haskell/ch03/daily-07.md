@@ -14,8 +14,8 @@ Write the type signature and function for each problem.
 3. Make this string without typing all of the letters: `"zxvtrpnlj"`
 4. Make a list of ordered pairs: the letter of the alphabet and its
    place in the ordinary order. Starts with `('a',1)`.
-5. (`shuffler`) Given two lists of integers, interleave them into one
-   list.
+5. (`shuffler`) Given two lists of integers that have the same length,
+   interleave them into one list.
    
         shuffler [1,2,3] [10,20,30] == [1,10,2,20,3,30]
         
