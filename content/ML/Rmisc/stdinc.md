@@ -14,7 +14,7 @@ notebooks.
 ## Colaboratory
 
 ```R
-install.packages(c("farver"))
+install.packages(c("farver","nycflights13"))
 library(tidyverse)
 
 options(repr.plot.width=10, repr.plot.height=6)
