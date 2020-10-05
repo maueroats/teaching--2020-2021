@@ -26,7 +26,7 @@ Write the type signature and function for each problem.
         PlatypusFiesta
         01234567Fiesta
 
-7. (`moveOdd`) Move any add numbers from the start of a list to the end. Stop
+7. (`moveOdd`) Move any odd numbers from the start of a list to the end. Stop
    moving when you find an even number. If there are no even numbers,
    the list does not change.
    

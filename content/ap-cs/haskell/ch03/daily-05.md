@@ -94,5 +94,5 @@ a cool thing to encrypt in problem 8).
     Note: this function is likely to require helper functions!
     
 9. `decrypt :: String -> String -> String`. Given an encrypted
-   message and a key, reverse the encryption process. This is kind of
+   message and a key (from question 9), reverse the encryption process. This is kind of
    tricky without experimentation; try just re-encrypting the message and see if you can figure out a pattern.

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Syllabus: Intermediate :: WY Computer Science</title>
+<title>Timeseries :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="">
+<meta name="description" content="Convert a time series object to a tibble.">
 
 
 
     
   </head>
-  <body data-url="/resources/intermediatecs-syllabus-2017-2018/">
+  <body data-url="/ml/rmisc/timeseries/">
     
       <header>
   <div class="logo">
@@ -648,10 +648,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/" class="dd-item haschildren
+    <li data-nav-id="/ml/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/">Machine Learning</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/startup/" class="dd-item">
@@ -661,10 +662,11 @@
           </a>
         </div>
     </li>
-    <li data-nav-id="/ml/rmisc/" class="dd-item haschildren
+    <li data-nav-id="/ml/rmisc/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/rmisc/">R: Misc</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/rmisc/">R: Misc</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/rmisc/jupyter-graphing/" class="dd-item">
@@ -681,7 +683,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ml/rmisc/timeseries/" class="dd-item">
+      <li data-nav-id="/ml/rmisc/timeseries/" class="dd-item active">
         <div>
           <a href="/ml/rmisc/timeseries/">
             Timeseries
@@ -756,11 +758,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/resources/" class="dd-item parent haschildren
+    <li data-nav-id="/resources/" class="dd-item haschildren
         ">
       <div>
-      <a href="/resources/">Resources</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/resources/generic-cs-syllabus/" class="dd-item">
@@ -847,21 +848,22 @@
     <option value="/intermediate-cs/" >
    Intermediate CS</option>
     <option value="/ml/" >
-   Machine Learning</option>
-    <option value="/resources/" >
-   Resources</option> 
-      <option value="/resources/generic-cs-syllabus/" >- Syllabus: All Courses</option>
-      <option value="/resources/apcs-syllabus-2019-2020/" >- Syllabus: AP CS</option>
-      <option value="/resources/intermediatecs-syllabus/" >- Syllabus: Intermediate</option>
-      <option value="/resources/grading-scale/" >- Grade Weights</option>
-      <option value="/resources/academic-integrity/" >- Academic Integrity</option>
-      <option value="/resources/letters-of-recommendation/" >- Letters of Recommendation</option>
-      <option value="/resources/interview/" >- Interviews</option>
-      <option value="/resources/senioritis/" >- Senioritis</option>
-    <option value="/resources/events/" >
+   Machine Learning</option> 
+      <option value="/ml/startup/" >- ML Startup</option>
+    <option value="/ml/rmisc/" >
   - 
-   CS Events</option>
+   R: Misc</option> 
+      <option value="/ml/rmisc/jupyter-graphing/" >-- Jupyter Graphing</option>
+      <option value="/ml/rmisc/stdinc/" >-- Standard Header</option>
+      <option value="/ml/rmisc/timeseries/"  selected>-- Timeseries</option>
+      <option value="/ml/rmisc/na-vs-null/" >-- NA vs NULL</option>
   
+    <option value="/ml/r4ds/" >
+  - 
+   R for Data Science</option>
+  
+    <option value="/resources/" >
+   Resources</option>
 
 
 
@@ -870,29 +872,42 @@
     </div>
     
 
-    <h1>Syllabus: Intermediate</h1>
+    <h1>Timeseries</h1>
 
     
     
     
-    <p>This document details the information specific to Intermediate Computer Science.
-See the <a href="/resources/generic-cs-syllabus/">all course syllabus information</a> as well.</p>
-<h2 id="materials">Materials</h2>
-<ul>
-<li>Notebook - a lightweight paper notebook dedicated to computer science.</li>
-<li>USB Drive of any size.</li>
-<li><em>Picturing Programs</em> book <a href="http://PicturingPrograms.com">electronic version</a> - downloaded onto flash drive.</li>
-<li><a href="https://racket-lang.org">DrRacket</a> programming environment - installed at home.</li>
-<li><a href="http://wescheme.org">WeScheme</a> - Online only replacement for DrRacket. Use if you cannot install software. You have to <a href="/intermediate-cs/resources/ics-wescheme-note/">read special instructions</a> to make it work.</li>
-</ul>
-
+    <p>You might want to work with a &ldquo;Time Series&rdquo; as a tibble.</p>
+<h2 id="do-you-have-a-time-series">Do you have a time series?</h2>
+<p>Look for a sign that you are looking at a time series at the start of
+its printout:</p>
+<pre><code>A Time Series: 192 × 8
+</code></pre>
+<h2 id="simple-conversion">Simple Conversion</h2>
+<p>If you want to keep it simple, just use the row number in the table to
+keep track of how many months into the time series you are.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#111">seat</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">Seatbelts</span> <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#75af00">as_tibble</span><span style="color:#111">(</span><span style="color:#111">rownames</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;monthnum&#34;</span><span style="color:#111">)</span> 
+</code></pre></div><h2 id="medium-conversion">Medium Conversion</h2>
+<p>You could get actual dates by using the <code>lubridate</code> library (Chapter
+16 in R4DS).</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75af00">library</span><span style="color:#111">(</span><span style="color:#111">lubridate</span><span style="color:#111">)</span>
+<span style="color:#111">time0</span> <span style="color:#f92672">&lt;-</span> <span style="color:#75af00">make_datetime</span><span style="color:#111">(</span><span style="color:#ae81ff">1969</span><span style="color:#111">,</span><span style="color:#ae81ff">01</span><span style="color:#111">)</span> <span style="color:#f92672">-</span> <span style="color:#75af00">months</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span>
+<span style="color:#111">seat</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">Seatbelts</span> <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#75af00">as_tibble</span><span style="color:#111">(</span><span style="color:#111">rownames</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;monthnum&#34;</span><span style="color:#111">)</span> <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#75af00">mutate </span><span style="color:#111">(</span><span style="color:#111">date</span> <span style="color:#f92672">=</span> <span style="color:#111">time0</span> <span style="color:#f92672">+</span> <span style="color:#75af00">months</span><span style="color:#111">(</span><span style="color:#75af00">as.integer</span><span style="color:#111">(</span><span style="color:#111">monthnum</span><span style="color:#111">)))</span>
+</code></pre></div><h2 id="advanced-conversion">Advanced Conversion</h2>
+<p>You could install the <code>timetk</code> package (&ldquo;time series toolkit&rdquo;). This
+package has functions to convert to and from a time series type.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#111">seat</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">timetk</span><span style="color:#f92672">::</span><span style="color:#75af00">ts_tbl</span><span style="color:#111">(</span><span style="color:#111">Seatbelts</span><span style="color:#111">)</span>
+</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ml/r4ds/ch07/" title="Ch07"> <i class="fa fa-chevron-left"></i><label>Ch07</label></a>
-    <a class="nav nav-next" href="/resources/generic-cs-syllabus/" title="Syllabus: All Courses" style="margin-right: 0px;"><label>Syllabus: All Courses</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ml/rmisc/stdinc/" title="Standard Header"> <i class="fa fa-chevron-left"></i><label>Standard Header</label></a>
+    <a class="nav nav-next" href="/ml/rmisc/na-vs-null/" title="NA vs NULL" style="margin-right: 0px;"><label>NA vs NULL</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -908,7 +923,7 @@ See the <a href="/resources/generic-cs-syllabus/">all course syllabus informatio
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 09/09/2017
+        <i class='fa fa-calendar'></i> Last update on 05/10/2020
     </div>
     
 
