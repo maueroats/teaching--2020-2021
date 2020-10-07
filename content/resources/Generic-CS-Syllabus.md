@@ -38,6 +38,8 @@ I expect everyone to take my suggestions for improving their work seriously. Com
 
 ## Grading weights and scale
 
+Normal years:
+
 | Percent | Category                       |
 |:-------:|--------------------------------|
 | 20      | Final Exam/Project (Quarterly) |

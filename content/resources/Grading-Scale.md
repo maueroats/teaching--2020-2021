@@ -12,9 +12,8 @@ computed.
 | Percent | Category                       |
 |:-------:|--------------------------------|
 | 10      | Final Exam/Project (Quarterly) |
-| 30      | Tests and Quizzes (individual) |
-| 30      | Projects                       |
-| 30      | Participation                  |
+| 45      | Tests and Quizzes (individual) |
+| 45      | Participation (incl. homework) |
 
 
 We use the standard Whitney Young grading scale (90+ A, 80+ B, 70+ C, 60+ D, below 60 F).
