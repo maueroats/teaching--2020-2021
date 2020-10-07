@@ -19,3 +19,5 @@ Write a Haskell program to do each of the following.
     * signature
     * function definition
 
+It is acceptable if your numbers print with an extra 0.00001 (or
+something similar). 
