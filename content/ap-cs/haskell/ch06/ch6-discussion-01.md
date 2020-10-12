@@ -64,7 +64,7 @@ The map function does the same thing:
 
     map f xs
     
-## Exericses
+## Exercises
 
 Try using some of the methods above (under P4 and map) to do these two
 exercises several different ways.

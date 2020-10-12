@@ -18,11 +18,12 @@ There are a few differences:
 
 * Omit the `(require picturing-programs)` line.
 
-* (**Chapter 1**) See the [WeScheme starter code]({{% relref
+* (**Chapter 1**) See the [Chapter 1 WeScheme starter code]({{% relref
   "WeScheme-Ch1" %}}).
 
-* (**Chapter 3**)
-Instead of copy and pasting in a picture, you need to copy the link for the image and use `bitmap/url` like this:
+* (**Chapter 3**) Use the [Chapter 3 WeScheme starter]({{% relref "WeScheme-Ch3" %}}) code.
+
+    * Instead of copy and pasting in a picture, you need to copy the link for the image and use `bitmap/url` like this:
 ```racket
 (bitmap/url "https://www.what-dog.net/Images/faces2/main004.jpg")
 ```

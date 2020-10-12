@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>1. Intro :: WY Computer Science</title>
+<title> :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/ap-cs/haskell/ch01/">
+  <body data-url="/intermediate-cs/resources/wescheme-ch3/">
     
       <header>
   <div class="logo">
@@ -68,25 +68,22 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/ap-cs/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/">AP CS</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/">AP CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/ap-cs/haskell/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/haskell/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/">Haskell</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/">Haskell</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/ap-cs/haskell/ch01/" class="dd-item parent active haschildren
+    <li data-nav-id="/ap-cs/haskell/ch01/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/ch01/">1. Intro</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/ch01/">1. Intro</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/ch01/ch01-reading-guide/" class="dd-item">
@@ -621,16 +618,18 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/" class="dd-item haschildren
+    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/intermediate-cs/">Intermediate CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/intermediate-cs/">Intermediate CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/intermediate-cs/resources/" class="dd-item haschildren
+    <li data-nav-id="/intermediate-cs/resources/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/intermediate-cs/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/intermediate-cs/resources/">Resources</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/intermediate-cs/resources/why-racket/" class="dd-item">
@@ -852,52 +851,17 @@
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/ap-cs/" >
-   AP CS</option> 
-    <option value="/ap-cs/haskell/" >
-  - 
-   Haskell</option> 
-    <option value="/ap-cs/haskell/ch01/"  selected >
-  -- 
-   1. Intro</option> 
-      <option value="/ap-cs/haskell/ch01/ch01-reading-guide/" >--- Ch01 Reading Guide</option>
-  
-    <option value="/ap-cs/haskell/ch02/" >
-  -- 
-   2. Starting Out</option>
-    <option value="/ap-cs/haskell/ch03/" >
-  -- 
-   3. Types and Typeclasses</option>
-    <option value="/ap-cs/haskell/ch04/" >
-  -- 
-   4. Syntax in Functions</option>
-    <option value="/ap-cs/haskell/ch05/" >
-  -- 
-   5. Recursion</option>
-    <option value="/ap-cs/haskell/ch06/" >
-  -- 
-   6. Higher Order Functions</option>
-    <option value="/ap-cs/haskell/ch07/" >
-  -- 
-   7. Modules</option>
-    <option value="/ap-cs/haskell/usaco/" >
-  -- 
-   USACO Practice</option>
-    <option value="/ap-cs/haskell/daily/" >
-  -- 
-   Haskell Daily Notes</option>
-    <option value="/ap-cs/haskell/scrabble/" >
-  -- 
-   Scrabble</option>
-    <option value="/ap-cs/haskell/connect-four/" >
-  -- 
-   Connect Four</option>
-      <option value="/ap-cs/haskell/typeclass-notes/" >-- Typeclass Notes</option>
-      <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
-      <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
-  
-  
+   AP CS</option>
     <option value="/intermediate-cs/" >
-   Intermediate CS</option>
+   Intermediate CS</option> 
+    <option value="/intermediate-cs/resources/" >
+  - 
+   Resources</option> 
+      <option value="/intermediate-cs/resources/why-racket/" >-- Why Racket?</option>
+      <option value="/intermediate-cs/resources/e-courses/" >-- Online Help</option>
+      <option value="/intermediate-cs/resources/ics-wescheme-note/" >-- WeScheme</option>
+  
+  
     <option value="/ml/" >
    Machine Learning</option>
     <option value="/resources/" >
@@ -910,27 +874,79 @@
     </div>
     
 
-    <h1>1. Intro</h1>
+    <h1></h1>
 
     
     
     
+    <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;;;; WeScheme Starter Code: Chapters 1 and 3</span>
 
-<p>A high-level overview of the Haskell language and why its features are good.</p>
-<p>You should read it carefully and note what items you are unfamiliar with.
-Writing down your questions will help you remember what parts were difficult so
-that we can discuss them in class.</p>
-<ul>
-<li><a href="/ap-cs/haskell/ch01/ch01-reading-guide/">Haskell Chapter 1 Reading Guide</a></li>
-</ul>
+<span style="color:#75715e">;; Chapter 1 Images</span>
+<span style="color:#75715e">;; pic:bloch</span>
+<span style="color:#75715e">;; pic:hieroglyphics</span>
+<span style="color:#75715e">;; pic:hacker</span>
+<span style="color:#75715e">;; pic:book</span>
+<span style="color:#75715e">;; pic:stick-figure</span>
+<span style="color:#75715e">;; pic:scheme-logo</span>
+<span style="color:#75715e">;; pic:calendar</span>
+<span style="color:#75715e">;; pic:train-engine  ; not a variable in DrRacket</span>
+<span style="color:#75715e">;; pic:train-car     ; not a variable in DrRacket</span>
 
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">pic:bloch</span> 
+  <span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;http://picturingprograms.com/pictures/bloch.jpg&#34;</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">pic:hieroglyphics</span>
+  <span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;http://picturingprograms.com/pictures/hieroglyphics.png&#34;</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">pic:hacker</span>
+  <span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;http://picturingprograms.com/pictures/mad_hacker.png&#34;</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">pic:book</span>
+  <span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;http://picturingprograms.com/pictures/qbook.png&#34;</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">pic:stick-figure</span>
+  <span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;http://picturingprograms.com/pictures/stick-figure.png&#34;</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">pic:scheme-logo</span>
+  <span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;http://picturingprograms.com/pictures/schemelogo.png&#34;</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">pic:calendar</span>
+  <span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;http://picturingprograms.com/pictures/calendar.png&#34;</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">pic:train-engine</span>
+  <span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;http://picturingprograms.com/pictures/train_engine.png&#34;</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">pic:train-car</span>
+  <span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;http://picturingprograms.com/pictures/train_car.png&#34;</span><span style="color:#111">))</span>
+<span style="color:#75715e">;;</span>
+
+<span style="color:#75715e">;; Chapter 1 Functions: rotate-cw rotate-ccw rotate-180</span>
+<span style="color:#75715e">;; This section defines simple functions used in Chapter 1</span>
+<span style="color:#75715e">;; rotate-cw </span>
+<span style="color:#75715e">;; rotate-ccw</span>
+<span style="color:#75715e">;; rotate-180</span>
+
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">rotate-cw</span> <span style="color:#111">x</span><span style="color:#111">)</span> 
+  <span style="color:#111">(</span><span style="color:#111">rotate</span> <span style="color:#ae81ff">90</span> <span style="color:#111">x</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">rotate-ccw</span> <span style="color:#111">x</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">rotate</span> <span style="color:#ae81ff">-90</span> <span style="color:#111">x</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">rotate-180</span> <span style="color:#111">x</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">rotate</span> <span style="color:#ae81ff">180</span> <span style="color:#111">x</span><span style="color:#111">))</span>
+
+<span style="color:#75715e">;; Chapter 3 Functions for WeScheme</span>
+
+<span style="color:#75715e">;; Chapter 3: crop-left crop-right crop-top crop-bottom</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">crop-left</span> <span style="color:#111">img</span> <span style="color:#111">x</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">crop</span> <span style="color:#111">x</span> <span style="color:#ae81ff">0</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">(</span><span style="color:#111">image-width</span> <span style="color:#111">img</span><span style="color:#111">)</span> <span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">image-height</span> <span style="color:#111">img</span><span style="color:#111">)</span> <span style="color:#111">img</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">crop-right</span> <span style="color:#111">img</span> <span style="color:#111">x</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">crop</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">(</span><span style="color:#111">image-width</span> <span style="color:#111">img</span><span style="color:#111">)</span> <span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">image-height</span> <span style="color:#111">img</span><span style="color:#111">)</span> <span style="color:#111">img</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">crop-top</span> <span style="color:#111">img</span> <span style="color:#111">y</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">crop</span> <span style="color:#ae81ff">0</span> <span style="color:#111">y</span> <span style="color:#111">(</span><span style="color:#111">image-width</span> <span style="color:#111">img</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">(</span><span style="color:#111">image-height</span> <span style="color:#111">img</span><span style="color:#111">)</span> <span style="color:#111">y</span><span style="color:#111">)</span> <span style="color:#111">img</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">crop-bottom</span> <span style="color:#111">img</span> <span style="color:#111">y</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">crop</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#111">(</span><span style="color:#111">image-width</span> <span style="color:#111">img</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">(</span><span style="color:#111">image-height</span> <span style="color:#111">img</span><span style="color:#111">)</span> <span style="color:#111">y</span><span style="color:#111">)</span> <span style="color:#111">img</span><span style="color:#111">))</span>
+<span style="color:#75715e">;; </span>
+
+
+</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/haskell/" title="Haskell"> <i class="fa fa-chevron-left"></i><label>Haskell</label></a>
-    <a class="nav nav-next" href="/ap-cs/haskell/ch01/ch01-reading-guide/" title="Ch01 Reading Guide" style="margin-right: 0px;"><label>Ch01 Reading Guide</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/intermediate-cs/" title="Intermediate CS"> <i class="fa fa-chevron-left"></i><label>Intermediate CS</label></a>
+    <a class="nav nav-next" href="/intermediate-cs/resources/why-racket/" title="Why Racket?" style="margin-right: 0px;"><label>Why Racket?</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -941,19 +957,9 @@ that we can discuss them in class.</p>
 
 <div class="footline">
     
-    <div class="tags"> 
-      
-        <a class="label label-default" href="https://wy-cs.infotags/haskell">haskell</a>
-      
-    </div>
-    
 
     
 
-    
-    <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 09/09/2017
-    </div>
     
 
     

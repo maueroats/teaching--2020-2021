@@ -14,7 +14,9 @@ the `[0..4]`.
         helper letter = True `elem` [if (vowels !! x) == letter then True else False | x <- [0..4]]
 
 
-2. Insert a 4 after every 3.
+2. Insert a 4 after every 3 in a list of integers.
+
+3. Write the sum by hand function (below).
 
 ## Sum By Hand
 
