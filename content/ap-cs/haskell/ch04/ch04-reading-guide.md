@@ -28,6 +28,8 @@ description: Questions to help you understand Chapter 4.
 
 7. Write the type signature and function definition for `double_double` which takes in any list and produces the same kind of list. The `double_double` function makes a list where the first term of the input appears twice, follwed by the whole input twice, so 
 ```haskell
+    double_double [3] == [3,3,3,3]
+    double_double [4,5] == [4,4,4,5,4,5]
     double_double [5,10,15] == [5,5,5,10,15,5,10,15]
 ```
 8. Write a function that takes in a number and returns "small" if the number is below 10, "medium" if the number is between 10 and 20 (inclusive), and "large" if the number is larger than 20. Do not use the `if...then...else` construct.
