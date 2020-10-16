@@ -12,7 +12,7 @@ draft: false
    function to determine if a word fits into a certain space.
    
         wordFits :: String -> String -> Bool
-        wordFits "jerk "_or_" == False
+        wordFits "jerk" "_or_" == False
         wordFits "work" "__r_" == True
 
   Along the way you may want to use a helper function to determine if
