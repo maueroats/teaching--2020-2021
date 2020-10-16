@@ -25,7 +25,7 @@ The alternating series is
    
      Example: 
    
-        waltSum [5,10,20] == 1*5 + (-1/2)*10 + (1/3)*15
+        waltSum [5,10,15] == 1*5 + (-1/2)*10 + (1/3)*15
 
 
 5. The `goalt x` function adds up the terms in the alternating series
