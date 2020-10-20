@@ -13,10 +13,10 @@ The alternating series is
     
 1. Define `altTerm n` to be the nth term in the sequence.
 
-2. Define `altSeq m` to be the first first m terms in the
+2. Define `altSeq m` to be the list of the first m terms in the
    sequence. 
    
-3. Write a function to find the first `k` terms of the alternating
+3. Write a function to find the sum of the first `k` terms of the alternating
    series.
    
 4. Write `waltSum`, which takes in a list of numbers, multiplies each

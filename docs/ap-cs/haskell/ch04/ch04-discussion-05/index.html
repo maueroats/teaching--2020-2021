@@ -932,7 +932,19 @@
     
     
     
-    <ol>
+    <script>
+MathJax = {
+ tex: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  displayMath: [['$$','$$'], ['\\[','\\]']]
+  }};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+
+<ol>
 <li>
 <p>In the game of Scrabble you try to fit a word into spaces with some
 letters already in place. In this question you will write a
@@ -949,19 +961,22 @@ characters from the same place match.</p>
     letterFits 'j' '_' == True
     letterFits 'e' 'o' == False
 </code></pre>
+<p>The strings given to <code>wordFits</code> will be the same length.</p>
 <ol start="2">
 <li>
 <p>In the game of 24 you are supposed to find a way to combine four
 whole numbers using addition, subtraction, multiplication, and
-division, in order to get 24 as the final answer. In this question
-we do a few steps toward that.</p>
+division, in order to get 24 as the final answer.</p>
 <ol>
 <li>
 <p>pairPossible produces all of the numbers that you can get from a
 single pair of numbers. Omit non-integral results of division.</p>
 <pre><code>pairPossible 3 12 == [-9,9,15,36,4]
 pairPossible 3 4 == [-1,1,7,12]
+pairPossible 49 2 == [-47,47,51,98]
 </code></pre>
+<p>Danger: 49/2 is not 24, so <code>pairPossible 49 2</code> should not
+include 24 in the list!</p>
 </li>
 <li>
 <p>allPairs produces a list of all of the possible two number pairs
@@ -980,8 +995,20 @@ are ok.</p>
 </ol>
 <h2 id="advanced">Advanced</h2>
 <ul>
-<li>Make <code>allPairs</code> work for any length input list.</li>
-<li>Make <code>choose k nums</code> that gives all <code>k</code> item subsets of <code>nums</code>.</li>
+<li>
+<p>Make <code>allPairs</code> work for any length input list.</p>
+</li>
+<li>
+<p>Make <code>choose k nums</code> that gives all <code>k</code> item subsets of <code>nums</code>.</p>
+</li>
+<li>
+<p>Finish the 24-solver. There are two different groupings that could
+lead to 24: <code>(((ab)c)d)</code> and <code>((ab)(cd))</code>. You can use your
+<code>allPairs</code> function but as you build all of the possibilities for
+four numbers, I think you will have to handle both of these cases
+separately.</p>
+<p>Examples: $(49 - 1) / (5 - 3)$ and $((15 / 3)+1)*4$ are both 24.</p>
+</li>
 </ul>
 
 
