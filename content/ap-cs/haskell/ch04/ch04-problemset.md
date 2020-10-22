@@ -72,11 +72,11 @@ coordinates of the person who gets hit.
                      == (4,5)
 ```
 
-     Flipping the mirror at (1,5) should make the answer (-3,5). 
-     You should draw some test cases and make a tester function to verify your code is correct when there are more mirrors.
+ Flipping the mirror at (1,5) should make the answer (-3,5). 
+ You should draw some test cases and make a tester function to verify your code is correct when there are more mirrors.
 
 ## Dangers and Annoyances
 
 The `\` character is an "escape character", so to include it in a
-string, you need to write '\\' (a Char) or "\\" (a String).
+string, you need to write `'\\'` (a Char) or `"\\"` (a String).
 

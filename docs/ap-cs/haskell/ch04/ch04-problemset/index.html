@@ -769,6 +769,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/ml/r4ds/ch14/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch14/">
+            Ch14
+          </a>
+        </div>
+    </li>
         </ul>
     </li>
         </ul>
@@ -987,12 +994,11 @@ coordinates of the person who gets hit.</li>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell">     <span style="color:#111">laserTagMirrors</span> <span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span> 
                      <span style="color:#111">[(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#d88200">&#39;*&#39;</span><span style="color:#111">),</span> <span style="color:#111">(</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#ae81ff">2</span><span style="color:#111">,</span><span style="color:#d88200">&#39;*&#39;</span><span style="color:#111">),</span> <span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#d88200">&#39;/&#39;</span><span style="color:#111">),</span> <span style="color:#111">(</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#d88200">&#39;*&#39;</span><span style="color:#111">),</span> <span style="color:#111">(</span><span style="color:#f92672">-</span><span style="color:#ae81ff">3</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">,</span><span style="color:#d88200">&#39;*&#39;</span><span style="color:#111">)]</span>
                      <span style="color:#f92672">==</span> <span style="color:#111">(</span><span style="color:#ae81ff">4</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">)</span>
-</code></pre></div><pre><code> Flipping the mirror at (1,5) should make the answer (-3,5). 
- You should draw some test cases and make a tester function to verify your code is correct when there are more mirrors.
-</code></pre>
+</code></pre></div><p>Flipping the mirror at (1,5) should make the answer (-3,5).
+You should draw some test cases and make a tester function to verify your code is correct when there are more mirrors.</p>
 <h2 id="dangers-and-annoyances">Dangers and Annoyances</h2>
 <p>The <code>\</code> character is an &ldquo;escape character&rdquo;, so to include it in a
-string, you need to write &lsquo;\&rsquo; (a Char) or &ldquo;\&rdquo; (a String).</p>
+string, you need to write <code>'\\'</code> (a Char) or <code>&quot;\\&quot;</code> (a String).</p>
 
 
     
