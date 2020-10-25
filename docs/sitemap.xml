@@ -38,6 +38,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/ap-cs/haskell/mancala/outline/</loc>
+    <lastmod>2020-10-24T19:59:13-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/ml/rmisc/jupyter-graphing/</loc>
     <lastmod>2020-09-21T11:52:18-05:00</lastmod>
   </url>
@@ -93,6 +98,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/ap-cs/haskell/mancala/drawing/</loc>
+    <lastmod>2020-10-24T20:53:34-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/ml/rmisc/</loc>
     <lastmod>2020-09-21T11:47:40-05:00</lastmod>
   </url>
@@ -125,6 +135,11 @@
   <url>
     <loc>https://wy-cs.info/resources/generic-cs-syllabus/</loc>
     <lastmod>2017-09-09T15:50:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/ap-cs/haskell/mancala/game-logic/</loc>
+    <lastmod>2020-10-24T22:40:58-05:00</lastmod>
   </url>
   
   <url>
@@ -200,6 +215,11 @@
   <url>
     <loc>https://wy-cs.info/resources/intermediatecs-syllabus/</loc>
     <lastmod>2017-09-09T15:49:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/ap-cs/haskell/mancala/ui/</loc>
+    <lastmod>2020-10-24T20:00:17-05:00</lastmod>
   </url>
   
   <url>
@@ -420,6 +440,11 @@
   <url>
     <loc>https://wy-cs.info/ap-cs/haskell/daily/</loc>
     <lastmod>2017-09-11T10:03:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/ap-cs/haskell/mancala/</loc>
+    <lastmod>2020-10-24T19:59:08-05:00</lastmod>
   </url>
   
   <url>

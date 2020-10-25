@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WY Computer Science</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<title>Drawing :: WY Computer Science</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/wy-cs.info";
+</script>
+<meta name="description" content="Rendering the board as text.">
+
+
+
+    
+  </head>
+  <body data-url="/ap-cs/haskell/mancala/drawing/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p>WY Computer Science</p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="/ftc"  rel="noopener">
+                  FTC Robotics
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/ecs-teach"  rel="noopener">
+                  Teacher Links
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/events"  rel="noopener">
+                  CS Events
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="http://wyoung.org"  rel="noopener">
+                  Whitney Young
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/ap-cs/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/ap-cs/">AP CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/ap-cs/haskell/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/">Haskell</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/ap-cs/haskell/ch01/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch01/">1. Intro</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch01/ch01-reading-guide/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch01/ch01-reading-guide/">
+            Ch01 Reading Guide
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch02/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch02/">2. Starting Out</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch02/ch02-reading-guide/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/ch02-reading-guide/">
+            Chapter 2 Reading Guide
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/cw-a2/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/cw-a2/">
+            Haskell CW II.2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/cw-3/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/cw-3/">
+            Haskell CW II.3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/cw-4/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/cw-4/">
+            Haskell CW II.4
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/cw-5/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/cw-5/">
+            Haskell CW II.5
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/hw-a2/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/hw-a2/">
+            Haskell HW 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/ch02-summary/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/ch02-summary/">
+            Chapter 2 Summary
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/ch02-test/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/ch02-test/">
+            Chapter 2 Test
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch03/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch03/">3. Types and Typeclasses</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-reading-guide-haskell/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-reading-guide-haskell/">
+            Chapter 3 Reading Guide
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-hw1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-hw1/">
+            Chapter 3 Problem Set
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-walkthrough/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-walkthrough/">
+            Chapter 3 Walkthrough
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-01/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-01/">
+            Chapter 3 Daily 01
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-02/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-02/">
+            Chapter 3 Daily 02
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-03/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-03/">
+            Chapter 3 Daily 03
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-04/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-04/">
+            Chapter 3 Daily 04
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-05/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-05/">
+            Chapter 3 Daily 05 HW
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-06/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-06/">
+            Chapter 3 Daily 06
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-07/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-07/">
+            Chapter 3 Daily 07
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-08/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-08/">
+            Chapter 3 Daily 08
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-quiz-2/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-quiz-2/">
+            Chapter 3 Quiz 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-test-2019/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-test-2019/">
+            Chapter 3 Test 2019
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-test-2019-10/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-test-2019-10/">
+            Chapter 3 Test 2019-10
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch04/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch04/">4. Syntax in Functions</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-reading-guide/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-reading-guide/">
+            Chapter 4 Reading Guide
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-01/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-01/">
+            Chapter 4 Discussion I
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-02/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-02/">
+            Chapter 4 Discussion II
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-03/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-03/">
+            Chapter 4 Discussion III
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-04/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-04/">
+            Chapter 4 Discussion IV
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-05/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-05/">
+            Chapter 4 Discussion V
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-06/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-06/">
+            Chapter 4 Discussion VI
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-problemset/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-problemset/">
+            Chapter 4 Problem Set
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-quiz-c/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-quiz-c/">
+            Chapter 4 Quiz C
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-summary/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-summary/">
+            Chapter 4 Summary
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-check-expect/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-check-expect/">
+            Check Expects in Haskell
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch05/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch05/">5. Recursion</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch05/ch05-quiz/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch05/ch05-quiz/">
+            Chapter 5 Quiz
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch05/ch05-reading-guide/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch05/ch05-reading-guide/">
+            Chapter 5 Reading Guide
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch06/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch06/">6. Higher Order Functions</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-01/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-discussion-01/">
+            Ch6 Discussion 01
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-02/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-discussion-02/">
+            Ch6 Discussion 02
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-03/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-discussion-03/">
+            Ch6 Discussion 03
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-04/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-discussion-04/">
+            Ch6 Discussion 04
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-misc-ex/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-misc-ex/">
+            Ch6 Misc Ex
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-quiz-1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-quiz-1/">
+            Ch6 Quiz
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch06-reading-guide/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch06-reading-guide/">
+            Chapter 6 Reading Guide
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch07/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch07/">7. Modules</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch07/ch7-maybe/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch07/ch7-maybe/">
+            7. Maybe
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/usaco/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/usaco/">USACO Practice</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/usaco/haybales/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/usaco/haybales/">
+            Haybales
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/daily/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/daily/">Haskell Daily Notes</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/daily/2018-10-16/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2018-10-16/">
+            2018-10-16
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2018-10-09/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2018-10-09/">
+            2018-10-09 Project
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2018-10-04/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2018-10-04/">
+            2018.10.04 Square Pasture
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2018-10-03/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2018-10-03/">
+            2018.10.03 Cow Signal
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-10-04/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-10-04/">
+            2017-10-04
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-10-03/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-10-03/">
+            2017-10-03
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-09-18/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-09-18/">
+            2017-09-18
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-09-13/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-09-13/">
+            2017-09-14 Indentation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-09-12/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-09-12/">
+            2017-09-12
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-09-11/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-09-11/">
+            2017-09-11
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/mancala/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/mancala/">Mancala</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/mancala/outline/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/mancala/outline/">
+            Mancala Outline
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/mancala/drawing/" class="dd-item active">
+        <div>
+          <a href="/ap-cs/haskell/mancala/drawing/">
+            Drawing
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/mancala/game-logic/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/mancala/game-logic/">
+            Game Logic
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/mancala/ui/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/mancala/ui/">
+            Mancala UI
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/scrabble/" class="dd-item
+        ">
+      <div>
+      <a href="/ap-cs/haskell/scrabble/">Scrabble</a>
+      </div>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/connect-four/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/connect-four/">Connect Four</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/connect-four/overview/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/overview/">
+            Connect Four Overview
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/connect-four/ui/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/ui/">
+            Connect Four UI
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/connect-four/testcases/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/testcases/">
+            Connect Four Testcases
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/connect-four/spoilers/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/spoilers/">
+            Connect Four Spoilers
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/connect-four/primer-2/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/primer-2/">
+            Primer 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/connect-four/rubric/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/rubric/">
+            Connect Four Rubric
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/typeclass-notes/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/typeclass-notes/">
+            Typeclass Notes
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/replit/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/replit/">
+            Repl.it
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ghci-details/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ghci-details/">
+            Source Code Files (ghci)
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/intermediate-cs/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/">Intermediate CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/intermediate-cs/resources/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/resources/why-racket/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/why-racket/">
+            Why Racket?
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/resources/e-courses/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/e-courses/">
+            Online Help
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/resources/ics-wescheme-note/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/ics-wescheme-note/">
+            WeScheme
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ml/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ml/startup/" class="dd-item">
+        <div>
+          <a href="/ml/startup/">
+            ML Startup
+          </a>
+        </div>
+    </li>
+    <li data-nav-id="/ml/rmisc/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/rmisc/">R: Misc</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ml/rmisc/jupyter-graphing/" class="dd-item">
+        <div>
+          <a href="/ml/rmisc/jupyter-graphing/">
+            Jupyter Graphing
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/rmisc/stdinc/" class="dd-item">
+        <div>
+          <a href="/ml/rmisc/stdinc/">
+            Standard Header
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/rmisc/timeseries/" class="dd-item">
+        <div>
+          <a href="/ml/rmisc/timeseries/">
+            Timeseries
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/rmisc/na-vs-null/" class="dd-item">
+        <div>
+          <a href="/ml/rmisc/na-vs-null/">
+            NA vs NULL
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ml/r4ds/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/r4ds/">R for Data Science</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ml/r4ds/ch01/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch01/">
+            Ch01
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch02/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch02/">
+            Ch02
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch03/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch03/">
+            Ch03
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch05-book/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch05-book/">
+            Ch05 Book
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch05/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch05/">
+            Ch05 Problem Set
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch05-project/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch05-project/">
+            Ch05 Project
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch07/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch07/">
+            Ch07
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch13/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch13/">
+            Ch13
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch14/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch14/">
+            Ch14
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/resources/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/resources/generic-cs-syllabus/" class="dd-item">
+        <div>
+          <a href="/resources/generic-cs-syllabus/">
+            Syllabus: All Courses
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/apcs-syllabus-2019-2020/" class="dd-item">
+        <div>
+          <a href="/resources/apcs-syllabus-2019-2020/">
+            Syllabus: AP CS
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/intermediatecs-syllabus/" class="dd-item">
+        <div>
+          <a href="/resources/intermediatecs-syllabus/">
+            Syllabus: Intermediate
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/grading-scale/" class="dd-item">
+        <div>
+          <a href="/resources/grading-scale/">
+            Grade Weights
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/academic-integrity/" class="dd-item">
+        <div>
+          <a href="/resources/academic-integrity/">
+            Academic Integrity
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/letters-of-recommendation/" class="dd-item">
+        <div>
+          <a href="/resources/letters-of-recommendation/">
+            Letters of Recommendation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/interview/" class="dd-item">
+        <div>
+          <a href="/resources/interview/">
+            Interviews
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/senioritis/" class="dd-item">
+        <div>
+          <a href="/resources/senioritis/">
+            Senioritis
+          </a>
+        </div>
+    </li>
+    <li data-nav-id="/resources/events/" class="dd-item
+        ">
+      <div>
+      <a href="/resources/events/">CS Events</a>
+      </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/ap-cs/" >
+   AP CS</option> 
+    <option value="/ap-cs/haskell/" >
+  - 
+   Haskell</option> 
+    <option value="/ap-cs/haskell/ch01/" >
+  -- 
+   1. Intro</option>
+    <option value="/ap-cs/haskell/ch02/" >
+  -- 
+   2. Starting Out</option>
+    <option value="/ap-cs/haskell/ch03/" >
+  -- 
+   3. Types and Typeclasses</option>
+    <option value="/ap-cs/haskell/ch04/" >
+  -- 
+   4. Syntax in Functions</option>
+    <option value="/ap-cs/haskell/ch05/" >
+  -- 
+   5. Recursion</option>
+    <option value="/ap-cs/haskell/ch06/" >
+  -- 
+   6. Higher Order Functions</option>
+    <option value="/ap-cs/haskell/ch07/" >
+  -- 
+   7. Modules</option>
+    <option value="/ap-cs/haskell/usaco/" >
+  -- 
+   USACO Practice</option>
+    <option value="/ap-cs/haskell/daily/" >
+  -- 
+   Haskell Daily Notes</option>
+    <option value="/ap-cs/haskell/mancala/" >
+  -- 
+   Mancala</option> 
+      <option value="/ap-cs/haskell/mancala/outline/" >--- Mancala Outline</option>
+      <option value="/ap-cs/haskell/mancala/drawing/"  selected>--- Drawing</option>
+      <option value="/ap-cs/haskell/mancala/game-logic/" >--- Game Logic</option>
+      <option value="/ap-cs/haskell/mancala/ui/" >--- Mancala UI</option>
+  
+    <option value="/ap-cs/haskell/scrabble/" >
+  -- 
+   Scrabble</option>
+    <option value="/ap-cs/haskell/connect-four/" >
+  -- 
+   Connect Four</option>
+      <option value="/ap-cs/haskell/typeclass-notes/" >-- Typeclass Notes</option>
+      <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
+      <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
+  
+  
+    <option value="/intermediate-cs/" >
+   Intermediate CS</option>
+    <option value="/ml/" >
+   Machine Learning</option>
+    <option value="/resources/" >
+   Resources</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>Drawing</h1>
+
+    
+    
+    
+    <p>You need to render the board. I suggest that you use the strategy we
+began in class with a single box-drawing function and a function to
+overlay the number on a single box, then assemble those with &ldquo;beside&rdquo;
+and &ldquo;above&rdquo; functions (that you will also have to write) into an
+ASCII-art board.</p>
+<p>This is an example of a board in the middle of a game of Mancala.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">+-----++-----++-----++-----++-----++-----++-----++-----+
+|     ||     ||     ||     ||     ||     ||     ||     |
+|     ||  0  ||  9  ||  0  ||  8  ||  1  ||  1  ||     |
+|     ||     ||     ||     ||     ||     ||     ||     |
+|     |+-----++-----++-----++-----++-----++-----+|     |
+|  5  |+-----++-----++-----++-----++-----++-----+| 20  |
+|     ||     ||     ||     ||     ||     ||     ||     |
+|     ||  1  ||  0  ||  2  ||  0  ||  0  ||  1  ||     |
+|     ||     ||     ||     ||     ||     ||     ||     |
++-----++-----++-----++-----++-----++-----++-----++-----+
+</code></pre></div><ul>
+<li>
+<p><code>makeBox :: Int -&gt; Int -&gt; [String]</code>. Given the width and height
+make a simple box. Example:</p>
+<pre><code>  makeBox 5 7 == [&quot;+---+&quot;,
+                  &quot;|   |&quot;,
+                  &quot;|   |&quot;,
+                  &quot;|   |&quot;,
+                  &quot;|   |&quot;,
+                  &quot;|   |&quot;,
+                  &quot;+---+&quot;]
+</code></pre>
+</li>
+<li>
+<p><code>beside :: [String] -&gt; [String] -&gt; [String]</code>. Combine two boxes
+horizontally. Assume they are the same height.</p>
+<pre><code>  beside (makeBox 5 7) (makeBox 3 7) == 
+    [&quot;+---++-+&quot;,
+     &quot;|   || |&quot;,
+     &quot;|   || |&quot;,
+     &quot;|   || |&quot;,
+     &quot;|   || |&quot;,
+     &quot;|   || |&quot;,
+     &quot;+---++-+&quot;]
+</code></pre>
+</li>
+<li>
+<p><code>above :: [String] -&gt; [String] -&gt; [String]</code>. Combine two boxes
+vertically. Assume they are the same width.</p>
+<pre><code>  above (makeBox 5 4) (makeBox 5 6) == 
+     [&quot;+---+&quot;,
+      &quot;|   |&quot;,
+      &quot;|   |&quot;,
+      &quot;+---+&quot;,
+      &quot;+---+&quot;,
+      &quot;|   |&quot;,
+      &quot;|   |&quot;,
+      &quot;|   |&quot;,
+      &quot;|   |&quot;,
+      &quot;+---+&quot;]
+</code></pre>
+</li>
+<li>
+<p><code>drawContents1 :: String -&gt; String  -&gt; String</code>. Attempt to place the
+first string in as close to the middle of the second string as
+possible, overwriting what is there.</p>
+<pre><code>  drawContents1 &quot;58&quot; &quot;abcdefg&quot; == &quot;ab58efg&quot;
+  drawContents1 &quot;13&quot; &quot;abcdefgh&quot; == &quot;abc13fgh&quot;
+</code></pre>
+</li>
+<li>
+<p><code>drawContentsOnBox :: String -&gt; [String] -&gt; [String]</code> The first
+input gives the contents string that is supposed to go on top of the
+box in the second argument. Use the helper function to replace the
+middle line of the box.</p>
+<pre><code>  drawContentsOnBox &quot;13&quot; (makeBox 5 7) ==
+    [&quot;+---+&quot;,
+     &quot;|   |&quot;,
+     &quot;|   |&quot;,
+     &quot;|13 |&quot;,
+     &quot;|   |&quot;,
+     &quot;|   |&quot;,
+     &quot;+---+&quot;]
+</code></pre>
+</li>
+<li>
+<p><code>drawSquare :: Int -&gt; [String]</code>. Show the number on a square of a
+fixed size. The basic unit of drawing the game board.</p>
+</li>
+<li>
+<p><code>drawBoard :: Board -&gt; [String]</code>. Use the functions above to draw
+the entire board. The board below shows the layout I used (numbers
+shown are the indices in the list).</p>
+<pre><code>  *Main&gt; render $ drawBoard [0..13]
+  +-----++-----++-----++-----++-----++-----++-----++-----+
+  |     ||     ||     ||     ||     ||     ||     ||     |
+  |     || 12  || 11  || 10  ||  9  ||  8  ||  7  ||     |
+  |     ||     ||     ||     ||     ||     ||     ||     |
+  |     |+-----++-----++-----++-----++-----++-----+|     |
+  | 13  |+-----++-----++-----++-----++-----++-----+|  6  |
+  |     ||     ||     ||     ||     ||     ||     ||     |
+  |     ||  0  ||  1  ||  2  ||  3  ||  4  ||  5  ||     |
+  |     ||     ||     ||     ||     ||     ||     ||     |
+  +-----++-----++-----++-----++-----++-----++-----++-----+
+</code></pre>
+</li>
+</ul>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/ap-cs/haskell/mancala/outline/" title="Mancala Outline"> <i class="fa fa-chevron-left"></i><label>Mancala Outline</label></a>
+    <a class="nav nav-next" href="/ap-cs/haskell/mancala/game-logic/" title="Game Logic" style="margin-right: 0px;"><label>Game Logic</label><i class="fa fa-chevron-right"></i></a></div>
+
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 24/10/2020
+    </div>
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
