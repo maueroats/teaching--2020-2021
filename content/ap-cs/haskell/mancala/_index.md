@@ -8,4 +8,4 @@ draft: false
 description: "An ancient stone-collecting game."
 ---
 
-{{% children description="true" %}}
+{{% children description="false" %}}

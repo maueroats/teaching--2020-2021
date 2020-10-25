@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Chapter 6 Reading Guide :: WY Computer Science</title>
+<title>Utilities :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/ap-cs/haskell/ch06/ch06-reading-guide/">
+  <body data-url="/ap-cs/haskell/mancala/utilities/">
     
       <header>
   <div class="logo">
@@ -374,11 +374,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/ch06/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/haskell/ch06/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/ch06/">6. Higher Order Functions</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/ch06/">6. Higher Order Functions</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-01/" class="dd-item">
@@ -423,7 +422,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/ch06/ch06-reading-guide/" class="dd-item active">
+      <li data-nav-id="/ap-cs/haskell/ch06/ch06-reading-guide/" class="dd-item">
         <div>
           <a href="/ap-cs/haskell/ch06/ch06-reading-guide/">
             Chapter 6 Reading Guide
@@ -540,10 +539,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/mancala/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/haskell/mancala/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/mancala/">Mancala</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/mancala/">Mancala</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/mancala/outline/" class="dd-item">
@@ -560,7 +560,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/mancala/utilities/" class="dd-item">
+      <li data-nav-id="/ap-cs/haskell/mancala/utilities/" class="dd-item active">
         <div>
           <a href="/ap-cs/haskell/mancala/utilities/">
             Utilities
@@ -937,15 +937,7 @@
    5. Recursion</option>
     <option value="/ap-cs/haskell/ch06/" >
   -- 
-   6. Higher Order Functions</option> 
-      <option value="/ap-cs/haskell/ch06/ch6-discussion-01/" >--- Ch6 Discussion 01</option>
-      <option value="/ap-cs/haskell/ch06/ch6-discussion-02/" >--- Ch6 Discussion 02</option>
-      <option value="/ap-cs/haskell/ch06/ch6-discussion-03/" >--- Ch6 Discussion 03</option>
-      <option value="/ap-cs/haskell/ch06/ch6-discussion-04/" >--- Ch6 Discussion 04</option>
-      <option value="/ap-cs/haskell/ch06/ch6-misc-ex/" >--- Ch6 Misc Ex</option>
-      <option value="/ap-cs/haskell/ch06/ch6-quiz-1/" >--- Ch6 Quiz</option>
-      <option value="/ap-cs/haskell/ch06/ch06-reading-guide/"  selected>--- Chapter 6 Reading Guide</option>
-  
+   6. Higher Order Functions</option>
     <option value="/ap-cs/haskell/ch07/" >
   -- 
    7. Modules</option>
@@ -957,7 +949,14 @@
    Haskell Daily Notes</option>
     <option value="/ap-cs/haskell/mancala/" >
   -- 
-   Mancala</option>
+   Mancala</option> 
+      <option value="/ap-cs/haskell/mancala/outline/" >--- Mancala Outline</option>
+      <option value="/ap-cs/haskell/mancala/drawing/" >--- Drawing</option>
+      <option value="/ap-cs/haskell/mancala/utilities/"  selected>--- Utilities</option>
+      <option value="/ap-cs/haskell/mancala/game-logic/" >--- Game Logic</option>
+      <option value="/ap-cs/haskell/mancala/testing/" >--- Testing</option>
+      <option value="/ap-cs/haskell/mancala/ui/" >--- Mancala UI</option>
+  
     <option value="/ap-cs/haskell/scrabble/" >
   -- 
    Scrabble</option>
@@ -983,36 +982,41 @@
     </div>
     
 
-    <h1>Chapter 6 Reading Guide</h1>
+    <h1>Utilities</h1>
 
     
     
     
-    <p><strong>Don&rsquo;t do this while this note is here.</strong></p>
-<ol>
+    <p>There are a few simple utility functions that make working with the
+board a lot easier.</p>
+<ul>
 <li>
-<p>Take in a list of numbers and output a list containing all of the numbers greater than 8.</p>
+<p><code>get1k :: Board -&gt; Square -&gt; Int</code>: Get the number at a certain
+location on the board.</p>
+<pre><code>  get1k [100..113] 5 == 105
+</code></pre>
 </li>
 <li>
-<p>Take in a list of numbers and output a list containing all of the numbers between 10 and 20 (inclusive).</p>
+<p><code>zero1k :: Board -&gt; Square -&gt; Board</code>: Set a certain square to zero,
+leaving the others alone.</p>
+<pre><code>  zero1k [100..105] 3 == [100,101,102,0,104,105]
+</code></pre>
 </li>
 <li>
-<p>Take in a list of numbers. Multiply all of the numbers in a list by 10 to make the output list.</p>
+<p><code>add1k :: Board -&gt; Square -&gt; Int -&gt; Board</code> Add a given number to the
+value at a given square. Produce the new board.</p>
+<pre><code>  add1k [100..105] 3 50 == [100,101,102,153,104,105]
+</code></pre>
 </li>
-<li>
-<p>Take in a list of lists. Arrange the list of lists according to how
-many elements each list has, so longer sublists go first and shorter sublists
-go later.</p>
-</li>
-</ol>
+</ul>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/haskell/ch06/ch6-quiz-1/" title="Ch6 Quiz"> <i class="fa fa-chevron-left"></i><label>Ch6 Quiz</label></a>
-    <a class="nav nav-next" href="/ap-cs/haskell/ch07/" title="7. Modules" style="margin-right: 0px;"><label>7. Modules</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/haskell/mancala/drawing/" title="Drawing"> <i class="fa fa-chevron-left"></i><label>Drawing</label></a>
+    <a class="nav nav-next" href="/ap-cs/haskell/mancala/game-logic/" title="Game Logic" style="margin-right: 0px;"><label>Game Logic</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1023,20 +1027,12 @@ go later.</p>
 
 <div class="footline">
     
-    <div class="tags"> 
-      
-        <a class="label label-default" href="https://wy-cs.infotags/haskell">haskell</a>
-      
-        <a class="label label-default" href="https://wy-cs.infotags/reading-guide">reading-guide</a>
-      
-    </div>
-    
 
     
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 02/10/2017
+        <i class='fa fa-calendar'></i> Last update on 25/10/2020
     </div>
     
 

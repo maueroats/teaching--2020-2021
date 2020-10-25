@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Chapter 6 Reading Guide :: WY Computer Science</title>
+<title>Testing :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -23,7 +23,7 @@
 
     
   </head>
-  <body data-url="/ap-cs/haskell/ch06/ch06-reading-guide/">
+  <body data-url="/ap-cs/haskell/mancala/testing/">
     
       <header>
   <div class="logo">
@@ -374,11 +374,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/ch06/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/haskell/ch06/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/ch06/">6. Higher Order Functions</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/ch06/">6. Higher Order Functions</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-01/" class="dd-item">
@@ -423,7 +422,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/ch06/ch06-reading-guide/" class="dd-item active">
+      <li data-nav-id="/ap-cs/haskell/ch06/ch06-reading-guide/" class="dd-item">
         <div>
           <a href="/ap-cs/haskell/ch06/ch06-reading-guide/">
             Chapter 6 Reading Guide
@@ -540,10 +539,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/mancala/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/haskell/mancala/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/mancala/">Mancala</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/mancala/">Mancala</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/mancala/outline/" class="dd-item">
@@ -574,7 +574,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/mancala/testing/" class="dd-item">
+      <li data-nav-id="/ap-cs/haskell/mancala/testing/" class="dd-item active">
         <div>
           <a href="/ap-cs/haskell/mancala/testing/">
             Testing
@@ -937,15 +937,7 @@
    5. Recursion</option>
     <option value="/ap-cs/haskell/ch06/" >
   -- 
-   6. Higher Order Functions</option> 
-      <option value="/ap-cs/haskell/ch06/ch6-discussion-01/" >--- Ch6 Discussion 01</option>
-      <option value="/ap-cs/haskell/ch06/ch6-discussion-02/" >--- Ch6 Discussion 02</option>
-      <option value="/ap-cs/haskell/ch06/ch6-discussion-03/" >--- Ch6 Discussion 03</option>
-      <option value="/ap-cs/haskell/ch06/ch6-discussion-04/" >--- Ch6 Discussion 04</option>
-      <option value="/ap-cs/haskell/ch06/ch6-misc-ex/" >--- Ch6 Misc Ex</option>
-      <option value="/ap-cs/haskell/ch06/ch6-quiz-1/" >--- Ch6 Quiz</option>
-      <option value="/ap-cs/haskell/ch06/ch06-reading-guide/"  selected>--- Chapter 6 Reading Guide</option>
-  
+   6. Higher Order Functions</option>
     <option value="/ap-cs/haskell/ch07/" >
   -- 
    7. Modules</option>
@@ -957,7 +949,14 @@
    Haskell Daily Notes</option>
     <option value="/ap-cs/haskell/mancala/" >
   -- 
-   Mancala</option>
+   Mancala</option> 
+      <option value="/ap-cs/haskell/mancala/outline/" >--- Mancala Outline</option>
+      <option value="/ap-cs/haskell/mancala/drawing/" >--- Drawing</option>
+      <option value="/ap-cs/haskell/mancala/utilities/" >--- Utilities</option>
+      <option value="/ap-cs/haskell/mancala/game-logic/" >--- Game Logic</option>
+      <option value="/ap-cs/haskell/mancala/testing/"  selected>--- Testing</option>
+      <option value="/ap-cs/haskell/mancala/ui/" >--- Mancala UI</option>
+  
     <option value="/ap-cs/haskell/scrabble/" >
   -- 
    Scrabble</option>
@@ -983,36 +982,100 @@
     </div>
     
 
-    <h1>Chapter 6 Reading Guide</h1>
+    <h1>Testing</h1>
 
     
     
     
-    <p><strong>Don&rsquo;t do this while this note is here.</strong></p>
-<ol>
-<li>
-<p>Take in a list of numbers and output a list containing all of the numbers greater than 8.</p>
-</li>
-<li>
-<p>Take in a list of numbers and output a list containing all of the numbers between 10 and 20 (inclusive).</p>
-</li>
-<li>
-<p>Take in a list of numbers. Multiply all of the numbers in a list by 10 to make the output list.</p>
-</li>
-<li>
-<p>Take in a list of lists. Arrange the list of lists according to how
-many elements each list has, so longer sublists go first and shorter sublists
-go later.</p>
-</li>
-</ol>
+    <p>Make sure you test each function as you go, so you are sure it works
+correctly. This document includes some tests for the <code>distribute</code>
+function.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">test_advance_1</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">Board</span>
+<span style="color:#75af00">test_advance_1</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span>  <span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span><span style="color:#ae81ff">103</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>  <span style="color:#ae81ff">106</span><span style="color:#111">,</span>
+                  <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">108</span><span style="color:#111">,</span><span style="color:#ae81ff">109</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">112</span><span style="color:#111">,</span>  <span style="color:#ae81ff">113</span><span style="color:#111">]</span>
+</code></pre></div><p>Rendered, the board for testing looks like this:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">+-----++-----++-----++-----++-----++-----++-----++-----+
+|     ||     ||     ||     ||     ||     ||     ||     |
+|     || 112 || 111 || 110 || 109 || 108 || 107 ||     |
+|     ||     ||     ||     ||     ||     ||     ||     |
+|     |+-----++-----++-----++-----++-----++-----+|     |
+| 113 |+-----++-----++-----++-----++-----++-----+| 106 |
+|     ||     ||     ||     ||     ||     ||     ||     |
+|     || 100 ||  0  || 102 || 103 || 104 || 105 ||     |
+|     ||     ||     ||     ||     ||     ||     ||     |
++-----++-----++-----++-----++-----++-----++-----++-----+
+</code></pre></div><h2 id="advance-to-the-next-square">Advance to the next square</h2>
+<p>A player can move into their own mancala, but not the opponent&rsquo;s
+mancala.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75715e">-- player 0 on square 5 with 9 stones in hand</span>
+<span style="color:#75af00">check_1</span> <span style="color:#f92672">=</span> <span style="color:#111">distribute</span> <span style="color:#111">test_advance_1</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">9</span> <span style="color:#f92672">==</span> 
+              <span style="color:#111">([</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span><span style="color:#ae81ff">103</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">106</span><span style="color:#111">,</span>  <span style="color:#ae81ff">106</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">108</span><span style="color:#111">,</span><span style="color:#ae81ff">109</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">112</span><span style="color:#111">,</span>  <span style="color:#ae81ff">113</span><span style="color:#111">],</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">6</span><span style="color:#111">,</span> <span style="color:#75715e">-- this is player 1 mancala</span>
+                <span style="color:#ae81ff">8</span><span style="color:#111">,</span> <span style="color:#75715e">-- eight stones left</span>
+                <span style="color:#d88200">&#34;&#34;</span><span style="color:#111">)</span>
+<span style="color:#75715e">-- player 0 on square 12 with 9 stones in hand</span>
+<span style="color:#75af00">check_3</span> <span style="color:#f92672">=</span> <span style="color:#111">distribute</span> <span style="color:#111">test_advance_1</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">12</span> <span style="color:#ae81ff">9</span> <span style="color:#f92672">==</span> 
+              <span style="color:#111">([</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span><span style="color:#ae81ff">103</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>  <span style="color:#ae81ff">106</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">108</span><span style="color:#111">,</span><span style="color:#ae81ff">109</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">113</span><span style="color:#111">,</span>  <span style="color:#ae81ff">113</span><span style="color:#111">],</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#75715e">-- advanced to square 0 not square 13</span>
+                <span style="color:#ae81ff">8</span><span style="color:#111">,</span> 
+                <span style="color:#d88200">&#34;&#34;</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="stone-in-the-mancala">Stone in the mancala</h2>
+<p>A player can place a stone in their own mancala, but not the
+opponent&rsquo;s mancala. A player should never have their &ldquo;square&rdquo; equal to
+the opponent&rsquo;s mancala. (That was tested above in &ldquo;advance to the next square&rdquo;.)</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75715e">-- player 0 on square 6 (their mancala) with 9 stones in hand</span>
+<span style="color:#75af00">check_2</span> <span style="color:#f92672">=</span> <span style="color:#111">distribute</span> <span style="color:#111">test_advance_1</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">9</span> <span style="color:#f92672">==</span> 
+              <span style="color:#111">([</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span><span style="color:#ae81ff">103</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>  <span style="color:#ae81ff">107</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">108</span><span style="color:#111">,</span><span style="color:#ae81ff">109</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">112</span><span style="color:#111">,</span>  <span style="color:#ae81ff">113</span><span style="color:#111">],</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">7</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">8</span><span style="color:#111">,</span> 
+                <span style="color:#d88200">&#34;&#34;</span><span style="color:#111">)</span>
 
+</code></pre></div><h2 id="move-again">Move again</h2>
+<p>Move again when you play your last stone in your own mancala.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75715e">-- move again</span>
+<span style="color:#75af00">check_5</span> <span style="color:#f92672">=</span> <span style="color:#111">distribute</span> <span style="color:#111">test_advance_1</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span>
+              <span style="color:#111">([</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span><span style="color:#ae81ff">103</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>  <span style="color:#ae81ff">107</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">108</span><span style="color:#111">,</span><span style="color:#ae81ff">109</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">112</span><span style="color:#111">,</span>  <span style="color:#ae81ff">113</span><span style="color:#111">],</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#75715e">-- indicates it is still the turn of player 0</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span> 
+                <span style="color:#d88200">&#34;Last stone in your mancala. Play again.&#34;</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="capturing-stones">Capturing stones</h2>
+<p>Land your last stone in an empty square and you capture the stones in
+the opposite square.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75715e">-- player 1 on square 1 with 1 stone left (sorry for the coincidences)</span>
+<span style="color:#75af00">check_4</span> <span style="color:#f92672">=</span> <span style="color:#111">distribute</span> <span style="color:#111">test_advance_1</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span>
+              <span style="color:#111">([</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span><span style="color:#ae81ff">103</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>  <span style="color:#ae81ff">106</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">109</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">113</span><span style="color:#111">,</span>  <span style="color:#ae81ff">224</span><span style="color:#111">],</span> <span style="color:#75715e">-- note now 224 in the mancala</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#75715e">-- indicates turn changed from player 1 to player 0</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#75715e">-- square 0, value does not matter</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#75715e">-- no stones, the will be asked where to start</span>
+                <span style="color:#d88200">&#34;Last stone in empty space. Pick up the stones in the opposite square.&#34;</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="end-of-turn">End of turn</h2>
+<p>A player&rsquo;s turn ends when they run out of stones.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75715e">-- player 0 square 8 with 1 stone in hand</span>
+<span style="color:#75af00">check_6</span> <span style="color:#f92672">=</span> <span style="color:#111">distribute</span> <span style="color:#111">test_advance_1</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span>
+              <span style="color:#111">([</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span><span style="color:#ae81ff">103</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>  <span style="color:#ae81ff">106</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">109</span><span style="color:#111">,</span><span style="color:#ae81ff">109</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">112</span><span style="color:#111">,</span>  <span style="color:#ae81ff">113</span><span style="color:#111">],</span>
+                <span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#75715e">-- indicates it is now the turn of player 1</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span> 
+                <span style="color:#d88200">&#34;Out of stones. Next player&#39;s turn.&#34;</span><span style="color:#111">)</span>
+</code></pre></div><div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">check_distribute</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span> <span style="color:#111">check_1</span><span style="color:#111">,</span> <span style="color:#111">check_2</span><span style="color:#111">,</span> <span style="color:#111">check_3</span><span style="color:#111">,</span> <span style="color:#111">check_4</span><span style="color:#111">,</span> <span style="color:#111">check_5</span><span style="color:#111">,</span> <span style="color:#111">check_6</span> <span style="color:#111">]</span>
+</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/haskell/ch06/ch6-quiz-1/" title="Ch6 Quiz"> <i class="fa fa-chevron-left"></i><label>Ch6 Quiz</label></a>
-    <a class="nav nav-next" href="/ap-cs/haskell/ch07/" title="7. Modules" style="margin-right: 0px;"><label>7. Modules</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/haskell/mancala/game-logic/" title="Game Logic"> <i class="fa fa-chevron-left"></i><label>Game Logic</label></a>
+    <a class="nav nav-next" href="/ap-cs/haskell/mancala/ui/" title="Mancala UI" style="margin-right: 0px;"><label>Mancala UI</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1023,20 +1086,12 @@ go later.</p>
 
 <div class="footline">
     
-    <div class="tags"> 
-      
-        <a class="label label-default" href="https://wy-cs.infotags/haskell">haskell</a>
-      
-        <a class="label label-default" href="https://wy-cs.infotags/reading-guide">reading-guide</a>
-      
-    </div>
-    
 
     
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 02/10/2017
+        <i class='fa fa-calendar'></i> Last update on 25/10/2020
     </div>
     
 
