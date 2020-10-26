@@ -120,6 +120,8 @@ check_6 = distribute test_advance_1 0 8 1 ==
                 "Out of stones. Next player's turn.")
 ```
 
+## Summary check
+
 ```haskell
 check_distribute = [ check_1, check_2, check_3, check_4, check_5, check_6 ]
 ```
