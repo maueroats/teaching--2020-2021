@@ -89,8 +89,11 @@ This is an example of a board in the middle of a game of Mancala.
            "+---+"]
 
 * `drawSquare :: Int -> [String]`. Show the number on a square of a
-  fixed size. The basic unit of drawing the game board.
+  fixed size. The basic unit of drawing the game board. Calling this
+  function produces the same image as drawing the number on top of a
+  standard sized square.
 
+        drawSquare 13
 
 * `drawBoard :: Board -> [String]`. Use the functions above to draw
   the entire board. The board below shows the layout I used (numbers

@@ -5,6 +5,7 @@ weight: 37
 draft: false
 #type: slide
 #theme: white
+description: "Scrabble wordFits and the game of 24."
 ---
 {{< use-mathjax >}}
 

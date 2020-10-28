@@ -5,6 +5,7 @@ weight: 38
 draft: false
 #type: slide
 #theme: white
+description: "The alternating series."
 ---
 
 The alternating series is 

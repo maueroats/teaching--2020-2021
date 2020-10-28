@@ -1,5 +1,5 @@
 ---
-title: "Chapter 4 Discussion III"
+title: "Chapter 4 Problem Set I"
 date: 2018-09-23T11:47:31-05:00
 weight: 35
 draft: false
@@ -7,6 +7,7 @@ draft: false
 #theme: white
 description: "Lots of problems so you can practice writing Haskell."
 ---
+(Formerly called "Chapter 4 Discussion III".)
 
 All of these problems are stolen from
 [CodingBat](https://codingbat.com).

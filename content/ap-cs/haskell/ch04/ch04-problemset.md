@@ -1,5 +1,5 @@
 ---
-title: "Chapter 4 Problem Set"
+title: "Chapter 4 Problem Set II"
 date: 2017-09-20T20:32:15-05:00
 tags:
  - haskell
@@ -50,7 +50,7 @@ et` binding so you can alter the starting values.
 
 ## Laser Tag
 
-We discussed these in class. You should be able to do them. If you missed class, talk to someone who was there.
+After a class discussion, you should be able to do these.
 
 5. _Laser Tag I_. You are playing laser tag on the integer coordinate plane. You stand at `(x0,y0)` and fire your laser parallel to one of the axes. We will write the direction using unit coordinates, so `(1,0)` will be the positive x-direction. The coordinates of the other players are in a list. Assuming that you hit a player, report the coordinates of the player who is hit.
 ```haskell
