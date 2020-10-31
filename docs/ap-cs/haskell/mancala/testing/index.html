@@ -1072,30 +1072,44 @@ the opponent&rsquo;s mancala. (That was tested above in &ldquo;advance to the ne
                 <span style="color:#d88200">&#34;Last stone in your mancala. Play again.&#34;</span><span style="color:#111">)</span>
 </code></pre></div><h2 id="capturing-stones">Capturing stones</h2>
 <p>Land your last stone in an empty square and you capture the stones in
-the opposite square. This test shows player 1 capturing the stones in
+the opposite square.</p>
+<p>Board setup:</p>
+<pre class="unicodeart">
+┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┃ 112 ┃┃ 111 ┃┃ 110 ┃┃ 109 ┃┃ 108 ┃┃ 107 ┃┃     ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┃     ┃
+┃ 113 ┃┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┃ 106 ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┃ 100 ┃┃ 101 ┃┃ 102 ┃┃  0  ┃┃ 104 ┃┃ 105 ┃┃     ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛
+</pre>
+<p>This test shows player 1 capturing the stones in
 square 11 by playing their last stone in square 1.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75715e">-- player 0 on square 3 with 1 stone left</span>
-<span style="color:#75af00">check_4</span> <span style="color:#f92672">=</span> <span style="color:#111">distribute</span> <span style="color:#111">test_board_2</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span> 
-              <span style="color:#111">([</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">101</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span>  <span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>   <span style="color:#ae81ff">215</span><span style="color:#111">,</span> <span style="color:#75715e">-- note now 215 in the mancala</span>
-                <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">108</span><span style="color:#111">,</span>  <span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">112</span><span style="color:#111">,</span>   <span style="color:#ae81ff">113</span><span style="color:#111">],</span> 
-                <span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#75715e">-- indicates turn changed from player 0 to player 1</span>
-                <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#75715e">-- square 0, value does not matter</span>
-                <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#75715e">-- no stones, the will be asked where to start</span>
-                <span style="color:#d88200">&#34;Last stone in empty space. Pick up the stones in the opposite square.&#34;</span><span style="color:#111">)</span>
-</code></pre></div><p>The resulting board is drawn here:</p>
+<p>Resulting board:</p>
 <pre class="unicodeart">
 ┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
 ┃     ┃┃ 112 ┃┃ 111 ┃┃ 110 ┃┃  0  ┃┃ 108 ┃┃ 107 ┃┃     ┃
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
 ┃     ┃┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┃     ┃
-┃ 222 ┃┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┃ 106 ┃
+┃ 113 ┃┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┃ 215 ┃
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
 ┃     ┃┃ 100 ┃┃ 101 ┃┃ 102 ┃┃  1  ┃┃ 104 ┃┃ 105 ┃┃     ┃
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
 ┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛
 </pre>
-<h2 id="end-of-turn">End of turn</h2>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75715e">-- player 0 on square 3 with 1 stone left</span>
+<span style="color:#75af00">check_4</span> <span style="color:#f92672">=</span> <span style="color:#111">distribute</span> <span style="color:#111">test_board_2</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span> 
+              <span style="color:#111">([</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">101</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span>  <span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>   <span style="color:#ae81ff">215</span><span style="color:#111">,</span> <span style="color:#75715e">-- mancala now 106+109=215</span>
+                <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">108</span><span style="color:#111">,</span>  <span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">112</span><span style="color:#111">,</span>   <span style="color:#ae81ff">113</span><span style="color:#111">],</span> 
+                <span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#75715e">-- indicates turn changed from player 0 to player 1</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#75715e">-- square 0, value does not matter</span>
+                <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#75715e">-- no stones, the will be asked where to start</span>
+                <span style="color:#d88200">&#34;Last stone in empty space. Pick up the stones in the opposite square.&#34;</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="end-of-turn">End of turn</h2>
 <p>A player&rsquo;s turn ends when they run out of stones.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75715e">-- player 0 square 8 with 1 stone in hand</span>
 <span style="color:#75af00">check_6</span> <span style="color:#f92672">=</span> <span style="color:#111">distribute</span> <span style="color:#111">test_board_1</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">8</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span>

@@ -123,13 +123,43 @@ check_5 = distribute test_board_1 0 6 1 ==
 ## Capturing stones
 
 Land your last stone in an empty square and you capture the stones in
-the opposite square. This test shows player 1 capturing the stones in
+the opposite square. 
+
+Board setup:
+<pre class="unicodeart">
+┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┃ 112 ┃┃ 111 ┃┃ 110 ┃┃ 109 ┃┃ 108 ┃┃ 107 ┃┃     ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┃     ┃
+┃ 113 ┃┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┃ 106 ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┃ 100 ┃┃ 101 ┃┃ 102 ┃┃  0  ┃┃ 104 ┃┃ 105 ┃┃     ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛
+</pre>
+
+This test shows player 1 capturing the stones in
 square 11 by playing their last stone in square 1.
+
+Resulting board:
+<pre class="unicodeart">
+┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┃ 112 ┃┃ 111 ┃┃ 110 ┃┃  0  ┃┃ 108 ┃┃ 107 ┃┃     ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┃     ┃
+┃ 113 ┃┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┃ 215 ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┃ 100 ┃┃ 101 ┃┃ 102 ┃┃  1  ┃┃ 104 ┃┃ 105 ┃┃     ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛
+</pre>
 
 ```haskell
 -- player 0 on square 3 with 1 stone left
 check_4 = distribute test_board_2 0 3 1 == 
-              ([100,101,102,  1,104,105,   215, -- note now 215 in the mancala
+              ([100,101,102,  1,104,105,   215, -- mancala now 106+109=215
                 107,108,  0,110,111,112,   113], 
                 1, -- indicates turn changed from player 0 to player 1
                 0, -- square 0, value does not matter
@@ -137,19 +167,6 @@ check_4 = distribute test_board_2 0 3 1 ==
                 "Last stone in empty space. Pick up the stones in the opposite square.")
 ```
 
-The resulting board is drawn here:
-<pre class="unicodeart">
-┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓
-┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
-┃     ┃┃ 112 ┃┃ 111 ┃┃ 110 ┃┃  0  ┃┃ 108 ┃┃ 107 ┃┃     ┃
-┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
-┃     ┃┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┃     ┃
-┃ 222 ┃┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┃ 106 ┃
-┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
-┃     ┃┃ 100 ┃┃ 101 ┃┃ 102 ┃┃  1  ┃┃ 104 ┃┃ 105 ┃┃     ┃
-┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
-┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛
-</pre>
 
 ## End of turn
 
