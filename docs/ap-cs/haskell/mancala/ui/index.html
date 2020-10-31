@@ -1069,8 +1069,15 @@
 <span style="color:#75af00">ask_hit_enter</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">do</span>
   <span style="color:#00a8c8">_</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">getLine</span>
   <span style="color:#111">return</span> <span style="color:#111">()</span>
-</code></pre></div><p>Functions you need to define:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">is_legal_move :: Board -&gt; Square -&gt; Bool
+</code></pre></div><p>Functions you need to define. Lines include values that will let the
+program run (although incorrectly).</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">is_game_over :: Board -&gt; Bool
+is_game_over board = undefined -- False -- and it will run
+
+winner :: Board -&gt; Player
+winner board = undefined -- 0 -- and it will run
+
+is_legal_move :: Board -&gt; Square -&gt; Bool
 is_legal_move board n = undefined -- True -- and it will run
 
 drawBoard :: Board -&gt; [String]

@@ -5,6 +5,7 @@ weight: 45
 draft: false
 #type: slide
 #theme: white
+description: "Writing tests for complicated functions helps you understand them better and makes them more likely to be correct."
 ---
 
 Make sure you test each function as you go, so you are sure it works
@@ -29,6 +30,20 @@ Rendered, the board for testing looks like this:
 |     || 100 ||  0  || 102 || 103 || 104 || 105 ||     |
 |     ||     ||     ||     ||     ||     ||     ||     |
 +-----++-----++-----++-----++-----++-----++-----++-----+
+```
+
+## Capture Stones
+
+Looking at the test board, player 0 landing in square 1 should capture
+the 111 pieces on square 11 and put them in player 0's mancala, giving
+106+111 = 217 stones in square 6.
+
+```haskell
+test_capture_stones = [
+    capture_stones test_advance_1 0 1 ==
+      [100,  0,102,103,104,105,  106+111,
+       107,108,109,110,  0,112,  113] ]
+    
 ```
 
 ## Advance to the next square

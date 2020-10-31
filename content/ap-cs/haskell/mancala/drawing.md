@@ -93,7 +93,7 @@ This is an example of a board in the middle of a game of Mancala.
   function produces the same image as drawing the number on top of a
   standard sized square.
 
-        drawSquare 13
+        drawSquare 13 -- same results as the drawContentsOnBox example
 
 * `drawBoard :: Board -> [String]`. Use the functions above to draw
   the entire board. The board below shows the layout I used (numbers

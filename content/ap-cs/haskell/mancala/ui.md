@@ -93,9 +93,16 @@ ask_hit_enter = do
   return ()
 ```
 
-Functions you need to define:
+Functions you need to define. Lines include values that will let the
+program run (although incorrectly).
 
 ```
+is_game_over :: Board -> Bool
+is_game_over board = undefined -- False -- and it will run
+
+winner :: Board -> Player
+winner board = undefined -- 0 -- and it will run
+
 is_legal_move :: Board -> Square -> Bool
 is_legal_move board n = undefined -- True -- and it will run
 

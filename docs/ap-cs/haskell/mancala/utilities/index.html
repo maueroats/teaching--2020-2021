@@ -17,7 +17,7 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="">
+<meta name="description" content="A few simple utility functions that make working with the board a lot easier.">
 
 
 
@@ -987,8 +987,8 @@
     
     
     
-    <p>There are a few simple utility functions that make working with the
-board a lot easier.</p>
+    <p>These utility functions are kind of simple. There are a few reasons to
+write them separately (see bottom).</p>
 <ul>
 <li>
 <p><code>get1k :: Board -&gt; Square -&gt; Int</code>: Get the number at a certain
@@ -1009,7 +1009,26 @@ value at a given square. Produce the new board.</p>
 </code></pre>
 </li>
 </ul>
-
+<h2 id="why-make-these-functions">Why make these functions?</h2>
+<p>These functions are simple enough that you might wonder why even
+bother making them functions. The code could just be &ldquo;inlined&rdquo;
+(written out) in the few places it is used.</p>
+<ul>
+<li>Functions give &ldquo;meaning&rdquo; to formulas. For example, &ldquo;get the item at
+square k&rdquo; rather than (<code>formula_thing!!k</code>).</li>
+<li>Functions make it easier to change the way you represent the board
+(later). You just edit these few functions instead of finding all of
+the little formulas scattered throughout your code.</li>
+<li>Functions let you isolate the thinking about these small
+cases. Thinking about small jobs by themselves is easier than
+thinking about them in the middle of making a much larger function.</li>
+</ul>
+<h2 id="the-names-stink">The names stink</h2>
+<p>Sorry. I agree. Make up your own, or use these:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">get1k = square_get
+zero1k = square_zero
+add1k = square_add
+</code></pre></div>
 
     
     

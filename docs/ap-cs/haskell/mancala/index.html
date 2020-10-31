@@ -999,21 +999,15 @@
 </span>
 <p><span><li>
 <a href="/ap-cs/haskell/mancala/utilities/" >Utilities</a></li></p>
-<p>There are a few simple utility functions that make working with the board a lot easier.
-  get1k :: Board -&gt; Square -&gt; Int: Get the number at a certain location on the board.
- get1k [100..113] 5 == 105    zero1k :: Board -&gt; Square -&gt; Board: Set a certain square to zero, leaving the others alone.
- zero1k [100..105] 3 == [100,101,102,0,104,105]    add1k :: Board -&gt; Square -&gt; Int -&gt; Board Add a given number to the value at a given square.</p>
+<p>A few simple utility functions that make working with the board a lot easier.</p>
 </span>
 <p><span><li>
 <a href="/ap-cs/haskell/mancala/game-logic/" >Game Logic</a></li></p>
-<p>You should be familiar with the data structures from the outline.
-Simple Game Logic  player_next :: Player -&gt; Player. Give the other player. is_empty :: Board -&gt; Square -&gt; Bool. True if the given square on the board is empty. is_legal_move :: Board -&gt; Player -&gt; Square -&gt; Bool. True if picking up the contents of the given square is a legal move for the player. A move is legal if it results in picking up pieces on the player&rsquo;s own side of the board.</p>
+<p>Logic functions that come together to make Mancala (everything except the drawing).</p>
 </span>
 <p><span><li>
 <a href="/ap-cs/haskell/mancala/testing/" >Testing</a></li></p>
-<p>Make sure you test each function as you go, so you are sure it works correctly. This document includes some tests for the distribute function.
-test_advance_1 :: Board test_advance_1 = [100, 0,102,103,104,105, 106, 107,108,109,110,111,112, 113] Rendered, the board for testing looks like this:
-+-----++-----++-----++-----++-----++-----++-----++-----+ | || || || || || || || | | || 112 || 111 || 110 || 109 || 108 || 107 || | | || || || || || || || | | |+-----++-----++-----++-----++-----++-----+| | | 113 |+-----++-----++-----++-----++-----++-----+| 106 | | || || || || || || || | | || 100 || 0 || 102 || 103 || 104 || 105 || | | || || || || || || || | +-----++-----++-----++-----++-----++-----++-----++-----+ Advance to the next square A player can move into their own mancala, but not the opponent&rsquo;s mancala.</p>
+<p>Writing tests for complicated functions helps you understand them better and makes them more likely to be correct.</p>
 </span>
 <p><span><li>
 <a href="/ap-cs/haskell/mancala/ui/" >Mancala UI</a></li></p>
