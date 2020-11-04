@@ -8,6 +8,8 @@ draft: false
 description: "An overview of how to fit your program into the UI framework."
 ---
 
+<style> .unicodeart { line-height: 100%; }</style>
+
 The [UI code]({{% relref "./ui" %}}) take care of
 * ending the game when necessary (you write: `is_game_over`)
 * printing out who won (you write: `winner`)
@@ -49,7 +51,7 @@ distribute board player sq stones
 In this example we will only show `board` squares 5, 6, and 7
 to keep writing short.
 
-```
+<pre class="unicodeart">
 ┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
 ┃     ┃┃  0  ┃┃  0  ┃┃  0  ┃┃  0  ┃┃  0  ┃┃  0  ┃┃     ┃
@@ -60,7 +62,7 @@ to keep writing short.
 ┃     ┃┃  0  ┃┃  0  ┃┃  0  ┃┃  0  ┃┃  0  ┃┃ 12  ┃┃     ┃
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
 ┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛
-```
+</pre>
 
 Starting with player 0 at square 5, with 2 stones, put 1 stone in
 square 5 and advance to square 6 with the same player active.
