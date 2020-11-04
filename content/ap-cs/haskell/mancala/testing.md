@@ -18,6 +18,9 @@ function.
 test_board_1 :: Board
 test_board_1 = [100,  0,102,103,104,105,  106,
                 107,108,109,110,111,112,  113]
+test_board_2 :: Board
+test_board_2 = [100,101,102,  0,104,105,  106,
+                107,108,109,110,111,112,  113]
 ```
 
 Rendered, the board for testing looks like this:
@@ -123,7 +126,7 @@ check_5 = distribute test_board_1 0 6 1 ==
 ## Capturing stones
 
 Land your last stone in an empty square and you capture the stones in
-the opposite square. 
+that square and the opposite square. 
 
 Board setup:
 <pre class="unicodeart">
@@ -149,9 +152,9 @@ Resulting board:
 ┃     ┃┃ 112 ┃┃ 111 ┃┃ 110 ┃┃  0  ┃┃ 108 ┃┃ 107 ┃┃     ┃
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
 ┃     ┃┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┃     ┃
-┃ 113 ┃┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┃ 215 ┃
+┃ 113 ┃┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┃ 216 ┃
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
-┃     ┃┃ 100 ┃┃ 101 ┃┃ 102 ┃┃  1  ┃┃ 104 ┃┃ 105 ┃┃     ┃
+┃     ┃┃ 100 ┃┃ 101 ┃┃ 102 ┃┃  0  ┃┃ 104 ┃┃ 105 ┃┃     ┃
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
 ┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛
 </pre>
@@ -159,7 +162,7 @@ Resulting board:
 ```haskell
 -- player 0 on square 3 with 1 stone left
 check_4 = distribute test_board_2 0 3 1 == 
-              ([100,101,102,  1,104,105,   215, -- mancala now 106+109=215
+              ([100,101,102,  0,104,105,   216, -- mancala now 106+109+1=216
                 107,108,  0,110,111,112,   113], 
                 1, -- indicates turn changed from player 0 to player 1
                 0, -- square 0, value does not matter

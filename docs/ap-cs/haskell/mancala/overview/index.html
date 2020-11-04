@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>2017-09-12 :: WY Computer Science</title>
+<title>Overview :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="Technical details that came up while doing Chapter 2 Homework.">
+<meta name="description" content="An overview of how to fit your program into the UI framework.">
 
 
 
     
   </head>
-  <body data-url="/ap-cs/haskell/daily/2017-09-12/">
+  <body data-url="/ap-cs/haskell/mancala/overview/">
     
       <header>
   <div class="logo">
@@ -461,11 +461,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/daily/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/haskell/daily/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/daily/">Haskell Daily Notes</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/daily/">Haskell Daily Notes</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/daily/2018-10-16/" class="dd-item">
@@ -524,7 +523,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/daily/2017-09-12/" class="dd-item active">
+      <li data-nav-id="/ap-cs/haskell/daily/2017-09-12/" class="dd-item">
         <div>
           <a href="/ap-cs/haskell/daily/2017-09-12/">
             2017-09-12
@@ -540,10 +539,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/mancala/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/haskell/mancala/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/mancala/">Mancala</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/mancala/">Mancala</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/mancala/outline/" class="dd-item">
@@ -553,7 +553,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/mancala/overview/" class="dd-item">
+      <li data-nav-id="/ap-cs/haskell/mancala/overview/" class="dd-item active">
         <div>
           <a href="/ap-cs/haskell/mancala/overview/">
             Overview
@@ -953,21 +953,18 @@
    USACO Practice</option>
     <option value="/ap-cs/haskell/daily/" >
   -- 
-   Haskell Daily Notes</option> 
-      <option value="/ap-cs/haskell/daily/2018-10-16/" >--- 2018-10-16</option>
-      <option value="/ap-cs/haskell/daily/2018-10-09/" >--- 2018-10-09 Project</option>
-      <option value="/ap-cs/haskell/daily/2018-10-04/" >--- 2018.10.04 Square Pasture</option>
-      <option value="/ap-cs/haskell/daily/2018-10-03/" >--- 2018.10.03 Cow Signal</option>
-      <option value="/ap-cs/haskell/daily/2017-10-04/" >--- 2017-10-04</option>
-      <option value="/ap-cs/haskell/daily/2017-10-03/" >--- 2017-10-03</option>
-      <option value="/ap-cs/haskell/daily/2017-09-18/" >--- 2017-09-18</option>
-      <option value="/ap-cs/haskell/daily/2017-09-13/" >--- 2017-09-14 Indentation</option>
-      <option value="/ap-cs/haskell/daily/2017-09-12/"  selected>--- 2017-09-12</option>
-      <option value="/ap-cs/haskell/daily/2017-09-11/" >--- 2017-09-11</option>
-  
+   Haskell Daily Notes</option>
     <option value="/ap-cs/haskell/mancala/" >
   -- 
-   Mancala</option>
+   Mancala</option> 
+      <option value="/ap-cs/haskell/mancala/outline/" >--- Mancala Outline</option>
+      <option value="/ap-cs/haskell/mancala/overview/"  selected>--- Overview</option>
+      <option value="/ap-cs/haskell/mancala/drawing/" >--- Drawing</option>
+      <option value="/ap-cs/haskell/mancala/utilities/" >--- Utilities</option>
+      <option value="/ap-cs/haskell/mancala/game-logic/" >--- Game Logic</option>
+      <option value="/ap-cs/haskell/mancala/testing/" >--- Testing</option>
+      <option value="/ap-cs/haskell/mancala/ui/" >--- Mancala UI</option>
+  
     <option value="/ap-cs/haskell/scrabble/" >
   -- 
    Scrabble</option>
@@ -993,45 +990,35 @@
     </div>
     
 
-    <h1>2017-09-12</h1>
+    <h1>Overview</h1>
 
     
     
     
-    <ul>
-<li>
-<p>Memorize how to write a basic main method:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">  main = do putStrLn &#34;Loaded&#34;
-</code></pre></div></li>
-<li>
-<p>Use &ldquo;&ndash;&rdquo; (two dashes) to comment to the end of the line. This is
-equivalent to Racket &ldquo;;&rdquo; (semicolon).</p>
-</li>
-<li>
-<p>Function name rules:</p>
+    <p>The <a href="/ap-cs/haskell/mancala/ui/">UI code</a> take care of</p>
 <ul>
-<li>
-<p>Must begin with lowercase letter.</p>
-</li>
-<li>
-<p>Hyphens (-) are not allowed in names.</p>
-</li>
-<li>
-<p>Underscore (_) may be used instead.</p>
-</li>
-<li>
-<p>Traditionally <code>camelCase</code> is used for functions. (First letter
-lowercase, then uppercase each new word.)</p>
-</li>
+<li>ending the game when necessary (you write: <code>is_game_over</code>)</li>
+<li>printing out who won (you write: <code>winner</code>)</li>
+<li>picking which square to take the pieces from at the start of your
+turn</li>
+<li>printing out messages</li>
 </ul>
-</li>
-<li>
-<p>We will learn about the <code>$</code> sign soon, but it is a substitute for
-putting parentheses from somewhere to the end of the line. That means</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    putStrLn ( show ( grapher f 0 10 ) )
-</code></pre></div><p>could be written as</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    putStrLn $ show $ grapher f 0 10
-</code></pre></div></li>
+<p>You communicate what you want to happen next by the results you return from
+<code>distribute</code>. As a reminder, the results are a huge tuple, with the
+<code>Int</code> representing the number of stones.</p>
+<pre><code>(Board, Player, Square, Int, String)
+</code></pre>
+<ul>
+<li>The String message is always printed out.</li>
+<li>If the number of stones is 0, then the returned player is asked to pick up
+stones from a new square. Whichever player is returned is asked, so
+this can be used for getting an extra turn by playing your last
+stone in your own mancala as well as passing the turn ordinarily -
+it just depends on what value your <code>distribute</code> function returns.</li>
+<li>If the number of stones is not 0, the next thing that will happen
+will be a play in the returned square. That means you should return
+the next square for the person to play on. (This could be handled in
+the skeleton provided</li>
 </ul>
 
 
@@ -1039,8 +1026,8 @@ putting parentheses from somewhere to the end of the line. That means</p>
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/haskell/daily/2017-09-13/" title="2017-09-14 Indentation"> <i class="fa fa-chevron-left"></i><label>2017-09-14 Indentation</label></a>
-    <a class="nav nav-next" href="/ap-cs/haskell/daily/2017-09-11/" title="2017-09-11" style="margin-right: 0px;"><label>2017-09-11</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/haskell/mancala/outline/" title="Mancala Outline"> <i class="fa fa-chevron-left"></i><label>Mancala Outline</label></a>
+    <a class="nav nav-next" href="/ap-cs/haskell/mancala/drawing/" title="Drawing" style="margin-right: 0px;"><label>Drawing</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1051,18 +1038,12 @@ putting parentheses from somewhere to the end of the line. That means</p>
 
 <div class="footline">
     
-    <div class="tags"> 
-      
-        <a class="label label-default" href="https://wy-cs.infotags/haskell">haskell</a>
-      
-    </div>
-    
 
     
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 12/09/2017
+        <i class='fa fa-calendar'></i> Last update on 04/11/2020
     </div>
     
 

@@ -553,6 +553,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/ap-cs/haskell/mancala/overview/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/mancala/overview/">
+            Overview
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/ap-cs/haskell/mancala/drawing/" class="dd-item">
         <div>
           <a href="/ap-cs/haskell/mancala/drawing/">
@@ -951,6 +958,7 @@
   -- 
    Mancala</option> 
       <option value="/ap-cs/haskell/mancala/outline/" >--- Mancala Outline</option>
+      <option value="/ap-cs/haskell/mancala/overview/" >--- Overview</option>
       <option value="/ap-cs/haskell/mancala/drawing/" >--- Drawing</option>
       <option value="/ap-cs/haskell/mancala/utilities/" >--- Utilities</option>
       <option value="/ap-cs/haskell/mancala/game-logic/" >--- Game Logic</option>
@@ -993,6 +1001,9 @@ correctly. This document includes some tests for the <code>distribute</code>
 function.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">test_board_1</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">Board</span>
 <span style="color:#75af00">test_board_1</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span>  <span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span><span style="color:#ae81ff">103</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>  <span style="color:#ae81ff">106</span><span style="color:#111">,</span>
+                <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">108</span><span style="color:#111">,</span><span style="color:#ae81ff">109</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">112</span><span style="color:#111">,</span>  <span style="color:#ae81ff">113</span><span style="color:#111">]</span>
+<span style="color:#75af00">test_board_2</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">Board</span>
+<span style="color:#75af00">test_board_2</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">101</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span>  <span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>  <span style="color:#ae81ff">106</span><span style="color:#111">,</span>
                 <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">108</span><span style="color:#111">,</span><span style="color:#ae81ff">109</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">112</span><span style="color:#111">,</span>  <span style="color:#ae81ff">113</span><span style="color:#111">]</span>
 </code></pre></div><p>Rendered, the board for testing looks like this:</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">+-----++-----++-----++-----++-----++-----++-----++-----+
@@ -1072,7 +1083,7 @@ the opponent&rsquo;s mancala. (That was tested above in &ldquo;advance to the ne
                 <span style="color:#d88200">&#34;Last stone in your mancala. Play again.&#34;</span><span style="color:#111">)</span>
 </code></pre></div><h2 id="capturing-stones">Capturing stones</h2>
 <p>Land your last stone in an empty square and you capture the stones in
-the opposite square.</p>
+that square and the opposite square.</p>
 <p>Board setup:</p>
 <pre class="unicodeart">
 ┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓
@@ -1095,15 +1106,15 @@ square 11 by playing their last stone in square 1.</p>
 ┃     ┃┃ 112 ┃┃ 111 ┃┃ 110 ┃┃  0  ┃┃ 108 ┃┃ 107 ┃┃     ┃
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
 ┃     ┃┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┃     ┃
-┃ 113 ┃┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┃ 215 ┃
+┃ 113 ┃┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┃ 216 ┃
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
-┃     ┃┃ 100 ┃┃ 101 ┃┃ 102 ┃┃  1  ┃┃ 104 ┃┃ 105 ┃┃     ┃
+┃     ┃┃ 100 ┃┃ 101 ┃┃ 102 ┃┃  0  ┃┃ 104 ┃┃ 105 ┃┃     ┃
 ┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
 ┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛
 </pre>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75715e">-- player 0 on square 3 with 1 stone left</span>
 <span style="color:#75af00">check_4</span> <span style="color:#f92672">=</span> <span style="color:#111">distribute</span> <span style="color:#111">test_board_2</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">==</span> 
-              <span style="color:#111">([</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">101</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span>  <span style="color:#ae81ff">1</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>   <span style="color:#ae81ff">215</span><span style="color:#111">,</span> <span style="color:#75715e">-- mancala now 106+109=215</span>
+              <span style="color:#111">([</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">101</span><span style="color:#111">,</span><span style="color:#ae81ff">102</span><span style="color:#111">,</span>  <span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">104</span><span style="color:#111">,</span><span style="color:#ae81ff">105</span><span style="color:#111">,</span>   <span style="color:#ae81ff">216</span><span style="color:#111">,</span> <span style="color:#75715e">-- mancala now 106+109+1=216</span>
                 <span style="color:#ae81ff">107</span><span style="color:#111">,</span><span style="color:#ae81ff">108</span><span style="color:#111">,</span>  <span style="color:#ae81ff">0</span><span style="color:#111">,</span><span style="color:#ae81ff">110</span><span style="color:#111">,</span><span style="color:#ae81ff">111</span><span style="color:#111">,</span><span style="color:#ae81ff">112</span><span style="color:#111">,</span>   <span style="color:#ae81ff">113</span><span style="color:#111">],</span> 
                 <span style="color:#ae81ff">1</span><span style="color:#111">,</span> <span style="color:#75715e">-- indicates turn changed from player 0 to player 1</span>
                 <span style="color:#ae81ff">0</span><span style="color:#111">,</span> <span style="color:#75715e">-- square 0, value does not matter</span>

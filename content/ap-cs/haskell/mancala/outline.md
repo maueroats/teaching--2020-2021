@@ -60,3 +60,4 @@ we also keep track of how many stones are in the player's hand.
 ## Drawing
 
 (See separate document.)
+
