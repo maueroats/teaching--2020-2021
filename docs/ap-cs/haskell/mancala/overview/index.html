@@ -1011,15 +1011,74 @@ turn</li>
 <ul>
 <li>The String message is always printed out.</li>
 <li>If the number of stones is 0, then the returned player is asked to pick up
-stones from a new square. Whichever player is returned is asked, so
-this can be used for getting an extra turn by playing your last
-stone in your own mancala as well as passing the turn ordinarily -
-it just depends on what value your <code>distribute</code> function returns.</li>
+stones from a new square.</li>
 <li>If the number of stones is not 0, the next thing that will happen
-will be a play in the returned square. That means you should return
-the next square for the person to play on. (This could be handled in
-the skeleton provided</li>
+will be a play in the returned square. The <code>distribute</code> function
+should return the next square for the person to play on.</li>
 </ul>
+<h2 id="examples">Examples</h2>
+<h3 id="returning-values">Returning values</h3>
+<p>A tuple of values can be returned by just writing it out. I prefer a big where
+statement to set all of the values.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">distribute</span> <span style="color:#111">board</span> <span style="color:#111">player</span> <span style="color:#111">sq</span> <span style="color:#111">stones</span> 
+   <span style="color:#f92672">|</span> <span style="color:#111">stones</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>   <span style="color:#f92672">=</span>   <span style="color:#111">(</span><span style="color:#111">newboard</span><span style="color:#111">,</span> <span style="color:#111">newplayer</span><span style="color:#111">,</span> <span style="color:#111">newsq</span><span style="color:#111">,</span> <span style="color:#111">newstones</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;Played once.&#34;</span><span style="color:#111">)</span>
+      <span style="color:#00a8c8">where</span> <span style="color:#111">newstones</span> <span style="color:#f92672">=</span> <span style="color:#111">stones</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#111">newboard</span> <span style="color:#f92672">=</span> <span style="color:#f92672">..</span>
+            <span style="color:#111">newplayer</span> <span style="color:#f92672">=</span> <span style="color:#f92672">...</span>
+            <span style="color:#111">newsquare</span> <span style="color:#f92672">=</span> <span style="color:#f92672">...</span>
+</code></pre></div><h3 id="play-typical">Play: typical</h3>
+<p>In this example we will only show <code>board</code> squares 5, 6, and 7
+to keep writing short.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┃  0  ┃┃  0  ┃┃  0  ┃┃  0  ┃┃  0  ┃┃  0  ┃┃     ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┃     ┃
+┃  0  ┃┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┏━━━━━┓┃  3  ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┃     ┃┃  0  ┃┃  0  ┃┃  0  ┃┃  0  ┃┃  0  ┃┃ 12  ┃┃     ┃
+┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃┃     ┃
+┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛┗━━━━━┛
+</code></pre></div><p>Starting with player 0 at square 5, with 2 stones, put 1 stone in
+square 5 and advance to square 6 with the same player active.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Original</th>
+<th>New</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>board</td>
+<td><code>[...,12,3,0,...]</code></td>
+<td><code>[...,13,3,0,...]</code></td>
+</tr>
+<tr>
+<td>player</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>square</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td>stones</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exercises">Exercises</h3>
+<p>Write the Original/New value table showing what happens when:</p>
+<ol>
+<li>Player 0 plays on square 6 starting with one stone.</li>
+<li>Player 1 plays on square 5 starting with two stones.</li>
+<li>Player 0 plays on square 7 starting with one stone.</li>
+</ol>
 
 
     
