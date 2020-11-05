@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Primer 2 :: WY Computer Science</title>
+<title>Types Intro :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="">
+<meta name="description" content="A one day introduction to Haskell structures.">
 
 
 
     
   </head>
-  <body data-url="/ap-cs/haskell/connect-four/primer-2/">
+  <body data-url="/ap-cs/haskell/ch08/types-intro/">
     
       <header>
   <div class="logo">
@@ -446,13 +446,14 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/ch08/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/haskell/ch08/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/ch08/">Types</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/ch08/">Types</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ap-cs/haskell/ch08/types-intro/" class="dd-item">
+      <li data-nav-id="/ap-cs/haskell/ch08/types-intro/" class="dd-item active">
         <div>
           <a href="/ap-cs/haskell/ch08/types-intro/">
             Types Intro
@@ -617,11 +618,10 @@
       <a href="/ap-cs/haskell/scrabble/">Scrabble</a>
       </div>
     </li>
-    <li data-nav-id="/ap-cs/haskell/connect-four/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/haskell/connect-four/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/connect-four/">Connect Four</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/connect-four/">Connect Four</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/connect-four/overview/" class="dd-item">
@@ -652,7 +652,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/connect-four/primer-2/" class="dd-item active">
+      <li data-nav-id="/ap-cs/haskell/connect-four/primer-2/" class="dd-item">
         <div>
           <a href="/ap-cs/haskell/connect-four/primer-2/">
             Primer 2
@@ -972,7 +972,9 @@
    7. Modules</option>
     <option value="/ap-cs/haskell/ch08/" >
   -- 
-   Types</option>
+   Types</option> 
+      <option value="/ap-cs/haskell/ch08/types-intro/"  selected>--- Types Intro</option>
+  
     <option value="/ap-cs/haskell/usaco/" >
   -- 
    USACO Practice</option>
@@ -987,14 +989,7 @@
    Scrabble</option>
     <option value="/ap-cs/haskell/connect-four/" >
   -- 
-   Connect Four</option> 
-      <option value="/ap-cs/haskell/connect-four/overview/" >--- Connect Four Overview</option>
-      <option value="/ap-cs/haskell/connect-four/ui/" >--- Connect Four UI</option>
-      <option value="/ap-cs/haskell/connect-four/testcases/" >--- Connect Four Testcases</option>
-      <option value="/ap-cs/haskell/connect-four/spoilers/" >--- Connect Four Spoilers</option>
-      <option value="/ap-cs/haskell/connect-four/primer-2/"  selected>--- Primer 2</option>
-      <option value="/ap-cs/haskell/connect-four/rubric/" >--- Connect Four Rubric</option>
-  
+   Connect Four</option>
       <option value="/ap-cs/haskell/typeclass-notes/" >-- Typeclass Notes</option>
       <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
       <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
@@ -1014,47 +1009,101 @@
     </div>
     
 
-    <h1>Primer 2</h1>
+    <h1>Types Intro</h1>
 
     
     
     
-    <ul>
+    <p>You probably know structures from another programming language, like
+<code>define-struct</code> in Racket.</p>
+<ul>
+<li>Racket: define-struct</li>
+<li>C++ / Java : class with no methods, public instance variables</li>
+<li>Haskell: <code>data</code></li>
+</ul>
+<p>A type alias is a word that is a shorthand for another type.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">type Posn = (Int,Int) 
+</code></pre></div><p>The <code>data</code> keyword creates a new type of structure.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">data Model = Model { model_time :: Int, model_place :: Posn }
+</code></pre></div><p>With these names, the way Haskell works is almost identical to
+Racket code which creates <code>model-time</code> and <code>model-place</code> to get the
+components of a model struct.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(define-struct model (time place))
+</code></pre></div><p><strong>Important</strong>: you want to add <code>deriving (Show, Eq)</code> in most cases, so you can
+automatically print out your structure and compare two of the with
+<code>==</code>. This is like <code>#:transparent</code> in <code>#lang racket</code>, if you ever
+encountered that.</p>
+<h2 id="example-in-action">Example in action</h2>
+<p>Let&rsquo;s make a structure to hold time and location information:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">data Game = Game { time :: Int, place :: Posn }
+    deriving (Show, Eq)
+</code></pre></div><p>We will make a function to start a new game where the tine is always
+zero but the place can be chosen.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">new_game :: Posn -&gt; Game
+new_game p = Game { time = 0, place = p }
+</code></pre></div><p>Go ahead, try typing a few things to see how it works (interactively):</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">a = new_game (5,12)
+time a
+place a
+</code></pre></div><p>Now we need to write a &ldquo;tick handler&rdquo; that will update the time by
+adding one. Its signature will be <code>time_passes :: Game -&gt; Game</code>.</p>
+<p>There are a few ways to do this. These are <em>all equivalent</em>, pick one
+that you like and stick with it.</p>
+<ul>
 <li>
-<p><code>type Posn = (Int, Int)</code></p>
-</li>
-<li>
-<p><code>occupied :: Posn -&gt; [Posn] -&gt; Bool</code>. True if the first argument
-appears somewhere in the list which is the second argument.</p>
-</li>
-<li>
-<p><code>allOccupied:: [Posn] -&gt; [Posn] -&gt; Bool</code>. True if every one of the
-posns in the first list appear somewhere in the second list.</p>
-<pre><code>  True == allOccupied [(1,5),(2,7)] [(2,7),(1,5),(3,7)]
-  False == allOccupied [(1,5),(2,7)] [(2,7),(3,7)]
-  False == allOccupied [(1,5),(2,7)] [(2,6),(2,8),(1,5)]
+<p>Write out everything. Works but very verbose.</p>
+<pre><code>  time_passes g = Game { time = 1 + time g, place = place g }
 </code></pre>
 </li>
 <li>
-<p><code>dropDown :: Int -&gt; [Posn] -&gt; Int</code>. The function <code>dropDown x board</code>
-gives a number that is one more than the largest y coordinate in the board
-with the same x coordinate. If there are no pieces in the given
-column, return 1 as the answer.</p>
-<p>In the example below, the column with x=4 has points with y=1 and
-y=2, so one more than largest y coordinate is y=3.</p>
-<pre><code>  dropDown 4 [(4,2),(1,1),(2,1),(2,2),(4,1),(2,3)] == 3
-  dropDown 6 [(4,2),(1,1),(2,1),(2,2),(4,1),(2,3)] == 1
+<p>Copy every field that you do not set by writing the name of the
+variable before the braces.</p>
+<pre><code>  time_passes g = g {time = 1 + time g}
+</code></pre>
+</li>
+<li>
+<p>Pattern matching on the
+contents of the game lets you explicitly build a new Game
+struct. <em>Warning</em>: this makes it difficult to change the contents of
+your Game struct because if you add a field the old pattern needs to
+be changed.</p>
+<pre><code>  time_passes (Game t p) = Game (t+1) p
+</code></pre>
+</li>
+<li>
+<p>Capturing the whole game struct with <code>@</code> and writing out the one
+field we want to change is tricky but cool. Same disadvantage as above.</p>
+<pre><code>  time_passes g@(Game t _) = g{time=t+1}
 </code></pre>
 </li>
 </ul>
-
+<h2 id="applying-what-you-know">Applying what you know</h2>
+<p>The <code>MGame</code> structure could be used to create a minesweeper game.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#00a8c8">data</span> <span style="color:#00a8c8">MGame</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">MGame</span> <span style="color:#111">{</span> <span style="color:#111">bombs</span> <span style="color:#f92672">::</span> <span style="color:#111">[</span><span style="color:#00a8c8">Posn</span><span style="color:#111">],</span>
+                     <span style="color:#111">revealed</span> <span style="color:#f92672">::</span> <span style="color:#111">[</span><span style="color:#00a8c8">Posn</span><span style="color:#111">],</span>
+                     <span style="color:#111">playing</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">Bool</span> <span style="color:#111">}</span>
+    <span style="color:#00a8c8">deriving</span> <span style="color:#111">(</span><span style="color:#00a8c8">Show</span><span style="color:#111">,</span> <span style="color:#00a8c8">Eq</span><span style="color:#111">)</span>
+</code></pre></div><p>Write a <code>reveal</code> function that takes in a Game and a Posn, and puts
+out a new Game struct that has the Posn added to its <code>revealed</code> list.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">player_reveal</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">MGame</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">Posn</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">MGame</span>
+<span style="color:#75af00">player_reveal</span> <span style="color:#111">g</span> <span style="color:#111">sq</span> <span style="color:#f92672">=</span> <span style="color:#111">g</span> <span style="color:#75715e">-- WRONG RIGHT NOW... TRY TO FIX</span>
+</code></pre></div><p>Checks showing how <code>player_reveal</code> should work:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ck_pr_1 = MGame { bombs = [ (5,12), (8,15), (3,4)],
+                  revealed = [(5,11), (4,11)],
+                  playing = True }
+ck_pr_2 = MGame { bombs = [ (5,12), (8,15), (3,4)],
+                  revealed = [(8,14), (5,11), (4,11)],
+                  playing = True }
+ck_pr = [ ck_pr_2 == player_reveal ck_pr_1 (8,14)
+         ]
+</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/haskell/connect-four/spoilers/" title="Connect Four Spoilers"> <i class="fa fa-chevron-left"></i><label>Connect Four Spoilers</label></a>
-    <a class="nav nav-next" href="/ap-cs/haskell/connect-four/rubric/" title="Connect Four Rubric" style="margin-right: 0px;"><label>Connect Four Rubric</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/haskell/ch08/" title="Types"> <i class="fa fa-chevron-left"></i><label>Types</label></a>
+    <a class="nav nav-next" href="/ap-cs/haskell/usaco/" title="USACO Practice" style="margin-right: 0px;"><label>USACO Practice</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1070,7 +1119,7 @@ y=2, so one more than largest y coordinate is y=3.</p>
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 22/11/2019
+        <i class='fa fa-calendar'></i> Last update on 05/11/2020
     </div>
     
 
