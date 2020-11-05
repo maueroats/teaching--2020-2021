@@ -10,7 +10,10 @@ description: "An overview of how to fit your program into the UI framework."
 
 <style> .unicodeart { line-height: 100%; }</style>
 
-The [UI code]({{% relref "./ui" %}}) take care of
+This page is supposed to give you an idea of what you are writing and
+how it will all fit together in the end.
+
+The [UI code]({{% relref "./ui" %}}) takes care of:
 * ending the game when necessary (you write: `is_game_over`)
 * printing out who won (you write: `winner`)
 * picking which square to take the pieces from at the start of your
@@ -29,6 +32,17 @@ You communicate what you want to happen next by the results you return from
 * If the number of stones is not 0, the next thing that will happen
   will be a play in the returned square. The `distribute` function
   should return the next square for the person to play on. 
+
+The 5-tuple is the "game state". It should really be a struct (called
+a "record" in Haskell) but we have not learned that yet.
+
+The `distribute` function is kind of like the tick handler. It causes pieces
+to move as time passes. Of course the person needs to choose which
+pieces to move.
+
+The `distribute` function only puts down one stone at a time. This is
+supposed to make it easier for you to write the code, because you only
+need to focus on one idea at once.
 
 ## Examples
 

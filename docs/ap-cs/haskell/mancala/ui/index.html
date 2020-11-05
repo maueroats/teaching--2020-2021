@@ -1068,7 +1068,7 @@
 <span style="color:#75af00">ask_pickup_location</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">Board</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">Player</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">IO</span> <span style="color:#00a8c8">Int</span>
 <span style="color:#75af00">ask_pickup_location</span> <span style="color:#111">board</span> <span style="color:#111">player</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">do</span>
   <span style="color:#111">n</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">get_move_raw</span>
-  <span style="color:#00a8c8">if</span> <span style="color:#111">is_legal_move</span> <span style="color:#111">board</span> <span style="color:#111">n</span> <span style="color:#f92672">||</span> <span style="color:#111">n</span> <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#00a8c8">then</span>
+  <span style="color:#00a8c8">if</span> <span style="color:#111">is_legal_move</span> <span style="color:#111">board</span> <span style="color:#111">player</span> <span style="color:#111">n</span> <span style="color:#f92672">||</span> <span style="color:#111">n</span> <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#00a8c8">then</span>
     <span style="color:#111">return</span> <span style="color:#111">n</span>
   <span style="color:#00a8c8">else</span> <span style="color:#00a8c8">do</span>
     <span style="color:#111">putStrLn</span> <span style="color:#d88200">&#34;Illegal move&#34;</span>
@@ -1085,8 +1085,8 @@ is_game_over board = undefined -- False -- and it will run
 winner :: Board -&gt; Player
 winner board = undefined -- 0 -- and it will run
 
-is_legal_move :: Board -&gt; Square -&gt; Bool
-is_legal_move board n = undefined -- True -- and it will run
+is_legal_move :: Board -&gt; Player -&gt; Square -&gt; Bool
+is_legal_move board player n = undefined -- True -- and it will run
 
 drawBoard :: Board -&gt; [String]
 drawBoard board = undefined  -- [&#34;Broken&#34;] -- and it will run

@@ -82,7 +82,7 @@ get_move_raw = do
 ask_pickup_location :: Board -> Player -> IO Int
 ask_pickup_location board player = do
   n <- get_move_raw
-  if is_legal_move board n || n == -1 then
+  if is_legal_move board player n || n == -1 then
     return n
   else do
     putStrLn "Illegal move"
@@ -103,8 +103,8 @@ is_game_over board = undefined -- False -- and it will run
 winner :: Board -> Player
 winner board = undefined -- 0 -- and it will run
 
-is_legal_move :: Board -> Square -> Bool
-is_legal_move board n = undefined -- True -- and it will run
+is_legal_move :: Board -> Player -> Square -> Bool
+is_legal_move board player n = undefined -- True -- and it will run
 
 drawBoard :: Board -> [String]
 drawBoard board = undefined  -- ["Broken"] -- and it will run

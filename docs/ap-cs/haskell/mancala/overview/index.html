@@ -996,7 +996,9 @@
     
     
     <style> .unicodeart { line-height: 100%; }</style>
-<p>The <a href="/ap-cs/haskell/mancala/ui/">UI code</a> take care of</p>
+<p>This page is supposed to give you an idea of what you are writing and
+how it will all fit together in the end.</p>
+<p>The <a href="/ap-cs/haskell/mancala/ui/">UI code</a> takes care of:</p>
 <ul>
 <li>ending the game when necessary (you write: <code>is_game_over</code>)</li>
 <li>printing out who won (you write: <code>winner</code>)</li>
@@ -1017,6 +1019,14 @@ stones from a new square.</li>
 will be a play in the returned square. The <code>distribute</code> function
 should return the next square for the person to play on.</li>
 </ul>
+<p>The 5-tuple is the &ldquo;game state&rdquo;. It should really be a struct (called
+a &ldquo;record&rdquo; in Haskell) but we have not learned that yet.</p>
+<p>The <code>distribute</code> function is kind of like the tick handler. It causes pieces
+to move as time passes. Of course the person needs to choose which
+pieces to move.</p>
+<p>The <code>distribute</code> function only puts down one stone at a time. This is
+supposed to make it easier for you to write the code, because you only
+need to focus on one idea at once.</p>
 <h2 id="examples">Examples</h2>
 <h3 id="returning-values">Returning values</h3>
 <p>A tuple of values can be returned by just writing it out. I prefer a big where
