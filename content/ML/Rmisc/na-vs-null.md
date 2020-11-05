@@ -1,7 +1,7 @@
 ---
 title: "NA vs NULL"
 date: 2020-09-21T11:47:53-05:00
-# weight: 20
+weight: 20
 draft: false
 #type: slide
 #theme: white

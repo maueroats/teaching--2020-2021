@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>2017-09-12 :: WY Computer Science</title>
+<title>Lookup Tables :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="Technical details that came up while doing Chapter 2 Homework.">
+<meta name="description" content="Replacing values with other values in R.">
 
 
 
     
   </head>
-  <body data-url="/ap-cs/haskell/daily/2017-09-12/">
+  <body data-url="/ml/rmisc/lookup-tables/">
     
       <header>
   <div class="logo">
@@ -68,18 +68,16 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/ap-cs/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/">AP CS</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/">AP CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/ap-cs/haskell/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/haskell/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/">Haskell</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/">Haskell</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ap-cs/haskell/ch01/" class="dd-item haschildren
@@ -461,11 +459,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/daily/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/haskell/daily/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/daily/">Haskell Daily Notes</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/daily/">Haskell Daily Notes</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/daily/2018-10-16/" class="dd-item">
@@ -524,7 +521,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/daily/2017-09-12/" class="dd-item active">
+      <li data-nav-id="/ap-cs/haskell/daily/2017-09-12/" class="dd-item">
         <div>
           <a href="/ap-cs/haskell/daily/2017-09-12/">
             2017-09-12
@@ -715,10 +712,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/" class="dd-item haschildren
+    <li data-nav-id="/ml/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/">Machine Learning</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/startup/" class="dd-item">
@@ -728,10 +726,11 @@
           </a>
         </div>
     </li>
-    <li data-nav-id="/ml/rmisc/" class="dd-item haschildren
+    <li data-nav-id="/ml/rmisc/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ml/rmisc/">R: Misc</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ml/rmisc/">R: Misc</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/rmisc/jupyter-graphing/" class="dd-item">
@@ -748,7 +747,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ml/rmisc/lookup-tables/" class="dd-item">
+      <li data-nav-id="/ml/rmisc/lookup-tables/" class="dd-item active">
         <div>
           <a href="/ml/rmisc/lookup-tables/">
             Lookup Tables
@@ -930,66 +929,25 @@
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/ap-cs/" >
-   AP CS</option> 
-    <option value="/ap-cs/haskell/" >
-  - 
-   Haskell</option> 
-    <option value="/ap-cs/haskell/ch01/" >
-  -- 
-   1. Intro</option>
-    <option value="/ap-cs/haskell/ch02/" >
-  -- 
-   2. Starting Out</option>
-    <option value="/ap-cs/haskell/ch03/" >
-  -- 
-   3. Types and Typeclasses</option>
-    <option value="/ap-cs/haskell/ch04/" >
-  -- 
-   4. Syntax in Functions</option>
-    <option value="/ap-cs/haskell/ch05/" >
-  -- 
-   5. Recursion</option>
-    <option value="/ap-cs/haskell/ch06/" >
-  -- 
-   6. Higher Order Functions</option>
-    <option value="/ap-cs/haskell/ch07/" >
-  -- 
-   7. Modules</option>
-    <option value="/ap-cs/haskell/usaco/" >
-  -- 
-   USACO Practice</option>
-    <option value="/ap-cs/haskell/daily/" >
-  -- 
-   Haskell Daily Notes</option> 
-      <option value="/ap-cs/haskell/daily/2018-10-16/" >--- 2018-10-16</option>
-      <option value="/ap-cs/haskell/daily/2018-10-09/" >--- 2018-10-09 Project</option>
-      <option value="/ap-cs/haskell/daily/2018-10-04/" >--- 2018.10.04 Square Pasture</option>
-      <option value="/ap-cs/haskell/daily/2018-10-03/" >--- 2018.10.03 Cow Signal</option>
-      <option value="/ap-cs/haskell/daily/2017-10-04/" >--- 2017-10-04</option>
-      <option value="/ap-cs/haskell/daily/2017-10-03/" >--- 2017-10-03</option>
-      <option value="/ap-cs/haskell/daily/2017-09-18/" >--- 2017-09-18</option>
-      <option value="/ap-cs/haskell/daily/2017-09-13/" >--- 2017-09-14 Indentation</option>
-      <option value="/ap-cs/haskell/daily/2017-09-12/"  selected>--- 2017-09-12</option>
-      <option value="/ap-cs/haskell/daily/2017-09-11/" >--- 2017-09-11</option>
-  
-    <option value="/ap-cs/haskell/mancala/" >
-  -- 
-   Mancala</option>
-    <option value="/ap-cs/haskell/scrabble/" >
-  -- 
-   Scrabble</option>
-    <option value="/ap-cs/haskell/connect-four/" >
-  -- 
-   Connect Four</option>
-      <option value="/ap-cs/haskell/typeclass-notes/" >-- Typeclass Notes</option>
-      <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
-      <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
-  
-  
+   AP CS</option>
     <option value="/intermediate-cs/" >
    Intermediate CS</option>
     <option value="/ml/" >
-   Machine Learning</option>
+   Machine Learning</option> 
+      <option value="/ml/startup/" >- ML Startup</option>
+    <option value="/ml/rmisc/" >
+  - 
+   R: Misc</option> 
+      <option value="/ml/rmisc/jupyter-graphing/" >-- Jupyter Graphing</option>
+      <option value="/ml/rmisc/na-vs-null/" >-- NA vs NULL</option>
+      <option value="/ml/rmisc/lookup-tables/"  selected>-- Lookup Tables</option>
+      <option value="/ml/rmisc/stdinc/" >-- Standard Header</option>
+      <option value="/ml/rmisc/timeseries/" >-- Timeseries</option>
+  
+    <option value="/ml/r4ds/" >
+  - 
+   R for Data Science</option>
+  
     <option value="/resources/" >
    Resources</option>
 
@@ -1000,54 +958,58 @@
     </div>
     
 
-    <h1>2017-09-12</h1>
+    <h1>Lookup Tables</h1>
 
     
     
     
     <ul>
-<li>
-<p>Memorize how to write a basic main method:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">  main = do putStrLn &#34;Loaded&#34;
-</code></pre></div></li>
-<li>
-<p>Use &ldquo;&ndash;&rdquo; (two dashes) to comment to the end of the line. This is
-equivalent to Racket &ldquo;;&rdquo; (semicolon).</p>
-</li>
-<li>
-<p>Function name rules:</p>
-<ul>
-<li>
-<p>Must begin with lowercase letter.</p>
-</li>
-<li>
-<p>Hyphens (-) are not allowed in names.</p>
-</li>
-<li>
-<p>Underscore (_) may be used instead.</p>
-</li>
-<li>
-<p>Traditionally <code>camelCase</code> is used for functions. (First letter
-lowercase, then uppercase each new word.)</p>
-</li>
+<li>Remember that if there are NA values, change them with <code>replace_na</code>.</li>
 </ul>
-</li>
-<li>
-<p>We will learn about the <code>$</code> sign soon, but it is a substitute for
-putting parentheses from somewhere to the end of the line. That means</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    putStrLn ( show ( grapher f 0 10 ) )
-</code></pre></div><p>could be written as</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">    putStrLn $ show $ grapher f 0 10
-</code></pre></div></li>
-</ul>
-
+<h2 id="lookup-list">Lookup List</h2>
+<p>Using a list with names gets the job done, but I do not think it is
+very efficient. You can make a function or use list access <code>[...]</code>.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#111">how_often_1</span> <span style="color:#f92672">=</span> <span style="color:#75af00">c</span><span style="color:#111">(</span><span style="color:#d88200">&#34;A&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;B&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;C&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;Long month&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;E&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;F&#34;</span><span style="color:#111">)</span>
+<span style="color:#111">how_often_lookup</span> <span style="color:#f92672">=</span> <span style="color:#75af00">set_names</span><span style="color:#111">(</span><span style="color:#75af00">seq_along</span><span style="color:#111">(</span><span style="color:#111">how_often_1</span><span style="color:#111">),</span><span style="color:#111">how_often_1</span><span style="color:#111">)</span>
+</code></pre></div><p>Examples:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#111">ex</span><span style="color:#f92672">=</span> <span style="color:#75af00">c</span><span style="color:#111">(</span><span style="color:#d88200">&#34;E&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;B&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;Long month&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;A&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;B&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;B&#34;</span><span style="color:#111">)</span>
+<span style="color:#111">how_often_lookup[</span><span style="color:#d88200">&#34;E&#34;</span><span style="color:#111">]</span>
+<span style="color:#111">how_often_lookup[ex]</span>
+<span style="color:#111">often_to_number</span> <span style="color:#f92672">&lt;-</span> <span style="color:#75af00">function</span><span style="color:#111">(</span><span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#111">how_often_lookup[x]</span>
+<span style="color:#75af00">often_to_number</span><span style="color:#111">(</span><span style="color:#111">ex</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="lookup-table">Lookup Table</h2>
+<p>Use a left join. You will have to make sure the column names
+match. Use <code>rename</code> if you want to change the value column name.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#111">gpa_values</span> <span style="color:#f92672">&lt;-</span> <span style="color:#75af00">tribble</span><span style="color:#111">(</span>
+    <span style="color:#f92672">~</span><span style="color:#111">grade</span><span style="color:#111">,</span> <span style="color:#f92672">~</span><span style="color:#111">value</span><span style="color:#111">,</span>
+    <span style="color:#d88200">&#34;A&#34;</span>   <span style="color:#111">,</span>  <span style="color:#ae81ff">4</span><span style="color:#111">,</span>
+    <span style="color:#d88200">&#34;B&#34;</span>   <span style="color:#111">,</span>  <span style="color:#ae81ff">3</span><span style="color:#111">,</span>
+    <span style="color:#d88200">&#34;C&#34;</span>   <span style="color:#111">,</span>  <span style="color:#ae81ff">2</span><span style="color:#111">,</span>
+    <span style="color:#d88200">&#34;D&#34;</span>   <span style="color:#111">,</span>  <span style="color:#ae81ff">1</span><span style="color:#111">,</span>
+    <span style="color:#d88200">&#34;F&#34;</span>   <span style="color:#111">,</span>  <span style="color:#ae81ff">0</span><span style="color:#111">,</span>
+    <span style="color:#111">)</span>
+</code></pre></div><p>Example usage:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#111">grades</span> <span style="color:#f92672">&lt;-</span> <span style="color:#75af00">tribble</span><span style="color:#111">(</span>
+   <span style="color:#f92672">~</span><span style="color:#111">person</span><span style="color:#111">,</span> <span style="color:#f92672">~</span><span style="color:#111">science_grade</span><span style="color:#111">,</span>
+   <span style="color:#d88200">&#34;Amanda&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;A&#34;</span><span style="color:#111">,</span>
+   <span style="color:#d88200">&#34;Gunn&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;B&#34;</span><span style="color:#111">,</span>
+   <span style="color:#d88200">&#34;Santiago&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;A&#34;</span><span style="color:#111">,</span>
+   <span style="color:#d88200">&#34;Carmen&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;F&#34;</span><span style="color:#111">,</span>
+   <span style="color:#d88200">&#34;Isabel&#34;</span><span style="color:#111">,</span> <span style="color:#d88200">&#34;D&#34;</span><span style="color:#111">,</span>
+   <span style="color:#d88200">&#34;Allende&#34;</span><span style="color:#111">,</span><span style="color:#d88200">&#34;C&#34;</span><span style="color:#111">,</span>
+   <span style="color:#d88200">&#34;Ghost&#34;</span><span style="color:#111">,</span> <span style="color:#00a8c8">NA</span><span style="color:#111">,</span>
+<span style="color:#111">)</span>
+<span style="color:#111">grades</span> <span style="color:#f92672">%&gt;%</span> 
+  <span style="color:#75af00">left_join</span><span style="color:#111">(</span><span style="color:#111">gpa_values</span><span style="color:#111">,</span> <span style="color:#111">by</span><span style="color:#f92672">=</span><span style="color:#75af00">c</span><span style="color:#111">(</span><span style="color:#d88200">&#34;science_grade&#34;</span><span style="color:#f92672">=</span><span style="color:#d88200">&#34;grade&#34;</span><span style="color:#111">))</span> <span style="color:#f92672">%&gt;%</span>
+  <span style="color:#75af00">rename</span><span style="color:#111">(</span><span style="color:#111">science_gp</span> <span style="color:#f92672">=</span> <span style="color:#111">value</span><span style="color:#111">)</span>
+</code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/haskell/daily/2017-09-13/" title="2017-09-14 Indentation"> <i class="fa fa-chevron-left"></i><label>2017-09-14 Indentation</label></a>
-    <a class="nav nav-next" href="/ap-cs/haskell/daily/2017-09-11/" title="2017-09-11" style="margin-right: 0px;"><label>2017-09-11</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ml/rmisc/na-vs-null/" title="NA vs NULL"> <i class="fa fa-chevron-left"></i><label>NA vs NULL</label></a>
+    <a class="nav nav-next" href="/ml/rmisc/stdinc/" title="Standard Header" style="margin-right: 0px;"><label>Standard Header</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1058,18 +1020,12 @@ putting parentheses from somewhere to the end of the line. That means</p>
 
 <div class="footline">
     
-    <div class="tags"> 
-      
-        <a class="label label-default" href="https://wy-cs.infotags/haskell">haskell</a>
-      
-    </div>
-    
 
     
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 12/09/2017
+        <i class='fa fa-calendar'></i> Last update on 05/11/2020
     </div>
     
 
