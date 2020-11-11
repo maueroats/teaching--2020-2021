@@ -19,6 +19,7 @@ description: "Starting Java"
 - lots of cool syntax like `[1..10]` or `[x^2 | x <- [1..9]]`
 - types were optional (deduced)
 - indentation made one thing go inside another (where)
+- the last line of a function is returned the function output value
 - syntax can be over the top `()-()` could be a function?!
 - very crap error messages
 
@@ -31,6 +32,7 @@ description: "Starting Java"
 - lots of syntax and special "reserved" words
 - types are required
 - braces `{ ... }` to put things inside each other
+- output values must be specified using a `return` statement
 - semicolons to end each "line" = statement or group of statements
 - consistency is weird sometimes (I will point this out)
 - need to understand how the computer sees "memory"
