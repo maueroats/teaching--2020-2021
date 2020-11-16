@@ -28,7 +28,8 @@ time. Learn to do it proficiently.
 
 * (`limit`) Make a function called `limit` that takes in an integer and puts out
   an integer between 0 and 255. Numbers below 0 should become 0, and
-  numbers above 255 should become 255.
+  numbers above 255 should become 255. Otherwise the answer should be
+  the same as the input number.
 
         (check-expect (limit -8) 0)
         (check-expect (limit 900) 255)
@@ -80,7 +81,8 @@ You should also be seeing it in this worksheet.
   could place its center at (150,100) and the point (x,y) would be
   just on the edge.
   
-* `test-circ number(x) number(y) -> image`. Draw a radius 4 solid brown
+* `test-circ number(x) number(y) image(background) -> image`. Using
+  the given image as the background, draw a radius 4 solid brown 
   circle centered at `(x,y)` and a solid maroon circle centered at
   `(150,100)` with `(x,y)` just on its edge.
 

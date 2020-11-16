@@ -1112,7 +1112,8 @@ time. Learn to do it proficiently.</p>
 <li>
 <p>(<code>limit</code>) Make a function called <code>limit</code> that takes in an integer and puts out
 an integer between 0 and 255. Numbers below 0 should become 0, and
-numbers above 255 should become 255.</p>
+numbers above 255 should become 255. Otherwise the answer should be
+the same as the input number.</p>
 <pre><code>  (check-expect (limit -8) 0)
   (check-expect (limit 900) 255)
 </code></pre>
@@ -1173,7 +1174,8 @@ could place its center at (150,100) and the point (x,y) would be
 just on the edge.</p>
 </li>
 <li>
-<p><code>test-circ number(x) number(y) -&gt; image</code>. Draw a radius 4 solid brown
+<p><code>test-circ number(x) number(y) image(background) -&gt; image</code>. Using
+the given image as the background, draw a radius 4 solid brown
 circle centered at <code>(x,y)</code> and a solid maroon circle centered at
 <code>(150,100)</code> with <code>(x,y)</code> just on its edge.</p>
 </li>
