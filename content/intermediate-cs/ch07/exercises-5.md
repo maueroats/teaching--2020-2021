@@ -16,6 +16,10 @@ Look for ways you can use these later.
 
 * (`at-least-10: number -> number)`: Take in any number, put out a
   number that is at least 10.
+  
+        (check-expect (at-least-10 75) 75)
+        (check-expect (at-least-10 3) 10)       
+
 
 ## Limiting values
 

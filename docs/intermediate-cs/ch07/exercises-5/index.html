@@ -1100,6 +1100,9 @@ lower right corner of an image.</p>
 <li>
 <p>(<code>at-least-10: number -&gt; number)</code>: Take in any number, put out a
 number that is at least 10.</p>
+<pre><code>  (check-expect (at-least-10 75) 75)
+  (check-expect (at-least-10 3) 10)       
+</code></pre>
 </li>
 </ul>
 <h2 id="limiting-values">Limiting values</h2>
