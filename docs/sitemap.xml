@@ -28,6 +28,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/ch07-summary/</loc>
+    <lastmod>2018-11-20T11:22:54-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/ap-cs/haskell/connect-four/timeline/</loc>
     <lastmod>2017-10-07T08:59:38-05:00</lastmod>
   </url>
@@ -78,6 +83,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/exercises-1/</loc>
+    <lastmod>2017-10-17T12:46:06-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch04/ch04-reading-guide/</loc>
     <lastmod>2017-09-17T20:47:05-05:00</lastmod>
   </url>
@@ -85,6 +95,16 @@
   <url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch02/ch02-reading-guide/</loc>
     <lastmod>2017-09-09T15:57:47-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/exercises-2/</loc>
+    <lastmod>2017-10-17T12:46:09-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/exercises-3/</loc>
+    <lastmod>2017-10-18T15:03:26-05:00</lastmod>
   </url>
   
   <url>
@@ -100,6 +120,11 @@
   <url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch02/cw-3/</loc>
     <lastmod>2018-09-11T09:15:40-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/exercises-4/</loc>
+    <lastmod>2017-10-24T08:14:20-05:00</lastmod>
   </url>
   
   <url>
@@ -258,6 +283,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/exercises-5/</loc>
+    <lastmod>2020-11-16T13:53:05-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/ap-cs/haskell/mancala/ui/</loc>
     <lastmod>2020-10-24T20:00:17-05:00</lastmod>
   </url>
@@ -338,8 +368,28 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/</loc>
+    <lastmod>2018-11-13T07:38:12-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch08/</loc>
     <lastmod>2020-11-05T16:58:57-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/review-1/</loc>
+    <lastmod>2018-11-13T07:38:18-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/review-2/</loc>
+    <lastmod>2019-11-21T12:57:17-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/ch07-quiz/</loc>
+    <lastmod>2018-11-15T22:38:57-06:00</lastmod>
   </url>
   
   <url>
@@ -615,6 +665,16 @@
   <url>
     <loc>https://wy-cs.info/intermediate-cs/resources/e-courses/</loc>
     <lastmod>2017-10-29T12:33:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/maxmin/</loc>
+    <lastmod>2017-10-18T14:28:44-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch07/random/</loc>
+    <lastmod>2017-10-17T22:10:45-05:00</lastmod>
   </url>
   
   <url>
