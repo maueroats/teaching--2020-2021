@@ -17,7 +17,7 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="">
+<meta name="description" content="Helper functions, limiting values, random numbers, and the distance formula.">
 
 
 
@@ -1091,7 +1091,10 @@
     
     
     <h2 id="helper-functions-1">Helper functions 1</h2>
-<p>Look for ways you can use these later.</p>
+<p>Re-use functions you have already written.
+This is shown a lot in the chapter (exercises 7.8-7.10, or 7.15-7.17, or 7.18-7.19).
+You should also be seeing it in this worksheet.</p>
+<p>Look for ways you can use these functions later.</p>
 <ul>
 <li>
 <p>(<code>dot-on: image -&gt; image</code>): Place a radius 5 solid red circle on the
@@ -1136,16 +1139,17 @@ the way the answer looks):</p>
 </ul>
 </li>
 </ul>
-<h2 id="helper-functions-2">Helper functions 2</h2>
-<p>Re-use functions you have already written.
-This is shown a lot in the chapter (exercises 7.8-7.10, or 7.15-7.17, or 7.18-7.19).
-You should also be seeing it in this worksheet.</p>
 <h2 id="random-numbers">Random numbers</h2>
 <ul>
 <li>
 <p><code>random-tenth: number(top) -&gt; number</code>. Put out a random real number
 of the form <code>xy.z</code>, between 10.0 and <code>top</code>. Assume the number <code>top</code>
 is at least 10.0.</p>
+<p>For example, <code>(random-tenth 10.3)</code> could put out 10.0, 10.1, 10.2,
+or 10.3. Since there are four possibilities, each one should be
+picked about 1/4 of the time. If you run (random-tenth 10.3) a
+bunch of times in the bottom window, you should see all of the
+possibilities.</p>
 </li>
 <li>
 <p><code>four-up: integer -&gt; number</code>. Round an integer up to the nearest
@@ -1154,6 +1158,8 @@ multiple of 4.</p>
   (check-expect (four-up 99) 100)
   (check-expect (four-up 400) 400)
 </code></pre>
+<p>This question is a bit challenging. If you can the first two
+check-expects to pass but not the last, that&rsquo;s pretty good.</p>
 </li>
 </ul>
 <h2 id="distance-formula">Distance formula</h2>
@@ -1163,23 +1169,31 @@ multiple of 4.</p>
 Write the distance function and two good tests to make sure it works
 correctly. (This function is important, make sure you know how to do
 it without thinking too hard.)</p>
-<pre><code>* One test should be when the answer is an integer. 
-* Another test should be when the answer is a square root.
-</code></pre>
+<ul>
+<li>One test should be when the answer is an integer.</li>
+<li>Another test should be when the answer is a square root.</li>
+</ul>
 </li>
 <li>
 <p><code>make-circ: number(x) number(y) -&gt; image</code>. Produce a solid maroon
 circle sized so that you
 could place its center at (150,100) and the point (x,y) would be
 just on the edge.</p>
+<pre><code>  (make-circ 200 220) =&gt; (circle 130 &quot;solid&quot; &quot;maroon&quot;)
+</code></pre>
 </li>
 <li>
 <p><code>test-circ number(x) number(y) image(background) -&gt; image</code>. Using
 the given image as the background, draw a radius 4 solid brown
 circle centered at <code>(x,y)</code> and a solid maroon circle centered at
 <code>(150,100)</code> with <code>(x,y)</code> just on its edge.</p>
+<pre><code>  (test-circ 175 160 (empty-scene 400 200))
+</code></pre>
+  <figure>
+  <img src="test-circ.png"/> 
 </li>
 </ul>
+</figure>
 <h2 id="animation-fun">Animation Fun</h2>
 <p>Make a red dot follow the graph of <code>y=x</code> until it gets to <code>y=150</code>,
 then move along <code>y=150</code> as <code>x</code> increases.</p>

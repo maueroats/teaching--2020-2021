@@ -23,6 +23,13 @@ The chapter is about doing math with numbers.
 (remainder 21912 7)
 ```
 
+* Maximum, minimum, absolute value
+```racket
+(max 0 -4) ; ==> 0
+(min 255 300) ; ==> 255
+(abs -10) ; ==> 10
+```
+
 * Exponents, square root, squaring:
 ```racket
 (expt 1.01 95) ; 1.01 to the 95 power is about 2.57
@@ -45,13 +52,6 @@ You should never use check-expect with inexact numbers, because the inexact resu
 ```racket
 > pi
 #i3.141592653589793
-```
-
-* Maximum, minimum, absolute value
-```racket
-(max 0 -4) ; ==> 0
-(min 255 300) ; ==> 255
-(abs -10) ; ==> 10
 ```
 
 * Getting rid of fractions. The best generic method to use is `real->int`. Otherwise there are specific functions that will round traditionally, round up (ceiling), and round down (floor). 
