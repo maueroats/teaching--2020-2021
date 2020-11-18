@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Ch01 :: WY Computer Science</title>
+<title>Exercises 6 :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="Introduction.">
+<meta name="description" content="Limiting warmup, more random numbers, distance.">
 
 
 
     
   </head>
-  <body data-url="/ml/r4ds/ch01/">
+  <body data-url="/intermediate-cs/ch07/exercises-6/">
     
       <header>
   <div class="logo">
@@ -712,16 +712,18 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/" class="dd-item haschildren
+    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/intermediate-cs/">Intermediate CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/intermediate-cs/">Intermediate CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/intermediate-cs/ch07/" class="dd-item haschildren
+    <li data-nav-id="/intermediate-cs/ch07/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/intermediate-cs/ch07/">7. Numbers</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/intermediate-cs/ch07/">7. Numbers</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/intermediate-cs/ch07/ch07-summary/" class="dd-item">
@@ -766,7 +768,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/intermediate-cs/ch07/exercises-6/" class="dd-item">
+      <li data-nav-id="/intermediate-cs/ch07/exercises-6/" class="dd-item active">
         <div>
           <a href="/intermediate-cs/ch07/exercises-6/">
             Exercises 6
@@ -841,11 +843,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/" class="dd-item parent haschildren
+    <li data-nav-id="/ml/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ml/">Machine Learning</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/startup/" class="dd-item">
@@ -898,14 +899,13 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/r4ds/" class="dd-item parent haschildren
+    <li data-nav-id="/ml/r4ds/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ml/r4ds/">R for Data Science</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ml/r4ds/">R for Data Science</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ml/r4ds/ch01/" class="dd-item active">
+      <li data-nav-id="/ml/r4ds/ch01/" class="dd-item">
         <div>
           <a href="/ml/r4ds/ch01/">
             Ch01
@@ -1060,27 +1060,29 @@
     <option value="/ap-cs/" >
    AP CS</option>
     <option value="/intermediate-cs/" >
-   Intermediate CS</option>
+   Intermediate CS</option> 
+    <option value="/intermediate-cs/ch07/" >
+  - 
+   7. Numbers</option> 
+      <option value="/intermediate-cs/ch07/ch07-summary/" >-- 7. Summary</option>
+      <option value="/intermediate-cs/ch07/exercises-1/" >-- Exercises 1</option>
+      <option value="/intermediate-cs/ch07/exercises-2/" >-- Exercises 2</option>
+      <option value="/intermediate-cs/ch07/exercises-3/" >-- Exercises 3</option>
+      <option value="/intermediate-cs/ch07/exercises-4/" >-- More Exercises 4</option>
+      <option value="/intermediate-cs/ch07/exercises-5/" >-- Exercises 5</option>
+      <option value="/intermediate-cs/ch07/exercises-6/"  selected>-- Exercises 6</option>
+      <option value="/intermediate-cs/ch07/review-1/" >-- 7. Review 1</option>
+      <option value="/intermediate-cs/ch07/review-2/" >-- 7. Review 2</option>
+      <option value="/intermediate-cs/ch07/ch07-quiz/" >-- 7. Numbers Quiz</option>
+      <option value="/intermediate-cs/ch07/maxmin/" >-- Max and min slides</option>
+      <option value="/intermediate-cs/ch07/random/" >-- Randomness</option>
+  
+    <option value="/intermediate-cs/resources/" >
+  - 
+   Resources</option>
+  
     <option value="/ml/" >
-   Machine Learning</option> 
-      <option value="/ml/startup/" >- ML Startup</option>
-    <option value="/ml/rmisc/" >
-  - 
-   R: Misc</option>
-    <option value="/ml/r4ds/" >
-  - 
-   R for Data Science</option> 
-      <option value="/ml/r4ds/ch01/"  selected>-- Ch01</option>
-      <option value="/ml/r4ds/ch02/" >-- Ch02</option>
-      <option value="/ml/r4ds/ch03/" >-- Ch03</option>
-      <option value="/ml/r4ds/ch05-book/" >-- Ch05 Book</option>
-      <option value="/ml/r4ds/ch05/" >-- Ch05 Problem Set</option>
-      <option value="/ml/r4ds/ch05-project/" >-- Ch05 Project</option>
-      <option value="/ml/r4ds/ch07/" >-- Ch07</option>
-      <option value="/ml/r4ds/ch13/" >-- Ch13</option>
-      <option value="/ml/r4ds/ch14/" >-- Ch14</option>
-  
-  
+   Machine Learning</option>
     <option value="/resources/" >
    Resources</option>
 
@@ -1091,46 +1093,66 @@
     </div>
     
 
-    <h1>Ch01</h1>
+    <h1>Exercises 6</h1>
 
     
     
     
-    <p><strong>Warning</strong>: Section 1.4 does not describe the method we will use for accessing R.</p>
+    <script>
+MathJax = {
+ tex: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  displayMath: [['$$','$$'], ['\\[','\\]']]
+  }};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<h2 id="opener">Opener</h2>
+<p>A digital thermometer gives temperature readouts with one decimal
+place. The <code>random-therm</code> function gives a possible temperature
+reading between $96.7$ and $100.5$, inclusive. Write the
+<code>random-therm</code> function.</p>
+<h2 id="random">Random</h2>
 <ul>
-<li>What are the steps used in a typical data science project?</li>
-<li>Define what the authors mean by &ldquo;tidy data&rdquo;.</li>
-<li>Transformations
-<ul>
-<li>There are three types of transformations listed. Give each type.</li>
-<li>Briefly describe a (possibly imaginary) dataset (<em>not</em> from the book).</li>
-<li>Using this data set, give an example of each type of transformation.</li>
-</ul>
+<li>
+<p>(<code>ball-jump</code>) A ball is supposed to teleport around the screen,
+moving to a random x coordinate. The x-coordinates chosen should be
+multiples of 10 between 70 and 250. Write a function that will give
+the new x-coordinate. Example of random choices:</p>
+<pre><code>  (ball-jump 0) =&gt; 90
+  (ball-jump 0) =&gt; 170
+  (ball-jump 0) =&gt; 120
+</code></pre>
 </li>
-<li>The book mentions both visualization and modeling. Which is more appropriate for the beginning of an investigation, and why?</li>
-<li>How large does the book consider to be a &ldquo;small&rdquo; data set? How big would a &ldquo;larger&rdquo; data set be? Does the book give a clue at what point the authors start to consider a data set &ldquo;Big Data&rdquo;?</li>
-<li>Name at least two other computer languages commonly uesd in data science.</li>
-<li>What would the authors think about me teaching Python and Hadoop alongside of R in this class? Explain their reasoning.</li>
-<li>In a nutshell, what is the difference between  exploration and hypothesis confirmation?</li>
 </ul>
-<h2 id="getting-help">Getting Help</h2>
-<p>Section 1.6 has some brief information about how to figure out what is going on when something goes wrong. At the start, here is some advice:</p>
+<h2 id="distances">Distances</h2>
 <ul>
-<li>Make sure you can clearly state what the code you are typing is supposed to do. If you&rsquo;re not sure what the result should look like, get clear on that first.</li>
-<li>Make a small example instead of being frustrated with a large one. If you have problems reading the hundred line data file, will it work when you cut it down to two lines? The book says it beautifully:</li>
+<li>
+<p>(<code>dist-to-circ</code>)
+A circle has radius $80$ and center $(200,150)$. Write a function to
+compute the distance from $(x,y)$ to the circle. When $(x,y)$ is
+inside the circle or on the perimeter of the circle, the distance is $0$.</p>
+</li>
+<li>
+<p>(<code>dist-to-sq</code>) <strong>Harder Challenge.</strong>
+A square of side length 50 is placed with center at (175,90). Find
+the distance from a point (x,y) to the square. If your point is
+inside the square, the distance is zero. Draw a picture.</p>
+</li>
 </ul>
-<blockquote>
-<p>Do your best to remove everything that is not related to the problem. The shorter your code is, the easier it is to understand, and the easier it is to fix.</p>
-</blockquote>
+<h2 id="other">Other</h2>
 <ul>
-<li>Check every step. If one line has a bunch of commands on it, break them down into separate lines and look at the answer after each one.</li>
-<li>Post your question for the class.</li>
-</ul>
-<h2 id="application-question">Application Question</h2>
-<p>The Society of Actuaries has a 45 million record data set about group long term disability insurance. Each record is an instance of a disability claim. There are about 29 pieces of information associated with each claim. Do you think this qualifies as big data? Explain why or why not. (Data format is in Appendix A of the <a href="https://www.soa.org/globalassets/assets/files/resources/experience-studies/2019/2009-2017-gltd-study-report-appendix-1.pdf">SOA Data Request</a>.)</p>
-<h2 id="review-questions">Review Questions</h2>
-<ul>
-<li>When someone talks about &ldquo;wrangling&rdquo; data, what do they mean?</li>
+<li>
+<p>(<code>swerve-heading</code>)
+A compass is currently pointing a certain direction between 0 and
+359 degrees. (0 degrees = North, not that it matters) The driver
+swerves a little bit, changing the heading by a random amount, at
+most ten degrees in either direction. The <code>swerve-heading</code> function
+takes in the original direction and produces the new, randomly
+varied, direction.</p>
+<p>Once you have the basic method working, make sure that the output
+direction is between 0 and 359 degrees.</p>
+</li>
 </ul>
 
 
@@ -1138,8 +1160,8 @@
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ml/r4ds/" title="R for Data Science"> <i class="fa fa-chevron-left"></i><label>R for Data Science</label></a>
-    <a class="nav nav-next" href="/ml/r4ds/ch02/" title="Ch02" style="margin-right: 0px;"><label>Ch02</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/intermediate-cs/ch07/exercises-5/" title="Exercises 5"> <i class="fa fa-chevron-left"></i><label>Exercises 5</label></a>
+    <a class="nav nav-next" href="/intermediate-cs/ch07/review-1/" title="7. Review 1" style="margin-right: 0px;"><label>7. Review 1</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1155,7 +1177,7 @@
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 10/09/2020
+        <i class='fa fa-calendar'></i> Last update on 18/11/2020
     </div>
     
 
