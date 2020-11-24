@@ -51,6 +51,7 @@ reading between $96.7$ and $100.5$, inclusive. Write the
   varied, direction. 
   
   Once you have the basic method working, make sure that the output
-  direction is between 0 and 359 degrees.
+  direction is between 0 and 359 degrees. When the current heading is
+  near 0 or 360 it can be a little tricky.
   
   

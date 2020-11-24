@@ -31,7 +31,7 @@ You should be familiar with the data structures from the outline.
 * `capture_stones :: Board -> Player -> Square -> Board`: Take the
   stones from the square opposite the given one and put them in the
   given player's mancala. For tests, see the [separate testing
-  page]({{< relref "testing" >}}).
+  page]({{< relref "./testing" >}}).
 
 * `square_next :: Player -> Square -> Square`. Given a player and a
   square, give the next square that a piece should be placed
