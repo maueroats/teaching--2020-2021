@@ -1,0 +1,44 @@
+import org.junit.*;
+import org.junit.runner.*;
+import java.util.Scanner;
+import static org.junit.Assert.*;
+
+public class GraphTest {
+    Graph g1;
+    String g1_pretty = "NVERTICES 4\n0 2\n1 2\n2 3\n";
+    String g1_pretty_full = "NVERTICES 4\n0 2\n1 2\n2 3\n3\n";
+    int [][] g1_adj = {
+            {1, 0, 1, 0},
+            {0, 1, 1, 0},
+            {1, 1, 1, 1},
+            {0, 0, 1, 1}
+    };
+
+    Graph g2;
+    String g2_pretty = "NVERTICES 6\n0 1\n1 0 2\n2 1 4\n3 1 4 5\n4 2 3\n5 3\n";
+
+    @Before
+    public void setup_g1() {
+        g1 = new Graph(this.g1_adj);
+    }
+    @Before
+    public void setup_g2() {
+        g2 = Graph.fromString(g2_pretty);
+    }
+
+    @Test
+    public void test_count_connected() {
+        assertEquals(3, g1.count_connected(2));
+        assertEquals(1, g1.count_connected(3));
+    }
+
+    @Test
+    public void test_reader() {
+        assertArrayEquals(g1_adj, Graph.read_graph_raw(new Scanner(g1_pretty)));
+    }
+
+    @Test
+    public void test_pretty_print() {
+        assertEquals(g1_pretty_full, g1.prettyPrint());
+    }
+}
