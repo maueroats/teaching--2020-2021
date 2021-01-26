@@ -19,11 +19,12 @@ public class GraphTest {
 
     @Before
     public void setup_g1() {
-        g1 = new Graph(this.g1_adj);
+        g1 = new Graph(this.g1_adj.length, this.g1_adj);
     }
     @Before
     public void setup_g2() {
-        g2 = Graph.fromString(g2_pretty);
+        int [][]xs = Graph.read_graph_raw(new Scanner(g2_pretty));
+        g2 = new Graph(6, xs);
     }
 
     @Test
