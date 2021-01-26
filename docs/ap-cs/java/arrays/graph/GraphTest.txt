@@ -48,8 +48,8 @@ public class GraphTest {
         assertArrayEquals(ans1, g1.edges(2));
     }
 
-    /* for repl.it */
-    public static void main (String[] args) {
+    /* for repl.it: call GraphTest.test() in your main method */
+    public static void test() {
         org.junit.runner.JUnitCore.main("GraphTest");
     }
 }
