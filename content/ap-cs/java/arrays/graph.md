@@ -39,5 +39,7 @@ description: "Represent a web of connections with an adjacency matrix."
 
 ## Java Tester Code
 
+* [Graph.java](Graph.txt): Skeleton code so the tests can
+  compile. Search for "FIXME".
 * [GraphTest.java](GraphTest.txt)
 

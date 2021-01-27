@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class Graph {
+    /* INSTANCE VARIABLES */
+
+
+    /* METHODS */
+
+    /* most general initializer: number of vertices and an adjacency matrix */
+    public Graph(int size, int[][] adjacency_matrix) {
+        // FIXME
+    }
+
+    /* dense graph initializer */
+    public Graph(int[][] adjacency_matrix) {
+        this(adjacency_matrix.length, adjacency_matrix);
+    }
+
+    /* how many vertices are connected to v, not including v */
+    public int count_connected(int v) {
+        // FIXME
+        return -99;
+    }
+
+    /* return all vertices connected to v by an edge */
+    public int[] edges (int v) {
+        // FIXME
+        int[] ans = {-99,-98,-97};
+        return ans;
+    }
+
+    public static Graph fromString(String str) {
+        return new Graph(read_graph_raw(new Scanner(str)));
+    }
+
+    public static int[][] read_graph_raw (Scanner s) {
+        // FIXME
+        int[][]ans = {
+            {1,1,0},
+            {1,1,0},
+            {0,0,1}
+        };
+        return ans;
+    }
+
+    public static Graph read_graph(Scanner s) {
+        return new Graph(read_graph_raw(s));
+    }
+
+    public String prettyPrint() {
+        return "FIXME";
+    }
+}
