@@ -739,13 +739,6 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ap-cs/java/arrays/matrix/" class="dd-item">
-        <div>
-          <a href="/ap-cs/java/arrays/matrix/">
-            Matrix
-          </a>
-        </div>
-    </li>
       <li data-nav-id="/ap-cs/java/arrays/graph/" class="dd-item active">
         <div>
           <a href="/ap-cs/java/arrays/graph/">
@@ -1185,7 +1178,6 @@
     <option value="/ap-cs/java/arrays/" >
   -- 
    Arrays</option> 
-      <option value="/ap-cs/java/arrays/matrix/" >--- Matrix</option>
       <option value="/ap-cs/java/arrays/graph/"  selected>--- Graphs</option>
   
   
@@ -1255,13 +1247,28 @@ the adjacency matrix (see tester code).</p>
 compile. Search for &ldquo;FIXME&rdquo;.</li>
 <li><a href="GraphTest.txt">GraphTest.java</a></li>
 </ul>
+<h2 id="dangers-and-annoyances">Dangers and Annoyances</h2>
+<ul>
+<li>
+<p>The current design of the <code>prettyPrint</code> output is kind of hard for a
+beginner to parse. Break it down into steps: get a single line into
+a <code>String</code>, then figure out how to change that <code>String</code> into an
+integer array. Your choices would be: <code>Scanner</code> or use both <code>split</code>
+and <code>Integer.parseInt</code>.</p>
+</li>
+<li>
+<p>Many people do not remember how to use classes. It was a problem to
+run the <code>count_connected</code> method on a <code>Graph</code> object. Alternative
+design for another year: make the functions take in the adjacency matrix.</p>
+</li>
+</ul>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/java/arrays/matrix/" title="Matrix"> <i class="fa fa-chevron-left"></i><label>Matrix</label></a>
+<a class="nav nav-prev" href="/ap-cs/java/arrays/" title="Arrays"> <i class="fa fa-chevron-left"></i><label>Arrays</label></a>
     <a class="nav nav-next" href="/intermediate-cs/" title="Intermediate CS" style="margin-right: 0px;"><label>Intermediate CS</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>

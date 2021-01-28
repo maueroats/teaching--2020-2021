@@ -1,7 +1,7 @@
 ---
 title: "Graphs"
 date: 2021-01-26T12:05:34-06:00
-#weight: 
+weight: 10
 draft: false
 #type: slide
 #theme: white
@@ -43,3 +43,17 @@ description: "Represent a web of connections with an adjacency matrix."
   compile. Search for "FIXME".
 * [GraphTest.java](GraphTest.txt)
 
+## Dangers and Annoyances
+
+* The current design of the `prettyPrint` output is kind of hard for a
+  beginner to parse. Break it down into steps: get a single line into
+  a `String`, then figure out how to change that `String` into an
+  integer array. Your choices would be: `Scanner` or use both `split`
+  and `Integer.parseInt`. 
+
+* Many people do not remember how to use classes. It was a problem to
+  run the `count_connected` method on a `Graph` object. Alternative
+  design for another year: make the functions take in the adjacency matrix.
+
+
+  
