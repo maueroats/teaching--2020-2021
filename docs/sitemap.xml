@@ -43,6 +43,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/intermediate-cs/sem1review/sem1reviewa/</loc>
+    <lastmod>2021-01-28T12:04:55-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/ap-cs/java/arrays/graph/</loc>
     <lastmod>2021-01-26T12:05:34-06:00</lastmod>
   </url>
@@ -513,6 +518,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/intermediate-cs/sem1review/</loc>
+    <lastmod>2021-01-28T12:04:32-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch05/ch05-quiz/</loc>
     <lastmod>2019-11-07T13:23:13-06:00</lastmod>
   </url>
@@ -573,13 +583,18 @@
   </url>
   
   <url>
-    <loc>https://wy-cs.info/ap-cs/java/arrays/</loc>
-    <lastmod>2021-01-26T12:05:30-06:00</lastmod>
+    <loc>https://wy-cs.info/ap-cs/java/review/sem1reva/</loc>
+    <lastmod>2021-01-29T14:04:04-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://wy-cs.info/intermediate-cs/ch17/17c/</loc>
-    <lastmod>2021-01-25T13:32:58-06:00</lastmod>
+    <loc>https://wy-cs.info/ap-cs/java/review/</loc>
+    <lastmod>2021-01-29T14:03:57-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/ap-cs/java/arrays/</loc>
+    <lastmod>2021-01-26T12:05:30-06:00</lastmod>
   </url>
   
   <url>
