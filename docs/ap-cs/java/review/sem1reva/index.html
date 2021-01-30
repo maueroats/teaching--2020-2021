@@ -1239,42 +1239,66 @@ MathJax = {
 <p>Reminder: the first three rows of <a href="https://codingbat.com/prob/p146974">CodingBat
 AP-1</a> problems are homework.</p>
 <ol>
-<li>(partialPalindrome)
+<li>
+<p>(partialPalindrome)
 <code>public static boolean partialPalindrome (String s, int n)</code>
 is true if the first n letters math the last n in the opposite order.
-The number n will be less than <code>s.length</code>.</li>
-</ol>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">partialPalindrome(&#34;abcaesqueacba&#34;, 3) =&gt; true
-partialPalindrome(&#34;abcaesqueacba&#34;, 4) =&gt; true
-partialPalindrome(&#34;abcaesqueacba&#34;, 5) =&gt; false
-partialPalindrome(&#34;wow&#34;,3) =&gt; true
-</code></pre></div><ol start="2">
-<li>(Mixer)
+The number n will be less than <code>s.length</code>.</p>
+<pre><code> partialPalindrome(&quot;abcaesqueacba&quot;, 3) =&gt; true
+ partialPalindrome(&quot;abcaesqueacba&quot;, 4) =&gt; true
+ partialPalindrome(&quot;abcaesqueacba&quot;, 5) =&gt; false
+ partialPalindrome(&quot;wow&quot;,3) =&gt; true
+</code></pre>
+</li>
+<li>
+<p>(Mixer)
 <code>public static int[] mixer (int[] nums)</code> two indices correspond when
 they differ by half of the length of the array (rounded up). Replace
 elements in the first half of the array with the sum of the element
-and its corresponding element. Except if the number is 99 do not alter it.</li>
-</ol>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">mixer({13,23,33}) = {46,23,33}
-mixer({99,17,20,30}) = {99, 47, 20, 30}
-mixer({10,20,50,13,17}) = {23, 37, 50, 13, 17}
-</code></pre></div><ol start="3">
+and its corresponding element. Except if the number is 99 do not alter it.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<pre><code> mixer({13,23,33}) = {46,23,33}
+ mixer({99,17,20,30}) = {99, 47, 20, 30}
+ mixer({10,20,50,13,17}) = {23, 37, 50, 13, 17}
+</code></pre>
+</li>
 <li>
 <p>We are going to combine rows in a 2D array.
 The operations are going to be like row operations on a matrix in math class.</p>
-<pre><code> 10  20  30  40 
- 21  37  57  96
+<p>\begin{pmatrix}
+10 &amp; 20 &amp; 30 &amp; 40 \\<br>
+21 &amp; 37 &amp; 57 &amp; 96
+\end{pmatrix}</p>
+<p>Adding $-2$ times the first row to the second row gives:</p>
+<p>\begin{pmatrix}
+10 &amp; 20 &amp; 30 &amp; 40 \\<br>
+1 &amp; -3 &amp; -3 &amp; 16
+\end{pmatrix}</p>
+<p>This operation updates the second row (which is <code>row=1</code> in Java counting)
+by adding <code>mult=-2</code> times the first row (which is <code>other=0</code> in java counting).
+It could be turned into a call of the function you are asked to write
+in this question:</p>
+<pre><code> int[][]xs = {{10,20,30,40},{21,37,57,96}};
+ xs = arop(xs, 1, 0, -2);
+</code></pre>
+<p>In other words, <code>arop(xs, row, other, mult)</code> replaces <code>xs[row]</code> by
+<code>xs[row] + mult * xs[other]</code> and returns the new result.</p>
+<p>Signature:</p>
+<pre><code> public static int[][]arop (int[][] nums, int row, int other, int mult)
 </code></pre>
 </li>
 </ol>
-<p>Add $-2$ times the first row to the second row gives:</p>
-<pre><code>10  20  30  40 
- 1  -3  -3  16
-</code></pre>
-<p>This operation will be called <code>(row=1, other=0, mult=-2)</code> because it
-replaces row 1 with row 1 plus -2 times row0.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">public static int[][]arop (int[][] nums, int row, int other, int mult)
-</code></pre></div>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>This description uses a convention from CodingBat where
+<code>{13,23}</code> denotes an array which must
+really be either defined <code>int[] a = {13,23}</code> or created in place
+by <code>new int[]{13,23}</code>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
 
     
     
