@@ -1,7 +1,7 @@
 ---
-title: "Sem1revA"
+title: "Sem1RevA"
 date: 2021-01-29T14:04:04-06:00
-#weight: 
+weight: 10
 draft: false
 #type: slide
 #theme: white
@@ -66,5 +66,5 @@ in this question:
 
 [^1]: This description uses a convention from CodingBat where
     `{13,23}` denotes an array which must 
-    really be either defined `int[] a = {13,23}` or created in place
+    really be either defined earlier as `int[] a = {13,23}` or created in place
     by `new int[]{13,23}`.

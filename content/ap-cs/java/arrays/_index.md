@@ -1,7 +1,7 @@
 ---
 title: "Arrays"
 date: 2021-01-26T12:05:30-06:00
-#weight: 
+weight: 100
 draft: false
 #type: slide
 #theme: white

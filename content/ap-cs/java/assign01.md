@@ -2,7 +2,8 @@
 title: "HW 01"
 date: 2020-11-10T16:40:17-06:00
 weight: 210
-draft: false
+draft: true
+hidden: true
 #type: slide
 #theme: white
 description: "Homework beginning with week 1."
