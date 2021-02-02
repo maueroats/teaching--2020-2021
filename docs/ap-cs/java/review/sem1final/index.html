@@ -1254,7 +1254,7 @@ and less than two neighbors in the other directions.</p>
   90 60 80          -8  90 40
   xx 40 xx          yy 240 yy 
 </code></pre>
-<p>Find the average height of all of the saddles in an array.</p>
+<p>Find the average height of all of the middle numbers in all of the saddles in an array.</p>
 <pre><code>public static int avg_saddle(int[][] nums)
 </code></pre>
 <h2 id="cards">Cards</h2>
@@ -1266,8 +1266,9 @@ the string &ldquo;2H 6D 4C JS AD&rdquo;.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">class</span> <span style="color:#75af00">Card</span> <span style="color:#f92672">{</span>
   <span style="color:#00a8c8">private</span> <span style="color:#00a8c8">int</span> <span style="color:#111">suit</span><span style="color:#f92672">,</span> <span style="color:#111">rank</span><span style="color:#f92672">;</span>
   <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">final</span> <span style="color:#00a8c8">int</span> <span style="color:#111">CLUB</span><span style="color:#f92672">=</span><span style="color:#111">1</span><span style="color:#f92672">,</span> <span style="color:#111">DIAMOND</span><span style="color:#f92672">=</span><span style="color:#111">2</span><span style="color:#f92672">,</span> <span style="color:#111">HEART</span><span style="color:#f92672">=</span><span style="color:#111">3</span><span style="color:#f92672">,</span> <span style="color:#111">SPADE</span><span style="color:#f92672">=</span><span style="color:#111">4</span><span style="color:#f92672">;</span>
-  <span style="color:#75715e">// you write the constructor, which should take in two numbers
-</span><span style="color:#75715e"></span>  <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">int</span> <span style="color:#75af00">getRank</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">rank</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
+  <span style="color:#75715e">// you write the constructor
+</span><span style="color:#75715e"></span>  
+  <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">int</span> <span style="color:#75af00">getRank</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">rank</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
   <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">int</span> <span style="color:#75af00">getSuit</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#00a8c8">return</span> <span style="color:#111">suit</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
   <span style="color:#00a8c8">public</span> <span style="color:#111">String</span> <span style="color:#75af00">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#00a8c8">return</span> <span style="color:#d88200">&#34;TODO&#34;</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
   <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#111">Card</span> <span style="color:#75af00">parse_one</span><span style="color:#f92672">(</span><span style="color:#111">String</span> <span style="color:#111">str</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span> <span style="color:#00a8c8">return</span> <span style="color:#00a8c8">null</span><span style="color:#f92672">;</span> <span style="color:#f92672">}</span>
@@ -1285,11 +1286,14 @@ the string &ldquo;2H 6D 4C JS AD&rdquo;.</p>
 <span style="color:#f92672">}</span>
 </code></pre></div><ol>
 <li>
-<p>Write the <code>Card</code> constructor.</p>
+<p>Write the <code>Card</code> constructor.  The 9 of spades is <code>new Card(9,4)</code>.</p>
 </li>
 <li>
 <p>Write the <code>toString</code> method which return a String representing the
-rank of the card followed by its suit.</p>
+rank of the card followed by its suit. Example:</p>
+<pre><code> Card s9 = new Card(9,4);
+ System.out.println(s9); // prints &quot;9S&quot; for 9 of spaces
+</code></pre>
 </li>
 <li>
 <p>Write the <code>parse_one</code> function. Example: <code>Card.parse_one(&quot;JH&quot;)</code>

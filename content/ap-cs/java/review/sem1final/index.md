@@ -34,7 +34,7 @@ Examples of a saddle:
       90 60 80          -8  90 40
       xx 40 xx          yy 240 yy 
 
-Find the average height of all of the saddles in an array.
+Find the average height of all of the middle numbers in all of the saddles in an array.
 
     public static int avg_saddle(int[][] nums)
 
@@ -54,7 +54,8 @@ You will use the Card class already partially written for you.
 public class Card {
   private int suit, rank;
   public static final int CLUB=1, DIAMOND=2, HEART=3, SPADE=4;
-  // you write the constructor, which should take in two numbers
+  // you write the constructor
+  
   public int getRank() { return rank; }
   public int getSuit() { return suit; }
   public String toString() { return "TODO"; }
@@ -73,9 +74,14 @@ public class Card {
 }
 ```
 
-1. Write the `Card` constructor.
+1. Write the `Card` constructor.  The 9 of spades is `new Card(9,4)`.
+
 2. Write the `toString` method which return a String representing the
-   rank of the card followed by its suit.
+   rank of the card followed by its suit. Example:
+
+        Card s9 = new Card(9,4);
+        System.out.println(s9); // prints "9S" for 9 of spaces
+   
 3. Write the `parse_one` function. Example: `Card.parse_one("JH")`
     should return a `new Card(11, 3)` because jack has a rank of 11
     and hearts is suit 3.
