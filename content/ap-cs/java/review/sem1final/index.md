@@ -21,8 +21,25 @@ Queen, King). Traditionally aces can be valued either low (1) or high
 
 ## Problem Solving
 
-WIP
+### Average Saddle
 
+A 2d array of numbers represents heights of the ground. A hilltop is
+greater than any of its up to 4 neighbors (changing only one coordinate
+by one). A saddle is greater than two neighbors in opposite directions
+and less than two neighbors in the other directions.
+
+Examples of a saddle:
+
+      xx 20 xx          yy 100 yy
+      90 60 80          -8  90 40
+      xx 40 xx          yy 240 yy 
+
+Find the average height of all of the saddles in an array.
+
+    public static int avg_saddle(int[][] nums)
+
+
+      
 ## Cards
 
 A hand of playing cards is represented by a string. 
