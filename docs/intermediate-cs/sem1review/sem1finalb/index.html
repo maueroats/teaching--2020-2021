@@ -1227,7 +1227,7 @@ function.</p>
 <ol>
 <li>Simplify as much as possible.</li>
 </ol>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(define (clean-teeth? minutes-brushing toothbrush? toothpaste?)
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(define (clean-teeth? minutes-brushing toothbrush? sugar-toothpaste?)
   (and (boolean=? true toothbrush?)
        (and (boolean=? sugar-toothpaste? false)
             (booolean=? (not (&lt; minutes-brushing 2))
@@ -1236,7 +1236,8 @@ function.</p>
 <li>
 <p>Identify the type of model and write the draw handler (only!). A
 radius 10 solid red circle rotates around just inside the perimeter
-of a solid yellow circle of radius 100.</p>
+of a solid yellow circle of radius 100. The red circle should be
+able to follow the mouse around the circle.</p>
 </li>
 <li>
 <p>Make an animation that shows &ldquo;woof&rdquo; when you click on a 50x50
