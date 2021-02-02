@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Sem.1 Final B :: WY Computer Science</title>
+<title>Sem.1 Final :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,7 +17,7 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="Final exam, Part B.">
+<meta name="description" content="Final exam, Parts A and B.">
 
 
 
@@ -729,6 +729,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/ap-cs/java/review/sem1final/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/review/sem1final/">
+            Sem.1 Final
+          </a>
+        </div>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/ap-cs/java/testing/" class="dd-item haschildren
@@ -879,7 +886,7 @@
       <li data-nav-id="/intermediate-cs/sem1review/sem1finalb/" class="dd-item active">
         <div>
           <a href="/intermediate-cs/sem1review/sem1finalb/">
-            Sem.1 Final B
+            Sem.1 Final
           </a>
         </div>
     </li>
@@ -1196,7 +1203,7 @@
   - 
    Sem. I</option> 
       <option value="/intermediate-cs/sem1review/sem1reviewa/" >-- Sem.1 Rev A</option>
-      <option value="/intermediate-cs/sem1review/sem1finalb/"  selected>-- Sem.1 Final B</option>
+      <option value="/intermediate-cs/sem1review/sem1finalb/"  selected>-- Sem.1 Final</option>
   
     <option value="/intermediate-cs/resources/" >
   - 
@@ -1216,13 +1223,47 @@
     </div>
     
 
-    <h1>Sem.1 Final B</h1>
+    <h1>Sem.1 Final</h1>
 
     
     
     
-    <p>You should have already completed Part A, programming the <code>in-shape?</code>
-function.</p>
+    <script>
+MathJax = {
+ tex: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  displayMath: [['$$','$$'], ['\\[','\\]']]
+  }};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<style type="text/css">
+    ol { list-style-type: roman; }
+    ol ol { list-style-type: lower-alpha; }
+    ol ol ol { list-style-type: lower-roman; }
+    ol ol ol ol { list-style-type: decimal; }
+</style>
+<h2 id="part-a">Part A</h2>
+<p>You are working in people coordinates to determine if a point is
+inside this 200x100 shape. The rounded corners are quarters of radius
+50 circles. There is an animation to demonstrate, but you do <em>not</em>
+need to write the animation!</p>
+<figure>
+    <img src="final-bread-1.png"/> 
+</figure>
+<ol>
+<li>Create this shape in DrRacket.</li>
+<li>The purpose of <code>in-shape?: number(x) number(y) -&gt; boolean</code> is to
+return true if the point (x,y) is inside this shape. Write:
+<ol>
+<li>Write a check-expect that returns true.</li>
+<li>Write a check-expect that returns false even though the point
+(x,y) is inside the rectangle with $0\le x \le 200$ and $0 \le
+y \le 100$.</li>
+</ol>
+</li>
+<li>Write the <code>in-shape?</code> function.</li>
+</ol>
 <h2 id="part-b">Part B</h2>
 <ol>
 <li>Simplify as much as possible.</li>
@@ -1233,18 +1274,46 @@ function.</p>
             (booolean=? (not (&lt; minutes-brushing 2))
                         true))))
 </code></pre></div><ol start="2">
-<li>
-<p>Identify the type of model and write the draw handler (only!). A
+<li>Identify the type of model and write the draw handler (only!). A
 radius 10 solid red circle rotates around just inside the perimeter
 of a solid yellow circle of radius 100. The red circle should be
-able to follow the mouse around the circle.</p>
-</li>
-<li>
-<p>Make an animation that shows &ldquo;woof&rdquo; when you click on a 50x50
-square the lower right corner and &ldquo;rowr&rdquo; when you click on the same
-sized square in the lower left corner.</p>
-</li>
+able to follow the mouse around the circle.</li>
 </ol>
+<table>
+<tr>
+<td> <figure>
+    <img src="final-red-1.png" width="100"/> 
+</figure>
+  </td>
+<td> <figure>
+    <img src="final-red-2.png" width="100"/> 
+</figure>
+ </td>
+</tr>
+</table>
+<ol start="3">
+<li>Make an animation that will show a given word until you click
+again.  Clicking on a 50x50 square the lower right corner shows
+&ldquo;woof&rdquo;. Clicking on the same sized square in the lower left corner
+shows &ldquo;rowr&rdquo;. If you click anywhere else it should show nothing.</li>
+</ol>
+<p>The red dots below show where the clicks occurred.</p>
+<table>
+<tr>
+<td> <figure>
+    <img src="final-speak-0.png" width="100"/> 
+</figure>
+ </td>
+<td> <figure>
+    <img src="final-speak-1.png" width="100"/> 
+</figure>
+ </td> 
+<td> <figure>
+    <img src="final-speak-2.png" width="100"/> 
+</figure>
+ </td>
+</tr>
+</table>
 
 
     
