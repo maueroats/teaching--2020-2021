@@ -56,6 +56,7 @@ in this question:
 
         int[][]xs = {{10,20,30,40},{21,37,57,96}};
         xs = arop(xs, 1, 0, -2);
+        // now xs = {{10,20,30,40},{1,-3,-3,16}}
 
     In other words, `arop(xs, row, other, mult)` replaces `xs[row]` by
 `xs[row] + mult * xs[other]` and returns the new result.
