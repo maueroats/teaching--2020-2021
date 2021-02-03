@@ -14,7 +14,9 @@ description: "Final exam, Parts A and B."
 ## Part A
 
 You are working in people coordinates to determine if a point is
-inside this 200x100 shape. The rounded corners are quarters of radius
+inside this 200x100 shape. 
+People coordinates in this problem means $(0,0)$ in the lower left.
+The rounded corners are quarters of radius
 50 circles. There is an animation to demonstrate, but you do _not_
 need to write the animation!
 
@@ -37,7 +39,7 @@ return true if the point (x,y) is inside this shape. Write:
 (define (clean-teeth? minutes-brushing toothbrush? sugar-toothpaste?)
   (and (boolean=? true toothbrush?)
        (and (boolean=? sugar-toothpaste? false)
-            (booolean=? (not (< minutes-brushing 2))
+            (boolean=? (not (< minutes-brushing 2))
                         true))))
 ```
 

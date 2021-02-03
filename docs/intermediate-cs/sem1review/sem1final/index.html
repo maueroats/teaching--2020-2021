@@ -1245,7 +1245,9 @@ MathJax = {
 </style>
 <h2 id="part-a">Part A</h2>
 <p>You are working in people coordinates to determine if a point is
-inside this 200x100 shape. The rounded corners are quarters of radius
+inside this 200x100 shape.
+People coordinates in this problem means $(0,0)$ in the lower left.
+The rounded corners are quarters of radius
 50 circles. There is an animation to demonstrate, but you do <em>not</em>
 need to write the animation!</p>
 <figure>
@@ -1271,7 +1273,7 @@ y \le 100$.</li>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(define (clean-teeth? minutes-brushing toothbrush? sugar-toothpaste?)
   (and (boolean=? true toothbrush?)
        (and (boolean=? sugar-toothpaste? false)
-            (booolean=? (not (&lt; minutes-brushing 2))
+            (boolean=? (not (&lt; minutes-brushing 2))
                         true))))
 </code></pre></div><ol start="2">
 <li>Identify the type of model and write the draw handler (only!). A
