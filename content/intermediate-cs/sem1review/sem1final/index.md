@@ -2,7 +2,7 @@
 title: "Sem.1 Final"
 date: 2021-02-02T08:08:28-06:00
 #weight: 
-draft: true
+draft: false
 #type: slide
 #theme: white
 description: "Final exam, Parts A and B."
