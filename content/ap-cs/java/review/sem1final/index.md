@@ -2,7 +2,7 @@
 title: "Sem.1 Final"
 date: 2021-02-02T11:12:01-06:00
 #weight: 
-draft: true
+draft: false
 #type: slide
 #theme: white
 description: "Final exam for semester 1, pandemic edition."

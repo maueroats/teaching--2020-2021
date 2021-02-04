@@ -56,9 +56,14 @@ return true if the point (x,y) is inside this shape. Write:
 </table>
    
 3. Make an animation that will show a given word until you click
- again.  Clicking on a 50x50 square the lower right corner shows
- "woof". Clicking on the same sized square in the lower left corner
- shows "rowr". If you click anywhere else it should show nothing.
+ again. 
+ 
+ * The background is 300x200. 
+ * Clicking on a 50x50 square the
+ lower right corner shows "woof". 
+ * Clicking on the same sized square in
+ the lower left corner shows "rowr". 
+ * Clicking anywhere else shows nothing (blank).
  
  The red dots below show where the clicks occurred.
 
