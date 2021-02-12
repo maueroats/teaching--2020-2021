@@ -44,11 +44,14 @@ Test code: [Saddle.java](Saddle.txt)
 
 ### Close Double
 
+(Do last, optional/extra credit/makeup if you cannot do one of the
+others.)
+
 The positive difference between two numbers that are supposed to match
 is called an error. With an array, we add up all of the errors.
 
-Computer the error in matching the first n numbers of an array with
-the n numbers coming immediately after.
+The `closeDouble` function computes the error in matching the first n
+numbers of an array with the n numbers coming immediately after.
 
 One catch: a 99 matches with anything with an error of 0.
 
