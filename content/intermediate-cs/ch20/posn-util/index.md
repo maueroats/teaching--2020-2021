@@ -15,7 +15,7 @@ save them in a file called `posn-util.rkt`. (Please use that name.)
 You may download [my posn utilities file](posn-util.rkt) if you write
 your functions on paper instead of typing them. There is also a
 [WeScheme
-posn-util](https://www.wescheme.org/view?publicId=FPeUHQKbul),
+posn-util](https://www.wescheme.org/view?publicId=MGNsfDhQmk)
 published February 2021.
 {{% /notice %}}
 

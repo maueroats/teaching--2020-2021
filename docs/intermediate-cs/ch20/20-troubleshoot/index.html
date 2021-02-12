@@ -1373,20 +1373,39 @@
     
     <p>This troubleshooting guide is focused on using <code>posn-util.rkt</code>.</p>
 <h3 id="problems">Problems</h3>
-<h4 id="work-in-the-same-folder-as-your-posn-util">Work in the same folder as your posn-util</h4>
+<h4 id="save-your-posn-util-in-your-cs-folder">Save your posn-util in your CS folder</h4>
 
 <div class="notices warning" ><p>You need to save your work in the same folder as your &ldquo;posn-util.rkt&rdquo; file, since Racket only looks in the current folder for other files.</p>
 </div>
 
-<h4 id="save-your-work-first">Save your work first</h4>
-<p>Racket will not find your posn-util until you save your work in the
-same folder as the <code>posn-util.rkt</code> file. If you work is &ldquo;Untitled&rdquo;, it
-is not saved and <code>require</code> will not find the library.</p>
+<p>This has been the source of a lot of issues:</p>
+<ul>
+<li>Verify that the folder you save in is &ldquo;Documents&rdquo; and not &ldquo;Downloads&rdquo;.</li>
+<li>If you are not asked where to save, the file probably ended up in
+Downloads. Go there and drag the file to where you actually want it.</li>
+</ul>
 <h4 id="name-the-file-carefully">Name the file carefully</h4>
 <p>Downloading the Racket file, one can end up with a file that has two
 suffixes (one of them is invisible). If <code>(require &quot;posn-util.rkt&quot;)</code>
 does not work, try <code>(require &quot;posn-util.rkt.rkt&quot;)</code>. If that works,
 delete the extra <code>.rkt</code>.</p>
+<p>Sometime people have <code>posn.util.rkt</code> instead. Use the official filename.</p>
+<h4 id="download-the-file">Download the file!</h4>
+<p>You need to actually download the code for <code>posn-util</code>. If you get the
+error below, you should open up your <code>posn-util.rkt</code> file and check to
+make sure that it has several hundred lines of code in it.</p>
+<pre><code>standard-module-name-resolver: cycle in loading
+</code></pre>
+<h4 id="save-your-work-first">Save your work first</h4>
+<p>Racket will not find your posn-util until you save your work in the
+same folder as the <code>posn-util.rkt</code> file. If you work is &ldquo;Untitled&rdquo;, it
+is not saved and <code>require</code> will not find the library.</p>
+<h4 id="provide-error">Provide error</h4>
+<p>When <code>(require picturing-programs)</code> is commented out on the first
+line, you get this error:</p>
+<pre><code>provide: this function is not defined
+</code></pre>
+<p>Fix: uncomment the first line.</p>
 
 
     
