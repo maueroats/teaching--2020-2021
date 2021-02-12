@@ -1,7 +1,7 @@
 ---
 title: "AP Preparation"
 date: 2021-01-22T11:37:15-06:00
-#weight: 
+weight: 20
 draft: false
 #type: slide
 #theme: white

@@ -1,7 +1,7 @@
 ---
 title: "AP Placement"
 date: 2021-01-22T11:57:08-06:00
-#weight: 
+weight: 40
 draft: false
 #type: slide
 #theme: white
@@ -13,4 +13,6 @@ programming experience.
 
 Write these functions and send them to doc mo (amauer-oats@cps.edu):
 
-1. 
+[email me if the list is not posted]
+
+
