@@ -1,6 +1,10 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-reader.ss" "lang")((modname posn-util) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
 (require picturing-programs)
 
 ;; posn-util.rkt February 2021
+;; version 1.03 posn-length-sqr fixed
 ;; version 1.02 made long versions of names the standard
 
 ;; Errors:
@@ -228,8 +232,8 @@
 
 (define (posn-dist p q)
   (posn-distance p q))
-(define (posn-length-sqr p q)
-  (posn-length-squared p q))
+(define (posn-length-sqr p)
+  (posn-length-squared p))
 (define (posn-sub p q)
   (posn-subtract p q))
 (define (posn-dot-prod p q)
