@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>17. Cond Animations :: WY Computer Science</title>
+<title>Chase :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="Use of conditionals in animations.">
+<meta name="description" content="">
 
 
 
     
   </head>
-  <body data-url="/intermediate-cs/ch17/">
+  <body data-url="/intermediate-cs/ch20/chase/">
     
       <header>
   <div class="logo">
@@ -863,7 +863,7 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/ch17/" class="dd-item parent active
+    <li data-nav-id="/intermediate-cs/ch17/" class="dd-item
         ">
       <div>
       <a href="/intermediate-cs/ch17/">17. Cond Animations</a>
@@ -891,10 +891,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/ch20/" class="dd-item haschildren
+    <li data-nav-id="/intermediate-cs/ch20/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/intermediate-cs/ch20/">20. Using Structures</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/intermediate-cs/ch20/">20. Using Structures</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/intermediate-cs/ch20/posn-util/" class="dd-item">
@@ -953,7 +954,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/intermediate-cs/ch20/chase/" class="dd-item">
+      <li data-nav-id="/intermediate-cs/ch20/chase/" class="dd-item active">
         <div>
           <a href="/intermediate-cs/ch20/chase/">
             Chase
@@ -1329,16 +1330,32 @@
     <option value="/intermediate-cs/ch07/" >
   - 
    7. Numbers</option>
-    <option value="/intermediate-cs/ch17/"  selected >
+    <option value="/intermediate-cs/ch17/" >
   - 
-   17. Cond Animations</option> 
-  
+   17. Cond Animations</option>
     <option value="/intermediate-cs/sem1review/" >
   - 
    Sem. I</option>
     <option value="/intermediate-cs/ch20/" >
   - 
-   20. Using Structures</option>
+   20. Using Structures</option> 
+      <option value="/intermediate-cs/ch20/posn-util/" >-- 20. Posn Util</option>
+      <option value="/intermediate-cs/ch20/20-require/" >-- 20. Libraries</option>
+      <option value="/intermediate-cs/ch20/20-troubleshoot/" >-- 20. Troubleshoot</option>
+      <option value="/intermediate-cs/ch20/click-circle/" >-- 20. Click Circle</option>
+      <option value="/intermediate-cs/ch20/click-circle-questions/" >-- 20. Click Circle Questions</option>
+      <option value="/intermediate-cs/ch20/click-mega/" >-- 20. Click Mega</option>
+      <option value="/intermediate-cs/ch20/square-a/" >-- 20. Silly Square</option>
+      <option value="/intermediate-cs/ch20/tightrope/" >-- 20. Tightrope</option>
+      <option value="/intermediate-cs/ch20/chase/"  selected>-- Chase</option>
+      <option value="/intermediate-cs/ch20/map-image/" >-- 20. Map Image</option>
+      <option value="/intermediate-cs/ch20/color-enhancing/" >-- 20. Color Enhancing</option>
+      <option value="/intermediate-cs/ch20/ch20-review/" >-- 20. Review</option>
+      <option value="/intermediate-cs/ch20/20-intro-quiz/" >-- 20. Intro Quiz</option>
+      <option value="/intermediate-cs/ch20/20-intro-ex-1/" >-- 20. Intro Ex 1</option>
+      <option value="/intermediate-cs/ch20/trollquiz/" >-- Troll Quiz Practice</option>
+      <option value="/intermediate-cs/ch20/aimbooster/" >-- Advanced: Aimbooster</option>
+  
     <option value="/intermediate-cs/resources/" >
   - 
    Resources</option>
@@ -1357,66 +1374,45 @@
     </div>
     
 
-    <h1>17. Cond Animations</h1>
+    <h1>Chase</h1>
 
     
     
     
-
-<h2 id="quick-quit">Quick Quit</h2>
-<p>Make a 200x100 colored rectangle in the middle of a 300x200 scene.</p>
-<p>When you click on the rectangle:</p>
-<ol>
-<li>the shape changes to a 200x100 ellipse</li>
-<li>the animation stops</li>
-</ol>
-<p>Discuss:</p>
+    <p>In this animation, a 20x20 square moves toward the mouse whenever the
+mouse does something. If the square touches the mouse, then the game
+is over.</p>
 <ul>
 <li>model</li>
-<li>draw handler: how will you show the rectangle? the ellipse?</li>
-<li>mouse handler</li>
+<li>what model will we use to indicate that the game is over?</li>
+<li>draw handler</li>
+<li>stop-when: decide when the game is over</li>
+<li>lose screen draw handler: put &ldquo;game over&rdquo; on the screen</li>
 </ul>
-<p>Write two check-expects for the mouse-handler:</p>
+<h2 id="square-moves-toward-the-mouse">Square moves toward the mouse</h2>
+<p>You want the square to move toward the mouse, but not too fast or
+nobody will want to play the game.</p>
+<p>Ideas:</p>
 <ul>
-<li>click in the rectangle</li>
-<li>click but not in the rectangle</li>
+<li>When you add posns A + B, that moves posn A in direction B</li>
+<li>When you want to limit your motion, scale the motion posn so that
+its length is (say) 5.</li>
 </ul>
-<p>Then we write functions.</p>
-<h2 id="random-shapes">Random Shapes</h2>
-<p>Write an animation that will show randomly of these images:</p>
-<ul>
-<li>1 triangle,</li>
-<li>2 squares,</li>
-<li>3 circles, or</li>
-<li>the word WIN
-They should all be equally likely.</li>
-</ul>
-<p>In this part, the word WIN should just appear like the other choices.</p>
-<h2 id="elementary-school-shapes">Elementary School Shapes</h2>
-<p>Modify to your random shapes animation.</p>
-<p>When you hit the number key corresponding to the number of shapes you
-see on the screen, you win.  Otherwise you lose.</p>
-<p>Optional: Hitting a non-numbered key is ignored.</p>
-<ul>
-<li>Winning shows the &ldquo;win&rdquo; screen.</li>
-<li>Losing: add some kind of &ldquo;that&rsquo;s not it&rdquo; screen.</li>
-<li>When you win or lose, the animation quits.</li>
-</ul>
-<p>The &ldquo;win&rdquo; screen should not be one of the random choices.</p>
-<p>Discussion:</p>
-<ul>
-<li>What model will you use?</li>
-<li>How will you represent the &ldquo;win&rdquo; and &ldquo;lose&rdquo; states with your model?</li>
-</ul>
-
+<h3 id="first-we-will-make-the-13-of-the-distance-chase">First we will make the &ldquo;1/3 of the distance&rdquo; chase</h3>
+<p>The <code>next-change</code> function will tell how to adjust the current
+position of the square based on the goal position of the mouse.</p>
+<pre><code>next-change: posn(goal) posn(current) -&gt; posn
+</code></pre>
+<h3 id="next-we-will-make-the-speed--10-chase">Next we will make the &ldquo;speed = 10&rdquo; chase</h3>
+<p>In this the length of next-change is adjusted to be 10.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/intermediate-cs/ch07/random/" title="Randomness"> <i class="fa fa-chevron-left"></i><label>Randomness</label></a>
-    <a class="nav nav-next" href="/intermediate-cs/sem1review/" title="Sem. I" style="margin-right: 0px;"><label>Sem. I</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/intermediate-cs/ch20/tightrope/" title="20. Tightrope"> <i class="fa fa-chevron-left"></i><label>20. Tightrope</label></a>
+    <a class="nav nav-next" href="/intermediate-cs/ch20/map-image/" title="20. Map Image" style="margin-right: 0px;"><label>20. Map Image</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1432,7 +1428,7 @@ see on the screen, you win.  Otherwise you lose.</p>
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 25/01/2021
+        <i class='fa fa-calendar'></i> Last update on 16/02/2021
     </div>
     
 
