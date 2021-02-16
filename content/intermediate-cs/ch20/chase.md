@@ -1,10 +1,11 @@
 ---
-title: "Chase"
+title: "20. Chase"
 date: 2021-02-16T14:41:53-06:00
 weight: 47
 draft: false
 #type: slide
 #theme: white
+description: "A simple game where a square chases the mouse."
 ---
 
 In this animation, a 20x20 square moves toward the mouse whenever the
