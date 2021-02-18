@@ -30,13 +30,18 @@ Ideas:
   its length is (say) 5.
 
 
-### First we will make the "1/3 of the distance" chase
+### Basic: we will make the "1/20 of the distance" chase
 
 The `next-change` function will tell how to adjust the current
 position of the square based on the goal position of the mouse.
 
     next-change: posn(goal) posn(current) -> posn
 
-### Next we will make the "speed = 10" chase
+### Advanced: make the "speed = 3" chase
 
-In this the length of next-change is adjusted to be 10.
+A variation on this is to make the square chase the mouse at a
+"constant speed" of 3 pixels every mouse motion. This done by making
+a helper function `scale-to-3: posn -> posn` that adjusts the posn so
+its length is always 3 (assume the posn is not (0,0)).
+
+

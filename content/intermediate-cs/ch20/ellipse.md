@@ -8,3 +8,7 @@ draft: true
 description: "Track the shape of an ellipse."
 ---
 
+See 2020-2021 Ch20 `ellipse-color.rkt`.
+
+Looks beautiful.
+
