@@ -1,5 +1,5 @@
 ---
-title: "Ball Driving"
+title: "20. Ball Driving"
 date: 2021-02-23T08:10:35-06:00
 weight: 80
 draft: false
@@ -28,30 +28,40 @@ We will all use the same target.
 `draw-h: posn(model) -> image`
 
 
-## Active controls?
+## 3. Active controls?
 
 We will write a function to determine if a point is in the control grid.
 
-`in-control-grid? : posn -> boolean`
 
-3a. What are the coordinates of the center of the Q4 control grid?
+### 3a. Center coordinates
 
-3b. Write two check-expects, one showing a point that is not the
+What are the coordinates of the center of the Q4 control grid?
+
+### 3b. Check expects
+
+Write two check-expects, one showing a point that is not the
 center is inside the grid, and another showing a point that is outside
 the grid.
 
-3c. Write the function `in-control-grid?`
+### 3c. In control grid? 
+
+Write the function `in-control-grid? : posn -> boolean`
+
 
 ## Motion
 
 There are two helper functions for motion: 
 
-### 4a. `compute-push: posn(mouse-pos) -> posn`
+### 4a. Compute Push
+
+Signature: `compute-push: posn(mouse-pos) -> posn`
 
 Given the coordinates of the mouse, determine how the position of the
 ball should change.
 
-### 4b. `limit-motion: posn(p) -> posn`
+### 4b. Limit Motion
+
+Signature: `limit-motion: posn(p) -> posn`
 
 Do not let the x or y coordinates move outside the screen (in either a
 positive or negative direction). We used to do this all of the time
@@ -65,22 +75,46 @@ for numbers.
 (check-expect (limit-motion (make-posn 285 193)) (make-posn 285 193))
 ```
 
-### 4c. `move-ball`
+### 4c. Move Ball
+
+Signature: `move-ball: posn(ball-pos) posn(mouse-pos) -> posn`
 
 Now put this all together to create a function that takes in the
 position of the ball and the mouse, and puts out the new ball
 position.
 
-`move-ball: posn(ball-pos) posn(mouse-pos) -> posn`
 
 ## End Game
 
 You win the game by moving your ball completely inside the white part
  of the target.
  
-* 5a. `win? : posn(ball-pos) -> boolean` 
+### 5a. Win?
+
+Signature: `win? : posn(ball-pos) -> boolean` 
 
 Check your function to make sure it does not count a win until the
 ball is completely inside the white area of the target.
 
-* Adding a win screen is optional. (`win-screen: posn(ball-posn) -> image`)
+### 5b. Win Screen
+
+Signature: `win-screen: posn(ball-posn) -> image`
+
+Adding a win screen is optional.
+
+## Mouse Handler
+
+When the mouse is inside the control grid, the ball should
+move. Otherwise nothing happens.
+
+## Big Bang
+
+This is what my `big-bang` looks like.
+
+```racket
+(big-bang (make-posn 200 100)
+  (check-with posn?)
+  (stop-when win? win-screen)
+  (on-draw draw-h)
+  (on-mouse mouse-h))
+```

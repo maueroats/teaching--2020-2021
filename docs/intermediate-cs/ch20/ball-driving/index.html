@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Ball Driving :: WY Computer Science</title>
+<title>20. Ball Driving :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -1077,7 +1077,7 @@
       <li data-nav-id="/intermediate-cs/ch20/ball-driving/" class="dd-item active">
         <div>
           <a href="/intermediate-cs/ch20/ball-driving/">
-            Ball Driving
+            20. Ball Driving
           </a>
         </div>
     </li>
@@ -1452,7 +1452,7 @@
       <option value="/intermediate-cs/ch20/map-image/" >-- 20. Map Image</option>
       <option value="/intermediate-cs/ch20/color-enhancing/" >-- 20. Color Enhancing</option>
       <option value="/intermediate-cs/ch20/ch20-review/" >-- 20. Review</option>
-      <option value="/intermediate-cs/ch20/ball-driving/"  selected>-- Ball Driving</option>
+      <option value="/intermediate-cs/ch20/ball-driving/"  selected>-- 20. Ball Driving</option>
       <option value="/intermediate-cs/ch20/20-intro-quiz/" >-- 20. Intro Quiz</option>
       <option value="/intermediate-cs/ch20/20-intro-ex-1/" >-- 20. Intro Ex 1</option>
       <option value="/intermediate-cs/ch20/trollquiz/" >-- Troll Quiz Practice</option>
@@ -1476,7 +1476,7 @@
     </div>
     
 
-    <h1>Ball Driving</h1>
+    <h1>20. Ball Driving</h1>
 
     
     
@@ -1494,20 +1494,24 @@
 <li>Draw the ball at the position indicated by the model.</li>
 </ul>
 <p><code>draw-h: posn(model) -&gt; image</code></p>
-<h2 id="active-controls">Active controls?</h2>
+<h2 id="3-active-controls">3. Active controls?</h2>
 <p>We will write a function to determine if a point is in the control grid.</p>
-<p><code>in-control-grid? : posn -&gt; boolean</code></p>
-<p>3a. What are the coordinates of the center of the Q4 control grid?</p>
-<p>3b. Write two check-expects, one showing a point that is not the
+<h3 id="3a-center-coordinates">3a. Center coordinates</h3>
+<p>What are the coordinates of the center of the Q4 control grid?</p>
+<h3 id="3b-check-expects">3b. Check expects</h3>
+<p>Write two check-expects, one showing a point that is not the
 center is inside the grid, and another showing a point that is outside
 the grid.</p>
-<p>3c. Write the function <code>in-control-grid?</code></p>
+<h3 id="3c-in-control-grid">3c. In control grid?</h3>
+<p>Write the function <code>in-control-grid? : posn -&gt; boolean</code></p>
 <h2 id="motion">Motion</h2>
 <p>There are two helper functions for motion:</p>
-<h3 id="4a-compute-push-posnmouse-pos---posn">4a. <code>compute-push: posn(mouse-pos) -&gt; posn</code></h3>
+<h3 id="4a-compute-push">4a. Compute Push</h3>
+<p>Signature: <code>compute-push: posn(mouse-pos) -&gt; posn</code></p>
 <p>Given the coordinates of the mouse, determine how the position of the
 ball should change.</p>
-<h3 id="4b-limit-motion-posnp---posn">4b. <code>limit-motion: posn(p) -&gt; posn</code></h3>
+<h3 id="4b-limit-motion">4b. Limit Motion</h3>
+<p>Signature: <code>limit-motion: posn(p) -&gt; posn</code></p>
 <p>Do not let the x or y coordinates move outside the screen (in either a
 positive or negative direction). We used to do this all of the time
 for numbers.</p>
@@ -1516,23 +1520,32 @@ for numbers.</p>
 <span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">limit-motion</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">135</span> <span style="color:#ae81ff">-8</span><span style="color:#111">))</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">135</span> <span style="color:#ae81ff">0</span><span style="color:#111">))</span>
 <span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">limit-motion</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">187</span> <span style="color:#ae81ff">315</span><span style="color:#111">))</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">187</span> <span style="color:#ae81ff">300</span><span style="color:#111">))</span>
 <span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">limit-motion</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">285</span> <span style="color:#ae81ff">193</span><span style="color:#111">))</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">285</span> <span style="color:#ae81ff">193</span><span style="color:#111">))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h3 id="4c-move-ball">4c. <code>move-ball</code></h3>
+</span></code></pre></div><h3 id="4c-move-ball">4c. Move Ball</h3>
+<p>Signature: <code>move-ball: posn(ball-pos) posn(mouse-pos) -&gt; posn</code></p>
 <p>Now put this all together to create a function that takes in the
 position of the ball and the mouse, and puts out the new ball
 position.</p>
-<p><code>move-ball: posn(ball-pos) posn(mouse-pos) -&gt; posn</code></p>
 <h2 id="end-game">End Game</h2>
 <p>You win the game by moving your ball completely inside the white part
 of the target.</p>
-<ul>
-<li>5a. <code>win? : posn(ball-pos) -&gt; boolean</code></li>
-</ul>
+<h3 id="5a-win">5a. Win?</h3>
+<p>Signature: <code>win? : posn(ball-pos) -&gt; boolean</code></p>
 <p>Check your function to make sure it does not count a win until the
 ball is completely inside the white area of the target.</p>
-<ul>
-<li>Adding a win screen is optional. (<code>win-screen: posn(ball-posn) -&gt; image</code>)</li>
-</ul>
-
+<h3 id="5b-win-screen">5b. Win Screen</h3>
+<p>Signature: <code>win-screen: posn(ball-posn) -&gt; image</code></p>
+<p>Adding a win screen is optional.</p>
+<h2 id="mouse-handler">Mouse Handler</h2>
+<p>When the mouse is inside the control grid, the ball should
+move. Otherwise nothing happens.</p>
+<h2 id="big-bang">Big Bang</h2>
+<p>This is what my <code>big-bang</code> looks like.</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">big-bang</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">200</span> <span style="color:#ae81ff">100</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">check-with</span> <span style="color:#111">posn?</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">stop-when</span> <span style="color:#111">win?</span> <span style="color:#111">win-screen</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">on-draw</span> <span style="color:#111">draw-h</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">on-mouse</span> <span style="color:#111">mouse-h</span><span style="color:#111">))</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
 
     
     
