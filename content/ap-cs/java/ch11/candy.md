@@ -14,13 +14,13 @@ getTaste()`.
 The `Candy` class implements the `Food` interface. When printed out,
 it shows the name of the candy and the flavor (as seen below). 
 
-    Candy c = new Candy("Red hots", "cinnamon");
-	Candy d = new Candy("Little Mints", "peppermint");
-	Candy e = new ComboCandy("swirl", c, d);
-	
-	System.out.println(c); // "Red hots: cinnamon"
-	System.out.println(d); // "Little Mints: peppermint"
-	System.out.println(e); // "Combo: swirl of cinnamon and peppermint"
+    Candy c = new Candy("Red Hots", "cinnamon");
+    Candy d = new Candy("Little Mints", "peppermint");
+    Candy e = new ComboCandy("swirl", c, d);
+    
+    System.out.println(c); // "Red Hots: cinnamon"
+    System.out.println(d); // "Little Mints: peppermint"
+    System.out.println(e); // "Combo: swirl of cinnamon and peppermint"
 
 Notice that the combo candy always prints out as "Combo" before the
 flavor.
