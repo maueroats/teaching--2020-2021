@@ -1495,19 +1495,19 @@
 </ul>
 <p><code>draw-h: posn(model) -&gt; image</code></p>
 <h2 id="active-controls">Active controls?</h2>
-<p>Question 3: How can you tell if a point is in the control grid?</p>
+<p>We will write a function to determine if a point is in the control grid.</p>
 <p><code>in-control-grid? : posn -&gt; boolean</code></p>
 <p>3a. What are the coordinates of the center of the Q4 control grid?</p>
 <p>3b. Write two check-expects, one showing a point that is not the
 center is inside the grid, and another showing a point that is outside
 the grid.</p>
-<p>3c. Write the function in-control-grid?</p>
+<p>3c. Write the function <code>in-control-grid?</code></p>
 <h2 id="motion">Motion</h2>
 <p>There are two helper functions for motion:</p>
-<h3 id="compute-push-posnmouse-pos---posn"><code>compute-push: posn(mouse-pos) -&gt; posn</code></h3>
+<h3 id="4a-compute-push-posnmouse-pos---posn">4a. <code>compute-push: posn(mouse-pos) -&gt; posn</code></h3>
 <p>Given the coordinates of the mouse, determine how the position of the
 ball should change.</p>
-<h3 id="limit-motion-posnp---posn"><code>limit-motion: posn(p) -&gt; posn</code></h3>
+<h3 id="4b-limit-motion-posnp---posn">4b. <code>limit-motion: posn(p) -&gt; posn</code></h3>
 <p>Do not let the x or y coordinates move outside the screen (in either a
 positive or negative direction). We used to do this all of the time
 for numbers.</p>
@@ -1516,11 +1516,16 @@ for numbers.</p>
 <span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">limit-motion</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">135</span> <span style="color:#ae81ff">-8</span><span style="color:#111">))</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">135</span> <span style="color:#ae81ff">0</span><span style="color:#111">))</span>
 <span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">limit-motion</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">187</span> <span style="color:#ae81ff">315</span><span style="color:#111">))</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">187</span> <span style="color:#ae81ff">300</span><span style="color:#111">))</span>
 <span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">limit-motion</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">285</span> <span style="color:#ae81ff">193</span><span style="color:#111">))</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">285</span> <span style="color:#ae81ff">193</span><span style="color:#111">))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h2 id="end-game">End Game</h2>
+</span></code></pre></div><h3 id="4c-move-ball">4c. <code>move-ball</code></h3>
+<p>Now put this all together to create a function that takes in the
+position of the ball and the mouse, and puts out the new ball
+position.</p>
+<p><code>move-ball: posn(ball-pos) posn(mouse-pos) -&gt; posn</code></p>
+<h2 id="end-game">End Game</h2>
 <p>You win the game by moving your ball completely inside the white part
 of the target.</p>
 <ul>
-<li><code>win? : posn(ball-pos) -&gt; boolean</code></li>
+<li>5a. <code>win? : posn(ball-pos) -&gt; boolean</code></li>
 </ul>
 <p>Check your function to make sure it does not count a win until the
 ball is completely inside the white area of the target.</p>

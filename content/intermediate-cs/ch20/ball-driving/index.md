@@ -30,10 +30,9 @@ We will all use the same target.
 
 ## Active controls?
 
-Question 3: How can you tell if a point is in the control grid?
+We will write a function to determine if a point is in the control grid.
 
 `in-control-grid? : posn -> boolean`
-
 
 3a. What are the coordinates of the center of the Q4 control grid?
 
@@ -41,18 +40,18 @@ Question 3: How can you tell if a point is in the control grid?
 center is inside the grid, and another showing a point that is outside
 the grid.
 
-3c. Write the function in-control-grid?
+3c. Write the function `in-control-grid?`
 
 ## Motion
 
 There are two helper functions for motion: 
 
-### `compute-push: posn(mouse-pos) -> posn`
+### 4a. `compute-push: posn(mouse-pos) -> posn`
 
 Given the coordinates of the mouse, determine how the position of the
 ball should change.
 
-### `limit-motion: posn(p) -> posn`
+### 4b. `limit-motion: posn(p) -> posn`
 
 Do not let the x or y coordinates move outside the screen (in either a
 positive or negative direction). We used to do this all of the time
@@ -66,12 +65,20 @@ for numbers.
 (check-expect (limit-motion (make-posn 285 193)) (make-posn 285 193))
 ```
 
+### 4c. `move-ball`
+
+Now put this all together to create a function that takes in the
+position of the ball and the mouse, and puts out the new ball
+position.
+
+`move-ball: posn(ball-pos) posn(mouse-pos) -> posn`
+
 ## End Game
 
 You win the game by moving your ball completely inside the white part
  of the target.
  
-* `win? : posn(ball-pos) -> boolean` 
+* 5a. `win? : posn(ball-pos) -> boolean` 
 
 Check your function to make sure it does not count a win until the
 ball is completely inside the white area of the target.
