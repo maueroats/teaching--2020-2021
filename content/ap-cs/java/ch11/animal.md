@@ -21,3 +21,7 @@ method `void eat(Animal other)`. This method causes the
 `CarnivoreAnimal` to gain the calories provided by the other Animal
 (found using the `beEaten()` method).
 
+## Note
+
+This description is kind of fake. This page doesn't really make
+sense as an abstract class either. (What is supposed to abstract?)

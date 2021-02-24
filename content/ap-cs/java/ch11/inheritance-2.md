@@ -14,14 +14,17 @@ It takes 0.2 seconds per letter for an animal to make a noise, so
 "meow" takes 0.8 seconds and "meeeou" is 1.2 seconds. There are two
 methods to think about:
 
-* public String noise(): the noise that something `Noisy` makes; and
-* public double timeNoise(): the number of seconds it takes to produce
+* `public String noise()`: the noise that something `Noisy` makes; and
+* `public double timeNoise()`: the number of seconds it takes to produce
   that noise.
   
 1. Is this best as an interface or an abstract class? Explain your
    answer.
 2. Write the `Noisy` thing in Java.
 3. Make a `Dolphin` class that makes the "click" noise.
+
+Note: this is a totally unrealistic design as `Noisy` cannot be combined with
+your `GrAnimal` with this design. Sorry. 
 
 ## Colorable
 
@@ -32,6 +35,8 @@ and `int getColor()`.
 2. Add the `Colorable` abilities to your `Dolphin`.
 
 ## Cats
+
+(Note: not related to any previous `Cat` class.)
 
 A `Cat` is a `Noisy` thing that makes one of three noises: "meow",
 "purr", or "rrrrrrr". When you construct a cat it should get a number

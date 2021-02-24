@@ -1075,6 +1075,56 @@
           </a>
         </div>
     </li>
+    <li data-nav-id="/intermediate-cs/ch20/ball-driving/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/ch20/ball-driving/">20. Ball Driving</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/intro/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/intro/">
+            1. Intro
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/starter-code/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/starter-code/">
+            2. Starter Code
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/controls/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/controls/">
+            3. Controls
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/motion/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/motion/">
+            4. Motion
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/end-game/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/end-game/">
+            5. End Game
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/animation/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/animation/">
+            6. Animation
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
       <li data-nav-id="/intermediate-cs/ch20/20-intro-quiz/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch20/20-intro-quiz/">
@@ -1476,8 +1526,8 @@
 &ldquo;meow&rdquo; takes 0.8 seconds and &ldquo;meeeou&rdquo; is 1.2 seconds. There are two
 methods to think about:</p>
 <ul>
-<li>public String noise(): the noise that something <code>Noisy</code> makes; and</li>
-<li>public double timeNoise(): the number of seconds it takes to produce
+<li><code>public String noise()</code>: the noise that something <code>Noisy</code> makes; and</li>
+<li><code>public double timeNoise()</code>: the number of seconds it takes to produce
 that noise.</li>
 </ul>
 <ol>
@@ -1486,6 +1536,8 @@ answer.</li>
 <li>Write the <code>Noisy</code> thing in Java.</li>
 <li>Make a <code>Dolphin</code> class that makes the &ldquo;click&rdquo; noise.</li>
 </ol>
+<p>Note: this is a totally unrealistic design as <code>Noisy</code> cannot be combined with
+your <code>GrAnimal</code> with this design. Sorry.</p>
 <h2 id="colorable">Colorable</h2>
 <p>A class is <code>Colorable</code> if it has the methods <code>void setColor(int c)</code>
 and <code>int getColor()</code>.</p>
@@ -1494,6 +1546,7 @@ and <code>int getColor()</code>.</p>
 <li>Add the <code>Colorable</code> abilities to your <code>Dolphin</code>.</li>
 </ol>
 <h2 id="cats">Cats</h2>
+<p>(Note: not related to any previous <code>Cat</code> class.)</p>
 <p>A <code>Cat</code> is a <code>Noisy</code> thing that makes one of three noises: &ldquo;meow&rdquo;,
 &ldquo;purr&rdquo;, or &ldquo;rrrrrrr&rdquo;. When you construct a cat it should get a number
 0, 1, or 2 that it uses to choose which noise to make.</p>

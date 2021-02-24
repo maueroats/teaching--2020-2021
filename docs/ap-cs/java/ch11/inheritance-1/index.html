@@ -1075,6 +1075,56 @@
           </a>
         </div>
     </li>
+    <li data-nav-id="/intermediate-cs/ch20/ball-driving/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/ch20/ball-driving/">20. Ball Driving</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/intro/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/intro/">
+            1. Intro
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/starter-code/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/starter-code/">
+            2. Starter Code
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/controls/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/controls/">
+            3. Controls
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/motion/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/motion/">
+            4. Motion
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/end-game/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/end-game/">
+            5. End Game
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/animation/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/animation/">
+            6. Animation
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
       <li data-nav-id="/intermediate-cs/ch20/20-intro-quiz/" class="dd-item">
         <div>
           <a href="/intermediate-cs/ch20/20-intro-quiz/">
@@ -1475,19 +1525,19 @@
 <p>Create the following classes.</p>
 <ul>
 <li>
-<p><code>Animal</code> is an abstract class</p>
+<p><code>GrAnimal</code> is an abstract class</p>
 <ul>
-<li><code>Animal(String kind)</code> constructor to create an animal of a
+<li><code>GrAnimal(String kind)</code> constructor to create an animal of a
 certain kind.</li>
 <li><code>public String noise()</code>: an abstract method</li>
 <li><code>public void speak()</code>: print out &ldquo;a [kind] says [noise()].&rdquo;</li>
 </ul>
 </li>
 <li>
-<p><code>Cat</code> is a subclass of <code>Animal</code>. It makes the &ldquo;miaou&rdquo; noise.</p>
+<p><code>Cat</code> is a subclass of <code>GrAnimal</code>. It makes the &ldquo;miaou&rdquo; noise.</p>
 </li>
 <li>
-<p><code>Dog</code> is a subclass of <code>Animal</code>. It makes the &ldquo;ruff&rdquo; noise. Dogs can
+<p><code>Dog</code> is a subclass of <code>GrAnimal</code>. It makes the &ldquo;ruff&rdquo; noise. Dogs can
 also do <code>public void trick()</code>, which prints out &ldquo;shake&rdquo;.</p>
 </li>
 <li>
@@ -1500,6 +1550,8 @@ noise it makes is a &ldquo;whine&rdquo;.</p>
 </ul>
 <p>Discuss how they can and cannot be used in a Java program. See
 the <a href="animals.java">testAnimals</a> function (also as <a href="animals.txt">plain text</a>).</p>
+<p>Note: discuss the <code>Dog</code> constructor and its relation to the <code>Borzoi</code>
+constructor.</p>
 <h2 id="complexified">Complexified</h2>
 <p>This example is more abstract but reviews the same ideas.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">    <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">class</span> <span style="color:#75af00">A</span> <span style="color:#f92672">{</span>

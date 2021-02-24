@@ -12,14 +12,14 @@ description: "Animal. Dog. Cat. Borzoi. Boxer. Abstract example: A, B, C."
 
 Create the following classes.
 
-* `Animal` is an abstract class
-     * `Animal(String kind)` constructor to create an animal of a
+* `GrAnimal` is an abstract class
+     * `GrAnimal(String kind)` constructor to create an animal of a
        certain kind. 
      * `public String noise()`: an abstract method
      * `public void speak()`: print out "a [kind] says [noise()]."
      
-* `Cat` is a subclass of `Animal`. It makes the "miaou" noise.
-* `Dog` is a subclass of `Animal`. It makes the "ruff" noise. Dogs can
+* `Cat` is a subclass of `GrAnimal`. It makes the "miaou" noise.
+* `Dog` is a subclass of `GrAnimal`. It makes the "ruff" noise. Dogs can
   also do `public void trick()`, which prints out "shake".
 * `Borzoi` is a subclass of `Dog`. The Borzoi does not bark, the only
   noise it makes is a "whine".
@@ -28,6 +28,8 @@ Create the following classes.
 Discuss how they can and cannot be used in a Java program. See
 the [testAnimals](animals.java) function (also as [plain text](animals.txt)).
 
+Note: discuss the `Dog` constructor and its relation to the `Borzoi`
+constructor. 
 
 
 ## Complexified 
