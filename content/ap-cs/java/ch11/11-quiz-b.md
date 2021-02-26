@@ -5,7 +5,9 @@ date: 2019-02-25T08:50:40-06:00
 draft: false
 #type: slide
 #theme: white
+description: "Clothes interface, BigFashionPerson class, and others."
 ---
+{{% use-goodlists %}}
 
 * `Clothes` interface has `int fashion()` and `int warmth()`.
 
@@ -26,9 +28,9 @@ draft: false
 * `BigFashionPerson` is a subclass of `Person` that has an
   `ArrayList<Clothes>`. 
   
-      * Constructor takes in a name and an arraylist of clothes.
-      * Their warmth is the sum of the warmth of their clothes. 
-      * Their fashion is the *minimum* of the fashion of their clothes. 
+     * Constructor takes in a name and an arraylist of clothes.
+     * Their warmth is the sum of the warmth of their clothes. 
+     * Their fashion is the *minimum* of the fashion of their clothes. 
 
 ## Example
 

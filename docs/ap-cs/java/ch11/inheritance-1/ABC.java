@@ -38,10 +38,13 @@ public class ABC {
         // 6
         A w = new C();
         w.p();
-        w.r();
 
         // 7
-        C w = new C();
-        w.r();
+        A t = new C();
+        t.r();
+
+        // 8
+        C ww = new A();
+        ww.r();
     }
 }

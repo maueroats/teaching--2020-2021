@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Jupyter Graphing :: WY Computer Science</title>
+<title>Inheritance Resources :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="Making ggplot work well.">
+<meta name="description" content="Internet resources to better understand classes, inheritance, overloading.">
 
 
 
     
   </head>
-  <body data-url="/ml/rmisc/jupyter-graphing/">
+  <body data-url="/ap-cs/java/ch11/resources/">
     
       <header>
   <div class="logo">
@@ -68,10 +68,11 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/ap-cs/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/">AP CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/">AP CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ap-cs/haskell/" class="dd-item haschildren
@@ -688,10 +689,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/java/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/java/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/java/">Java</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/java/">Java</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/java/week01/" class="dd-item">
@@ -716,10 +718,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/java/ch11/" class="dd-item haschildren
+    <li data-nav-id="/ap-cs/java/ch11/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/ap-cs/java/ch11/">11. Classes</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/ap-cs/java/ch11/">11. Classes</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/java/ch11/animal/" class="dd-item">
@@ -764,7 +767,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/java/ch11/resources/" class="dd-item">
+      <li data-nav-id="/ap-cs/java/ch11/resources/" class="dd-item active">
         <div>
           <a href="/ap-cs/java/ch11/resources/">
             Inheritance Resources
@@ -1190,11 +1193,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/" class="dd-item parent haschildren
+    <li data-nav-id="/ml/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ml/">Machine Learning</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/startup/" class="dd-item">
@@ -1204,14 +1206,13 @@
           </a>
         </div>
     </li>
-    <li data-nav-id="/ml/rmisc/" class="dd-item parent haschildren
+    <li data-nav-id="/ml/rmisc/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ml/rmisc/">R: Misc</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ml/rmisc/">R: Misc</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/ml/rmisc/jupyter-graphing/" class="dd-item active">
+      <li data-nav-id="/ml/rmisc/jupyter-graphing/" class="dd-item">
         <div>
           <a href="/ml/rmisc/jupyter-graphing/">
             Jupyter Graphing
@@ -1473,28 +1474,44 @@
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/ap-cs/" >
-   AP CS</option>
+   AP CS</option> 
+    <option value="/ap-cs/haskell/" >
+  - 
+   Haskell</option>
+    <option value="/ap-cs/java/" >
+  - 
+   Java</option> 
+      <option value="/ap-cs/java/week01/" >-- Java 01</option>
+    <option value="/ap-cs/java/arrays/" >
+  -- 
+   Arrays</option>
+    <option value="/ap-cs/java/ch11/" >
+  -- 
+   11. Classes</option> 
+      <option value="/ap-cs/java/ch11/animal/" >--- 11. Animal</option>
+      <option value="/ap-cs/java/ch11/candy/" >--- 11. Candy</option>
+      <option value="/ap-cs/java/ch11/inheritance-1/" >--- 11. Inheritance 1</option>
+      <option value="/ap-cs/java/ch11/inheritance-2/" >--- 11. Inheritance 2</option>
+      <option value="/ap-cs/java/ch11/abstract-classes/" >--- Abstract Classes</option>
+      <option value="/ap-cs/java/ch11/interfaces/" >--- Interfaces</option>
+      <option value="/ap-cs/java/ch11/resources/"  selected>--- Inheritance Resources</option>
+      <option value="/ap-cs/java/ch11/11-quiz-b/" >--- 11. Quiz B</option>
+      <option value="/ap-cs/java/ch11/11-answers-aquiz/" >--- 11. AQuiz IAnswers</option>
+      <option value="/ap-cs/java/ch11/treasurehunt/" >--- 11. Treasure Hunt</option>
+      <option value="/ap-cs/java/ch11/instanceof/" >--- 11. Instanceof</option>
+  
+    <option value="/ap-cs/java/review/" >
+  -- 
+   Review</option>
+    <option value="/ap-cs/java/testing/" >
+  -- 
+   Unit Testing</option>
+  
+  
     <option value="/intermediate-cs/" >
    Intermediate CS</option>
     <option value="/ml/" >
-   Machine Learning</option> 
-      <option value="/ml/startup/" >- ML Startup</option>
-    <option value="/ml/rmisc/" >
-  - 
-   R: Misc</option> 
-      <option value="/ml/rmisc/jupyter-graphing/"  selected>-- Jupyter Graphing</option>
-      <option value="/ml/rmisc/na-vs-null/" >-- NA vs NULL</option>
-      <option value="/ml/rmisc/lookup-tables/" >-- Lookup Tables</option>
-      <option value="/ml/rmisc/stdinc/" >-- Standard Header</option>
-      <option value="/ml/rmisc/timeseries/" >-- Timeseries</option>
-  
-    <option value="/ml/isl/" >
-  - 
-   ISL</option>
-    <option value="/ml/r4ds/" >
-  - 
-   R for Data Science</option>
-  
+   Machine Learning</option>
     <option value="/resources/" >
    Resources</option>
     <option value="/future/" >
@@ -1507,45 +1524,46 @@
     </div>
     
 
-    <h1>Jupyter Graphing</h1>
+    <h1>Inheritance Resources</h1>
 
     
     
     
-    <p>This page includes code to make plots more readable and code to update
-an internal package.</p>
-<h2 id="more-readable-plots">More readable plots</h2>
-<p>I use these options to make my Jupyter notebook plots look good.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">options(repr.plot.width=10, repr.plot.height=6)
-theme_update(text = element_text(size=20))
-</code></pre></div><h2 id="farver-update">Farver Update</h2>
-<p>(Last tested: 2020-09-23.)
-I have had weird errors (see below) when trying to use fill colors
-with a continuous variable. Solution: make
-sure you have an up-to-date &ldquo;farver&rdquo; package.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">install.packages(c(&#34;farver&#34;))
-</code></pre></div><p>If you get the error message, you will need to reload the kernel to
-get the up-to-date &ldquo;farver&rdquo; package.
-Choose the menu option &ldquo;Runtime -&gt; Restart and run all&rdquo;.</p>
-<p>If you can run the code below without errors, you do not need the
-<code>farver</code> fix.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">library(tidyverse)
-x &lt;- LETTERS[1:20]
-y &lt;- paste0(&#34;var&#34;, seq(1,20))
-data &lt;- expand.grid(X=x, Y=y)
-data$Z &lt;- runif(400, 0, 5)
-ggplot(data, aes(X, Y, fill= Z)) + 
-  geom_tile() + coord_fixed() 
-</code></pre></div><p>The error that prompted me to try the fix is below:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ERROR while rich displaying an object: Error in farver::decode_colour(colors, alpha = TRUE, to = &#34;lab&#34;, na_value = &#34;transparent&#34;): unused argument (na_value = &#34;transparent&#34;)
-</code></pre></div>
+    <ul>
+<li>
+<p>AP CS A Unit 9</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=FHdU8zpnIY4">9.1</a>
+Subclasses. Distinguishing &ldquo;is a&rdquo; and &ldquo;has a&rdquo; relationships.</li>
+<li><a href="https://www.youtube.com/watch?v=b0tcyR1EPl4">9.2</a> Writing
+constructors.</li>
+<li><a href="https://www.youtube.com/watch?v=j3KJySOeWGY">9.3</a> Overriding, overloading.</li>
+</ul>
+</li>
+<li>
+<p><a href="https://csawesome.runestone.academy/runestone/books/published/csawesome/Unit9-Inheritance/toctree.html">CSAwesome version of Unit
+9</a></p>
+</li>
+<li>
+<p><code>super</code></p>
+<ul>
+<li>The <a href="https://docs.oracle.com/javase/tutorial/java/IandI/super.html">basics of
+super</a>.</li>
+<li>A <a href="https://www.geeksforgeeks.org/super-keyword/">partial ripoff of the Oracle Java Docs
+page</a> with some more
+(and weirder) examples.</li>
+<li>Stack overflow accessible <a href="https://stackoverflow.com/questions/488727/inheritance-in-java-creating-an-object-of-the-subclass-invokes-also-the-constr">question about superclass constructors running</a></li>
+</ul>
+</li>
+</ul>
+
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ml/rmisc/" title="R: Misc"> <i class="fa fa-chevron-left"></i><label>R: Misc</label></a>
-    <a class="nav nav-next" href="/ml/rmisc/na-vs-null/" title="NA vs NULL" style="margin-right: 0px;"><label>NA vs NULL</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/ap-cs/java/ch11/interfaces/" title="Interfaces"> <i class="fa fa-chevron-left"></i><label>Interfaces</label></a>
+    <a class="nav nav-next" href="/ap-cs/java/ch11/11-quiz-b/" title="11. Quiz B" style="margin-right: 0px;"><label>11. Quiz B</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1561,7 +1579,7 @@ ggplot(data, aes(X, Y, fill= Z)) +
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 21/09/2020
+        <i class='fa fa-calendar'></i> Last update on 24/02/2021
     </div>
     
 

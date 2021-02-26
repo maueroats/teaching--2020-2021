@@ -15,12 +15,12 @@ Motion is a combination of helper functions:
 * `move-ball`
 
 
-### 4a. Compute Push
+### 4a. Compute Push Helper
 
-Signature: `compute-push: posn(mouse-pos) -> posn`
+Signature: `compute-push-h: posn(mouse-pos) posn(origin-pos) -> posn`
 
-Given the coordinates of the mouse, determine how the position of the
-ball should change. 
+Given the coordinates of the mouse and the (control center) origin,
+determine how the position of the ball should change.
 
 Use the position of the mouse in the "control center" axes to
 determine the motion.

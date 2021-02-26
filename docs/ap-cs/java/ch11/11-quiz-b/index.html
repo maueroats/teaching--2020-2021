@@ -17,7 +17,7 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="">
+<meta name="description" content="Clothes interface, BigFashionPerson class, and others.">
 
 
 
@@ -767,6 +767,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/ap-cs/java/ch11/resources/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/resources/">
+            Inheritance Resources
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/ap-cs/java/ch11/11-quiz-b/" class="dd-item active">
         <div>
           <a href="/ap-cs/java/ch11/11-quiz-b/">
@@ -1487,6 +1494,7 @@
       <option value="/ap-cs/java/ch11/inheritance-2/" >--- 11. Inheritance 2</option>
       <option value="/ap-cs/java/ch11/abstract-classes/" >--- Abstract Classes</option>
       <option value="/ap-cs/java/ch11/interfaces/" >--- Interfaces</option>
+      <option value="/ap-cs/java/ch11/resources/" >--- Inheritance Resources</option>
       <option value="/ap-cs/java/ch11/11-quiz-b/"  selected>--- 11. Quiz B</option>
       <option value="/ap-cs/java/ch11/11-answers-aquiz/" >--- 11. AQuiz IAnswers</option>
       <option value="/ap-cs/java/ch11/treasurehunt/" >--- 11. Treasure Hunt</option>
@@ -1521,7 +1529,13 @@
     
     
     
-    <ul>
+    <style type="text/css">
+    ol { list-style-type: roman; }
+    ol ol { list-style-type: lower-alpha; }
+    ol ol ol { list-style-type: lower-roman; }
+    ol ol ol ol { list-style-type: decimal; }
+</style>
+<ul>
 <li>
 <p><code>Clothes</code> interface has <code>int fashion()</code> and <code>int warmth()</code>.</p>
 </li>
@@ -1545,10 +1559,11 @@ fashion of 50, always.</p>
 <li>
 <p><code>BigFashionPerson</code> is a subclass of <code>Person</code> that has an
 <code>ArrayList&lt;Clothes&gt;</code>.</p>
-<pre><code>* Constructor takes in a name and an arraylist of clothes.
-* Their warmth is the sum of the warmth of their clothes. 
-* Their fashion is the *minimum* of the fashion of their clothes. 
-</code></pre>
+<ul>
+<li>Constructor takes in a name and an arraylist of clothes.</li>
+<li>Their warmth is the sum of the warmth of their clothes.</li>
+<li>Their fashion is the <em>minimum</em> of the fashion of their clothes.</li>
+</ul>
 </li>
 </ul>
 <h2 id="example">Example</h2>
@@ -1587,7 +1602,7 @@ for its fashion level and its warmth rating. The methods in the
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/java/ch11/interfaces/" title="Interfaces"> <i class="fa fa-chevron-left"></i><label>Interfaces</label></a>
+<a class="nav nav-prev" href="/ap-cs/java/ch11/resources/" title="Inheritance Resources"> <i class="fa fa-chevron-left"></i><label>Inheritance Resources</label></a>
     <a class="nav nav-next" href="/ap-cs/java/ch11/11-answers-aquiz/" title="11. AQuiz IAnswers" style="margin-right: 0px;"><label>11. AQuiz IAnswers</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
