@@ -1,7 +1,7 @@
 ---
 title: "R for Data Science"
 date: 2020-09-10T09:56:48-05:00
-#weight: 
+weight: 10
 draft: false
 #type: slide
 #theme: white
