@@ -16,16 +16,16 @@ public class TestClothes {
 
         Person p2 = new BigFashionPerson("Sanjana", w);
         aassert("Sanjana".equals(p2.getName()));
-        aassert(20+25+95 == p2.getWarmth());
-        aassert(40 == p2.getFashion());
+        aassert(105+110+40 == p2.getWarmth());
+        aassert(20 == p2.getFashion());
     }
     // on repl.it the assert() method does nothing
     public static void aassert(bool b)
     {
-	if (b) {
-	    System.out.println("OK");
-	} else {
-	    System.out.println("BAD");
-	}
+        if (b) {
+            System.out.println("OK");
+        } else {
+            System.out.println("BAD");
+        }
     }
 }

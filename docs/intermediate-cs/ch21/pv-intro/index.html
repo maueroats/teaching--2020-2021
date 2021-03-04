@@ -1,0 +1,131 @@
+	<head><meta charset="utf-8"></head>
+
+	<link rel="stylesheet" href="/revealjs/css/reveal.css">
+	<link rel="stylesheet" href="/revealjs/css/theme/white.css" id="theme">
+	<link rel="stylesheet" href="/revealjs/lib/css/zenburn.css">
+
+	<div class="reveal">
+	<div class="slides">
+	<section data-markdown
+	         data-separator="^---"
+		 data-separator-vertical="^___"
+		 data-separator-notes="^Note:">
+	
+## Pick a model
+
+* A ball moves around the screen. 
+* It keeps going in the direction it starts. 
+* What could the model be?
+
+---
+
+## Define the model
+
+Keep the names short; we will type them a lot.
+
+---
+
+## Define the model
+
+Keep the names short; we will type them a lot.
+
+`(define-struct pv (pos vel))`
+
+---
+
+## Example needed
+
+Create a `pv` structure called `ex1`.
+
+* Position `(100,50)`
+* Velocity `(-5,8)`
+
+---
+
+## Sketch 
+
+```racket
+(make-pv (make-posn 50 200) 
+         (make-posn 10 -30))
+```
+
+---
+
+## update-pos
+
+* Write `update-pos: pv -&gt; pv`.
+* Use velocity to change position, one time step.
+
+---
+
+## scale-velocity
+
+* `scale-velocity: pv(orig) num(scale) -&gt; pv`
+* Multiply both x and y components of velocity of `orig` by `scale`.
+
+---
+
+## turn-180
+
+What would this mean? Sketch first.
+
+---
+
+## Bouncing off walls 1
+
+Should you bounce off of a wall?
+
+Sketch three true and three false. 
+
+```racket
+should-bounce-r? : pv num(xwall) -&gt; boolean
+```
+The wall on the right is at `x=xwall`.
+
+---
+
+## Bouncing off walls 2
+
+```racket
+should-bounce-r? : pv num(xwall) -&gt; boolean
+```
+The wall on the right is at `x=xwall`.
+
+Now actually write the function.
+
+--- 
+
+## Bouncing off walls 3
+
+```racket
+bounce-r-velocity: pv -&gt; posn(new-velocity)
+```
+
+Given that you bounced, what should your new velocity be?
+
+Draw a sketch!
+
+
+	</section>
+	</div>
+	</div>
+	<script src="/revealjs/lib/js/head.min.js"></script>
+	<script src="/revealjs/js/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+		      	embedded : true,
+
+		        
+		        
+		        
+		        dependencies: [
+		          { src: '\/revealjs\/lib\/js\/classList.js"', condition: function() { return !document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/markdown\/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/markdown\/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		          { src: '\/revealjs\/plugin\/highlight\/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+		          { src: '\/revealjs\/plugin\/zoom-js\/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/notes\/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+		          { src: '\/revealjs\/plugin\/math\/math.js', async: true}
+		        ]
+		      });
+	</script>
