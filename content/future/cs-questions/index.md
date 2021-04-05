@@ -40,7 +40,10 @@ hard to learn new concepts, or apply ideas in new ways? CS could be
 challenging. 
 
 
-## What is the difference between AP CS A and AP CS Principles?
+## Comparison: CS A vs CS Principles
+
+**What is the difference between the Advanced Placement Computer
+Science A (CSA) and Computer Science Principles (CSP)?**
 
 CS Principles is a general introduction to computing. In general, you
 should take this class if you are not very comfortable with
@@ -65,3 +68,31 @@ may allow CS A to fulfill a required course for a major.
 
     {{% figure src="nu-credit.png" width="300"  %}}
 
+## Preparation for College CS
+
+**What is the best preparation for college computer science?**
+
+In my opinion, Intermedate CS offers the best preparation for
+college. Compare it to Northwestern's [EECS
+111](https://www.mccormick.northwestern.edu/computer-science/academics/courses/descriptions/111.html), a "required core course in the CS curriculum".
+
+Intermediate CS will give you time to develop your project management
+skills.
+
+* Planning: break a large project into smaller pieces.
+* Debugging: check that each piece works before assembling the whole.
+* Creativity: make interesting projects with flexibility for what you
+  find interesting.
+
+AP Computer Science A will teach you the technical details of a
+programming language (Java), but the AP curriculum focuses more on
+technical details than the translation from concept to reality that
+many people need to develop. AP computer science could be an
+appropriate first course for someone who is interested in learning
+more about algorithms, data structures, and CS competitions.
+
+* Object oriented programming.
+* Searching and sorting large lists of data.
+
+If you have been programming on your own and have a _well-crafted_
+larger project, feel free to ask about placement.

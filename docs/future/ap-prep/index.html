@@ -1405,6 +1405,13 @@
     </li>
         </ul>
     </li>
+      <li data-nav-id="/ml/data/student/" class="dd-item">
+        <div>
+          <a href="/ml/data/student/">
+            Student Achievement
+          </a>
+        </div>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/resources/" class="dd-item haschildren
@@ -1557,9 +1564,18 @@
     
     
     
-    <p>This page will help you decide if you should take AP CS A or
+    <script>
+MathJax = {
+ tex: {
+  inlineMath: [['$','$'], ['\\(','\\)']],
+  displayMath: [['$$','$$'], ['\\[','\\]']]
+  }};
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<p>This page will help you decide if you should take AP CS A or
 Intermediate CS.</p>
-<p>If you are taking Intermediate Computer Science and in Jauary 2021 you
+<p>If you are taking Intermediate Computer Science and in January 2021 you
 can make an animation using <code>cond</code>, you will be prepared. Your end of
 the year goals should include:</p>
 <ul>
@@ -1570,22 +1586,37 @@ the year goals should include:</p>
 <p>AP Computer Science Principles is not a class that focuses on
 programming, you should ask about whether Intermediate CS or AP CS A
 would be more appropriate.</p>
-<h3 id="self-check-1-january">Self-check 1: January</h3>
-<p>Here is a project that everybody in Intermediate Computer Science should be
-able to do in January: make a vertical slider controlled by the
-mouse. Clicking or dragging on the slider moves a cross bar which also
-controls the amount of blue in the background.</p>
+<h3 id="self-check-1-january-project">Self-check 1: January Project</h3>
+<p>Make a vertical slider controlled by the mouse. Clicking or dragging
+on the slider moves a cross bar which also controls the amount of blue
+in the background.</p>
 <ul>
 <li>When the bar is at the bottom, the background is a dark blue (0,0,100)</li>
 <li>When the bar is at the top, the background is pure blue (0,0,255)</li>
 </ul>
 <p>An advanced student would be able to make a slider that changes the
 background from &ldquo;light sky blue&rdquo; at the bottom to &ldquo;royal blue&rdquo; at the top.</p>
-<h3 id="self-check-2-may">Self-check 2: May</h3>
-<p>Here is a project that everyone in Intermediate Computer Science
-should be able to do in May: write a function that takes in a list of
+<p>Demonstrate your animation works with at least two check-expects.</p>
+<p>Everybody currently enrolled in Intermediate Computer Science earning
+a B or better can complete the January project before the end of semester one.</p>
+<h3 id="self-check-2-may-project">Self-check 2: May Project</h3>
+<p>Write a function that takes in a list of
 points / ordered pairs $(x,y)$ and a single point $(x_0,y_0)$, and
 puts out the point in the list that is closest to $(x_0,y_0)$.</p>
+<p>Demonstrate that your function works with at least two check-expects.</p>
+<p>Everyone in Intermediate Computer Science earning a grade of B or
+better should be able to complete the May Project before the end of
+semester two.</p>
+<h3 id="questions">Questions</h3>
+<p>If you are not sure what the question is asking, or if you are unable
+to verify that your function works, that is a sign that you need more
+preparation. That said, feel free to ask clarifying questions, but
+please include some statement about your thinking along with the
+question. A good question has the form &ldquo;I think this means &hellip;, is
+that correct?&rdquo;</p>
+<p>If there are ambiguous edge cases, you can choose for yourself how to
+handle them, no need to ask my preference. Just indicate in a comment
+what you chose.</p>
 
 
     

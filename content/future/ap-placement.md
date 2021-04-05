@@ -8,8 +8,12 @@ draft: false
 description: "Something to demonstrate that you know how to program."
 ---
 
-You should only take AP computer science if you have some significant
-programming experience.
+If you have already taken Intermediate Computer Science, there is no
+need to take a placement test. See the [AP Preparation]({{% relref
+"ap-prep" %}}) page for the skills you should have acquired.
+
+You should only take AP computer science without Intermediate CS if you have
+some significant programming experience.
 
 Write these functions and send them to doc mo (amauer-oats@cps.edu):
 
