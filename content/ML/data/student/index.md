@@ -8,7 +8,7 @@ draft: false
 description: "Dataset from early 2000 Portugal student achievement."
 ---
 
-{{% attachments-github %}}
+{{% attachments-github "*.csv" %}}
 
 [Example notebook](ISL-05-StudentAchievement.ipynb)
 
