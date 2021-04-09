@@ -1,10 +1,11 @@
-e---
+---
 title: "Parcels"
 date: 2020-03-19T13:13:00-05:00
 #weight: 
 draft: false
 #type: slide
 #theme: white
+description: "Create an interactive map showing delivery distances from the closest storage depot."
 ---
 
 In this project we will create an interactive map showing delivery
