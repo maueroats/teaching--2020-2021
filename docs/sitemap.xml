@@ -118,6 +118,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch22b/list-intro/</loc>
+    <lastmod>2018-02-23T11:14:59-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/intermediate-cs/ch21/pv-tick-handler/math-soln-1/</loc>
     <lastmod>2018-02-07T08:18:24-06:00</lastmod>
   </url>
@@ -258,6 +263,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch22b/list-exercises-1/</loc>
+    <lastmod>2018-04-03T08:08:02-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/intermediate-cs/ch21/pv-tick-handler/math-soln-2/</loc>
     <lastmod>2018-02-07T08:18:26-06:00</lastmod>
   </url>
@@ -275,6 +285,11 @@
   <url>
     <loc>https://wy-cs.info/ap-cs/haskell/mancala/utilities/</loc>
     <lastmod>2020-10-25T15:10:17-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch22b/list-exercises-1.5/</loc>
+    <lastmod>2019-03-05T13:54:56-06:00</lastmod>
   </url>
   
   <url>
@@ -325,6 +340,11 @@
   <url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch04/ch04-discussion-02/</loc>
     <lastmod>2018-09-22T15:29:48-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch22b/list-exercises-2/</loc>
+    <lastmod>2018-04-04T21:37:45-05:00</lastmod>
   </url>
   
   <url>
@@ -398,6 +418,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch22b/bubble-wrap/</loc>
+    <lastmod>2018-04-05T12:43:42-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/intermediate-cs/ch21/pv-intro/</loc>
     <lastmod>2018-02-05T14:48:00-06:00</lastmod>
   </url>
@@ -430,6 +455,11 @@
   <url>
     <loc>https://wy-cs.info/ap-cs/haskell/mancala/testing/</loc>
     <lastmod>2020-10-25T15:18:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch22b/bubble-review/</loc>
+    <lastmod>2019-03-17T22:02:50-05:00</lastmod>
   </url>
   
   <url>
@@ -483,6 +513,11 @@
   </url>
   
   <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch22b/list-exercises-3/</loc>
+    <lastmod>2018-04-06T08:20:03-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://wy-cs.info/ml/r4ds/ch05/</loc>
     <lastmod>2020-09-21T11:26:45-05:00</lastmod>
   </url>
@@ -505,6 +540,11 @@
   <url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch04/ch04-quiz-c/</loc>
     <lastmod>2019-10-16T15:46:05-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch22b/list-exercises-4-q/</loc>
+    <lastmod>2018-04-09T08:00:55-05:00</lastmod>
   </url>
   
   <url>
@@ -615,6 +655,11 @@
   <url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch04/ch04-summary/</loc>
     <lastmod>2017-09-19T14:06:42-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch22b/list-resources/</loc>
+    <lastmod>2018-02-23T11:13:06-06:00</lastmod>
   </url>
   
   <url>
@@ -775,6 +820,11 @@
   <url>
     <loc>https://wy-cs.info/intermediate-cs/ch21/</loc>
     <lastmod>2018-01-17T13:57:24-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch22b/</loc>
+    <lastmod>2018-02-23T11:11:52-06:00</lastmod>
   </url>
   
   <url>
@@ -1119,6 +1169,10 @@
   
   <url>
     <loc>https://wy-cs.info/intermediate-cs/ch20/20-intro-ex-1/20-intro-checkexpect/</loc>
+  </url>
+  
+  <url>
+    <loc>https://wy-cs.info/intermediate-cs/ch22b/parcels/</loc>
   </url>
   
   <url>
