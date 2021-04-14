@@ -1274,12 +1274,34 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/intermediate-cs/ch22b/parcels/" class="dd-item">
+    <li data-nav-id="/intermediate-cs/ch22b/parcels/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/ch22b/parcels/">Parcels</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/ch22b/parcels/grid/" class="dd-item">
         <div>
-          <a href="/intermediate-cs/ch22b/parcels/">
-            Parcels
+          <a href="/intermediate-cs/ch22b/parcels/grid/">
+            Grid
           </a>
         </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/parcels/distances/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/parcels/distances/">
+            Distances
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/parcels/parcels-colors/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/parcels/parcels-colors/">
+            Coloring
+          </a>
+        </div>
+    </li>
+        </ul>
     </li>
         </ul>
     </li>
@@ -1723,7 +1745,7 @@
 <p>What Haskell function is used to indicate that the user is asking the program to do something impossible?</p>
 </li>
 <li>
-<p>A function <code>two_of</code> takes in a list of showable numbers and puts out a String that says &ldquo;__ is item 2 of __&quot;. For example <code>two_of [10,25,50] == &quot;25 is item 2 of [10,25,50]&quot;. Write the signature and function definition for </code>two_of`.</p>
+<p>A function <code>two_of</code> takes in a list of showable numbers and puts out a String that says &ldquo;__ is item 2 of __&rdquo;. For example <code>two_of [10,25,50] == &quot;25 is item 2 of [10,25,50]&quot;. Write the signature and function definition for </code>two_of`.</p>
 </li>
 <li>
 <p>Write the type signature and function definition for <code>double_double</code> which takes in any list and produces the same kind of list. The <code>double_double</code> function makes a list where the first term of the input appears twice, follwed by the whole input twice, so</p>

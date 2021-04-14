@@ -6,11 +6,7 @@
     <description>Recent content in Categories on WY Computer Science</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Sep 2018 11:26:51 -0500</lastBuildDate>
-    
-	<atom:link href="https://wy-cs.info/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 05 Sep 2018 11:26:51 -0500</lastBuildDate><atom:link href="https://wy-cs.info/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ap-cs</title>
       <link>https://wy-cs.info/categories/ap-cs/</link>

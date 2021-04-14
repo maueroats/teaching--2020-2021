@@ -1273,12 +1273,35 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/intermediate-cs/ch22b/parcels/" class="dd-item active">
+    <li data-nav-id="/intermediate-cs/ch22b/parcels/" class="dd-item parent active haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/ch22b/parcels/">Parcels</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/ch22b/parcels/grid/" class="dd-item">
         <div>
-          <a href="/intermediate-cs/ch22b/parcels/">
-            Parcels
+          <a href="/intermediate-cs/ch22b/parcels/grid/">
+            Grid
           </a>
         </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/parcels/distances/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/parcels/distances/">
+            Distances
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/parcels/parcels-colors/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/parcels/parcels-colors/">
+            Coloring
+          </a>
+        </div>
+    </li>
+        </ul>
     </li>
         </ul>
     </li>
@@ -1646,7 +1669,13 @@
       <option value="/intermediate-cs/ch22b/list-exercises-3/" >-- 22b. List Exercises 3</option>
       <option value="/intermediate-cs/ch22b/list-exercises-4-q/" >-- 22b. List Exercises 4</option>
       <option value="/intermediate-cs/ch22b/list-resources/" >-- 22. Additional Resources</option>
-      <option value="/intermediate-cs/ch22b/parcels/"  selected>-- Parcels</option>
+    <option value="/intermediate-cs/ch22b/parcels/"  selected >
+  -- 
+   Parcels</option> 
+      <option value="/intermediate-cs/ch22b/parcels/grid/" >--- Grid</option>
+      <option value="/intermediate-cs/ch22b/parcels/distances/" >--- Distances</option>
+      <option value="/intermediate-cs/ch22b/parcels/parcels-colors/" >--- Coloring</option>
+  
   
     <option value="/intermediate-cs/resources/" >
   - 
@@ -1671,7 +1700,8 @@
     
     
     
-    <p>In this project we will create an interactive map showing delivery
+
+<p>In this project we will create an interactive map showing delivery
 distances based on locations of storage depots. This project is
 inspired by the problem
 <a href="https://codingcompetitions.withgoogle.com/kickstart/round/0000000000050e01/000000000006987d">parcels</a>
@@ -1696,66 +1726,30 @@ usually the truck cannot drive &ldquo;diagonally&rdquo; through blocks of houses
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">city-distance</span> <span style="color:#111">a</span> <span style="color:#111">b</span><span style="color:#111">)</span>
   <span style="color:#111">(</span><span style="color:#111">+</span> <span style="color:#111">(</span><span style="color:#111">abs</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">(</span><span style="color:#111">posn-x</span> <span style="color:#111">a</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">posn-x</span> <span style="color:#111">b</span><span style="color:#111">)))</span>
      <span style="color:#111">(</span><span style="color:#111">abs</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">(</span><span style="color:#111">posn-y</span> <span style="color:#111">a</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">posn-y</span> <span style="color:#111">b</span><span style="color:#111">)))))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h2 id="finding-distances-i">Finding Distances I</h2>
-<p>The most straightforward way to figure out the distance to the closest
-warehouse is two steps:</p>
-<ol>
-<li>(<code>find-distances</code>) Given a list of warehouse locations, make a list of distances from
-your location to all of them.</li>
-<li>(<code>minimum</code>) Given a list of distances, find the smallest one.</li>
-</ol>
-<p>Start out by writing some test cases, going from one warehouse to many.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; find-distances: posn(current) list-of-posn(warehouses) -&gt; list-of-numbers</span>
-<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">find-distances</span> <span style="color:#111">current</span> <span style="color:#111">warehouses</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#ae81ff">0</span><span style="color:#111">))</span>
-<span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">find-distances</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">3</span><span style="color:#111">)</span> 
-                              <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">2</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">10</span><span style="color:#111">)))</span>
-              <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#ae81ff">6</span> <span style="color:#ae81ff">11</span><span style="color:#111">))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h2 id="finding-distances-ii">Finding Distances II</h2>
-<p>Now we want to create a list of points from which we will find the
-distances.</p>
-<ol>
-<li><code>(gen-col x ymax)</code>: Create a list of posns with the given x,
-but y from 0 up to <code>ymax</code>.</li>
-<li><code>(gen-rows-cols xmax ymax)</code>: Create a list of posns for x
-between 0 and <code>xmax</code>, and also y between 0 and <code>ymax</code>.</li>
-</ol>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">gen-rows-cols</span> <span style="color:#111">xmax</span> <span style="color:#111">ymax</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">-1</span> <span style="color:#ae81ff">-1</span><span style="color:#111">)))</span>
-<span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">gen-rows-cols</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">3</span><span style="color:#111">)</span> 
-              <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">0</span><span style="color:#111">)</span>
-                    <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">2</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span><span style="color:#111">)))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h2 id="finding-distances-iii">Finding Distances III</h2>
-<p>NOTE: While this approach works, students may find it easier just to
-take the list of points from Finding Distances II and directly plot
-their distances.</p>
-<p>Combine the results of the previous two sections to create a
-list of <code>(list posn number)</code> where the list records the distance from
-the posn to the nearest warehouse.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; find-distances-2: list-of-posn(warehouses) list-of-posn(points) -&gt; list of (posn, number)</span>
-<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">find-distances-2</span> <span style="color:#111">warehouses</span> <span style="color:#111">points</span><span style="color:#111">)</span>
-   <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">-1</span> <span style="color:#ae81ff">-2</span><span style="color:#111">)</span> <span style="color:#ae81ff">5</span><span style="color:#111">)))</span>
-<span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">find-distances-2</span> <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">posn</span> <span style="color:#ae81ff">4</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">posn</span> <span style="color:#ae81ff">7</span> <span style="color:#ae81ff">8</span><span style="color:#111">))</span>
-                                <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">7</span><span style="color:#111">)))</span>
-              <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#ae81ff">5</span> <span style="color:#ae81ff">6</span><span style="color:#111">)))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h2 id="coloring">Coloring</h2>
-<p>You can choose your own coloring function or use mine. Change this
-once you start making images and would like to adjust the way they
-look.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">color-select</span> <span style="color:#111">n</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#111">make-color</span> <span style="color:#111">(</span><span style="color:#111">limit</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#ae81ff">255</span> <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">50</span> <span style="color:#111">n</span><span style="color:#111">)))</span>
-              <span style="color:#ae81ff">0</span>
-              <span style="color:#111">(</span><span style="color:#111">limit</span> <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">100</span> <span style="color:#111">n</span><span style="color:#111">))))</span>
-<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">limit</span> <span style="color:#111">n</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#111">max</span> <span style="color:#ae81ff">0</span> <span style="color:#111">(</span><span style="color:#111">min</span> <span style="color:#ae81ff">255</span> <span style="color:#111">(</span><span style="color:#111">real-&gt;int</span> <span style="color:#111">n</span><span style="color:#111">))))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div>
+</span></code></pre></div><h2 id="more-parts-of-the-project">More Parts of the Project</h2>
+<ul class="children children-li">
+<p><span><li>
+<a href="/intermediate-cs/ch22b/parcels/grid/" >Grid</a></li></p>
+<p>Functions to create a regular grid of posns.</p>
+</span>
+<p><span><li>
+<a href="/intermediate-cs/ch22b/parcels/distances/" >Distances</a></li></p>
+<p>Finding distances between depots and points on the grid. Important steps.</p>
+</span>
+<p><span><li>
+<a href="/intermediate-cs/ch22b/parcels/parcels-colors/" >Coloring</a></li></p>
+<p>Ways color your grid.</p>
+</span>
+</ul>
+
+
 
     
     
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/intermediate-cs/ch22b/list-resources/" title="22. Additional Resources"> <i class="fa fa-chevron-left"></i><label>22. Additional Resources</label></a>
-    <a class="nav nav-next" href="/intermediate-cs/resources/" title="Resources" style="margin-right: 0px;"><label>Resources</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/intermediate-cs/ch22b/parcels/grid/" title="Grid" style="margin-right: 0px;"><label>Grid</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1771,7 +1765,7 @@ look.</p>
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 19/03/2020
+        <i class='fa fa-calendar'></i> Last update on 13/04/2021
     </div>
     
 
