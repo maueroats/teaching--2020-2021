@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Haskell CW II.2 :: WY Computer Science</title>
+<title>Animation :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="Project Euler problems.">
+<meta name="description" content="The details of making an animation for Parcels.">
 
 
 
     
   </head>
-  <body data-url="/ap-cs/haskell/ch02/cw-a2/">
+  <body data-url="/intermediate-cs/ch22b/parcels/parcels-animation/">
     
       <header>
   <div class="logo">
@@ -68,18 +68,16 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/ap-cs/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/">AP CS</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/">AP CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
-    <li data-nav-id="/ap-cs/haskell/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/haskell/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/">Haskell</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/">Haskell</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/ap-cs/haskell/ch01/" class="dd-item haschildren
@@ -97,11 +95,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ap-cs/haskell/ch02/" class="dd-item parent haschildren
+    <li data-nav-id="/ap-cs/haskell/ch02/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ap-cs/haskell/ch02/">2. Starting Out</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ap-cs/haskell/ch02/">2. Starting Out</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ap-cs/haskell/ch02/ch02-reading-guide/" class="dd-item">
@@ -111,7 +108,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/ap-cs/haskell/ch02/cw-a2/" class="dd-item active">
+      <li data-nav-id="/ap-cs/haskell/ch02/cw-a2/" class="dd-item">
         <div>
           <a href="/ap-cs/haskell/ch02/cw-a2/">
             Haskell CW II.2
@@ -852,10 +849,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/" class="dd-item haschildren
+    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/intermediate-cs/">Intermediate CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/intermediate-cs/">Intermediate CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/intermediate-cs/ch07/" class="dd-item haschildren
@@ -1205,10 +1203,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/ch22b/" class="dd-item haschildren
+    <li data-nav-id="/intermediate-cs/ch22b/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/intermediate-cs/ch22b/">22b. Lists</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/intermediate-cs/ch22b/">22b. Lists</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/intermediate-cs/ch22b/list-intro/" class="dd-item">
@@ -1274,10 +1273,11 @@
           </a>
         </div>
     </li>
-    <li data-nav-id="/intermediate-cs/ch22b/parcels/" class="dd-item haschildren
+    <li data-nav-id="/intermediate-cs/ch22b/parcels/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/intermediate-cs/ch22b/parcels/">Parcels</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/intermediate-cs/ch22b/parcels/">Parcels</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/intermediate-cs/ch22b/parcels/grid/" class="dd-item">
@@ -1301,7 +1301,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/intermediate-cs/ch22b/parcels/parcels-animation/" class="dd-item">
+      <li data-nav-id="/intermediate-cs/ch22b/parcels/parcels-animation/" class="dd-item active">
         <div>
           <a href="/intermediate-cs/ch22b/parcels/parcels-animation/">
             Animation
@@ -1646,68 +1646,49 @@
         <select onchange="javascript:location.href = this.value;">
           
     <option value="/ap-cs/" >
-   AP CS</option> 
-    <option value="/ap-cs/haskell/" >
-  - 
-   Haskell</option> 
-    <option value="/ap-cs/haskell/ch01/" >
-  -- 
-   1. Intro</option>
-    <option value="/ap-cs/haskell/ch02/" >
-  -- 
-   2. Starting Out</option> 
-      <option value="/ap-cs/haskell/ch02/ch02-reading-guide/" >--- Chapter 2 Reading Guide</option>
-      <option value="/ap-cs/haskell/ch02/cw-a2/"  selected>--- Haskell CW II.2</option>
-      <option value="/ap-cs/haskell/ch02/cw-3/" >--- Haskell CW II.3</option>
-      <option value="/ap-cs/haskell/ch02/cw-4/" >--- Haskell CW II.4</option>
-      <option value="/ap-cs/haskell/ch02/cw-5/" >--- Haskell CW II.5</option>
-      <option value="/ap-cs/haskell/ch02/hw-a2/" >--- Haskell HW 2</option>
-      <option value="/ap-cs/haskell/ch02/ch02-summary/" >--- Chapter 2 Summary</option>
-      <option value="/ap-cs/haskell/ch02/ch02-test/" >--- Chapter 2 Test</option>
-  
-    <option value="/ap-cs/haskell/ch03/" >
-  -- 
-   3. Types and Typeclasses</option>
-    <option value="/ap-cs/haskell/ch04/" >
-  -- 
-   4. Syntax in Functions</option>
-    <option value="/ap-cs/haskell/ch05/" >
-  -- 
-   5. Recursion</option>
-    <option value="/ap-cs/haskell/ch06/" >
-  -- 
-   6. Higher Order Functions</option>
-    <option value="/ap-cs/haskell/ch07/" >
-  -- 
-   7. Modules</option>
-    <option value="/ap-cs/haskell/ch08/" >
-  -- 
-   8. Types</option>
-    <option value="/ap-cs/haskell/usaco/" >
-  -- 
-   USACO Practice</option>
-    <option value="/ap-cs/haskell/daily/" >
-  -- 
-   Haskell Daily Notes</option>
-    <option value="/ap-cs/haskell/mancala/" >
-  -- 
-   Mancala</option>
-    <option value="/ap-cs/haskell/scrabble/" >
-  -- 
-   Scrabble</option>
-    <option value="/ap-cs/haskell/connect-four/" >
-  -- 
-   Connect Four</option>
-      <option value="/ap-cs/haskell/typeclass-notes/" >-- Typeclass Notes</option>
-      <option value="/ap-cs/haskell/replit/" >-- Repl.it</option>
-      <option value="/ap-cs/haskell/ghci-details/" >-- Source Code Files (ghci)</option>
-  
-    <option value="/ap-cs/java/" >
-  - 
-   Java</option>
-  
+   AP CS</option>
     <option value="/intermediate-cs/" >
-   Intermediate CS</option>
+   Intermediate CS</option> 
+    <option value="/intermediate-cs/ch07/" >
+  - 
+   7. Numbers</option>
+    <option value="/intermediate-cs/ch17/" >
+  - 
+   17. Cond Animations</option>
+    <option value="/intermediate-cs/sem1review/" >
+  - 
+   Sem. I</option>
+    <option value="/intermediate-cs/ch20/" >
+  - 
+   20. Using Structures</option>
+    <option value="/intermediate-cs/ch21/" >
+  - 
+   21. Structures</option>
+    <option value="/intermediate-cs/ch22b/" >
+  - 
+   22b. Lists</option> 
+      <option value="/intermediate-cs/ch22b/list-intro/" >-- 22. List Intro</option>
+      <option value="/intermediate-cs/ch22b/list-exercises-1/" >-- 22b. List Exercises 1</option>
+      <option value="/intermediate-cs/ch22b/list-exercises-1.5/" >-- 22b. List Exercises 1.5</option>
+      <option value="/intermediate-cs/ch22b/list-exercises-2/" >-- 22b. List Exercises 2</option>
+      <option value="/intermediate-cs/ch22b/bubble-wrap/" >-- 22b. Bubble Wrap</option>
+      <option value="/intermediate-cs/ch22b/bubble-review/" >-- Bubble Review</option>
+      <option value="/intermediate-cs/ch22b/list-exercises-3/" >-- 22b. List Exercises 3</option>
+      <option value="/intermediate-cs/ch22b/list-exercises-4-q/" >-- 22b. List Exercises 4</option>
+      <option value="/intermediate-cs/ch22b/list-resources/" >-- 22. Additional Resources</option>
+    <option value="/intermediate-cs/ch22b/parcels/" >
+  -- 
+   Parcels</option> 
+      <option value="/intermediate-cs/ch22b/parcels/grid/" >--- Grid</option>
+      <option value="/intermediate-cs/ch22b/parcels/distances/" >--- Distances</option>
+      <option value="/intermediate-cs/ch22b/parcels/parcels-colors/" >--- Coloring</option>
+      <option value="/intermediate-cs/ch22b/parcels/parcels-animation/"  selected>--- Animation</option>
+  
+  
+    <option value="/intermediate-cs/resources/" >
+  - 
+   Resources</option>
+  
     <option value="/ml/" >
    Machine Learning</option>
     <option value="/resources/" >
@@ -1722,7 +1703,7 @@
     </div>
     
 
-    <h1>Haskell CW II.2</h1>
+    <h1>Animation</h1>
 
     
     
@@ -1736,42 +1717,79 @@ MathJax = {
 </script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-
-
-<h2 id="warmup">Warmup</h2>
-<p>On the line $y = 3x-5$, find at least 20 ordered pairs $(x,y)$ with
-$0\le x \le 5$.</p>
-<h2 id="class-work-for-21--23">Class work for 2.1&ndash;2.3</h2>
-<ol>
-<li>
-<p><a href="https://projecteuler.net/problem=6">Sum Square Difference</a>
-The sum of the squares of the first ten natural numbers is,</p>
-<pre><code> 1^2 + 2^2 + ... + 10^2 = 385
+<p>Making an animation with the work you have done so far mostly involves combining the pieces
+that you have. The only new ingredients are helper functions to translate between
+grid coordinates like $(3,4)$ and computer coordinates like $(125,175)$.</p>
+<h2 id="warmup-working-with-a-grid">Warmup: Working with a grid</h2>
+<p>Let&rsquo;s get used to working with a grid. Each grid square will be
+50x50. Numbering the grid posns just like we did in the grid generator keeps
+everything else uncomplicated, but it does mean we have to do a bit of math to
+figure out what computer coordinates we want to use.</p>
+<ul>
+<li>$(1,1)$ will the the upper left - traditionally computer would use $(0,0)$, so that&rsquo;s ok too</li>
+<li>Every grid square will be 50x50.</li>
+<li>What is the center of the grid square labeled $(1,1)$? Draw a picture, figure it out, do
+not rely on someone else to tell you!</li>
+<li>What is the center of the square at $(2,1)$?</li>
+<li>What is the center of the square at $(3,1)$?</li>
+</ul>
+<h3 id="grid-posn-to-computer-posn">Grid posn to computer posn</h3>
+<p>Write a function that translates &ldquo;grid posns&rdquo; (<code>gp</code>) to &ldquo;computer posns&rdquo;
+(<code>cp</code>). Make sure you write at least three checks (change both x and y in your checks).</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; Skeleton:</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">gp-&gt;cp</span> <span style="color:#111">pt</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span><span style="color:#111">))</span><span style="color:#f92672">`</span>
+</code></pre></div><h3 id="placing-lots-of-circles">Placing lots of circles</h3>
+<p>Use your translation function to write a function that will place a bunch of circles
+everywhere in a list of given grid posns.</p>
+<p><code>place-circles: (Listof Posn) Image -&gt; Image</code>: Place a radius 25 solid blue circle in the
+center of every one of the squares whose grid posns coordinates are given. The list
+<code>ex-ps</code> below should make shape shown here:</p>
+<pre><code>O
+O
+OO
 </code></pre>
-<p>The square of the sum of the first ten natural numbers is,</p>
-<pre><code> (1 + 2 + ... + 10)^2 = 55^2 = 3025
-</code></pre>
-<p>Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 - 385 = 2640.</p>
-<p>Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.</p>
-</li>
-</ol>
-<ol start="2">
-<li>
-<p><a href="https://projecteuler.net/problem=1">Multiples of 3 and 5</a> If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.</p>
-</li>
-<li>
-<p><a href="https://projecteuler.net/problem=5">Smallest Multiple</a>
-2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder. What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?</p>
-</li>
-</ol>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">ex-ps</span> <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">3</span><span style="color:#111">)</span> 
+                    <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">4</span><span style="color:#111">)))</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><h2 id="model">Model</h2>
+<p>The model is a list of posns, the coordinates of all of the depots.</p>
+<h2 id="draw-handler">Draw Handler</h2>
+<p>Given a list of <em>depot</em> posns, you want to generate a whole colored grid.
+Use the idea from the warmup combined with your earlier work. Making 50x50 squares looks good to me.</p>
+<ul>
+<li>Create a list of all of the grid posns in a 10x10 grid.</li>
+<li>Given one grid posn, find the distance to the closest depot.</li>
+<li>Make a square of the correct color based on that information.</li>
+<li>Use the idea from the warmup to place the square at the correct location in
+your grid.</li>
+<li>Repeat this process for all of the posns in the grid.</li>
+</ul>
+<h2 id="mouse-handler">Mouse Handler</h2>
+<p>The job of the mouse handler is to add a depot where you click.</p>
+<ul>
+<li>Given a mouse click at (x,y), compute which grid posn is nearest.</li>
+<li>Add that grid posn to the front of the model (list of depots).</li>
+</ul>
+<h3 id="computer-to-grid">Computer to grid</h3>
+<p>In order to determine the grid posn that corresponds to a click, you will want a helper
+function <code>cp-&gt;gp</code> that changes computer posns to grid posns.</p>
+<p>Recommendation: just make a table of values of x and y and the nearest grid posns. Use
+your algebra skills to find an equation that will change the computer coordinates to the
+grid coordinates.</p>
+<p>I suggest first changing just the x-coordinate until you are confident that you have the
+right formula.</p>
+<p>Include at least three check-expects showing how your formula is correct!</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; skeleton</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">cp-&gt;gp</span> <span style="color:#111">pt</span><span style="color:#111">)</span>
+  <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span><span style="color:#111">))</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div>
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ap-cs/haskell/ch02/ch02-reading-guide/" title="Chapter 2 Reading Guide"> <i class="fa fa-chevron-left"></i><label>Chapter 2 Reading Guide</label></a>
-    <a class="nav nav-next" href="/ap-cs/haskell/ch02/cw-3/" title="Haskell CW II.3" style="margin-right: 0px;"><label>Haskell CW II.3</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/intermediate-cs/ch22b/parcels/parcels-colors/" title="Coloring"> <i class="fa fa-chevron-left"></i><label>Coloring</label></a>
+    <a class="nav nav-next" href="/intermediate-cs/resources/" title="Resources" style="margin-right: 0px;"><label>Resources</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
@@ -1782,20 +1800,12 @@ The sum of the squares of the first ten natural numbers is,</p>
 
 <div class="footline">
     
-    <div class="tags"> 
-      
-        <a class="label label-default" href="https://wy-cs.infotags/haskell">haskell</a>
-      
-        <a class="label label-default" href="https://wy-cs.infotags/ap-cs">ap-cs</a>
-      
-    </div>
-    
 
     
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 09/09/2017
+        <i class='fa fa-calendar'></i> Last update on 13/04/2021
     </div>
     
 
