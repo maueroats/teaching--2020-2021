@@ -35,7 +35,7 @@ Write a function that translates "grid posns" (`gp`) to "computer posns"
 ```racket
 ;; Skeleton:
 (define (gp->cp pt)
-  (make-posn 0 0))`
+  (make-posn 0 0))
 ```
 
 ### Placing lots of circles
@@ -68,7 +68,7 @@ Use the idea from the warmup combined with your earlier work. Making 50x50 squar
 
 * Create a list of all of the grid posns in a 10x10 grid.
 * Given one grid posn, find the distance to the closest depot.
-* Make a square of the correct color based on that information.
+* Make a square of the desired color based on that information.
 * Use the idea from the warmup to place the square at the correct location in
   your grid.
 * Repeat this process for all of the posns in the grid.
