@@ -1,10 +1,11 @@
 ---
 title: "ML Startup"
 date: 2020-09-08T20:41:18-05:00
-weight: 10
+weight: 5
 draft: false
 #type: slide
 #theme: white
+description: "Links for main class materials."
 ---
 
 * [R for Data Science](https://r4ds.had.co.nz): Foundational skills
