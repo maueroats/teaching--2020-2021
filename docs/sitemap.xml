@@ -29,6 +29,12 @@
     <loc>https://wy-cs.info/ap-cs/haskell/ch05/</loc>
     <lastmod>2017-09-24T13:52:10-05:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/ap-cs/daily/2021-04-21/</loc>
+    <lastmod>2021-04-23T22:00:51-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/ap-cs/</loc>
+    <lastmod>2021-04-23T21:57:40-05:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/ml/q4/20210421/</loc>
     <lastmod>2021-04-21T10:48:29-05:00</lastmod>
   </url><url>
@@ -67,9 +73,6 @@
   </url><url>
     <loc>https://wy-cs.info/ml/r4ds/</loc>
     <lastmod>2020-09-10T09:56:48-05:00</lastmod>
-  </url><url>
-    <loc>https://wy-cs.info/ap-cs/</loc>
-    <lastmod>2020-09-08T20:33:56-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch20/posn-util/</loc>
     <lastmod>2019-01-08T08:32:15-06:00</lastmod>
@@ -130,6 +133,9 @@
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch02/cw-5/</loc>
     <lastmod>2020-09-18T12:06:24-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/ap-cs/daily/2021-04-23/</loc>
+    <lastmod>2021-04-23T20:57:53-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch22b/parcels/distances/</loc>
     <lastmod>2021-04-13T21:48:41-05:00</lastmod>
@@ -541,6 +547,9 @@
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/daily/</loc>
     <lastmod>2017-09-11T10:03:46-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/ap-cs/daily/</loc>
+    <lastmod>2021-04-23T20:57:47-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch22b/parcels/</loc>
     <lastmod>2021-04-13T22:11:42-05:00</lastmod>
