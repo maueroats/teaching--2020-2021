@@ -1,5 +1,5 @@
 #! /bin/bash
-hugo server -D 
+/snap/bin/hugo server -D 
 # --disableFastRender
 
 # When you interrupt the hugo server, you want a shell not a closed window.

@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WY Computer Science</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<title>Snake Intro :: WY Computer Science</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "https:\/\/wy-cs.info";
+</script>
+<meta name="description" content="Orientation to the game of snake.">
+
+
+
+    
+  </head>
+  <body data-url="/intermediate-cs/projects/snake/10-snake-intro/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p>WY Computer Science</p>
+
+  
+
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="/ftc"  rel="noopener">
+                  FTC Robotics
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/ecs-teach"  rel="noopener">
+                  Teacher Links
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/events"  rel="noopener">
+                  CS Events
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="http://wyoung.org"  rel="noopener">
+                  Whitney Young
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/ap-cs/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/">AP CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/ap-cs/haskell/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/">Haskell</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/ap-cs/haskell/ch01/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch01/">1. Intro</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch01/ch01-reading-guide/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch01/ch01-reading-guide/">
+            Ch01 Reading Guide
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch02/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch02/">2. Starting Out</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch02/ch02-reading-guide/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/ch02-reading-guide/">
+            Chapter 2 Reading Guide
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/cw-a2/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/cw-a2/">
+            Haskell CW II.2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/cw-3/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/cw-3/">
+            Haskell CW II.3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/cw-4/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/cw-4/">
+            Haskell CW II.4
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/cw-5/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/cw-5/">
+            Haskell CW II.5
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/hw-a2/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/hw-a2/">
+            Haskell HW 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/ch02-summary/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/ch02-summary/">
+            Chapter 2 Summary
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch02/ch02-test/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch02/ch02-test/">
+            Chapter 2 Test
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch03/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch03/">3. Types and Typeclasses</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-reading-guide-haskell/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-reading-guide-haskell/">
+            Chapter 3 Reading Guide
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-hw1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-hw1/">
+            Chapter 3 Problem Set
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-walkthrough/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-walkthrough/">
+            Chapter 3 Walkthrough
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-01/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-01/">
+            Chapter 3 Daily 01
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-02/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-02/">
+            Chapter 3 Daily 02
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-03/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-03/">
+            Chapter 3 Daily 03
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-04/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-04/">
+            Chapter 3 Daily 04
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-05/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-05/">
+            Chapter 3 Daily 05 HW
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-06/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-06/">
+            Chapter 3 Daily 06
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-07/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-07/">
+            Chapter 3 Daily 07
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/daily-08/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/daily-08/">
+            Chapter 3 Daily 08
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-quiz-2/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-quiz-2/">
+            Chapter 3 Quiz 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-test-2019/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-test-2019/">
+            Chapter 3 Test 2019
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch03/ch03-test-2019-10/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch03/ch03-test-2019-10/">
+            Chapter 3 Test 2019-10
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch04/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch04/">4. Syntax in Functions</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-reading-guide/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-reading-guide/">
+            Chapter 4 Reading Guide
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-01/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-01/">
+            Chapter 4 Discussion I
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-02/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-02/">
+            Chapter 4 Discussion II
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-03/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-03/">
+            Chapter 4 Problem Set I
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-04/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-04/">
+            Chapter 4 Discussion IV
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-05/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-05/">
+            Chapter 4 Discussion V
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-discussion-06/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-discussion-06/">
+            Chapter 4 Discussion VI
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-problemset/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-problemset/">
+            Chapter 4 Problem Set II
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-quiz-c/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-quiz-c/">
+            Chapter 4 Quiz C
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-summary/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-summary/">
+            Chapter 4 Summary
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch04/ch04-check-expect/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch04/ch04-check-expect/">
+            Check Expects in Haskell
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch05/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch05/">5. Recursion</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch05/ch05-quiz/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch05/ch05-quiz/">
+            Chapter 5 Quiz
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch05/ch05-reading-guide/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch05/ch05-reading-guide/">
+            Chapter 5 Reading Guide
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch06/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch06/">6. Higher Order Functions</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-01/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-discussion-01/">
+            Ch6 Discussion 01
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-02/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-discussion-02/">
+            Ch6 Discussion 02
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-03/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-discussion-03/">
+            Ch6 Discussion 03
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-discussion-04/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-discussion-04/">
+            Ch6 Discussion 04
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-misc-ex/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-misc-ex/">
+            Ch6 Misc Ex
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch6-quiz-1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch6-quiz-1/">
+            Ch6 Quiz
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ch06/ch06-reading-guide/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch06/ch06-reading-guide/">
+            Chapter 6 Reading Guide
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch07/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch07/">7. Modules</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch07/ch7-maybe/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch07/ch7-maybe/">
+            7. Maybe
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/ch08/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/ch08/">8. Types</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/ch08/types-intro/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ch08/types-intro/">
+            Types Intro
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/usaco/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/usaco/">USACO Practice</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/usaco/haybales/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/usaco/haybales/">
+            Haybales
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/daily/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/daily/">Haskell Daily Notes</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/daily/2018-10-16/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2018-10-16/">
+            2018-10-16
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2018-10-09/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2018-10-09/">
+            2018-10-09 Project
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2018-10-04/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2018-10-04/">
+            2018.10.04 Square Pasture
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2018-10-03/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2018-10-03/">
+            2018.10.03 Cow Signal
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-10-04/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-10-04/">
+            2017-10-04
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-10-03/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-10-03/">
+            2017-10-03
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-09-18/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-09-18/">
+            2017-09-18
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-09-13/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-09-13/">
+            2017-09-14 Indentation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-09-12/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-09-12/">
+            2017-09-12
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/daily/2017-09-11/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/daily/2017-09-11/">
+            2017-09-11
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/mancala/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/mancala/">Mancala</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/mancala/outline/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/mancala/outline/">
+            Mancala Outline
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/mancala/overview/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/mancala/overview/">
+            Overview
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/mancala/drawing/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/mancala/drawing/">
+            Drawing
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/mancala/utilities/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/mancala/utilities/">
+            Utilities
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/mancala/game-logic/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/mancala/game-logic/">
+            Game Logic
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/mancala/testing/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/mancala/testing/">
+            Testing
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/mancala/ui/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/mancala/ui/">
+            Mancala UI
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/scrabble/" class="dd-item
+        ">
+      <div>
+      <a href="/ap-cs/haskell/scrabble/">Scrabble</a>
+      </div>
+    </li>
+    <li data-nav-id="/ap-cs/haskell/connect-four/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/haskell/connect-four/">Connect Four</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/haskell/connect-four/overview/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/overview/">
+            Connect Four Overview
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/connect-four/ui/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/ui/">
+            Connect Four UI
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/connect-four/testcases/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/testcases/">
+            Connect Four Testcases
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/connect-four/spoilers/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/spoilers/">
+            Connect Four Spoilers
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/connect-four/primer-2/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/primer-2/">
+            Primer 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/connect-four/rubric/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/connect-four/rubric/">
+            Connect Four Rubric
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/typeclass-notes/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/typeclass-notes/">
+            Typeclass Notes
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/replit/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/replit/">
+            Repl.it
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/haskell/ghci-details/" class="dd-item">
+        <div>
+          <a href="/ap-cs/haskell/ghci-details/">
+            Source Code Files (ghci)
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/java/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/">Java</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/week01/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/week01/">
+            Java 01
+          </a>
+        </div>
+    </li>
+    <li data-nav-id="/ap-cs/java/arrays/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/arrays/">Arrays</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/arrays/graph/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/arrays/graph/">
+            Graphs
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/java/ch11/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/ch11/">11. Classes</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/ch11/animal/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/animal/">
+            11. Animal
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/ch11/candy/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/candy/">
+            11. Candy
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/ch11/inheritance-1/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/inheritance-1/">
+            11. Inheritance 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/ch11/inheritance-2/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/inheritance-2/">
+            11. Inheritance 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/ch11/abstract-classes/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/abstract-classes/">
+            Abstract Classes
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/ch11/interfaces/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/interfaces/">
+            Interfaces
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/ch11/resources/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/resources/">
+            Inheritance Resources
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/ch11/11-quiz-b/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/11-quiz-b/">
+            11. Quiz B
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/ch11/11-answers-aquiz/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/11-answers-aquiz/">
+            11. AQuiz IAnswers
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/ch11/treasurehunt/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/treasurehunt/">
+            11. Treasure Hunt
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/ch11/instanceof/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/ch11/instanceof/">
+            11. Instanceof
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/java/review/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/review/">Review</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/review/sem1reva/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/review/sem1reva/">
+            Sem1RevA
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/review/sem1final/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/review/sem1final/">
+            Sem.1 Final
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/java/testing/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/java/testing/">Unit Testing</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/java/testing/testing-intro/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/testing/testing-intro/">
+            Unit Testing Level I
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/java/testing/testing-medium/" class="dd-item">
+        <div>
+          <a href="/ap-cs/java/testing/testing-medium/">
+            Unit Testing Level II
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ap-cs/daily/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/daily/">Daily Notes</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/daily/2021-04-21/" class="dd-item">
+        <div>
+          <a href="/ap-cs/daily/2021-04-21/">
+            Set 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/daily/2021-04-23/" class="dd-item">
+        <div>
+          <a href="/ap-cs/daily/2021-04-23/">
+            Set Counter 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/daily/2021-04-24/" class="dd-item">
+        <div>
+          <a href="/ap-cs/daily/2021-04-24/">
+            Pitfalls of Sets
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/daily/2021-04-25/" class="dd-item">
+        <div>
+          <a href="/ap-cs/daily/2021-04-25/">
+            Integers
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/">Intermediate CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/intermediate-cs/ch07/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/ch07/">7. Numbers</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/ch07/ch07-summary/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/ch07-summary/">
+            7. Summary
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch07/exercises-1/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/exercises-1/">
+            Exercises 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch07/exercises-2/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/exercises-2/">
+            Exercises 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch07/exercises-3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/exercises-3/">
+            Exercises 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch07/exercises-4/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/exercises-4/">
+            More Exercises 4
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch07/exercises-5/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/exercises-5/">
+            Exercises 5
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch07/exercises-6/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/exercises-6/">
+            Exercises 6
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch07/review-1/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/review-1/">
+            7. Review 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch07/review-2/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/review-2/">
+            7. Review 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch07/ch07-quiz/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/ch07-quiz/">
+            7. Numbers Quiz
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch07/maxmin/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/maxmin/">
+            Max and min slides
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch07/random/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch07/random/">
+            Randomness
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/intermediate-cs/ch17/" class="dd-item
+        ">
+      <div>
+      <a href="/intermediate-cs/ch17/">17. Cond Animations</a>
+      </div>
+    </li>
+    <li data-nav-id="/intermediate-cs/sem1review/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/sem1review/">Sem. I</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/sem1review/sem1reviewa/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/sem1review/sem1reviewa/">
+            Sem.1 Rev A
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/sem1review/sem1final/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/sem1review/sem1final/">
+            Sem.1 Final
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/intermediate-cs/ch20/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/ch20/">20. Using Structures</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/ch20/posn-util/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/posn-util/">
+            20. Posn Util
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/20-require/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/20-require/">
+            20. Libraries
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/20-troubleshoot/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/20-troubleshoot/">
+            20. Troubleshoot
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/posnmath/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/posnmath/">
+            20. Posn Math
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/click-circle/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/click-circle/">
+            20. Click Circle
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/click-circle-questions/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/click-circle-questions/">
+            20. Click Circle Questions
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/click-mega/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/click-mega/">
+            20. Click Mega
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/square-a/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/square-a/">
+            20. Silly Square
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/tightrope/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/tightrope/">
+            20. Tightrope
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/click-rect/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/click-rect/">
+            20. Click Rectangle
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/chase/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/chase/">
+            20. Chase
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/map-image/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/map-image/">
+            20. Map Image
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/color-enhancing/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/color-enhancing/">
+            20. Color Enhancing
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ch20-review/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ch20-review/">
+            20. Review
+          </a>
+        </div>
+    </li>
+    <li data-nav-id="/intermediate-cs/ch20/ball-driving/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/ch20/ball-driving/">20. Ball Driving</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/intro/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/intro/">
+            1. Intro
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/starter-code/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/starter-code/">
+            2. Starter Code
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/controls/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/controls/">
+            3. Controls
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/motion/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/motion/">
+            4. Motion
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/end-game/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/end-game/">
+            5. End Game
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/ball-driving/animation/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/ball-driving/animation/">
+            6. Animation
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/20-intro-quiz/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/20-intro-quiz/">
+            20. Intro Quiz
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/20-intro-ex-1/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/20-intro-ex-1/">
+            20. Intro Ex 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/trollquiz/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/trollquiz/">
+            Troll Quiz Practice
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch20/aimbooster/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch20/aimbooster/">
+            Advanced: Aimbooster
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/intermediate-cs/ch21/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/ch21/">21. Structures</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/ch21/pv-intro/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch21/pv-intro/">
+            21. PV Intro
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch21/pv-tick-handler/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch21/pv-tick-handler/">
+            21. Two Actions, One Tick
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch21/moving-ball/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch21/moving-ball/">
+            Moving Ball
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch21/speed-typer/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch21/speed-typer/">
+            Speed Typer
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch21/agar-io/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch21/agar-io/">
+            Agar.io
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/intermediate-cs/ch22b/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/ch22b/">22b. Lists</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/ch22b/list-intro/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/list-intro/">
+            22. List Intro
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/list-exercises-1/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/list-exercises-1/">
+            22b. List Exercises 1
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/list-exercises-1.5/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/list-exercises-1.5/">
+            22b. List Exercises 1.5
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/list-exercises-2/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/list-exercises-2/">
+            22b. List Exercises 2
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/bubble-wrap/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/bubble-wrap/">
+            22b. Bubble Wrap
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/bubble-review/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/bubble-review/">
+            Bubble Review
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/list-exercises-3/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/list-exercises-3/">
+            22b. List Exercises 3
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/list-exercises-4-q/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/list-exercises-4-q/">
+            22b. List Exercises 4
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/list-resources/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/list-resources/">
+            22. Additional Resources
+          </a>
+        </div>
+    </li>
+    <li data-nav-id="/intermediate-cs/ch22b/parcels/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/ch22b/parcels/">Parcels</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/ch22b/parcels/grid/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/parcels/grid/">
+            Grid
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/parcels/distances/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/parcels/distances/">
+            Distances
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/parcels/parcels-colors/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/parcels/parcels-colors/">
+            Coloring
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/ch22b/parcels/parcels-animation/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/ch22b/parcels/parcels-animation/">
+            Animation
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/intermediate-cs/resources/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/resources/why-racket/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/why-racket/">
+            Why Racket?
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/resources/e-courses/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/e-courses/">
+            Online Help
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/resources/ics-wescheme-note/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/resources/ics-wescheme-note/">
+            WeScheme
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/intermediate-cs/projects/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/projects/">Projects</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/intermediate-cs/projects/battleship/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/projects/battleship/">Battleship</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/projects/battleship/model/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/battleship/model/">
+            Battleship Model
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/battleship/examples/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/battleship/examples/">
+            Battleship Examples
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/battleship/outline/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/battleship/outline/">
+            Battleship Outline
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/battleship/checks/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/battleship/checks/">
+            Battleship Checks
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/battleship/draw/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/battleship/draw/">
+            Battleship Action
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/intermediate-cs/projects/snake/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/intermediate-cs/projects/snake/">Snake</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/intermediate-cs/projects/snake/10-snake-intro/" class="dd-item active">
+        <div>
+          <a href="/intermediate-cs/projects/snake/10-snake-intro/">
+            Snake Intro
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/snake/100-snake/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/snake/100-snake/">
+            Snake Functions
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/snake/110-multiplayer/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/snake/110-multiplayer/">
+            Snake Multiplayer
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/snake/120-ai/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/snake/120-ai/">
+            Snake AI
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ml/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ml/startup/" class="dd-item">
+        <div>
+          <a href="/ml/startup/">
+            ML Startup
+          </a>
+        </div>
+    </li>
+    <li data-nav-id="/ml/r4ds/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/r4ds/">R for Data Science</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ml/r4ds/ch01/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch01/">
+            Ch01
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch02/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch02/">
+            Ch02
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch03/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch03/">
+            Ch03
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch05-book/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch05-book/">
+            Ch05 Book
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch05/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch05/">
+            Ch05 Problem Set
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch05-project/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch05-project/">
+            Ch05 Project
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch07/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch07/">
+            Ch07
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch13/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch13/">
+            Ch13
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/r4ds/ch14/" class="dd-item">
+        <div>
+          <a href="/ml/r4ds/ch14/">
+            Ch14
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ml/rmisc/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/rmisc/">R: Misc</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ml/rmisc/jupyter-graphing/" class="dd-item">
+        <div>
+          <a href="/ml/rmisc/jupyter-graphing/">
+            Jupyter Graphing
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/rmisc/na-vs-null/" class="dd-item">
+        <div>
+          <a href="/ml/rmisc/na-vs-null/">
+            NA vs NULL
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/rmisc/lookup-tables/" class="dd-item">
+        <div>
+          <a href="/ml/rmisc/lookup-tables/">
+            Lookup Tables
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/rmisc/stdinc/" class="dd-item">
+        <div>
+          <a href="/ml/rmisc/stdinc/">
+            Standard Header
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/rmisc/timeseries/" class="dd-item">
+        <div>
+          <a href="/ml/rmisc/timeseries/">
+            Timeseries
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ml/isl/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/isl/">ISL</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/ml/isl/ch02/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/isl/ch02/">02. StatLearn</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ml/isl/ch02/02-quiz-a/" class="dd-item">
+        <div>
+          <a href="/ml/isl/ch02/02-quiz-a/">
+            02 Quiz A
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+      <li data-nav-id="/ml/isl/sem-i/final/" class="dd-item">
+        <div>
+          <a href="/ml/isl/sem-i/final/">
+            Sem.1 Final
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ml/mtfc/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/mtfc/">Modeling the Future</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ml/mtfc/data/" class="dd-item">
+        <div>
+          <a href="/ml/mtfc/data/">
+            Flood Data
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ml/q4/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/q4/">Quarter 4</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ml/q4/20210421/" class="dd-item">
+        <div>
+          <a href="/ml/q4/20210421/">
+            p-values
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ml/q4/2021-04-26/" class="dd-item">
+        <div>
+          <a href="/ml/q4/2021-04-26/">
+            2021-04-26
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/ml/data/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ml/data/">Datasets</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ml/data/student/" class="dd-item">
+        <div>
+          <a href="/ml/data/student/">
+            Student Achievement
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/resources/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/resources/">Resources</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/resources/generic-cs-syllabus/" class="dd-item">
+        <div>
+          <a href="/resources/generic-cs-syllabus/">
+            Syllabus: All Courses
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/apcs-syllabus-2019-2020/" class="dd-item">
+        <div>
+          <a href="/resources/apcs-syllabus-2019-2020/">
+            Syllabus: AP CS
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/intermediatecs-syllabus/" class="dd-item">
+        <div>
+          <a href="/resources/intermediatecs-syllabus/">
+            Syllabus: Intermediate
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/grading-scale/" class="dd-item">
+        <div>
+          <a href="/resources/grading-scale/">
+            Grade Weights
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/academic-integrity/" class="dd-item">
+        <div>
+          <a href="/resources/academic-integrity/">
+            Academic Integrity
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/letters-of-recommendation/" class="dd-item">
+        <div>
+          <a href="/resources/letters-of-recommendation/">
+            Letters of Recommendation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/interview/" class="dd-item">
+        <div>
+          <a href="/resources/interview/">
+            Interviews
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/resources/senioritis/" class="dd-item">
+        <div>
+          <a href="/resources/senioritis/">
+            Senioritis
+          </a>
+        </div>
+    </li>
+    <li data-nav-id="/resources/events/" class="dd-item
+        ">
+      <div>
+      <a href="/resources/events/">CS Events</a>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/future/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/future/">Future Courses</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/future/cs-questions/" class="dd-item">
+        <div>
+          <a href="/future/cs-questions/">
+            CS Questions
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/future/ap-prep/" class="dd-item">
+        <div>
+          <a href="/future/ap-prep/">
+            AP Preparation
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/future/ap-cs-2021-2022/" class="dd-item">
+        <div>
+          <a href="/future/ap-cs-2021-2022/">
+            AP CS A 2021-2022
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/future/ap-placement/" class="dd-item">
+        <div>
+          <a href="/future/ap-placement/">
+            AP Placement
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/ap-cs/" >
+   AP CS</option>
+    <option value="/intermediate-cs/" >
+   Intermediate CS</option> 
+    <option value="/intermediate-cs/ch07/" >
+  - 
+   7. Numbers</option>
+    <option value="/intermediate-cs/ch17/" >
+  - 
+   17. Cond Animations</option>
+    <option value="/intermediate-cs/sem1review/" >
+  - 
+   Sem. I</option>
+    <option value="/intermediate-cs/ch20/" >
+  - 
+   20. Using Structures</option>
+    <option value="/intermediate-cs/ch21/" >
+  - 
+   21. Structures</option>
+    <option value="/intermediate-cs/ch22b/" >
+  - 
+   22b. Lists</option>
+    <option value="/intermediate-cs/resources/" >
+  - 
+   Resources</option>
+    <option value="/intermediate-cs/projects/" >
+  - 
+   Projects</option> 
+    <option value="/intermediate-cs/projects/battleship/" >
+  -- 
+   Battleship</option>
+    <option value="/intermediate-cs/projects/snake/" >
+  -- 
+   Snake</option> 
+      <option value="/intermediate-cs/projects/snake/10-snake-intro/"  selected>--- Snake Intro</option>
+      <option value="/intermediate-cs/projects/snake/100-snake/" >--- Snake Functions</option>
+      <option value="/intermediate-cs/projects/snake/110-multiplayer/" >--- Snake Multiplayer</option>
+      <option value="/intermediate-cs/projects/snake/120-ai/" >--- Snake AI</option>
+  
+  
+  
+    <option value="/ml/" >
+   Machine Learning</option>
+    <option value="/resources/" >
+   Resources</option>
+    <option value="/future/" >
+   Future Courses</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>Snake Intro</h1>
+
+    
+    
+    
+    <p>In the game of snake, your object is to eat food and get as long as
+you can without running into yourself, the walls, or another player.</p>
+<ul>
+<li>
+<p>Wikipedia entry on the
+<a href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)">Snake</a>
+video game.</p>
+</li>
+<li>
+<p>Play <a href="https://www.google.com/fbx?fbx=snake_arcade">snake</a> online in
+one of its <a href="https://playsnake.org/">many</a>
+<a href="https://slither.io">forms</a>. You might not be able to access some of
+these from the school internet.</p>
+</li>
+</ul>
+<p>The Google version of the game looks like the one below. Make sure you
+turn the sound off!</p>
+<figure><a href="https://www.google.com/fbx?fbx=snake_arcade">
+    <img src="snakeimage.jpeg" width="300"/> </a>
+</figure>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/intermediate-cs/projects/snake/" title="Snake"> <i class="fa fa-chevron-left"></i><label>Snake</label></a>
+    <a class="nav nav-next" href="/intermediate-cs/projects/snake/100-snake/" title="Snake Functions" style="margin-right: 0px;"><label>Snake Functions</label><i class="fa fa-chevron-right"></i></a></div>
+
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+    
+    <div class="date">
+        <i class='fa fa-calendar'></i> Last update on 26/04/2021
+    </div>
+    
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
