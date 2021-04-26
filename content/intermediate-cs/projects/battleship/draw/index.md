@@ -24,7 +24,10 @@ Ingredients:
 
 * `gp->cp`: posn -> posn. A function that takes grid coordinates and
   puts out the computer coordinates of the center of the grid
-  square. 
+  square. You need to decide if the upper left is `(0,0)` or
+  `(1,1)`. I chose `(0,0)`:
+  
+        (check-expect (gp->cp (make-posn 1 2)) (make-posn 75 125))
   
 * `draw-squares`: list-of-posn(grid-posns) image -> image. Draw grey squares at
   every grid posn.
@@ -41,16 +44,16 @@ edge of the grid square.
 
 Ingredients:
 * `cp->gp`: posn -> posn. A function to translate computer coordinates
-  to grid coordinates.
+  to grid coordinates. I am using `(0,0)` as the upper left:
   
-        (check-expect (cp->gp (make-posn 28 57) (make-posn 1 2)))
+        (check-expect (cp->gp (make-posn 28 107) (make-posn 0 2)))
 
 * `mouse-h`: A mouse handler using a list of posns for the model. Add
   the grid posn when you click.
 
 ```racket
-(check-expect (mouse-h empty 28 57 "button-down")
-              (list (make-posn 25 75))
+(check-expect (mouse-h empty 28 107 "button-down")
+              (list (make-posn 0 2)))
 ```
 
 ## Combining
@@ -62,7 +65,8 @@ do something more complex.
   (on-draw draw-h)
   (on-mouse mouse-h))
 ```
-
+Make sure the grid square lights up no matter where in the square you
+click.
 
 ## Bonus
 
