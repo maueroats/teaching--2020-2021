@@ -876,6 +876,13 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/ap-cs/daily/2021-04-25/" class="dd-item">
+        <div>
+          <a href="/ap-cs/daily/2021-04-25/">
+            Integers
+          </a>
+        </div>
+    </li>
         </ul>
     </li>
         </ul>
@@ -1710,6 +1717,7 @@
       <option value="/ap-cs/daily/2021-04-21/" >-- Set 2</option>
       <option value="/ap-cs/daily/2021-04-23/" >-- Set Counter 1</option>
       <option value="/ap-cs/daily/2021-04-24/"  selected>-- Pitfalls of Sets</option>
+      <option value="/ap-cs/daily/2021-04-25/" >-- Integers</option>
   
   
     <option value="/intermediate-cs/" >
@@ -1743,6 +1751,17 @@ interface.</p>
 <li><code>implements Comparable&lt;Card&gt;</code></li>
 <li><code>public int compareTo(Card other)</code></li>
 </ul>
+<p>A typical piece of a <code>compareTo</code> method using <code>String</code> fields <code>color</code>
+and <code>shape</code> would look like this:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">int</span> <span style="color:#75af00">compareTo</span><span style="color:#f92672">(</span><span style="color:#111">Card</span> <span style="color:#111">other</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  <span style="color:#00a8c8">int</span> <span style="color:#111">ans</span> <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#00a8c8">this</span><span style="color:#f92672">.</span><span style="color:#75af00">color</span><span style="color:#f92672">).</span><span style="color:#75af00">compareTo</span><span style="color:#f92672">(</span><span style="color:#111">other</span><span style="color:#f92672">.</span><span style="color:#75af00">color</span><span style="color:#f92672">);</span>
+  <span style="color:#00a8c8">if</span> <span style="color:#f92672">(</span><span style="color:#111">ans</span> <span style="color:#f92672">==</span> <span style="color:#111">0</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#111">ans</span> <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#00a8c8">this</span><span style="color:#f92672">.</span><span style="color:#75af00">shape</span><span style="color:#f92672">).</span><span style="color:#75af00">compareTo</span><span style="color:#f92672">(</span><span style="color:#111">other</span><span style="color:#f92672">.</span><span style="color:#75af00">shape</span><span style="color:#f92672">);</span>
+  <span style="color:#f92672">}</span>
+  <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>  <span style="color:#00a8c8">return</span> <span style="color:#111">ans</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Remember that for numeric fields compareTo should be subtraction <code>(this.n) - (other.n)</code>.</p>
 <h2 id="hashset">HashSet</h2>
 <p>There are no ordering requirements to use a <code>HashSet</code>, which might
 lead you to think that any class will automatically work correctly.</p>
@@ -1755,6 +1774,10 @@ imply <code>x</code> cannot be <code>.equal</code> to <code>y</code>. The <a hre
 implementation</a> is a random
 per-object number, which will not have this property if you have
 changed <code>equals</code> to be something besides <code>==</code>.</p>
+<h2 id="takeaways">Takeaways</h2>
+<p><code>TreeSet</code> is reasonable to work with in the context of AP Computer
+Science A. <code>HashSet</code> requires details that are beyond what would
+normally be in the course.</p>
 
 
     
@@ -1762,7 +1785,7 @@ changed <code>equals</code> to be something besides <code>==</code>.</p>
         <div class="chevrons">
     <div id="navigation">
 <a class="nav nav-prev" href="/ap-cs/daily/2021-04-23/" title="Set Counter 1"> <i class="fa fa-chevron-left"></i><label>Set Counter 1</label></a>
-    <a class="nav nav-next" href="/intermediate-cs/" title="Intermediate CS" style="margin-right: 0px;"><label>Intermediate CS</label><i class="fa fa-chevron-right"></i></a></div>
+    <a class="nav nav-next" href="/ap-cs/daily/2021-04-25/" title="Integers" style="margin-right: 0px;"><label>Integers</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 
