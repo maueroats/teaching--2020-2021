@@ -1,5 +1,5 @@
 ---
-title: "130 Maze Review"
+title: "130 Maze"
 date: 2020-04-28T10:50:43-05:00
 weight: 130
 draft: false

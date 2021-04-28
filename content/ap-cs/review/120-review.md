@@ -1,5 +1,5 @@
 ---
-title: "120 Review"
+title: "120 Wire"
 date: 2020-04-24T10:44:48-05:00
 weight: 120
 draft: false
