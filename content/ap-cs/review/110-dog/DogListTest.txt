@@ -1,0 +1,27 @@
+class Main {
+    public static void main(String[] args) {
+        Dog a = new Dog("A", 5);
+        Dog b = new Dog("Peeps",10);
+        Dog bb = new Dog("Peeeeeps",11);
+        Dog c = new Dog("Freddy",50);
+        Dog e = new Dog("Boss",8);
+        Dog f = new Dog("Quentin",26);
+        Dog g = new Dog("Mario",13);
+        Dog x = new Dog("Xaviara",9);
+
+        ArrayList<Dog> dogs = new ArrayList<>();
+        dogs.add(a); dogs.add(b); dogs.add(bb); dogs.add(c); dogs.add(e);
+
+        updateDogList(dogs);
+
+        for(Dog d: dogs) {
+            System.out.println(d);
+        }
+
+        /* Expected list after update:
+           Dog("A", 6)
+           Dog("Boss", 9)
+           Dog("Mario", 14)
+         */
+    }
+}

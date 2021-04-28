@@ -25,12 +25,17 @@ Ingredients:
 * `gp->cp`: posn -> posn. A function that takes grid coordinates and
   puts out the computer coordinates of the center of the grid
   square. You need to decide if the upper left is `(0,0)` or
-  `(1,1)`. I chose `(0,0)`:
+  `(1,1)` (both are fine). I chose `(0,0)` as the upper left, which
+  corresponds to a computer posn of `(25,25)`.
   
         (check-expect (gp->cp (make-posn 1 2)) (make-posn 75 125))
   
-* `draw-squares`: list-of-posn(grid-posns) image -> image. Draw grey squares at
-  every grid posn.
+* `draw-squares`: list-of-posn(grid-posns) image(background) -> image. Draw grey squares at
+  every grid posn, on top of the background image.
+  
+  The purpose of taking in an image background is to make it easier to
+  make this function step by step. You can also use smaller
+  backgrounds for your testing than you want to use for the real game.
 
 * `draw-h`: list-of-posn(grid-posns) -> image. Same as `draw-squares`,
   but pick a specific background.

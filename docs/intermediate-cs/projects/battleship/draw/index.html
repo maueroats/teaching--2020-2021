@@ -847,6 +847,70 @@
     </li>
         </ul>
     </li>
+    <li data-nav-id="/ap-cs/review/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/ap-cs/review/">AP Review</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/ap-cs/review/resources/" class="dd-item">
+        <div>
+          <a href="/ap-cs/review/resources/">
+            AP Exam Resources
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/review/content-overview/" class="dd-item">
+        <div>
+          <a href="/ap-cs/review/content-overview/">
+            Content Overview
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/review/details/" class="dd-item">
+        <div>
+          <a href="/ap-cs/review/details/">
+            Details 2020
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/review/110-dog/" class="dd-item">
+        <div>
+          <a href="/ap-cs/review/110-dog/">
+            110 Review
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/review/120-review/" class="dd-item">
+        <div>
+          <a href="/ap-cs/review/120-review/">
+            120 Review
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/review/130-review/" class="dd-item">
+        <div>
+          <a href="/ap-cs/review/130-review/">
+            130 Maze Review
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/review/140-farm/" class="dd-item">
+        <div>
+          <a href="/ap-cs/review/140-farm/">
+            140 Farm
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/ap-cs/review/150-chart/" class="dd-item">
+        <div>
+          <a href="/ap-cs/review/150-chart/">
+            ChartMaker
+          </a>
+        </div>
+    </li>
+        </ul>
+    </li>
     <li data-nav-id="/ap-cs/daily/" class="dd-item haschildren
         ">
       <div>
@@ -1875,13 +1939,17 @@
 <p><code>gp-&gt;cp</code>: posn -&gt; posn. A function that takes grid coordinates and
 puts out the computer coordinates of the center of the grid
 square. You need to decide if the upper left is <code>(0,0)</code> or
-<code>(1,1)</code>. I chose <code>(0,0)</code>:</p>
+<code>(1,1)</code> (both are fine). I chose <code>(0,0)</code> as the upper left, which
+corresponds to a computer posn of <code>(25,25)</code>.</p>
 <pre><code>  (check-expect (gp-&gt;cp (make-posn 1 2)) (make-posn 75 125))
 </code></pre>
 </li>
 <li>
-<p><code>draw-squares</code>: list-of-posn(grid-posns) image -&gt; image. Draw grey squares at
-every grid posn.</p>
+<p><code>draw-squares</code>: list-of-posn(grid-posns) image(background) -&gt; image. Draw grey squares at
+every grid posn, on top of the background image.</p>
+<p>The purpose of taking in an image background is to make it easier to
+make this function step by step. You can also use smaller
+backgrounds for your testing than you want to use for the real game.</p>
 </li>
 <li>
 <p><code>draw-h</code>: list-of-posn(grid-posns) -&gt; image. Same as <code>draw-squares</code>,

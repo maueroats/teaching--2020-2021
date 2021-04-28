@@ -1,0 +1,68 @@
+import java.util.*;
+
+public class Farm {
+    private ArrayList<String> crops;
+    public Farm(ArrayList<String> contents) {
+        crops = contents;
+    }
+    public int harvest(List<String> crops) {
+        // WRITE
+        return 0;
+    }
+    public void fertilize(String crop) {
+        // WRITE
+    }
+    public String toString() {
+        String ans = "[A Farm containing:\n";
+        for(String a : crops) {
+            ans += "   " + a + "\n";
+        }
+        return ans + "]";
+    }
+
+    public static Farm demoFarm() {
+        ArrayList<String> c = new ArrayList<>();
+        c.add("corn");
+        c.add("corn");
+        c.add("corn");
+        c.add("soybeans");
+        c.add("soybeans");
+        c.add("green breans");
+        return new Farm(c);
+    }
+
+    ////////////////////////////////////////////////////
+
+    public static void demo1() {
+        Farm f = demoFarm();
+        f.plant("wheat");
+        System.out.println(f);
+        // should be [corn, corn, corn, soybeans, soybeans, green beans, wheat]
+    }
+
+    public static void demo2() {
+        Farm f = demoFarm();
+        ArrayList<String> inSeason = new ArrayList<>();
+        inSeason.add("corn");
+        inSeason.add("soybeans");
+        int x = f.harvest(inSeason);
+        System.out.println(f); // [green beans]
+        System.out.println(x); // 5
+    }
+
+    public static void demo3() {
+        Farm f = demoFarm();
+        f.fertilize("soybeans");
+        System.out.println(f);
+        // should be [corn, corn, corn, soybeans, soybeans, soybeans, soybeans, green beans]
+    }
+
+    public static void main() {
+        System.out.println("=== DEMO 1 ===");
+        demo1();
+        System.out.println("=== DEMO 2 ===");
+        demo2();
+        System.out.println("=== DEMO 3 ===");
+        demo3();
+   }
+}

@@ -7,7 +7,7 @@ description: "Haskell to expand the way you see the world and Java for object-or
 
 <i class='fa fa-calendar' aria-hidden='true'></i>[AP Exam Calendar
 2021](https://apcentral.collegeboard.org/courses/exam-dates-and-fees):
-Wednesday, May 18, 2021 at 3:00pm online.
+Tuesday, May 18, 2021 at 3:00pm online.
 
 ## All Topics
 

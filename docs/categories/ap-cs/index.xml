@@ -6,11 +6,7 @@
     <description>Recent content in ap-cs on WY Computer Science</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Sep 2018 11:26:51 -0500</lastBuildDate>
-    
-	<atom:link href="https://wy-cs.info/categories/ap-cs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 05 Sep 2018 11:26:51 -0500</lastBuildDate><atom:link href="https://wy-cs.info/categories/ap-cs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>1. Intro</title>
       <link>https://wy-cs.info/ap-cs/haskell/ch01/</link>
