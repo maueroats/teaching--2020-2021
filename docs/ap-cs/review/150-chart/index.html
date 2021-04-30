@@ -1910,6 +1910,37 @@
 <a href="https://en.wikipedia.org/wiki/Histogram">histograms</a>.
 When you make a <code>ChartMaker</code> object, you provide a list of cut scores
 to use for making the bins.</p>
+<h2 id="example">Example</h2>
+<p>Using the demo code below with cutscores of 0, 10, 20, and 30 with
+the data</p>
+<pre><code>{-5,0,1,2,3,20,20,20,29,30,100,110}
+</code></pre>
+<p>should produce the output:</p>
+<pre><code>XXXXXXXXXX  (10)
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (40)
+  (0)
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (40)
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX  (30)
+</code></pre>
+<p>Showing the number of X&rsquo;s is an optional feature. The number of X&rsquo;s is
+determined by the ratio</p>
+<pre><code> (Xs to show) / maxwidth = (number in bin) / (total number)
+</code></pre>
+<p>The code is:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">demo1</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+  <span style="color:#00a8c8">int</span><span style="color:#f92672">[]</span> <span style="color:#111">data</span> <span style="color:#f92672">=</span> <span style="color:#f92672">{-</span><span style="color:#111">5</span><span style="color:#f92672">,</span><span style="color:#111">0</span><span style="color:#f92672">,</span><span style="color:#111">1</span><span style="color:#f92672">,</span><span style="color:#111">2</span><span style="color:#f92672">,</span><span style="color:#111">3</span><span style="color:#f92672">,</span><span style="color:#111">20</span><span style="color:#f92672">,</span><span style="color:#111">20</span><span style="color:#f92672">,</span><span style="color:#111">20</span><span style="color:#f92672">,</span><span style="color:#111">29</span><span style="color:#f92672">,</span><span style="color:#111">30</span><span style="color:#f92672">,</span><span style="color:#111">100</span><span style="color:#f92672">,</span><span style="color:#111">110</span><span style="color:#f92672">};</span> <span style="color:#75715e">// 12 items
+</span><span style="color:#75715e"></span>  <span style="color:#00a8c8">int</span> <span style="color:#111">maxwidth</span> <span style="color:#f92672">=</span> <span style="color:#111">120</span><span style="color:#f92672">;</span>
+  <span style="color:#111">demo0</span><span style="color:#f92672">(</span><span style="color:#111">data</span><span style="color:#f92672">,</span> <span style="color:#111">maxwidth</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>The <code>demo0</code> function is:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">demo0</span><span style="color:#f92672">(</span><span style="color:#00a8c8">int</span><span style="color:#f92672">[]</span> <span style="color:#111">data</span><span style="color:#f92672">,</span> <span style="color:#111">maxwidth</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+  <span style="color:#111">List</span><span style="color:#f92672">&lt;</span><span style="color:#111">Integer</span><span style="color:#f92672">&gt;</span> <span style="color:#111">cutscores</span> <span style="color:#f92672">=</span> <span style="color:#111">Arrays</span><span style="color:#f92672">.</span><span style="color:#75af00">asList</span><span style="color:#f92672">(</span><span style="color:#111">0</span><span style="color:#f92672">,</span><span style="color:#111">10</span><span style="color:#f92672">,</span><span style="color:#111">20</span><span style="color:#f92672">,</span><span style="color:#111">30</span><span style="color:#f92672">);</span>
+  <span style="color:#111">ChartMaker</span> <span style="color:#111">cm</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">ChartMaker</span><span style="color:#f92672">(</span><span style="color:#111">cutscores</span><span style="color:#f92672">);</span>
+  <span style="color:#111">cm</span><span style="color:#f92672">.</span><span style="color:#75af00">ingest</span><span style="color:#f92672">(</span><span style="color:#111">data</span><span style="color:#f92672">);</span>
+  <span style="color:#111">List</span><span style="color:#f92672">&lt;</span><span style="color:#111">String</span><span style="color:#f92672">&gt;</span> <span style="color:#111">chart</span> <span style="color:#f92672">=</span> <span style="color:#111">cm</span><span style="color:#f92672">.</span><span style="color:#75af00">barChart</span><span style="color:#f92672">(</span><span style="color:#111">maxwidth</span><span style="color:#f92672">);</span>
+  <span style="color:#111">dumpChart</span><span style="color:#f92672">(</span><span style="color:#111">chart</span><span style="color:#f92672">);</span> <span style="color:#75715e">// see Helper functions
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><h2 id="java-setup">Java Setup</h2>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">class</span> <span style="color:#75af00">ChartMaker</span> <span style="color:#f92672">{</span>
   <span style="color:#75715e">// (a) Constructor
 </span><span style="color:#75715e"></span>  <span style="color:#00a8c8">public</span> <span style="color:#75af00">ChartMaker</span><span style="color:#f92672">(</span><span style="color:#111">List</span><span style="color:#f92672">&lt;</span><span style="color:#111">Integer</span><span style="color:#f92672">&gt;</span> <span style="color:#111">cutscores</span><span style="color:#f92672">)</span> <span style="color:#f92672">{...}</span>
@@ -1925,20 +1956,15 @@ to use for making the bins.</p>
 </span><span style="color:#75715e"></span>  <span style="color:#75715e">//     to join every two &#34;bins&#34; into one
 </span><span style="color:#75715e"></span>  <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">mergeAdjacent</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span> <span style="color:#f92672">...</span> <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="examples">Examples</h2>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">{</span>
-  <span style="color:#111">List</span><span style="color:#f92672">&lt;</span><span style="color:#111">Integer</span><span style="color:#f92672">&gt;</span> <span style="color:#111">cutscores</span> <span style="color:#f92672">=</span> <span style="color:#111">Arrays</span><span style="color:#f92672">.</span><span style="color:#75af00">asList</span><span style="color:#f92672">(</span><span style="color:#111">0</span><span style="color:#f92672">,</span><span style="color:#111">10</span><span style="color:#f92672">,</span><span style="color:#111">20</span><span style="color:#f92672">,</span><span style="color:#111">30</span><span style="color:#f92672">);</span>
-  <span style="color:#111">ChartMaker</span> <span style="color:#111">cm</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">ChartMaker</span><span style="color:#f92672">(</span><span style="color:#111">cutscores</span><span style="color:#f92672">);</span>
-  
-  <span style="color:#00a8c8">int</span><span style="color:#f92672">[]</span> <span style="color:#111">data</span> <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#111">1</span><span style="color:#f92672">,</span><span style="color:#111">2</span><span style="color:#f92672">,</span><span style="color:#111">3</span><span style="color:#f92672">,</span><span style="color:#111">4</span><span style="color:#f92672">,</span><span style="color:#111">3</span><span style="color:#f92672">,</span><span style="color:#111">2</span><span style="color:#f92672">,</span><span style="color:#111">1</span><span style="color:#f92672">,</span><span style="color:#111">11</span><span style="color:#f92672">,</span><span style="color:#111">13</span><span style="color:#f92672">,</span><span style="color:#111">22</span><span style="color:#f92672">,</span><span style="color:#111">23</span><span style="color:#f92672">,</span><span style="color:#111">24</span><span style="color:#f92672">,</span><span style="color:#111">31</span><span style="color:#f92672">,</span><span style="color:#111">50</span><span style="color:#f92672">,</span><span style="color:#111">100</span><span style="color:#f92672">};</span>
-  <span style="color:#111">cm</span><span style="color:#f92672">.</span><span style="color:#75af00">ingest</span><span style="color:#f92672">(</span><span style="color:#111">data</span><span style="color:#f92672">);</span>
-  
-  <span style="color:#111">List</span><span style="color:#f92672">&lt;</span><span style="color:#111">String</span><span style="color:#f92672">&gt;</span> <span style="color:#111">chart</span> <span style="color:#f92672">=</span> <span style="color:#111">cm</span><span style="color:#f92672">.</span><span style="color:#75af00">barChart</span><span style="color:#f92672">(</span><span style="color:#111">80</span><span style="color:#f92672">);</span>
-  
-  <span style="color:#111">cm</span><span style="color:#f92672">.</span><span style="color:#75af00">mergeAdjacent</span><span style="color:#f92672">();</span> <span style="color:#75715e">// join cutscores to be {0,20}, counts also updated
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
 </code></pre></div><h2 id="helper-functions">Helper functions</h2>
-<p>In writing you may assume the existence of a <a href="https://stackoverflow.com/questions/1235179/simple-way-to-repeat-a-string-in-java">String repeating method</a>.</p>
+<p>I use a <code>dumpChart</code> function to print the chart nicely:</p>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">dumpChart</span><span style="color:#f92672">(</span><span style="color:#111">ArrayList</span><span style="color:#f92672">&lt;</span><span style="color:#111">String</span><span style="color:#f92672">&gt;</span> <span style="color:#111">chart</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#00a8c8">for</span> <span style="color:#f92672">(</span><span style="color:#111">String</span> <span style="color:#111">xs</span> <span style="color:#f92672">:</span> <span style="color:#111">chart</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#111">System</span><span style="color:#f92672">.</span><span style="color:#75af00">out</span><span style="color:#f92672">.</span><span style="color:#75af00">println</span><span style="color:#f92672">(</span><span style="color:#111">String</span><span style="color:#f92672">.</span><span style="color:#75af00">format</span><span style="color:#f92672">(</span><span style="color:#d88200">&#34;%s  (%d)&#34;</span><span style="color:#f92672">,</span><span style="color:#111">xs</span><span style="color:#f92672">,</span><span style="color:#111">xs</span><span style="color:#f92672">.</span><span style="color:#75af00">length</span><span style="color:#f92672">()));</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>You will need to make a repeating string of X&rsquo;s. New-ish versions of
+Java have a <a href="https://stackoverflow.com/questions/1235179/simple-way-to-repeat-a-string-in-java">String repeating method</a>.</p>
 <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#00a8c8">public</span> <span style="color:#00a8c8">static</span> <span style="color:#111">String</span> <span style="color:#75af00">rep</span> <span style="color:#f92672">(</span><span style="color:#111">String</span> <span style="color:#111">x</span><span style="color:#f92672">,</span> <span style="color:#00a8c8">int</span> <span style="color:#111">times</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#00a8c8">return</span> <span style="color:#111">x</span><span style="color:#f92672">.</span><span style="color:#75af00">repeat</span><span style="color:#f92672">(</span><span style="color:#111">times</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
@@ -1965,7 +1991,7 @@ to use for making the bins.</p>
 
     
     <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 14/05/2020
+        <i class='fa fa-calendar'></i> Last update on 30/04/2021
     </div>
     
 
