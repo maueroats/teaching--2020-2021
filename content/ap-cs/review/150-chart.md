@@ -1,5 +1,5 @@
 ---
-title: "ChartMaker"
+title: "150 ChartMaker"
 date: 2020-05-14T10:50:51-05:00
 weight: 150
 draft: false
@@ -41,7 +41,7 @@ public class ChartMaker {
   int[] data = {1,2,3,4,3,2,1,11,13,22,23,24,31,50,100};
   cm.ingest(data);
   
-  ArrayList<String> chart = cm.barChart(80);
+  List<String> chart = cm.barChart(80);
   
   cm.mergeAdjacent(); // join cutscores to be {0,20}, counts also updated
 }
