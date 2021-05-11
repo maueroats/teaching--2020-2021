@@ -2,7 +2,7 @@
 title: "OOP Principles" 
 date: 2021-05-07T13:17:45-05:00
 weight: 20
-draft: true
+draft: false
 #type: slide
 #theme: white
 description: "A view under which Java object oriented programming makes sense."
