@@ -1,7 +1,7 @@
 ---
 title: "Battleship"
 date: 2019-04-08T08:16:45-05:00
-weight: 300
+weight: 100
 draft: false
 #type: slide
 #theme: white

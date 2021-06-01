@@ -29,6 +29,9 @@
     <loc>https://wy-cs.info/ap-cs/haskell/ch05/</loc>
     <lastmod>2017-09-24T13:52:10-05:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/ml/q4/20210601-dogs/overview/</loc>
+    <lastmod>2021-06-01T09:14:42-05:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/ap-cs/review/210-oop/10-starter/</loc>
     <lastmod>2021-05-07T13:03:03-05:00</lastmod>
   </url><url>
@@ -211,6 +214,9 @@
   </url><url>
     <loc>https://wy-cs.info/resources/generic-cs-syllabus/</loc>
     <lastmod>2017-09-09T15:50:00-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/ml/q4/20210601-dogs/swiss-dog-data/</loc>
+    <lastmod>2021-06-01T09:25:25-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/review/210-oop/30-vocab/</loc>
     <lastmod>2021-05-10T22:09:19-05:00</lastmod>
@@ -458,6 +464,9 @@
     <loc>https://wy-cs.info/intermediate-cs/ch22b/list-resources/</loc>
     <lastmod>2018-02-23T11:13:06-06:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/intermediate-cs/projects/reversi/100-overview/</loc>
+    <lastmod>2021-05-26T09:47:21-05:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/ap-cs/review/150-chart/chart-demo/</loc>
     <lastmod>2021-05-03T08:47:17-05:00</lastmod>
   </url><url>
@@ -466,6 +475,9 @@
   </url><url>
     <loc>https://wy-cs.info/ml/rmisc/stdinc/</loc>
     <lastmod>2020-09-30T13:29:57-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/intermediate-cs/projects/battleship/</loc>
+    <lastmod>2019-04-08T08:16:45-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/projects/snake/100-snake/</loc>
     <lastmod>2019-03-25T15:44:03-05:00</lastmod>
@@ -508,6 +520,9 @@
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch03/daily-08/</loc>
     <lastmod>2020-10-06T11:21:08-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/intermediate-cs/projects/reversi/110-stage1/</loc>
+    <lastmod>2021-05-26T09:47:32-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/projects/snake/110-multiplayer/</loc>
     <lastmod>2020-04-24T13:28:39-05:00</lastmod>
@@ -569,6 +584,9 @@
     <loc>https://wy-cs.info/ap-cs/review/150-chart/chart-helper/</loc>
     <lastmod>2021-05-03T08:47:37-05:00</lastmod>
   </url><url>
+    <loc>https://wy-cs.info/intermediate-cs/projects/snake/</loc>
+    <lastmod>2020-04-24T13:27:52-05:00</lastmod>
+  </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch05/ch05-quiz/</loc>
     <lastmod>2019-11-07T13:23:13-06:00</lastmod>
   </url><url>
@@ -608,8 +626,8 @@
     <loc>https://wy-cs.info/ap-cs/daily/2021-04-25/</loc>
     <lastmod>2021-04-24T08:56:53-05:00</lastmod>
   </url><url>
-    <loc>https://wy-cs.info/intermediate-cs/projects/battleship/</loc>
-    <lastmod>2019-04-08T08:16:45-05:00</lastmod>
+    <loc>https://wy-cs.info/intermediate-cs/projects/reversi/</loc>
+    <lastmod>2021-05-26T09:42:46-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/ap-cs/haskell/ch03/ch03-test-2019/</loc>
     <lastmod>2019-09-20T13:03:18-05:00</lastmod>
@@ -631,6 +649,12 @@
   </url><url>
     <loc>https://wy-cs.info/ml/q4/2021-04-26/</loc>
     <lastmod>2021-04-26T11:54:27-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/ml/q4/2021-05-17/</loc>
+    <lastmod>2021-05-17T09:08:23-05:00</lastmod>
+  </url><url>
+    <loc>https://wy-cs.info/ml/q4/20210601-dogs/</loc>
+    <lastmod>2021-06-01T09:13:56-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/projects/</loc>
     <lastmod>2021-04-26T12:33:06-05:00</lastmod>
@@ -664,9 +688,6 @@
   </url><url>
     <loc>https://wy-cs.info/ml/rmisc/timeseries/</loc>
     <lastmod>2020-10-05T11:33:06-05:00</lastmod>
-  </url><url>
-    <loc>https://wy-cs.info/intermediate-cs/projects/snake/</loc>
-    <lastmod>2020-04-24T13:27:52-05:00</lastmod>
   </url><url>
     <loc>https://wy-cs.info/intermediate-cs/ch20/20-intro-quiz/</loc>
     <lastmod>2020-01-24T10:51:44-06:00</lastmod>
