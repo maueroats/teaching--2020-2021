@@ -8,6 +8,6 @@ draft: false
 description: ""
 ---
 
-{{% attachments-github "../*.csv" %}}
+{{% attachments-github "*.csv" %}}
 
 

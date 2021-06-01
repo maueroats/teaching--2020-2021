@@ -1,11 +1,11 @@
 ---
-title: "Overview" 
-date: 2021-06-01T09:14:42-05:00
-weight: 10
+title: "2021-06-01 Dogs"
+date: 2021-06-01T09:13:56-05:00
+weight: 20210601
 draft: false
 #type: slide
 #theme: white
-description: ""
+description: "Data on Dogs in Switzerland."
 ---
 
 The data is from Zurich, Switzerland, courtesy of the internet. The
@@ -25,4 +25,8 @@ might need to use a translator.
 * GEBURTSJAHR_HUND -> Dog's Year of Birth
 * GESCHLECHT_HUND -> Dog's Gender
 * HUNDEFARBE -> Dog's Color
+
+## Data
+
+[Dog data from Zurich]({{% relref "swiss-dog-data" %}}).
 
