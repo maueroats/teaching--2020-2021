@@ -13,13 +13,13 @@
                 {{if ($.Get "pattern")}}
                         {{if (findRE ($.Get "pattern") .Name)}}
 <li>
-<a href="{{ $.Site.Params.github_base }}{{ $.Site.Params.github_glue }}/{{ $.Page.File.Dir }}{{ ($.Scratch.Get "filesName")}}/{{ .Name }}">{{ .Name }}</a>
+<a href="{{ $.Site.Params.github_base }}{{ $.Site.Params.github_glue }}/{{ lower $.Page.File.Dir }}{{ ($.Scratch.Get "filesName")}}/{{ .Name }}">{{ .Name }}</a>
 ({{div .Size 1024 }} kB)
 </li>
                         {{end}}
                 {{else}}
 <li>
-<a href="{{ $.Site.Params.github_base }}{{ $.Site.Params.github_glue }}/{{ $.Page.File.Dir }}{{ ($.Scratch.Get "filesName")}}/{{ .Name }}">{{ .Name }}</a>
+<a href="{{ $.Site.Params.github_base }}{{ $.Site.Params.github_glue }}/{{ lower $.Page.File.Dir }}{{ ($.Scratch.Get "filesName")}}/{{ .Name }}">{{ .Name }}</a>
 ({{div .Size 1024 }} kB)
 </li>
                 {{end}}

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Overview :: WY Computer Science</title>
+<title>Reversi Indicator :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -17,13 +17,13 @@
 <script type="text/javascript">
       var baseurl = "https:\/\/wy-cs.info";
 </script>
-<meta name="description" content="">
+<meta name="description" content="Instructions to add an indicator showing where you will place a piece.">
 
 
 
     
   </head>
-  <body data-url="/ml/q4/20210601-dogs/overview/">
+  <body data-url="/intermediate-cs/projects/reversi/120-indicator/">
     
       <header>
   <div class="logo">
@@ -993,10 +993,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/" class="dd-item haschildren
+    <li data-nav-id="/intermediate-cs/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/intermediate-cs/">Intermediate CS</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/intermediate-cs/">Intermediate CS</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/intermediate-cs/ch07/" class="dd-item haschildren
@@ -1482,10 +1483,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/projects/" class="dd-item haschildren
+    <li data-nav-id="/intermediate-cs/projects/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/intermediate-cs/projects/">Projects</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/intermediate-cs/projects/">Projects</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
     <li data-nav-id="/intermediate-cs/projects/battleship/" class="dd-item haschildren
@@ -1567,10 +1569,11 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/intermediate-cs/projects/reversi/" class="dd-item haschildren
+    <li data-nav-id="/intermediate-cs/projects/reversi/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/intermediate-cs/projects/reversi/">Reversi</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/intermediate-cs/projects/reversi/">Reversi</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/intermediate-cs/projects/reversi/100-overview/" class="dd-item">
@@ -1580,10 +1583,31 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/projects/reversi/105-structs/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/reversi/105-structs/">
+            Reversi Structs
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/projects/reversi/110-stage1/" class="dd-item">
         <div>
           <a href="/intermediate-cs/projects/reversi/110-stage1/">
-            Placement
+            Reversi Placement
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/reversi/120-indicator/" class="dd-item active">
+        <div>
+          <a href="/intermediate-cs/projects/reversi/120-indicator/">
+            Reversi Indicator
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/reversi/130-ray/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/reversi/130-ray/">
+            Reversi Ray
           </a>
         </div>
     </li>
@@ -1593,11 +1617,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/" class="dd-item parent haschildren
+    <li data-nav-id="/ml/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ml/">Machine Learning</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ml/">Machine Learning</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/startup/" class="dd-item">
@@ -1766,11 +1789,10 @@
     </li>
         </ul>
     </li>
-    <li data-nav-id="/ml/q4/" class="dd-item parent haschildren
+    <li data-nav-id="/ml/q4/" class="dd-item haschildren
         ">
       <div>
-      <a href="/ml/q4/">Quarter 4</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
+      <a href="/ml/q4/">Quarter 4</a><i class="fa fa-angle-right fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/ml/q4/20210421/" class="dd-item">
@@ -1794,21 +1816,12 @@
           </a>
         </div>
     </li>
-    <li data-nav-id="/ml/q4/20210601-dogs/" class="dd-item parent haschildren
-        ">
-      <div>
-      <a href="/ml/q4/20210601-dogs/">Dogs</a>
-            <i class="fa fa-angle-down fa-lg category-icon"></i>
-      </div>
-        <ul>
-      <li data-nav-id="/ml/q4/20210601-dogs/overview/" class="dd-item active">
+      <li data-nav-id="/ml/q4/20210601-dogs/" class="dd-item">
         <div>
-          <a href="/ml/q4/20210601-dogs/overview/">
-            Overview
+          <a href="/ml/q4/20210601-dogs/">
+            2021-06-01 Dogs
           </a>
         </div>
-    </li>
-        </ul>
     </li>
         </ul>
     </li>
@@ -1960,38 +1973,50 @@
     <option value="/ap-cs/" >
    AP CS</option>
     <option value="/intermediate-cs/" >
-   Intermediate CS</option>
-    <option value="/ml/" >
-   Machine Learning</option> 
-      <option value="/ml/startup/" >- ML Startup</option>
-    <option value="/ml/r4ds/" >
+   Intermediate CS</option> 
+    <option value="/intermediate-cs/ch07/" >
   - 
-   R for Data Science</option>
-    <option value="/ml/rmisc/" >
+   7. Numbers</option>
+    <option value="/intermediate-cs/ch17/" >
   - 
-   R: Misc</option>
-    <option value="/ml/isl/" >
+   17. Cond Animations</option>
+    <option value="/intermediate-cs/sem1review/" >
   - 
-   ISL</option>
-    <option value="/ml/mtfc/" >
+   Sem. I</option>
+    <option value="/intermediate-cs/ch20/" >
   - 
-   Modeling the Future</option>
-    <option value="/ml/q4/" >
+   20. Using Structures</option>
+    <option value="/intermediate-cs/ch21/" >
   - 
-   Quarter 4</option> 
-      <option value="/ml/q4/20210421/" >-- p-values</option>
-      <option value="/ml/q4/2021-04-26/" >-- 2021-04-26</option>
-      <option value="/ml/q4/2021-05-17/" >-- 2021-05-17</option>
-    <option value="/ml/q4/20210601-dogs/" >
+   21. Structures</option>
+    <option value="/intermediate-cs/ch22b/" >
+  - 
+   22b. Lists</option>
+    <option value="/intermediate-cs/resources/" >
+  - 
+   Resources</option>
+    <option value="/intermediate-cs/projects/" >
+  - 
+   Projects</option> 
+    <option value="/intermediate-cs/projects/battleship/" >
   -- 
-   Dogs</option> 
-      <option value="/ml/q4/20210601-dogs/overview/"  selected>--- Overview</option>
+   Battleship</option>
+    <option value="/intermediate-cs/projects/snake/" >
+  -- 
+   Snake</option>
+    <option value="/intermediate-cs/projects/reversi/" >
+  -- 
+   Reversi</option> 
+      <option value="/intermediate-cs/projects/reversi/100-overview/" >--- Reversi Overview</option>
+      <option value="/intermediate-cs/projects/reversi/105-structs/" >--- Reversi Structs</option>
+      <option value="/intermediate-cs/projects/reversi/110-stage1/" >--- Reversi Placement</option>
+      <option value="/intermediate-cs/projects/reversi/120-indicator/"  selected>--- Reversi Indicator</option>
+      <option value="/intermediate-cs/projects/reversi/130-ray/" >--- Reversi Ray</option>
   
   
-    <option value="/ml/data/" >
-  - 
-   Datasets</option>
   
+    <option value="/ml/" >
+   Machine Learning</option>
     <option value="/resources/" >
    Resources</option>
     <option value="/future/" >
@@ -2004,37 +2029,31 @@
     </div>
     
 
-    <h1>Overview</h1>
+    <h1>Reversi Indicator</h1>
 
     
     
     
-    <p>The data is from Zurich, Switzerland, courtesy of the internet. The
-idea to analyze this dataset comes from a <a href="https://www.kaggle.com/kmader/dogs-of-zurich?select=zuordnungstabellehunderassehundetyp.csv">post on Kaggle</a>.</p>
-<h2 id="translation">Translation</h2>
-<p>German is the official language of Zurich most of the columns
-are in German but the translations to English aren&rsquo;t too tricky. You
-might need to use a translator.</p>
+    <p>The indicator should be a somewhat-transparent version of the actual
+piece.</p>
+<h2 id="draw-handler">Draw Handler</h2>
 <ul>
-<li>ALTER -&gt; Age</li>
-<li>GESCHLECHT -&gt; Gender (w = weiblich, female; m = mannlich, male)</li>
-<li>STADTKREIS -&gt; City Quarter or District</li>
-<li>RASSE1 -&gt; Dog&rsquo;s Primary Breed</li>
-<li>RASSE2 -&gt; Dog&rsquo;s Secondary Breed</li>
-<li>GEBURTSJAHR_HUND -&gt; Dog&rsquo;s Year of Birth</li>
-<li>GESCHLECHT_HUND -&gt; Dog&rsquo;s Gender</li>
-<li>HUNDEFARBE -&gt; Dog&rsquo;s Color</li>
+<li>draw-indicator: posn player image -&gt; image.</li>
+<li>draw-h2: game-model -&gt; image.
+The second draw handler should call the first draw handler to draw
+the pieces on the board.</li>
 </ul>
-<h2 id="data">Data</h2>
-<p><a href="/ml/data/swiss-dog-data/">Dog data from Zurich</a>.</p>
+<h2 id="mouse-handler">Mouse Handler</h2>
+<p>If your mouse handler does not remember the most recent position of
+the mouse, you will have to add that now.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/ml/q4/20210601-dogs/" title="Dogs"> <i class="fa fa-chevron-left"></i><label>Dogs</label></a>
-    <a class="nav nav-next" href="/ml/data/" title="Datasets" style="margin-right: 0px;"><label>Datasets</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/intermediate-cs/projects/reversi/110-stage1/" title="Reversi Placement"> <i class="fa fa-chevron-left"></i><label>Reversi Placement</label></a>
+    <a class="nav nav-next" href="/intermediate-cs/projects/reversi/130-ray/" title="Reversi Ray" style="margin-right: 0px;"><label>Reversi Ray</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 

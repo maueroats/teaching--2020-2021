@@ -1580,10 +1580,31 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/projects/reversi/105-structs/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/reversi/105-structs/">
+            Reversi Structs
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/projects/reversi/110-stage1/" class="dd-item">
         <div>
           <a href="/intermediate-cs/projects/reversi/110-stage1/">
-            Placement
+            Reversi Placement
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/reversi/120-indicator/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/reversi/120-indicator/">
+            Reversi Indicator
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/reversi/130-ray/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/reversi/130-ray/">
+            Reversi Ray
           </a>
         </div>
     </li>
@@ -1999,12 +2020,12 @@
     <p>The data is from Zurich, Switzerland, courtesy of the internet. The
 idea to analyze this dataset comes from a <a href="https://www.kaggle.com/kmader/dogs-of-zurich?select=zuordnungstabellehunderassehundetyp.csv">post on Kaggle</a>.</p>
 <h2 id="translation">Translation</h2>
-<p>German is the official language of Zurich most of the columns
-are in German but the translations to English aren&rsquo;t too tricky. You
-might need to use a translator.</p>
+<p>German is the official language of Zurich. Most of the columns
+are in German, but the translations to English aren&rsquo;t too tricky. Use
+a translator if you find something you do not understand.</p>
 <ul>
 <li>ALTER -&gt; Age</li>
-<li>GESCHLECHT -&gt; Gender (w = weiblich, female; m = mannlich, male)</li>
+<li>GESCHLECHT -&gt; Gender (w = weiblich, female; m = männlich, male)</li>
 <li>STADTKREIS -&gt; City Quarter or District</li>
 <li>RASSE1 -&gt; Dog&rsquo;s Primary Breed</li>
 <li>RASSE2 -&gt; Dog&rsquo;s Secondary Breed</li>
@@ -2013,7 +2034,22 @@ might need to use a translator.</p>
 <li>HUNDEFARBE -&gt; Dog&rsquo;s Color</li>
 </ul>
 <h2 id="data">Data</h2>
-<p><a href="/ml/data/swiss-dog-data/">Dog data from Zurich</a>.</p>
+<p><a href="/ml/data/swiss-dog-data/">Dog data from Zurich</a>. There should
+be a notebook available to load the data and do some initial
+cleaning.</p>
+<h2 id="questions">Questions</h2>
+<p>We will use 2015 to begin. Later we can combine all of the information
+into a single data frame to see if more can be learned by combining
+data from multiple years.</p>
+<ul>
+<li>How many dogs are there?</li>
+<li>How many male vs female dogs?</li>
+<li>Analyze the ages of the owners?</li>
+<li>The birth year of the dog has some obvious errors. Find them and fix
+them. See the fixing code included in the notebook.</li>
+<li>Does <code>id</code> uniquely identify the dog registration information?
+Explain your reasoning and give supporting evidence.</li>
+</ul>
 
 
     

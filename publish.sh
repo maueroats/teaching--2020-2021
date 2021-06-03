@@ -8,5 +8,5 @@ hugo version
 hugo --cleanDestinationDir
 git add -A
 git commit -a -m "wy-cs site update $(date +'%Y-%m-%d %H:%M')"
-git push -u origin master
-#git push -u backdoor master
+#git push -u origin master
+git push -u backdoor master

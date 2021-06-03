@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-<title>Placement :: WY Computer Science</title>
+<title>Reversi Placement :: WY Computer Science</title>
 <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
 <link href="/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/nucleus.css" rel="stylesheet">
@@ -1583,10 +1583,31 @@
           </a>
         </div>
     </li>
+      <li data-nav-id="/intermediate-cs/projects/reversi/105-structs/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/reversi/105-structs/">
+            Reversi Structs
+          </a>
+        </div>
+    </li>
       <li data-nav-id="/intermediate-cs/projects/reversi/110-stage1/" class="dd-item active">
         <div>
           <a href="/intermediate-cs/projects/reversi/110-stage1/">
-            Placement
+            Reversi Placement
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/reversi/120-indicator/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/reversi/120-indicator/">
+            Reversi Indicator
+          </a>
+        </div>
+    </li>
+      <li data-nav-id="/intermediate-cs/projects/reversi/130-ray/" class="dd-item">
+        <div>
+          <a href="/intermediate-cs/projects/reversi/130-ray/">
+            Reversi Ray
           </a>
         </div>
     </li>
@@ -1987,7 +2008,10 @@
   -- 
    Reversi</option> 
       <option value="/intermediate-cs/projects/reversi/100-overview/" >--- Reversi Overview</option>
-      <option value="/intermediate-cs/projects/reversi/110-stage1/"  selected>--- Placement</option>
+      <option value="/intermediate-cs/projects/reversi/105-structs/" >--- Reversi Structs</option>
+      <option value="/intermediate-cs/projects/reversi/110-stage1/"  selected>--- Reversi Placement</option>
+      <option value="/intermediate-cs/projects/reversi/120-indicator/" >--- Reversi Indicator</option>
+      <option value="/intermediate-cs/projects/reversi/130-ray/" >--- Reversi Ray</option>
   
   
   
@@ -2005,19 +2029,49 @@
     </div>
     
 
-    <h1>Placement</h1>
+    <h1>Reversi Placement</h1>
 
     
     
     
-    
+    <p>We are going to make an animation where clicking places a piece and
+space bar changes the current player.</p>
+<p>You can choose the colors of the pieces yourself.</p>
+<h2 id="example-model">Example Model</h2>
+<p>Make an example game model showing one piece at (2,5) and the current
+player being the opposite of the one who owns the piece. The mode
+should be 1.</p>
+<h2 id="grid">Grid</h2>
+<p>You need a grid and functions to convert to and from grid
+coordinates. Those should already be written from earlier
+projects. Find them now.</p>
+<h2 id="draw-handler">Draw Handler</h2>
+<p>Write a draw handler to draw the pieces of the game on the board. If
+you are not sure how to do this, break it down into small steps:</p>
+<ul>
+<li>draw-one: piece image -&gt; image</li>
+<li>draw-all: list-of-piece image -&gt; image</li>
+<li>draw-h1: game -&gt; image</li>
+</ul>
+<h2 id="mouse-handler">Mouse Handler</h2>
+<p>The mouse handler (version 1) places the piece where you click.</p>
+<p>Write a check-expect so you think through what need to do
+before you write the function.</p>
+<pre><code>mouse-h: game-model x y mouse-event -&gt; game-model
+</code></pre>
+<h2 id="key-handler">Key Handler</h2>
+<p>Hitting the space bar should switch between players.</p>
+<p>Surprisingly, I recommend a helper function!</p>
+<pre><code>switch-player: game-model -&gt; game-model
+</code></pre>
+
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/intermediate-cs/projects/reversi/100-overview/" title="Reversi Overview"> <i class="fa fa-chevron-left"></i><label>Reversi Overview</label></a>
-    <a class="nav nav-next" href="/ml/" title="Machine Learning" style="margin-right: 0px;"><label>Machine Learning</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/intermediate-cs/projects/reversi/105-structs/" title="Reversi Structs"> <i class="fa fa-chevron-left"></i><label>Reversi Structs</label></a>
+    <a class="nav nav-next" href="/intermediate-cs/projects/reversi/120-indicator/" title="Reversi Indicator" style="margin-right: 0px;"><label>Reversi Indicator</label><i class="fa fa-chevron-right"></i></a></div>
 
   </div>
 

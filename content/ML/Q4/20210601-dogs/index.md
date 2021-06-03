@@ -13,12 +13,12 @@ idea to analyze this dataset comes from a [post on Kaggle](https://www.kaggle.co
 
 ## Translation
 
-German is the official language of Zurich most of the columns
-are in German but the translations to English aren't too tricky. You
-might need to use a translator.
+German is the official language of Zurich. Most of the columns
+are in German, but the translations to English aren't too tricky. Use
+a translator if you find something you do not understand.
 
 * ALTER -> Age
-* GESCHLECHT -> Gender (w = weiblich, female; m = mannlich, male)
+* GESCHLECHT -> Gender (w = weiblich, female; m = männlich, male)
 * STADTKREIS -> City Quarter or District
 * RASSE1 -> Dog's Primary Breed
 * RASSE2 -> Dog's Secondary Breed
@@ -28,5 +28,20 @@ might need to use a translator.
 
 ## Data
 
-[Dog data from Zurich]({{% relref "swiss-dog-data" %}}).
+[Dog data from Zurich]({{% relref "swiss-dog-data" %}}). There should
+be a notebook available to load the data and do some initial
+cleaning. 
 
+## Questions
+
+We will use 2015 to begin. Later we can combine all of the information
+into a single data frame to see if more can be learned by combining
+data from multiple years.
+
+* How many dogs are there? 
+* How many male vs female dogs?
+* Analyze the ages of the owners?
+* The birth year of the dog has some obvious errors. Find them and fix
+  them. See the fixing code included in the notebook.
+* Does `id` uniquely identify the dog registration information?
+  Explain your reasoning and give supporting evidence.
