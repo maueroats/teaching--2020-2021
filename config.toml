@@ -65,4 +65,3 @@ weight = 100
 # Added for 0.62 in order to make images show.
 [markup.goldmark.renderer]
 unsafe = true
-  
