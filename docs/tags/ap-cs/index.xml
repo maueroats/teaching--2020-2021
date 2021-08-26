@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ap-cs on WY Computer Science</title>
-    <link>https://wy-cs.info/tags/ap-cs/</link>
+    <link>https://maueroats.github.io/teaching--2020-2021/tags/ap-cs/</link>
     <description>Recent content in ap-cs on WY Computer Science</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Sep 2019 15:59:25 -0500</lastBuildDate><atom:link href="https://wy-cs.info/tags/ap-cs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Sep 2019 15:59:25 -0500</lastBuildDate><atom:link href="https://maueroats.github.io/teaching--2020-2021/tags/ap-cs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Haskell CW II.2</title>
-      <link>https://wy-cs.info/ap-cs/haskell/ch02/cw-a2/</link>
+      <link>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/ch02/cw-a2/</link>
       <pubDate>Sat, 09 Sep 2017 15:57:47 -0500</pubDate>
       
-      <guid>https://wy-cs.info/ap-cs/haskell/ch02/cw-a2/</guid>
+      <guid>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/ch02/cw-a2/</guid>
       <description>&lt;script&gt;
 MathJax = {
  tex: {
@@ -46,10 +46,10 @@ The sum of the squares of the first ten natural numbers is,&lt;/p&gt;
     
     <item>
       <title>Haskell HW 2</title>
-      <link>https://wy-cs.info/ap-cs/haskell/ch02/hw-a2/</link>
+      <link>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/ch02/hw-a2/</link>
       <pubDate>Fri, 13 Sep 2019 15:59:25 -0500</pubDate>
       
-      <guid>https://wy-cs.info/ap-cs/haskell/ch02/hw-a2/</guid>
+      <guid>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/ch02/hw-a2/</guid>
       <description>All of the points you should work with have Int coordinates. So far you only know Int, String, and lists of each of those.
   Write a function onLine that takes in a slope m, a y-intercept b, and a point (x0,y0) and gives back True if the point is on the line y=m*x+b and false otherwise.
   Write a function moreThan100 that takes in a list of numbers and puts out a list of numbers.</description>

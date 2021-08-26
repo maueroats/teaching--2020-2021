@@ -2,27 +2,27 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>daily-notes on WY Computer Science</title>
-    <link>https://wy-cs.info/tags/daily-notes/</link>
+    <link>https://maueroats.github.io/teaching--2020-2021/tags/daily-notes/</link>
     <description>Recent content in daily-notes on WY Computer Science</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Sep 2017 10:47:02 -0500</lastBuildDate><atom:link href="https://wy-cs.info/tags/daily-notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 11 Sep 2017 10:47:02 -0500</lastBuildDate><atom:link href="https://maueroats.github.io/teaching--2020-2021/tags/daily-notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Haskell Daily Notes</title>
-      <link>https://wy-cs.info/ap-cs/haskell/daily/</link>
+      <link>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/daily/</link>
       <pubDate>Mon, 11 Sep 2017 10:03:46 -0500</pubDate>
       
-      <guid>https://wy-cs.info/ap-cs/haskell/daily/</guid>
+      <guid>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/daily/</guid>
       <description>2018-10-16
 notAlone. notAlone :: [Int] -&amp;gt; Int -&amp;gt; [Int] notAlone nums x = undefined Team Tic Tac Toe Write teamWins to determine if a given team wins a given three in a row. teamWins :: String -&amp;gt; [Char] -&amp;gt; Bool teamWins row team = undefined Write allThrees, which gets all of the three in a row segments from a board. allThrees :: [String] -&amp;gt; [String] allThrees board = undefined Write allTeams, which produces a list of all possible teams.</description>
     </item>
     
     <item>
       <title>2017-09-11</title>
-      <link>https://wy-cs.info/ap-cs/haskell/daily/2017-09-11/</link>
+      <link>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/daily/2017-09-11/</link>
       <pubDate>Mon, 11 Sep 2017 10:47:02 -0500</pubDate>
       
-      <guid>https://wy-cs.info/ap-cs/haskell/daily/2017-09-11/</guid>
+      <guid>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/daily/2017-09-11/</guid>
       <description>removeVowels word = [ letter | letter &amp;lt;- word, not (letter elem &amp;ldquo;aeiouAEIOU&amp;rdquo; )]
 wordLenPairs wordlist = [ (word, length word) | word &amp;lt;- wordlist ]</description>
     </item>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hw on WY Computer Science</title>
-    <link>https://wy-cs.info/tags/hw/</link>
+    <link>https://maueroats.github.io/teaching--2020-2021/tags/hw/</link>
     <description>Recent content in hw on WY Computer Science</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Sep 2019 15:59:25 -0500</lastBuildDate><atom:link href="https://wy-cs.info/tags/hw/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 13 Sep 2019 15:59:25 -0500</lastBuildDate><atom:link href="https://maueroats.github.io/teaching--2020-2021/tags/hw/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Haskell HW 2</title>
-      <link>https://wy-cs.info/ap-cs/haskell/ch02/hw-a2/</link>
+      <link>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/ch02/hw-a2/</link>
       <pubDate>Fri, 13 Sep 2019 15:59:25 -0500</pubDate>
       
-      <guid>https://wy-cs.info/ap-cs/haskell/ch02/hw-a2/</guid>
+      <guid>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/ch02/hw-a2/</guid>
       <description>All of the points you should work with have Int coordinates. So far you only know Int, String, and lists of each of those.
   Write a function onLine that takes in a slope m, a y-intercept b, and a point (x0,y0) and gives back True if the point is on the line y=m*x+b and false otherwise.
   Write a function moreThan100 that takes in a list of numbers and puts out a list of numbers.</description>
@@ -20,10 +20,10 @@
     
     <item>
       <title>Chapter 3 Problem Set</title>
-      <link>https://wy-cs.info/ap-cs/haskell/ch03/ch03-hw1/</link>
+      <link>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/ch03/ch03-hw1/</link>
       <pubDate>Thu, 14 Sep 2017 10:00:00 -0500</pubDate>
       
-      <guid>https://wy-cs.info/ap-cs/haskell/ch03/ch03-hw1/</guid>
+      <guid>https://maueroats.github.io/teaching--2020-2021/ap-cs/haskell/ch03/ch03-hw1/</guid>
       <description>&lt;p&gt;The essentials of the Types and Typeclasses chapter are: writing type
 signatures for functions, reading string inputs with the &lt;code&gt;Read&lt;/code&gt; class,
 and dealing with Integral to Fractional conversions when they are needed.&lt;/p&gt;</description>
