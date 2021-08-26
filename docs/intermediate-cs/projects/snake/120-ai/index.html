@@ -2058,7 +2058,7 @@
 <p>The tick handler will give each computer controlled snake a chance to
 choose a new direction just before the game state updates. The key
 ai function will have a signature like this:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ai-function: snake world -&gt; posn(direction)
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ai-function: snake world -&gt; posn(direction)
 </code></pre></div><p>In fact, most of the code will be building up or reducing the list of
 possible choices, so expect most AI-related functions to take in a
 list of directions in addition to the snake and the world, and put out
@@ -2080,23 +2080,23 @@ strategy&rdquo;. Expect these computer snakes to drive themselves in circles
 that cause them to die.</p>
 <h3 id="level-0">Level 0</h3>
 <p>A snake can only move one of four directions.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">DIRECTIONS</span> 
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">DIRECTIONS</span> 
   <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">-1</span><span style="color:#111">)</span>   <span style="color:#111">(</span><span style="color:#111">make-posn</span>  <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span>
-        <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">0</span><span style="color:#111">)</span>   <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">-1</span> <span style="color:#ae81ff">0</span><span style="color:#111">)))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>We will need a random choice function.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; random-choice: list-of-things -&gt; thing</span>
+        <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span>  <span style="color:#ae81ff">0</span><span style="color:#111">)</span>   <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">-1</span> <span style="color:#ae81ff">0</span><span style="color:#111">)))</span>
+</code></pre></div><p>We will need a random choice function.</p>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; random-choice: list-of-things -&gt; thing</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">random-choice</span> <span style="color:#111">things</span><span style="color:#111">)</span>
-   <span style="color:#111">(</span><span style="color:#111">list-ref</span> <span style="color:#111">things</span> <span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#111">(</span><span style="color:#111">length</span> <span style="color:#111">things</span><span style="color:#111">))))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>One problem I had was that I needed to be careful to make sure there
+   <span style="color:#111">(</span><span style="color:#111">list-ref</span> <span style="color:#111">things</span> <span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#111">(</span><span style="color:#111">length</span> <span style="color:#111">things</span><span style="color:#111">))))</span>
+</code></pre></div><p>One problem I had was that I needed to be careful to make sure there
 was not an error when there were no choices (snake has to crash). My
 level 0 AI keeps going straight if there are no possibilities (for not crashing).</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">level-0</span> <span style="color:#111">snake</span> <span style="color:#111">world</span> <span style="color:#111">possible</span><span style="color:#111">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">level-0</span> <span style="color:#111">snake</span> <span style="color:#111">world</span> <span style="color:#111">possible</span><span style="color:#111">)</span>
    <span style="color:#111">(</span><span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#111">&gt;</span> <span style="color:#111">(</span><span style="color:#111">length</span> <span style="color:#111">possible</span><span style="color:#111">)</span> <span style="color:#ae81ff">0</span><span style="color:#111">)</span>
        <span style="color:#111">(</span><span style="color:#111">random-choice</span> <span style="color:#111">possible</span><span style="color:#111">)</span>
        <span style="color:#111">(</span><span style="color:#111">sn-dir</span> <span style="color:#111">snake</span><span style="color:#111">)))</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">ai-level-0</span> <span style="color:#111">snake-world</span><span style="color:#111">)</span>
-   <span style="color:#111">(</span><span style="color:#111">level-0</span> <span style="color:#111">snake</span> <span style="color:#111">world</span> <span style="color:#111">DIRECTIONS</span><span style="color:#111">))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h3 id="level-1">Level 1</h3>
+   <span style="color:#111">(</span><span style="color:#111">level-0</span> <span style="color:#111">snake</span> <span style="color:#111">world</span> <span style="color:#111">DIRECTIONS</span><span style="color:#111">))</span>
+</code></pre></div><h3 id="level-1">Level 1</h3>
 <p>The level 1 function just needs to avoid going back on itself. That
 means do not pick the move that gives you the first of the
 body. There are lots of ways to do this, so if you like the sound of
@@ -2115,7 +2115,7 @@ eliminating the unsafe ones.</li>
 </ul>
 <p>Notice how I build on my <code>level-0</code> function in <code>level-1</code>? That is a
 good pattern to use!</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(define (level-1 snake world possible)
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(define (level-1 snake world possible)
   (level-0 snake world
            (only-safe snake world possible)))
 </code></pre></div>

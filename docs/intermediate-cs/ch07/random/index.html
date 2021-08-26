@@ -2054,7 +2054,7 @@
     <ul>
 <li>Random numbers: <code>(random 3)</code> gives a random number 0, 1, or 2. Notice that there are three possible answers, but they start counting at 0. Run the code below and you should get different answers each time.</li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">10</span><span style="color:#111">)</span> 
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">10</span><span style="color:#111">)</span> 
 <span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">10</span><span style="color:#111">)</span> 
 <span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">10</span><span style="color:#111">)</span> 
 </code></pre></div><h2 id="random-ranges">Random ranges</h2>
@@ -2068,14 +2068,14 @@
 <h2 id="using-randomness">Using randomness</h2>
 <p>It is hard to test random functions, so write non-random versions first, and use the randomness as an input. Test the non-random functions!</p>
 <p>Example: Make an ellipse of a random height 150-250 pixels tall, and twice as wide.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">; make-ellipse-nr: string(color) number(height) -&gt; image</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">; make-ellipse-nr: string(color) number(height) -&gt; image</span>
 <span style="color:#75715e">; purpose: make an ellipse height units tall and 2*height units wide in the given color</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">make-ellipse-nr</span> <span style="color:#111">color</span> <span style="color:#111">height</span><span style="color:#111">)</span>
     <span style="color:#111">(</span><span style="color:#111">ellipse</span> <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">2</span> <span style="color:#111">height</span><span style="color:#111">)</span> <span style="color:#111">height</span> <span style="color:#d88200">&#34;solid&#34;</span> <span style="color:#111">color</span><span style="color:#111">))</span>
 <span style="color:#75715e">; see below for check-expect</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">make-ellipse</span> <span style="color:#111">color</span><span style="color:#111">)</span>
-    <span style="color:#111">(</span><span style="color:#111">make-ellipse-nr</span> <span style="color:#111">color</span> <span style="color:#111">(</span><span style="color:#111">+</span> <span style="color:#ae81ff">150</span> <span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">101</span><span style="color:#111">))))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><figure><img src="nonrandom-check.png"/><figcaption>
+    <span style="color:#111">(</span><span style="color:#111">make-ellipse-nr</span> <span style="color:#111">color</span> <span style="color:#111">(</span><span style="color:#111">+</span> <span style="color:#ae81ff">150</span> <span style="color:#111">(</span><span style="color:#111">random</span> <span style="color:#ae81ff">101</span><span style="color:#111">))))</span>
+</code></pre></div><figure><img src="nonrandom-check.png"/><figcaption>
             <h4>Test your nonrandom function well!</h4>
         </figcaption>
 </figure>

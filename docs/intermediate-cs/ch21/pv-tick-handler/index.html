@@ -2051,20 +2051,20 @@ its input, multiplies by three, and adds one. The <code>g</code> function takes
 its input, squares it, and subtracts 9. Make a new <code>h</code> function that
 takes it input, multiplies by 3, adds one, then squares the answer and
 subtracts 9.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">f</span> <span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">+</span> <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">3</span> <span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#ae81ff">1</span><span style="color:#111">))</span>
-<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">g</span> <span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">(</span><span style="color:#111">sqr</span> <span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#ae81ff">9</span><span style="color:#111">))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">f</span> <span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">+</span> <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">3</span> <span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#ae81ff">1</span><span style="color:#111">))</span>
+<span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">g</span> <span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">(</span><span style="color:#111">sqr</span> <span style="color:#111">x</span><span style="color:#111">)</span> <span style="color:#ae81ff">9</span><span style="color:#111">))</span>
+</code></pre></div><ul>
 <li><a href="math-soln-1">Solution 1 - typical but long</a>.</li>
 <li><a href="math-soln-2">Solution 2 - much better</a>.</li>
 </ul>
 <h2 id="big-bang">Big-bang</h2>
 <p>You can combine two tick-handler actions into one by using &ldquo;function composition&rdquo;:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">; first-action: model -&gt; model</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">; first-action: model -&gt; model</span>
 <span style="color:#75715e">; second-action: model -&gt; model</span>
 <span style="color:#75715e">; tick-handler: model -&gt; model</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">tick-handler</span> <span style="color:#111">model</span><span style="color:#111">)</span>
-   <span style="color:#111">(</span><span style="color:#111">second-action</span> <span style="color:#111">(</span><span style="color:#111">first-action</span> <span style="color:#111">model</span><span style="color:#111">)))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>Try combining the ball bouncing and ball moving actions in this way.</p>
+   <span style="color:#111">(</span><span style="color:#111">second-action</span> <span style="color:#111">(</span><span style="color:#111">first-action</span> <span style="color:#111">model</span><span style="color:#111">)))</span>
+</code></pre></div><p>Try combining the ball bouncing and ball moving actions in this way.</p>
 
 
     

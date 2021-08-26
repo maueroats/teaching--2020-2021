@@ -2048,12 +2048,12 @@ its printout:</p>
 <h2 id="simple-conversion">Simple Conversion</h2>
 <p>If you want to keep it simple, just use the row number in the table to
 keep track of how many months into the time series you are.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#111">seat</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">Seatbelts</span> <span style="color:#f92672">%&gt;%</span> 
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#111">seat</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">Seatbelts</span> <span style="color:#f92672">%&gt;%</span> 
   <span style="color:#75af00">as_tibble</span><span style="color:#111">(</span><span style="color:#111">rownames</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;monthnum&#34;</span><span style="color:#111">)</span> 
 </code></pre></div><h2 id="medium-conversion">Medium Conversion</h2>
 <p>You could get actual dates by using the <code>lubridate</code> library (Chapter
 16 in R4DS).</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75af00">library</span><span style="color:#111">(</span><span style="color:#111">lubridate</span><span style="color:#111">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#75af00">library</span><span style="color:#111">(</span><span style="color:#111">lubridate</span><span style="color:#111">)</span>
 <span style="color:#111">time0</span> <span style="color:#f92672">&lt;-</span> <span style="color:#75af00">make_datetime</span><span style="color:#111">(</span><span style="color:#ae81ff">1969</span><span style="color:#111">,</span><span style="color:#ae81ff">01</span><span style="color:#111">)</span> <span style="color:#f92672">-</span> <span style="color:#75af00">months</span><span style="color:#111">(</span><span style="color:#ae81ff">1</span><span style="color:#111">)</span>
 <span style="color:#111">seat</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">Seatbelts</span> <span style="color:#f92672">%&gt;%</span> 
   <span style="color:#75af00">as_tibble</span><span style="color:#111">(</span><span style="color:#111">rownames</span> <span style="color:#f92672">=</span> <span style="color:#d88200">&#34;monthnum&#34;</span><span style="color:#111">)</span> <span style="color:#f92672">%&gt;%</span>
@@ -2061,7 +2061,7 @@ keep track of how many months into the time series you are.</p>
 </code></pre></div><h2 id="advanced-conversion">Advanced Conversion</h2>
 <p>You could install the <code>timetk</code> package (&ldquo;time series toolkit&rdquo;). This
 package has functions to convert to and from a time series type.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#111">seat</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">timetk</span><span style="color:#f92672">::</span><span style="color:#75af00">ts_tbl</span><span style="color:#111">(</span><span style="color:#111">Seatbelts</span><span style="color:#111">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-R" data-lang="R"><span style="color:#111">seat</span> <span style="color:#f92672">&lt;-</span> <span style="color:#111">timetk</span><span style="color:#f92672">::</span><span style="color:#75af00">ts_tbl</span><span style="color:#111">(</span><span style="color:#111">Seatbelts</span><span style="color:#111">)</span>
 </code></pre></div>
 
     

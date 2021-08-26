@@ -2063,10 +2063,10 @@ For example, if you have a Chromebook for your home computer.</p>
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;https://www.what-dog.net/Images/faces2/main004.jpg&#34;</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">bitmap/url</span> <span style="color:#d88200">&#34;https://www.what-dog.net/Images/faces2/main004.jpg&#34;</span><span style="color:#111">)</span>
+</code></pre></div><ul>
 <li>(<strong>Chapter 6</strong>) Inside <code>big-bang</code> you need to use the phrase <code>to-draw</code> instead of <code>on-draw</code> that we use in DrRacket.
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">draw-handler</span> <span style="color:#111">model</span><span style="color:#111">)</span> 
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">draw-handler</span> <span style="color:#111">model</span><span style="color:#111">)</span> 
     <span style="color:#111">(</span><span style="color:#111">overlay</span> <span style="color:#111">model</span> <span style="color:#111">(</span><span style="color:#111">empty-scene</span> <span style="color:#ae81ff">300</span> <span style="color:#ae81ff">200</span><span style="color:#111">)))</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">tick-handler</span> <span style="color:#111">model</span><span style="color:#111">)</span> 
     <span style="color:#111">(</span><span style="color:#111">scale</span> <span style="color:#ae81ff">1.01</span> <span style="color:#111">model</span><span style="color:#111">))</span>

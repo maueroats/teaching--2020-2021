@@ -2013,23 +2013,7 @@
     <option value="/intermediate-cs/ch22b/" >
   - 
    22b. Lists</option> 
-      <option value="/intermediate-cs/ch22b/list-intro/" >-- 22. List Intro</option>
-      <option value="/intermediate-cs/ch22b/list-exercises-1/" >-- 22b. List Exercises 1</option>
-      <option value="/intermediate-cs/ch22b/list-exercises-1.5/" >-- 22b. List Exercises 1.5</option>
-      <option value="/intermediate-cs/ch22b/list-exercises-2/" >-- 22b. List Exercises 2</option>
-      <option value="/intermediate-cs/ch22b/bubble-wrap/" >-- 22b. Bubble Wrap</option>
-      <option value="/intermediate-cs/ch22b/bubble-review/" >-- Bubble Review</option>
-      <option value="/intermediate-cs/ch22b/list-exercises-3/" >-- 22b. List Exercises 3</option>
-      <option value="/intermediate-cs/ch22b/list-exercises-4-q/" >-- 22b. List Exercises 4</option>
-      <option value="/intermediate-cs/ch22b/list-resources/" >-- 22. Additional Resources</option>
-    <option value="/intermediate-cs/ch22b/parcels/"  selected >
-  -- 
-   Parcels</option> 
-      <option value="/intermediate-cs/ch22b/parcels/grid/" >--- Grid</option>
-      <option value="/intermediate-cs/ch22b/parcels/distances/" >--- Distances</option>
-      <option value="/intermediate-cs/ch22b/parcels/parcels-colors/" >--- Coloring</option>
-      <option value="/intermediate-cs/ch22b/parcels/parcels-animation/" >--- Animation</option>
-  
+      <option value="/ml/mtfc/data/" >-- Flood Data</option>
   
     <option value="/intermediate-cs/resources/" >
   - 
@@ -2079,10 +2063,10 @@ and (0,8) would produce a distance map like this:</p>
 <p>City delivery distance is best measured by just adding the change in x
 and y between the two locations (because city streets form a grid;
 usually the truck cannot drive &ldquo;diagonally&rdquo; through blocks of houses).</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">city-distance</span> <span style="color:#111">a</span> <span style="color:#111">b</span><span style="color:#111">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">city-distance</span> <span style="color:#111">a</span> <span style="color:#111">b</span><span style="color:#111">)</span>
   <span style="color:#111">(</span><span style="color:#111">+</span> <span style="color:#111">(</span><span style="color:#111">abs</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">(</span><span style="color:#111">posn-x</span> <span style="color:#111">a</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">posn-x</span> <span style="color:#111">b</span><span style="color:#111">)))</span>
-     <span style="color:#111">(</span><span style="color:#111">abs</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">(</span><span style="color:#111">posn-y</span> <span style="color:#111">a</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">posn-y</span> <span style="color:#111">b</span><span style="color:#111">)))))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h2 id="more-parts-of-the-project">More Parts of the Project</h2>
+     <span style="color:#111">(</span><span style="color:#111">abs</span> <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#111">(</span><span style="color:#111">posn-y</span> <span style="color:#111">a</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">posn-y</span> <span style="color:#111">b</span><span style="color:#111">)))))</span>
+</code></pre></div><h2 id="more-parts-of-the-project">More Parts of the Project</h2>
 <ul class="children children-li">
 <p><span><li>
 <a href="/intermediate-cs/ch22b/parcels/grid/" >Grid</a></li></p>

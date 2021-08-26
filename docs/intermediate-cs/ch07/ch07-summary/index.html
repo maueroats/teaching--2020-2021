@@ -2056,48 +2056,48 @@
 <ul>
 <li>Basic arithmetic</li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">+</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">3</span><span style="color:#111">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">+</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">3</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#111">/</span> <span style="color:#ae81ff">13</span> <span style="color:#ae81ff">7</span><span style="color:#111">)</span> <span style="color:#75715e">; thirteen divided by seven</span>
 <span style="color:#111">(</span><span style="color:#111">*</span> <span style="color:#ae81ff">11</span> <span style="color:#ae81ff">2</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#75715e">; nine minus one</span>
 <span style="color:#111">(</span><span style="color:#111">-</span> <span style="color:#ae81ff">8</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#111">quotient</span> <span style="color:#ae81ff">21912</span> <span style="color:#ae81ff">7</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#111">remainder</span> <span style="color:#ae81ff">21912</span> <span style="color:#ae81ff">7</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><ul>
+<span style="color:#111">(</span><span style="color:#111">remainder</span> <span style="color:#ae81ff">21912</span> <span style="color:#ae81ff">7</span><span style="color:#111">)</span>
+</code></pre></div><ul>
 <li>Maximum, minimum, absolute value</li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">max</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">-4</span><span style="color:#111">)</span> <span style="color:#75715e">; ==&gt; 0</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">max</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">-4</span><span style="color:#111">)</span> <span style="color:#75715e">; ==&gt; 0</span>
 <span style="color:#111">(</span><span style="color:#111">min</span> <span style="color:#ae81ff">255</span> <span style="color:#ae81ff">300</span><span style="color:#111">)</span> <span style="color:#75715e">; ==&gt; 255</span>
 <span style="color:#111">(</span><span style="color:#111">abs</span> <span style="color:#ae81ff">-10</span><span style="color:#111">)</span> <span style="color:#75715e">; ==&gt; 10</span>
 </code></pre></div><ul>
 <li>Exponents, square root, squaring:</li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">expt</span> <span style="color:#ae81ff">1.01</span> <span style="color:#ae81ff">95</span><span style="color:#111">)</span> <span style="color:#75715e">; 1.01 to the 95 power is about 2.57</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">expt</span> <span style="color:#ae81ff">1.01</span> <span style="color:#ae81ff">95</span><span style="color:#111">)</span> <span style="color:#75715e">; 1.01 to the 95 power is about 2.57</span>
 <span style="color:#111">(</span><span style="color:#111">sqrt</span> <span style="color:#ae81ff">9</span><span style="color:#111">)</span> <span style="color:#75715e">; square root of 9 is three</span>
 <span style="color:#111">(</span><span style="color:#111">sqr</span> <span style="color:#ae81ff">1241</span><span style="color:#111">)</span> <span style="color:#75715e">; when you square 1241 you get 1540081</span>
 </code></pre></div><ul>
 <li>Inexact answers, checking with tolerance</li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">&gt;</span> <span style="color:#111">(</span><span style="color:#111">sqrt</span> <span style="color:#ae81ff">5</span><span style="color:#111">)</span> <span style="color:#75715e">; about 2.236</span>
-<span style="color:#ae81ff">#i2.23606797749979</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>The <code>#i</code> at the start of <code>#i2.236...</code> means that the number is an &ldquo;inexact&rdquo; decimal.
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">&gt;</span> <span style="color:#111">(</span><span style="color:#111">sqrt</span> <span style="color:#ae81ff">5</span><span style="color:#111">)</span> <span style="color:#75715e">; about 2.236</span>
+<span style="color:#ae81ff">#i2.23606797749979</span>
+</code></pre></div><p>The <code>#i</code> at the start of <code>#i2.236...</code> means that the number is an &ldquo;inexact&rdquo; decimal.
 You should never use check-expect with inexact numbers, because the inexact results can be different on different computers! Instead, use <code>check-within</code>.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">check-within</span> <span style="color:#111">(</span><span style="color:#111">sqrt</span> <span style="color:#ae81ff">5</span><span style="color:#111">)</span> <span style="color:#ae81ff">2.236</span> <span style="color:#ae81ff">0.001</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">check-within</span> <span style="color:#111">(</span><span style="color:#111">sqrt</span> <span style="color:#ae81ff">5</span><span style="color:#111">)</span> <span style="color:#ae81ff">2.236</span> <span style="color:#ae81ff">0.001</span><span style="color:#111">)</span>
+</code></pre></div><ul>
 <li>Special numbers: both pi is built in. Your tests should still pass if you use either the buit in value of <code>pi</code> or <code>3.1415</code>.</li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">&gt;</span> <span style="color:#111">pi</span>
-<span style="color:#ae81ff">#i3.141592653589793</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">&gt;</span> <span style="color:#111">pi</span>
+<span style="color:#ae81ff">#i3.141592653589793</span>
+</code></pre></div><ul>
 <li>Getting rid of fractions. The best generic method to use is <code>real-&gt;int</code>. Otherwise there are specific functions that will round traditionally, round up (ceiling), and round down (floor).</li>
 </ul>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">real-&gt;int</span> <span style="color:#ae81ff">0.5</span><span style="color:#111">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#111">real-&gt;int</span> <span style="color:#ae81ff">0.5</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#111">real-&gt;int</span> <span style="color:#ae81ff">1.5</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#111">real-&gt;int</span> <span style="color:#ae81ff">2.5</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#111">ceiling</span> <span style="color:#ae81ff">1.2</span><span style="color:#111">)</span>
 <span style="color:#111">(</span><span style="color:#111">floor</span> <span style="color:#ae81ff">1.7</span><span style="color:#111">)</span>
-<span style="color:#111">(</span><span style="color:#111">round</span> <span style="color:#ae81ff">1.6</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h2 id="more-important-ideas">More Important Ideas</h2>
+<span style="color:#111">(</span><span style="color:#111">round</span> <span style="color:#ae81ff">1.6</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="more-important-ideas">More Important Ideas</h2>
 <ul>
 <li>Inexact numbers and <code>check-within</code></li>
 <li><code>build3-image</code> or <code>build-image</code></li>

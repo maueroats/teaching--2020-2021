@@ -2068,16 +2068,16 @@ in another file.</p>
 <p>In order to use the functions in another file, you need to <code>require</code> that file.
 You already know <code>(require picturing-programs)</code> but when we use require
 we need to give the whole filename.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">require</span> <span style="color:#d88200">&#34;posn-util.rkt&#34;</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h3 id="provide">Provide</h3>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">require</span> <span style="color:#d88200">&#34;posn-util.rkt&#34;</span><span style="color:#111">)</span>
+</code></pre></div><h3 id="provide">Provide</h3>
 <p>The <code>provide</code> command makes functions available for other files to use.
 One way to use it is to list all of the functions you want to allow
 other files to use:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">provide</span> <span style="color:#111">posn-add</span> <span style="color:#111">posn-sub</span> <span style="color:#111">posn-scale</span> <span style="color:#111">posn-distance</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>Sometimes you just want to make every function in the file available.
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">provide</span> <span style="color:#111">posn-add</span> <span style="color:#111">posn-sub</span> <span style="color:#111">posn-scale</span> <span style="color:#111">posn-distance</span><span style="color:#111">)</span>
+</code></pre></div><p>Sometimes you just want to make every function in the file available.
 There is a shortcut to do that:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">provide</span> <span style="color:#111">(</span><span style="color:#00a8c8">all-defined-out</span><span style="color:#111">))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">provide</span> <span style="color:#111">(</span><span style="color:#00a8c8">all-defined-out</span><span style="color:#111">))</span>
+</code></pre></div>
 
     
     

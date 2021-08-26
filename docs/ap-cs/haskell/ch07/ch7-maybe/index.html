@@ -2099,7 +2099,7 @@ from a function.</p>
 </ul>
 <h3 id="testing-code">Testing code</h3>
 <p>Signatures and tests.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">top3list</span> <span style="color:#111">xs</span> <span style="color:#f92672">=</span> <span style="color:#111">xs</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">top3list</span> <span style="color:#111">xs</span> <span style="color:#f92672">=</span> <span style="color:#111">xs</span>
 <span style="color:#75715e">-- gives a list of the greatest 10 integers</span>
 <span style="color:#75715e">-- in the input, in decreasing order</span>
 <span style="color:#75af00">numlist</span> <span style="color:#f92672">=</span> <span style="color:#111">[</span><span style="color:#ae81ff">99</span><span style="color:#111">,</span><span style="color:#ae81ff">30</span><span style="color:#111">,</span><span style="color:#ae81ff">40</span><span style="color:#111">,</span><span style="color:#ae81ff">100</span><span style="color:#111">,</span><span style="color:#ae81ff">80</span><span style="color:#111">,</span><span style="color:#ae81ff">5</span><span style="color:#111">]</span>
@@ -2123,7 +2123,7 @@ number when the number is at most 80, otherwise <code>Nothing</code>.</li>
 (<code>wc2</code> below).</p>
 <h2 id="testing-code-1">Testing code</h2>
 <p>Signatures and tests.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">wordCounter</span> <span style="color:#f92672">::</span> <span style="color:#111">[(</span><span style="color:#00a8c8">String</span><span style="color:#111">,</span><span style="color:#00a8c8">Int</span><span style="color:#111">)]</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#111">[(</span><span style="color:#00a8c8">String</span><span style="color:#111">,</span><span style="color:#00a8c8">Int</span><span style="color:#111">)]</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">wordCounter</span> <span style="color:#f92672">::</span> <span style="color:#111">[(</span><span style="color:#00a8c8">String</span><span style="color:#111">,</span><span style="color:#00a8c8">Int</span><span style="color:#111">)]</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">String</span> <span style="color:#f92672">-&gt;</span> <span style="color:#111">[(</span><span style="color:#00a8c8">String</span><span style="color:#111">,</span><span style="color:#00a8c8">Int</span><span style="color:#111">)]</span>
 <span style="color:#75af00">wordCounter</span> <span style="color:#00a8c8">_</span> <span style="color:#00a8c8">_</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">[]</span>
 <span style="color:#75715e">-- if word is not seen, add (word,1) to list</span>
 <span style="color:#75715e">-- if word is already seen, add 1 to its count</span>

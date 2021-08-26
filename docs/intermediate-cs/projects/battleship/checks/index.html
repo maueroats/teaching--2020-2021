@@ -2061,20 +2061,20 @@ are doing top-level work, you should be analyzing and writing your own
 functions (including checks). Check in here when you think your
 function works.</p>
 <h2 id="basic-definitions">Basic definitions</h2>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define-struct</span> <span style="color:#111">ship</span> <span style="color:#111">(</span><span style="color:#111">name</span> <span style="color:#111">posns</span><span style="color:#111">))</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define-struct</span> <span style="color:#111">ship</span> <span style="color:#111">(</span><span style="color:#111">name</span> <span style="color:#111">posns</span><span style="color:#111">))</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">ex-ship-1</span>
   <span style="color:#111">(</span><span style="color:#111">make-ship</span> <span style="color:#d88200">&#34;Betty&#34;</span>
              <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span>
                    <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">2</span><span style="color:#111">))))</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">ex-ship-2</span>
   <span style="color:#111">(</span><span style="color:#111">make-ship</span> <span style="color:#d88200">&#34;Charlie&#34;</span>
-             <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span><span style="color:#111">))))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h2 id="shot-hit-any-ship">shot-hit-any-ship?</h2>
+             <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span><span style="color:#111">))))</span>
+</code></pre></div><h2 id="shot-hit-any-ship">shot-hit-any-ship?</h2>
 <p>A shot is colored a &ldquo;hit&rdquo; if it hits any ship on the board. The only
 way to know a shot is a &ldquo;miss&rdquo; is by checking that it misses every
 ship. Any ship you do not check could be placed at the spot where the
 shot hits.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; one ship, one shot, shot hits ship</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; one ship, one shot, shot hits ship</span>
 <span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">shot-hit-any-ship?</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span>
                                   <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">ex-ship-1</span><span style="color:#111">))</span>
               <span style="color:#111">true</span><span style="color:#111">)</span>
@@ -2091,8 +2091,8 @@ shot hits.</p>
 <span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">shot-hit-any-ship?</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">9</span> <span style="color:#ae81ff">8</span><span style="color:#111">)</span>
                                   <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">ex-ship-1</span>
                                         <span style="color:#111">ex-ship-2</span><span style="color:#111">))</span>
-              <span style="color:#00a8c8">false</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h2 id="ship-sunk">ship-sunk?</h2>
+              <span style="color:#00a8c8">false</span><span style="color:#111">)</span>
+</code></pre></div><h2 id="ship-sunk">ship-sunk?</h2>
 
 <div class="notices warning" ><p>A very common mistake is to declare a ship sunk once
 it is hit by a single shot.</p>
@@ -2100,12 +2100,12 @@ it is hit by a single shot.</p>
 
 <p>This discussion will use a helper function. It is not absolutely
 necessary to write your functions this way.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ship-sunk? : ship list-of-posn(shots) -&gt; boolean
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ship-sunk? : ship list-of-posn(shots) -&gt; boolean
 ship-sunk-helper? : list-of-posn(ship-posns)
                     list-of-posn(shots)
                     -&gt; boolean
 </code></pre></div><p>Checks for the helper:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; one shot, and it sinks the ship</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; one shot, and it sinks the ship</span>
 <span style="color:#111">(</span><span style="color:#111">check-expect</span> <span style="color:#111">(</span><span style="color:#111">ship-sunk-helper?</span>
                <span style="color:#111">(</span><span style="color:#111">ship-posns</span> <span style="color:#111">ex-ship-2</span><span style="color:#111">)</span>
                <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">3</span> <span style="color:#ae81ff">4</span><span style="color:#111">)))</span>
@@ -2140,8 +2140,8 @@ ship-sunk-helper? : list-of-posn(ship-posns)
                <span style="color:#111">(</span><span style="color:#111">ship-posns</span> <span style="color:#111">ex-ship-1</span><span style="color:#111">)</span>
                <span style="color:#111">(</span><span style="color:#111">list</span>  <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span>
                       <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">2</span><span style="color:#111">)))</span>
-              <span style="color:#111">true</span><span style="color:#111">)</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>This function can be written by going through either the list of posns
+              <span style="color:#111">true</span><span style="color:#111">)</span>
+</code></pre></div><p>This function can be written by going through either the list of posns
 in the ship or the shots. I prefer to start with the question &ldquo;is the
 first posn in the ship hit by a shot?&rdquo;</p>
 

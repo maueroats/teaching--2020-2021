@@ -2080,27 +2080,27 @@
 <li>Haskell: <code>data</code></li>
 </ul>
 <p>A type alias is a word that is a shorthand for another type.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">type Posn = (Int,Int) 
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">type Posn = (Int,Int) 
 </code></pre></div><p>The <code>data</code> keyword creates a new type of structure.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">data Model = Model { model_time :: Int, model_place :: Posn }
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">data Model = Model { model_time :: Int, model_place :: Posn }
 </code></pre></div><p>With these names, the way Haskell works is almost identical to
 Racket code which creates <code>model-time</code> and <code>model-place</code> to get the
 components of a model struct.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(define-struct model (time place))
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">(define-struct model (time place))
 </code></pre></div><p><strong>Important</strong>: you want to add <code>deriving (Show, Eq)</code> in most cases, so you can
 automatically print out your structure and compare two of the with
 <code>==</code>. This is like <code>#:transparent</code> in <code>#lang racket</code>, if you ever
 encountered that.</p>
 <h2 id="example-in-action">Example in action</h2>
 <p>Let&rsquo;s make a structure to hold time and location information:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">data Game = Game { time :: Int, place :: Posn }
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">data Game = Game { time :: Int, place :: Posn }
     deriving (Show, Eq)
 </code></pre></div><p>We will make a function to start a new game where the tine is always
 zero but the place can be chosen.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">new_game :: Posn -&gt; Game
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">new_game :: Posn -&gt; Game
 new_game p = Game { time = 0, place = p }
 </code></pre></div><p>Go ahead, try typing a few things to see how it works (interactively):</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">a = new_game (5,12)
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">a = new_game (5,12)
 time a
 place a
 </code></pre></div><p>Now we need to write a &ldquo;tick handler&rdquo; that will update the time by
@@ -2137,16 +2137,16 @@ field we want to change is tricky but cool. Same disadvantage as above.</p>
 </ul>
 <h2 id="applying-what-you-know">Applying what you know</h2>
 <p>The <code>MGame</code> structure could be used to create a minesweeper game.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#00a8c8">data</span> <span style="color:#00a8c8">MGame</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">MGame</span> <span style="color:#111">{</span> <span style="color:#111">bombs</span> <span style="color:#f92672">::</span> <span style="color:#111">[</span><span style="color:#00a8c8">Posn</span><span style="color:#111">],</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#00a8c8">data</span> <span style="color:#00a8c8">MGame</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">MGame</span> <span style="color:#111">{</span> <span style="color:#111">bombs</span> <span style="color:#f92672">::</span> <span style="color:#111">[</span><span style="color:#00a8c8">Posn</span><span style="color:#111">],</span>
                      <span style="color:#111">revealed</span> <span style="color:#f92672">::</span> <span style="color:#111">[</span><span style="color:#00a8c8">Posn</span><span style="color:#111">],</span>
                      <span style="color:#111">playing</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">Bool</span> <span style="color:#111">}</span>
     <span style="color:#00a8c8">deriving</span> <span style="color:#111">(</span><span style="color:#00a8c8">Show</span><span style="color:#111">,</span> <span style="color:#00a8c8">Eq</span><span style="color:#111">)</span>
 </code></pre></div><p>Write a <code>reveal</code> function that takes in a Game and a Posn, and puts
 out a new Game struct that has the Posn added to its <code>revealed</code> list.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">player_reveal</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">MGame</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">Posn</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">MGame</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-haskell" data-lang="haskell"><span style="color:#75af00">player_reveal</span> <span style="color:#f92672">::</span> <span style="color:#00a8c8">MGame</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">Posn</span> <span style="color:#f92672">-&gt;</span> <span style="color:#00a8c8">MGame</span>
 <span style="color:#75af00">player_reveal</span> <span style="color:#111">g</span> <span style="color:#111">sq</span> <span style="color:#f92672">=</span> <span style="color:#111">g</span> <span style="color:#75715e">-- WRONG RIGHT NOW... TRY TO FIX</span>
 </code></pre></div><p>Checks showing how <code>player_reveal</code> should work:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ck_pr_1 = MGame { bombs = [ (5,12), (8,15), (3,4)],
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ck_pr_1 = MGame { bombs = [ (5,12), (8,15), (3,4)],
                   revealed = [(5,11), (4,11)],
                   playing = True }
 ck_pr_2 = MGame { bombs = [ (5,12), (8,15), (3,4)],

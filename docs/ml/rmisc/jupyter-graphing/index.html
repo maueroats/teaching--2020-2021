@@ -2043,20 +2043,20 @@
 an internal package.</p>
 <h2 id="more-readable-plots">More readable plots</h2>
 <p>I use these options to make my Jupyter notebook plots look good.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">options(repr.plot.width=10, repr.plot.height=6)
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">options(repr.plot.width=10, repr.plot.height=6)
 theme_update(text = element_text(size=20))
 </code></pre></div><h2 id="farver-update">Farver Update</h2>
 <p>(Last tested: 2020-09-23.)
 I have had weird errors (see below) when trying to use fill colors
 with a continuous variable. Solution: make
 sure you have an up-to-date &ldquo;farver&rdquo; package.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">install.packages(c(&#34;farver&#34;))
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">install.packages(c(&#34;farver&#34;))
 </code></pre></div><p>If you get the error message, you will need to reload the kernel to
 get the up-to-date &ldquo;farver&rdquo; package.
 Choose the menu option &ldquo;Runtime -&gt; Restart and run all&rdquo;.</p>
 <p>If you can run the code below without errors, you do not need the
 <code>farver</code> fix.</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">library(tidyverse)
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">library(tidyverse)
 x &lt;- LETTERS[1:20]
 y &lt;- paste0(&#34;var&#34;, seq(1,20))
 data &lt;- expand.grid(X=x, Y=y)
@@ -2064,7 +2064,7 @@ data$Z &lt;- runif(400, 0, 5)
 ggplot(data, aes(X, Y, fill= Z)) + 
   geom_tile() + coord_fixed() 
 </code></pre></div><p>The error that prompted me to try the fix is below:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ERROR while rich displaying an object: Error in farver::decode_colour(colors, alpha = TRUE, to = &#34;lab&#34;, na_value = &#34;transparent&#34;): unused argument (na_value = &#34;transparent&#34;)
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">ERROR while rich displaying an object: Error in farver::decode_colour(colors, alpha = TRUE, to = &#34;lab&#34;, na_value = &#34;transparent&#34;): unused argument (na_value = &#34;transparent&#34;)
 </code></pre></div>
 
     

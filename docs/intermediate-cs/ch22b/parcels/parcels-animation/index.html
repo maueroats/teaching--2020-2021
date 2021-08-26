@@ -2085,10 +2085,10 @@ not rely on someone else to tell you!</li>
 <h3 id="grid-posn-to-computer-posn">Grid posn to computer posn</h3>
 <p>Write a function that translates &ldquo;grid posns&rdquo; (<code>gp</code>) to &ldquo;computer posns&rdquo;
 (<code>cp</code>). Make sure you write at least three checks (change both x and y in your checks).</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; Skeleton:</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; Skeleton:</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">gp-&gt;cp</span> <span style="color:#111">pt</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span><span style="color:#111">))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h3 id="placing-lots-of-circles">Placing lots of circles</h3>
+  <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span><span style="color:#111">))</span>
+</code></pre></div><h3 id="placing-lots-of-circles">Placing lots of circles</h3>
 <p>Use your translation function to write a function that will place a bunch of circles
 everywhere in a list of given grid posns.</p>
 <p><code>place-circles: (Listof Posn) Image -&gt; Image</code>: Place a radius 25 solid blue circle in the
@@ -2098,9 +2098,9 @@ center of every one of the squares whose grid posns coordinates are given. The l
 O
 OO
 </code></pre>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">ex-ps</span> <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">3</span><span style="color:#111">)</span> 
-                    <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">4</span><span style="color:#111">)))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><h2 id="model">Model</h2>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">ex-ps</span> <span style="color:#111">(</span><span style="color:#111">list</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">2</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">3</span><span style="color:#111">)</span> 
+                    <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">1</span> <span style="color:#ae81ff">4</span><span style="color:#111">)</span> <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">4</span><span style="color:#111">)))</span>
+</code></pre></div><h2 id="model">Model</h2>
 <p>The model is a list of posns, the coordinates of all of the depots.</p>
 <h2 id="draw-handler">Draw Handler</h2>
 <p>Given a list of <em>depot</em> posns, you want to generate a whole colored grid.
@@ -2128,10 +2128,10 @@ grid coordinates.</p>
 <p>I suggest first changing just the x-coordinate until you are confident that you have the
 right formula.</p>
 <p>Include at least three check-expects showing how your formula is correct!</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; skeleton</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-racket" data-lang="racket"><span style="color:#75715e">;; skeleton</span>
 <span style="color:#111">(</span><span style="color:#00a8c8">define</span> <span style="color:#111">(</span><span style="color:#111">cp-&gt;gp</span> <span style="color:#111">pt</span><span style="color:#111">)</span>
-  <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span><span style="color:#111">))</span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div>
+  <span style="color:#111">(</span><span style="color:#111">make-posn</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span><span style="color:#111">))</span>
+</code></pre></div>
 
     
     

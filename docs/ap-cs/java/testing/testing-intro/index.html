@@ -2058,20 +2058,20 @@ that is built into DrJava.</p>
 <li><code>assertArrayEquals(correct, actual)</code>: Compare arrays.</li>
 </ul>
 <p>Example:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75af00">@Test</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75af00">@Test</span>
 <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">test_math</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
     <span style="color:#111">assertEquals</span><span style="color:#f92672">(</span><span style="color:#111">5</span><span style="color:#f92672">,</span> <span style="color:#111">2</span><span style="color:#f92672">+</span><span style="color:#111">3</span><span style="color:#f92672">);</span>
     <span style="color:#111">assertEquals</span><span style="color:#f92672">(.</span><span style="color:#75af00">66</span><span style="color:#f92672">,</span> <span style="color:#111">2</span><span style="color:#f92672">.</span><span style="color:#75af00">0</span><span style="color:#f92672">/</span><span style="color:#111">3</span><span style="color:#f92672">,</span> <span style="color:#111">0</span><span style="color:#f92672">.</span><span style="color:#75af00">01</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Example for arrays (Chapter 12):</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75af00">@Test</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75af00">@Test</span>
 <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">test_always_ok</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
     <span style="color:#00a8c8">int</span><span style="color:#f92672">[]</span> <span style="color:#111">correct</span> <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#111">1</span><span style="color:#f92672">,</span><span style="color:#111">2</span><span style="color:#f92672">,</span><span style="color:#111">3</span><span style="color:#f92672">};</span>
     <span style="color:#00a8c8">int</span><span style="color:#f92672">[]</span> <span style="color:#111">actual</span> <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#111">1</span><span style="color:#f92672">,</span><span style="color:#111">2</span><span style="color:#f92672">,</span><span style="color:#111">3</span><span style="color:#f92672">};</span>
     <span style="color:#111">assertArrayEquals</span><span style="color:#f92672">(</span><span style="color:#111">correct</span><span style="color:#f92672">,</span> <span style="color:#111">actual</span><span style="color:#f92672">);</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>Example for ArrayList (Chapter 13):</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75af00">@Test</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75af00">@Test</span>
 <span style="color:#00a8c8">public</span> <span style="color:#00a8c8">void</span> <span style="color:#75af00">test_arraylist</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
   <span style="color:#111">ArrayList</span><span style="color:#f92672">&lt;</span><span style="color:#111">Integer</span><span style="color:#f92672">&gt;</span> <span style="color:#111">n</span> <span style="color:#f92672">=</span> <span style="color:#00a8c8">new</span> <span style="color:#111">ArrayList</span><span style="color:#f92672">&lt;&gt;();</span>
   <span style="color:#111">n</span><span style="color:#f92672">.</span><span style="color:#75af00">add</span><span style="color:#f92672">(</span><span style="color:#111">5</span><span style="color:#f92672">);</span> <span style="color:#111">n</span><span style="color:#f92672">.</span><span style="color:#75af00">add</span><span style="color:#f92672">(</span><span style="color:#111">25</span><span style="color:#f92672">);</span> <span style="color:#111">n</span><span style="color:#f92672">.</span><span style="color:#75af00">add</span><span style="color:#f92672">(</span><span style="color:#111">100</span><span style="color:#f92672">);</span>
@@ -2082,7 +2082,7 @@ that is built into DrJava.</p>
 <span style="color:#f92672">}</span> 
 </code></pre></div><h2 id="testing-boilerplate">Testing Boilerplate</h2>
 <p>At the start of your code, include the following boilerplate:</p>
-<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#111">org.junit.*</span><span style="color:#f92672">;</span>
+<div class="highlight"><pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> <span style="color:#111">org.junit.*</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">import</span> <span style="color:#111">org.junit.runner.*</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">import static</span> <span style="color:#111">org.junit.Assert.*</span><span style="color:#f92672">;</span>
 </code></pre></div><h2 id="drjava">DrJava</h2>
